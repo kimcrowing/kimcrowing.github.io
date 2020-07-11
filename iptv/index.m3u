@@ -1,0 +1,11 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="Music Channel" tvg-language="Romanian" tvg-logo="https://i.imgur.com/PRgvj4c.png" tvg-country="RO" tvg-url="" group-title="Music",1 Music Channel
+https://edge126.rcs-rds.ro/utvedge/musicchannelhq.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="German" tvg-logo="https://bit.ly/36RqpIy" tvg-country="DE" tvg-url="" group-title="",1-2-3.tv
+https://123tv.cdn.ses-ps.com/stream070101/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Bulgarian" tvg-logo="https://i.imgur.com/PjBm4Ic.jpg" tvg-country="BG" tvg-url="" group-title="Auto",100% Auto Moto TV
+http://100automoto.tv:1935/bgtv1/autotv/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Ukrainian" tvg-logo="https://i.imgur.com/11llLr1.jpg" tvg-country="UA" tvg-url="" group-title="News",100% News
+http://85.238.112.40:8810/hls_sec/239.33.16.32-.m3u8
+#EXTINF:-1 tvg-id="11kanal" tvg-name="11 канал Днепр" tvg-language="Ukrainian" tvg-logo="https://i.imgur.com/R3MO4vb.png" tvg-country="UA" tvg-url="https://iptvx.one/epg/epg.xml.gz" group-title="",11 канал (Днепр)
+http://212.3.106.230/hls-live/live/_definst_/liveevent/livestream.m3u8

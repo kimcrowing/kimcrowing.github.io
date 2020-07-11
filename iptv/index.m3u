@@ -66,7 +66,7 @@ http://iptv.pdsu.edu.cn/hls/tjhd.m3u8
 #EXTINF:-1 tvg-id="40" tvg-name="重庆卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/chongqingHD.png" group-title="卫视频道",重庆卫视HD
 http://iptv.pdsu.edu.cn/hls/cqhd.m3u8
 #EXTINF:-1 tvg-id="46" tvg-name="黑龙江卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/heilongjiangHD.png" group-title="卫视频道",黑龙江卫视HD
-http://iptv.pdsu.edu.cn/hls/hljhd.m3u8
+http://223.82.250.72/live/hdheilongjiangstv/1.m3u8
 #EXTINF:-1 tvg-id="36" tvg-name="辽宁卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/liaoningHD.png" group-title="卫视频道",辽宁卫视HD
 http://iptv.pdsu.edu.cn/hls/lnhd.m3u8
 #EXTINF:-1 tvg-id="52" tvg-name="内蒙古卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/neimenggu.png" group-title="卫视频道",内蒙古卫视
@@ -95,6 +95,8 @@ http://iptv.pdsu.edu.cn/hls/gdhd.m3u8
 http://iptv.pdsu.edu.cn/hls/szhd.m3u8
 #EXTINF:-1 tvg-id="56" tvg-name="四川卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/sichuanHD.png" group-title="卫视频道",四川卫视HD
 http://iptv.pdsu.edu.cn/hls/schd.m3u8
+#EXTINF:-1 tvg-id="56" tvg-name="陕西卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/shanxiHD.png" group-title="卫视频道",陕西卫视HD
+http://ivi.bupt.edu.cn/hls/sxtv.m3u8
 #EXTINF:-1 tvg-id="56" tvg-name="贵州卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/guizhouHD.png" group-title="卫视频道",贵州卫视
 http://iptv.pdsu.edu.cn/hls/gztv.m3u8
 #EXTINF:-1 tvg-id="1873" tvg-name="BTV文艺" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/BTV文艺.png" group-title="卫视频道",北京文艺HD

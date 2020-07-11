@@ -74,9 +74,9 @@ http://iptv.pdsu.edu.cn/hls/nmtv.m3u8
 #EXTINF:-1 tvg-id="45" tvg-name="河北卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/hebeiHD.png" group-title="卫视频道",河北卫视HD
 http://iptv.pdsu.edu.cn/hls/hebhd.m3u8
 #EXTINF:-1 tvg-id="38" tvg-name="山东卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/shandongHD.png" group-title="卫视频道",山东卫视HD
-http://iptv.pdsu.edu.cn/hls/sdhd.m3u8
+http://112.50.243.8/PLTV/88888888/224/3221225843/1.m3u8
 #EXTINF:-1 tvg-id="32" tvg-name="安徽卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/anhuiHD.png" group-title="卫视频道",安徽卫视HD
-http://iptv.pdsu.edu.cn/hls/ahhd.m3u8
+http://hwottcdn.ln.chinamobile.com/PLTV/88888890/224/3221226045/index.m3u8
 #EXTINF:-1 tvg-id="48" tvg-name="湖北卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/hubeiHD.png" group-title="卫视频道",湖北卫视HD
 http://iptv.pdsu.edu.cn/hls/hbhd.m3u8
 #EXTINF:-1 tvg-id="27" tvg-name="湖南卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/hunanHD.png" group-title="卫视频道",湖南卫视HD

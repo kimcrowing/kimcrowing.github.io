@@ -114,7 +114,7 @@ http://iptv.pdsu.edu.cn/hls/startv.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="星空体育" tvg-logo="https://kimcrowing.github.io/iptv/statetv/xingkong.png" group-title="卫视频道",星空体育
 http://iptv.pdsu.edu.cn/hls/starsports.m3u8
 #EXTINF:-1 tvg-id="6241" tvg-name="CHC高清电影" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/CHC3.jpg" group-title="家庭影院频道",CHC高清电影
-http://iptv.pdsu.edu.cn/hls/chchd.m3u8
+http://ivi.bupt.edu.cn/hls/chchd.m3u8
 #EXTINF:-1 tvg-id="6245" tvg-name="CHC动作电影" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/CHC1.jpg" group-title="家庭影院频道",CHC动作电影
 http://iptv.pdsu.edu.cn/hls/chcatv.m3u8
 #EXTINF:-1 tvg-id="6246" tvg-name="CHC家庭电影" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/CHC2.jpg" group-title="家庭影院频道",CHC家庭影院

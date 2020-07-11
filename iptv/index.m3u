@@ -62,7 +62,7 @@ http://112.50.243.8/PLTV/88888888/224/3221225826/1.m3u8
 #EXTINF:-1 tvg-id="31" tvg-name="东方卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/dongfangHD.png" group-title="卫视频道",东方卫视HD
 http://223.82.250.72/live/hddongfangstv/1.m3u8
 #EXTINF:-1 tvg-id="39" tvg-name="天津卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/tianjinHD.png" group-title="卫视频道",天津卫视HD
-http://iptv.pdsu.edu.cn/hls/tjhd.m3u8
+http://112.50.243.8/PLTV/88888888/224/3221225830/1.m3u8
 #EXTINF:-1 tvg-id="40" tvg-name="重庆卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/chongqingHD.png" group-title="卫视频道",重庆卫视HD
 http://112.50.243.8/PLTV/88888888/224/3221225949/3.m3u8
 #EXTINF:-1 tvg-id="46" tvg-name="黑龙江卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/heilongjiangHD.png" group-title="卫视频道",黑龙江卫视HD
@@ -78,15 +78,15 @@ http://112.50.243.8/PLTV/88888888/224/3221225843/1.m3u8
 #EXTINF:-1 tvg-id="32" tvg-name="安徽卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/anhuiHD.png" group-title="卫视频道",安徽卫视HD
 http://hwottcdn.ln.chinamobile.com/PLTV/88888890/224/3221226045/index.m3u8
 #EXTINF:-1 tvg-id="48" tvg-name="湖北卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/hubeiHD.png" group-title="卫视频道",湖北卫视HD
-http://iptv.pdsu.edu.cn/hls/hbhd.m3u8
+http://39.134.52.153/huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221225749/1.m3u8
 #EXTINF:-1 tvg-id="27" tvg-name="湖南卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/hunanHD.png" group-title="卫视频道",湖南卫视HD
-http://iptv.pdsu.edu.cn/hls/hunanhd.m3u8
+http://112.50.243.8/PLTV/88888888/224/3221225827/1.m3u8
 #EXTINF:-1 tvg-id="50" tvg-name="江西卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/jiangxiHD.png" group-title="卫视频道",江西卫视HD
-http://iptv.pdsu.edu.cn/hls/jxhd.m3u8
+http://112.50.243.8/PLTV/88888888/224/3221225868/1.m3u8
 #EXTINF:-1 tvg-id="29" tvg-name="江苏卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/jiangsuHD.png" group-title="卫视频道",江苏卫视HD
-http://iptv.pdsu.edu.cn/hls/jshd.m3u8
+http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221225663/index.m3u8
 #EXTINF:-1 tvg-id="28" tvg-name="浙江卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/zhejiangHD.png" group-title="卫视频道",浙江卫视HD
-http://iptv.pdsu.edu.cn/hls/zjhd.m3u8
+http://121.31.30.90:8085/ysten-business/live/hdzhejiangstv/1.m3u8
 #EXTINF:-1 tvg-id="41" tvg-name="东南卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/dongnanHD.png" group-title="卫视频道",东南卫视HD
 http://hwottcdn.ln.chinamobile.com/PLTV/88888890/224/3221226046/index.m3u8
 #EXTINF:-1 tvg-id="33" tvg-name="广东卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/guangdongHD.png" group-title="卫视频道",广东卫视HD

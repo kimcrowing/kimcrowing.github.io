@@ -4,15 +4,15 @@ http://112.50.243.8/PLTV/88888888/224/3221225922/1.m3u8
 #EXTINF:-1 tvg-id="2" tvg-name="CCTV2" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV2HD.png" group-title="央视频道",CCTV2HD
 http://111.13.111.242/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226230/1.m3u8
 #EXTINF:-1 tvg-id="3" tvg-name="CCTV3" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV3HD.png" group-title="央视频道",CCTV3HD
-http://121.31.30.90:8085/ysten-business/live/cctv-3/1.m3u8
+http://117.169.120.140:8080/live/cctv-3/.m3u8
 #EXTINF:-1 tvg-id="4" tvg-name="CCTV4" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV4HD.png" group-title="央视频道",CCTV4HD
-http://121.31.30.90:8085/ysten-business/live/cctv-4/1.m3u8
+http://117.148.187.37/PLTV/88888888/224/3221226171/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV5HD.png" group-title="央视频道",CCTV5HD
-http://121.31.30.90:8085/ysten-business/live/cctv-5/1.m3u8
+http://117.148.187.37/PLTV/88888888/224/3221226400/index.m3u8
 #EXTINF:-1 tvg-id="6" tvg-name="CCTV5+" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV5+HD.png" group-title="央视频道",CCTV5+HD
-http://121.31.30.90:8085/ysten-business/live/hdcctv05plus/1.m3u8
+http://111.40.205.87/PLTV/88888888/224/3221225689/index.m3u8
 #EXTINF:-1 tvg-id="7" tvg-name="CCTV6" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV6HD.png" group-title="央视频道",CCTV6HD
-http://121.31.30.90:8085/ysten-business/live/cctv-6/1.m3u8
+http://117.169.120.140:8080/live/cctv-6/.m3u8
 #EXTINF:-1 tvg-id="8" tvg-name="CCTV7" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV7HD.png" group-title="央视频道",CCTV7HD
 http://112.50.243.8/PLTV/88888888/224/3221225927/1.m3u8
 #EXTINF:-1 tvg-id="9" tvg-name="CCTV8" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV8HD.png" group-title="央视频道",CCTV8HD
@@ -28,9 +28,9 @@ http://121.31.30.90:8085/ysten-business/live/cctv-12/1.m3u8
 #EXTINF:-1 tvg-id="14" tvg-name="CCTV13" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV13HD.png" group-title="央视频道",CCTV13HD
 http://121.31.30.90:8085/ysten-business/live/cctv-13/1.m3u8
 #EXTINF:-1 tvg-id="15" tvg-name="CCTV14" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV14HD.png" group-title="央视频道",CCTV14HD
-http://121.31.30.90:8085/ysten-business/live/cctv-14/1.m3u8
+http://117.148.187.37/PLTV/88888888/224/3221226565/index.m3u8
 #EXTINF:-1 tvg-id="16" tvg-name="CCTV15" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV15HD.png" group-title="央视频道",CCTV15HD
-http://121.31.30.90:8085/ysten-business/live/cctv-15/1.m3u8
+http://117.148.187.37/PLTV/88888888/224/3221226112/index.m3u8
 #EXTINF:-1 tvg-id="17" tvg-name="CCTV17" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV17HD.png" group-title="央视频道",CCTV17HD
 http://ivi.bupt.edu.cn/hls/cctv17hd.m3u8
 #EXTINF:-1 tvg-id="18" tvg-name="CETV1" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CETV1HD.png" group-title="央视频道",CETV1HD

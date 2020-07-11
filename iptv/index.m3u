@@ -151,51 +151,47 @@ http://hls-ott-zhibo.wasu.tv/live/269/index.m3u8
 http://hls-ott-zhibo.wasu.tv/live/263/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/huashu.png" group-title="网络频道",华数抗日剧场
 http://hls-ott-zhibo.wasu.tv/live/258/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P423200320U1.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 中国功夫
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P423200320U1.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV中国功夫
 http://111.40.205.76/PLTV/88888888/224/3221225681/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262242033H.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 健康有约
-http://111.40.205.76/PLTV/88888888/224/3221225673/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426221943132.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 军事评论
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426221943132.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV军事评论
 http://111.40.205.76/PLTV/88888888/224/3221225668/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262226352Z.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 军旅剧场
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262226352Z.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV军旅剧场
 http://121.31.30.90:8085/ysten-business/live/junlvjc/1.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426222232647.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 农业致富
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426222232647.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV农业致富
 http://121.31.30.90:8085/ysten-business/live/nongyezf/1.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="http://www.nettv.live/uploads/19/1-191215202451457.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 动作电影
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="http://www.nettv.live/uploads/19/1-191215202451457.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV动作电影
 http://111.40.205.76/PLTV/88888888/224/3221225661/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262246003C.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 古装剧场
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262246003C.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV古装剧场
 http://111.40.205.76/PLTV/88888888/224/3221225663/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426224331251.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 家庭剧场
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426224331251.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV家庭剧场
 http://111.40.205.76/PLTV/88888888/224/3221225677/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P42622394O34.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 惊悚悬疑
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P42622394O34.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV惊悚悬疑
 http://111.40.205.76/PLTV/88888888/224/3221225665/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P42622394O34.jpg" tvg-country="CN" tvg-url="" group-title="",NewTV未来电视 惊悚悬疑 (Backup)
-http://121.31.30.90:8085/ysten-business/live/jingsongxy/1.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P426225Q10-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 搏击
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P426225Q10-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV搏击
 http://111.40.205.76/PLTV/88888888/224/3221225680/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P42616140Na.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 明星大片
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P42616140Na.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV明星大片
 http://111.40.205.76/PLTV/88888888/224/3221225664/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P4262254200-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 潮妈辣婆
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P4262254200-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV潮妈辣婆
 http://117.148.187.37/PLTV/88888888/224/3221226666/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/19/1-191215192034I5.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 炫舞未来
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/19/1-191215192034I5.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV炫舞未来
 http://112.17.40.140/PLTV/88888888/224/3221226817/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P4262300110-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 爱情喜剧
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P4262300110-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV爱情喜剧
 http://111.40.205.76/PLTV/88888888/224/3221225669/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426222R1296.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 精品体育
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426222R1296.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品体育
 http://121.31.30.90:8085/ysten-business/live/jtiyu/1.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P426223G10-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 精品大剧
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P426223G10-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品大剧
 http://111.40.205.76/PLTV/88888888/224/3221225670/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 精品记录
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品记录
 http://111.40.205.76/PLTV/88888888/224/3221225672/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 精品记录
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品记录
 http://111.40.205.87/PLTV/88888888/224/3221225672/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 精品记录
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品记录
 http://117.148.187.37/PLTV/88888888/224/3221226763/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 精品记录
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品记录
 http://121.31.30.90:8085/ysten-business/live/jingpinjl/1.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="https://i.imgur.com/2PoLaXw.png" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 超级体育
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="https://i.imgur.com/2PoLaXw.png" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV超级体育
 http://111.40.205.107/PLTV/88888888/224/3221225715/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="https://i.imgur.com/KukcTgh.png" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 超级电影
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="https://i.imgur.com/KukcTgh.png" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV超级电影
 http://112.50.243.12/PLTV/88888888/224/3221225804/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262241042I.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV未来电视 金牌综艺
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262241042I.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV金牌综艺
 http://111.40.205.76/PLTV/88888888/224/3221225666/index.m3u8

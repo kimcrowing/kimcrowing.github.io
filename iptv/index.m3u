@@ -6,7 +6,7 @@ http://111.13.111.242/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226230/1.m3
 #EXTINF:-1 tvg-id="3" tvg-name="CCTV3" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV3HD.png" group-title="央视频道",CCTV3HD
 http://ivi.bupt.edu.cn/hls/cctv3hd.m3u8
 #EXTINF:-1 tvg-id="4" tvg-name="CCTV4" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV4HD.png" group-title="央视频道",CCTV4HD
-http://117.148.187.37/PLTV/88888888/224/3221226171/index.m3u8
+http://117.169.120.140:8080/live/cctv-4/.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV5HD.png" group-title="央视频道",CCTV5HD
 http://117.148.187.37/PLTV/88888888/224/3221226400/index.m3u8
 #EXTINF:-1 tvg-id="6" tvg-name="CCTV5+" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV5+HD.png" group-title="央视频道",CCTV5+HD

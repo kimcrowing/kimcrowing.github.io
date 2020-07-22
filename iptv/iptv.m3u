@@ -16,7 +16,7 @@ http://tv.ncist.edu.cn:281/live/cctv6hd.flv
 #EXTINF:-1 tvg-id="8" tvg-name="CCTV7" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV7HD.png" group-title="央视频道",CCTV7HD
 http://tv.ncist.edu.cn:281/live/cctv7hd.flv
 #EXTINF:-1 tvg-id="9" tvg-name="CCTV8" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV8HD.png" group-title="央视频道",CCTV8HD
-http://tv.ncist.edu.cn:281/live/cctv8hd.flv
+http://tv.ncist.edu.cn:281/live/cctv8hdd.flv
 #EXTINF:-1 tvg-id="10" tvg-name="CCTV9" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV9HD.png" group-title="央视频道",CCTV9HD
 http://tv.ncist.edu.cn:281/live/cctv9hd.flv
 #EXTINF:-1 tvg-id="11" tvg-name="CCTV10" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV10HD.png" group-title="央视频道",CCTV10HD

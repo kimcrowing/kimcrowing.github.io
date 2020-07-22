@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="1" tvg-name="CCTV1" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV1HD.png" group-title="央视频道",CCTV1HD
-http://itv.ahau.edu.cn/hls/cctv1hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv1hd.flv
 #EXTINF:-1 tvg-id="2" tvg-name="CCTV2" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV2HD.png" group-title="央视频道",CCTV2HD
 http://itv.ahau.edu.cn/hls/cctv2hd.m3u8
 #EXTINF:-1 tvg-id="3" tvg-name="CCTV3" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV3HD.png" group-title="央视频道",CCTV3HD

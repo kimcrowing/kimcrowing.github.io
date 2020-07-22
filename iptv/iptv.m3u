@@ -2,29 +2,29 @@
 #EXTINF:-1 tvg-id="1" tvg-name="CCTV1" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV1HD.png" group-title="央视频道",CCTV1HD
 http://tv.ncist.edu.cn:281/live/cctv1hd.flv
 #EXTINF:-1 tvg-id="2" tvg-name="CCTV2" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV2HD.png" group-title="央视频道",CCTV2HD
-http://itv.ahau.edu.cn/hls/cctv2hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv2hd.flv
 #EXTINF:-1 tvg-id="3" tvg-name="CCTV3" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV3HD.png" group-title="央视频道",CCTV3HD
-http://itv.ahau.edu.cn/hls/cctv3hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv3hd.flv
 #EXTINF:-1 tvg-id="4" tvg-name="CCTV4" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV4HD.png" group-title="央视频道",CCTV4HD
-http://itv.ahau.edu.cn/hls/cctv4hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv4hd.flv
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV5HD.png" group-title="央视频道",CCTV5HD
-http://itv.ahau.edu.cn/hls/cctv5hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv5hd.flv
 #EXTINF:-1 tvg-id="6" tvg-name="CCTV5+" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV5+HD.png" group-title="央视频道",CCTV5+HD
-http://itv.ahau.edu.cn/hls/cctv5phd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv5HD.flv
 #EXTINF:-1 tvg-id="7" tvg-name="CCTV6" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV6HD.png" group-title="央视频道",CCTV6HD
-http://itv.ahau.edu.cn/hls/cctv6hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv6hd.flv
 #EXTINF:-1 tvg-id="8" tvg-name="CCTV7" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV7HD.png" group-title="央视频道",CCTV7HD
-http://itv.ahau.edu.cn/hls/cctv7hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv7hd.flv
 #EXTINF:-1 tvg-id="9" tvg-name="CCTV8" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV8HD.png" group-title="央视频道",CCTV8HD
-http://itv.ahau.edu.cn/hls/cctv8hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv8hd.flv
 #EXTINF:-1 tvg-id="10" tvg-name="CCTV9" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV9HD.png" group-title="央视频道",CCTV9HD
-http://itv.ahau.edu.cn/hls/cctv9hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv9hd.flv
 #EXTINF:-1 tvg-id="11" tvg-name="CCTV10" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV10HD.png" group-title="央视频道",CCTV10HD
-http://itv.ahau.edu.cn/hls/cctv10hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv10hd.flv
 #EXTINF:-1 tvg-id="12" tvg-name="CCTV11" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV11HD.png" group-title="央视频道",CCTV11HD
 http://itv.ahau.edu.cn/hls/cctv11hd.m3u8
 #EXTINF:-1 tvg-id="13" tvg-name="CCTV12" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV12HD.png" group-title="央视频道",CCTV12HD
-http://itv.ahau.edu.cn/hls/cctv12hd.m3u8
+http://tv.ncist.edu.cn:281/live/cctv12hd.flv
 #EXTINF:-1 tvg-id="14" tvg-name="CCTV13" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV13HD.png" group-title="央视频道",CCTV13HD
 http://112.50.243.8/PLTV/88888888/224/3221225817/1.m3u8
 #EXTINF:-1 tvg-id="15" tvg-name="CCTV14" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV14HD.png" group-title="央视频道",CCTV14HD

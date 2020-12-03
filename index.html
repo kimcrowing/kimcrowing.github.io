@@ -16,11 +16,28 @@
 	<button onclick="search()" id="search_submit" value="" aria-label="前进">
 		<div class="search icon"></div></button><span><input class="search" onfocus="showButton()" onblur="hideButton()" type="text" value="" autocomplete="off" id="search_input" title="搜索"></span>
 			</form></div>
-		<div id="bookmark_part"><div id="box_container"><div class="box"><a href="https://m.ithome.com/" title="IT之家"></a ><p class="title" style="background:#657fae">I</p ><p class="url">IT之家</p ></div>
-			<div class="box"><a href="https://www.52pojie.cn/" title="吾爱破解"></a ><p class="title" style="background:#6f727f">吾</p ><p class="url">吾爱破解</p ></div><div class="box"><a href="https://github.com/" title="GitHub"></a ><p class="title" style="background:#6c77ac">G</p ><p class="url">GitHub</p ></div><div class="box"><a href="https://springsunday.net/index.php" title="CMCT"></a ><p class="title" style="background:#cb77b5">C</p ><p class="url">CMCT</p ></div></div>
-		</div><script src="/js/s3.js"></script><script type="text/javascript">
-		try{var sortable=Sortable.create(box_container,{disabled:false,delay:150,animation:0,handle:'.box',ghostClass:'sort-ghost',onEnd:function(evt){try{window.via.changeFavoriteOrder(evt.oldIndex, evt.newIndex)}catch(e){}},});}catch(err){console.log(err)}</script><script type="text/javascript">function showButton(){document.getElementById("search_submit").style.display="block"}function hideButton(){var a=document.getElementById("search_input").value;""==a&&(document.getElementById("search_submit").style.display="none")}function search(){var a=document.getElementById("search_input").value;return""!=a&&(window.via.searchText(a),document.getElementById("search_input").value=""),!1}</script><style type="text/css">.bdSug_app{display:none !important;}td{margin:4px !important;padding:10px !important;}.bdSug_wpr{overflow-y: scroll !important;max-height:30% !important;}</style><script charset="gbk" src="/js/opensug.js"></script><script type="text/javascript">
-		function show(str){var searchbox = document.getElementById("search_input"); searchbox.innerHTML = str; searchbox.blur(); search();} var params = {"XOffset":0, "YOffset":0, "fontColor":"#666666", "fontColorHI":"#FFF", "fontSize":"14px", "borderColor":"#eee", "bgcolorHI":"#7B90E3", "sugSubmit":false }; BaiduSuggestion.bind("search_input",params,show); 
+		<div id="bookmark_part">
+			<div id="box_container">
+				<div class="box"><a href="https://m.ithome.com/" title="IT之家"></a ><p class="title" style="background:#657fae">I</p ><p class="url">IT之家</p ></div>
+				<div class="box"><a href="https://www.52pojie.cn/" title="吾爱破解"></a ><p class="title" style="background:#6f727f">吾</p ><p class="url">吾爱破解</p ></div>
+				<div class="box"><a href="https://github.com/" title="GitHub"></a ><p class="title" style="background:#6c77ac">G</p ><p class="url">GitHub</p ></div>
+				<div class="box"><a href="https://springsunday.net/index.php" title="CMCT"></a ><p class="title" style="background:#cb77b5">C</p ><p class="url">CMCT</p ></div>
+			</div>
+		</div>
+		<script src="/js/s3.js"></script><script type="text/javascript">
+		try{var sortable=Sortable.create(box_container,{disabled:false,delay:150,animation:0,handle:'.box',ghostClass:'sort-ghost',onEnd:function(evt){try{window.via.changeFavoriteOrder(evt.oldIndex, evt.newIndex)}catch(e){}},});}catch(err){console.log(err)}
+		</script>
+		<script type="text/javascript">
+		function showButton(){document.getElementById("search_submit").style.display="block"}
+		function hideButton(){var a=document.getElementById("search_input").value;""==a&&(document.getElementById("search_submit").style.display="none")}
+		function search(){var a=document.getElementById("search_input").value;return""!=a&&(window.via.searchText(a),document.getElementById("search_input").value=""),!1}</script>
+		<style type="text/css">.bdSug_app{display:none !important;}td{margin:4px !important;padding:10px !important;}.bdSug_wpr{overflow-y: scroll !important;max-height:30% !important;}
+		</style>
+		<script charset="gbk" src="/js/opensug.js"></script>
+		<script type="text/javascript">
+		function show(str){var searchbox = document.getElementById("search_input"); searchbox.innerHTML = str; searchbox.blur(); search();} 
+		var params = {"XOffset":0, "YOffset":0, "fontColor":"#666666", "fontColorHI":"#FFF", "fontSize":"14px", "borderColor":"#eee", "bgcolorHI":"#7B90E3", "sugSubmit":false }; 
+			BaiduSuggestion.bind("search_input",params,show); 
 	</script>
 	</div>
 	</body>

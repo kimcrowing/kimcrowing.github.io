@@ -7,7 +7,7 @@
  * @createTime: 2019-10-12 09:11:58
  * @updateTime   : 2020-03-16 00:51:04
  */
-(function () {
+/*(function () {
   /* 判断是否该执行 */
   /* 网址黑名单制，遇到这些域名不执行 */
   const blackList = ['zhihu.com', 'twitter.com', 'wenku.baidu.com', 'wk.baidu.com'];
@@ -145,7 +145,7 @@
       });
     }
   });
-})();
+})();*/
 
 // ==UserScript==
 // @name         Google网页翻译

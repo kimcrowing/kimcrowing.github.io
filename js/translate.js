@@ -1,4 +1,4 @@
-(function () {
+window.onload=function () {
     'use strict';
     var userLang = document.documentElement.lang;
     
@@ -22,4 +22,4 @@
             "}, 'google_translate_element');}";
         document.getElementsByTagName('head')[0].appendChild(script);
     }
-})();
+}

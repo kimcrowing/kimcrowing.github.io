@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 /*
- * @name: 谷歌原生网页翻译
- * @Author: 谷花泰
- * @version: 2.0
- * @description: 调用谷歌翻译接口翻译整个网站
+ * @name: 谷歌翻译
+ * @Author: Kim
+ * @version: 1.0
+ * @description: 调用谷歌翻译网站
  * @include: *
- * @createTime: 2019-10-12 09:11:58
- * @updateTime   : 2020-03-16 00:51:04
+ * @createTime: 2020-10-12 09:11:58
+ * @updateTime   : 2020-12-16 00:51:04
  */
 (function () {
   /* 判断是否该执行 */
@@ -15,7 +15,7 @@
   const blackList = ['zhihu.com', 'twitter.com', 'wenku.baidu.com', 'wk.baidu.com'];
 
   const hostname = window.location.hostname;
-  const key = encodeURIComponent('谷花泰:谷歌原生网页翻译:执行判断');
+  const key = encodeURIComponent('Kim:谷歌翻译:执行判断');
   const isBlack = blackList.some(keyword => {
     if (hostname.match(keyword)) {
       return true;
@@ -57,9 +57,9 @@
     right: 5vw;
     z-index: 9999;
   `);
-            const transBtn = document.createElement('span');
-            transBtn.innerText = '翻译';
-            transBtn.addEventListener('click', (e) => {
+  const transBtn = document.createElement('button');
+  transBtn.innerText = '翻译';
+  transBtn.addEventListener('click', (e) => {
   document.documentElement.appendChild(div)};
 
   /* 一些样式 */

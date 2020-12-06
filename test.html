@@ -57,7 +57,10 @@
     right: 5vw;
     z-index: 9999;
   `);
-  document.documentElement.appendChild(div);
+            const transBtn = document.createElement('span');
+            transBtn.innerText = '翻译';
+            transBtn.addEventListener('click', (e) => {
+  document.documentElement.appendChild(div)};
 
   /* 一些样式 */
   const style = document.createElement('style');

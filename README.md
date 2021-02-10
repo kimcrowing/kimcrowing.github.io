@@ -10,3 +10,8 @@ YAML         13 mins         ▒░░░░░░░░░░░░░░░░
 Git Config   8 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.74 % 
 ```
 <!--END_SECTION:waka-->
+
+
+📈 My GitHub Stats
+
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=kimcrowing&show_icons=true&theme=gotham" alt="kimcrowing" />

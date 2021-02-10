@@ -2,6 +2,13 @@
 <img align="right" alt="GIF" src="https://github.com/kimcrowing/material/blob/master/code.gif?raw=true" width="500" height="320" />
 
 
+
+
+
+
+
+
+
 📈 My GitHub Stats
 
 <p align="left"> <img src="https://github-readme-stats.vercel.app/api?username=kimcrowing&show_icons=true&theme=gotham" alt="kimcrowing" />

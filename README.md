@@ -1,4 +1,4 @@
-<img align="lift" alt="GIF" src="https://github.com/kimcrowing/material/blob/master/logo.jpg?raw=true" width="500" height="320" /> 
+<img align="lift" alt="img" src="https://github.com/kimcrowing/material/blob/master/logo.jpg?raw=true" width="500" height="320" /> 
  <img align="right" alt="GIF" src="https://github.com/kimcrowing/material/blob/master/code.gif?raw=true" width="500" height="320" />
 
 [![我的 GitHub 数据](https://github-readme-stats.vercel.app/api?username=kimcrowing)]()

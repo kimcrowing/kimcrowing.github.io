@@ -1,16 +1,6 @@
 <img align="lift" alt="img" src="https://github.com/kimcrowing/material/raw/master/log.jpg" width="100" height="100" /> 
-<img align="right" alt="GIF" src="https://github.com/kimcrowing/material/blob/master/code.gif?raw=true" width="500" height="320" />
-
-
-
-
-
-
-
-
-
-
-<p align="left"> <img src="https://github-readme-stats.vercel.app/api?username=kimcrowing&show_icons=true&theme=gotham" alt="kimcrowing" />
+<img align="left" alt="GIF" src="https://github.com/kimcrowing/material/blob/master/code.gif?raw=true" width="280" height="192" />
+<p align="right"> <img src="https://github-readme-stats.vercel.app/api?username=kimcrowing&show_icons=true&theme=gotham" alt="kimcrowing" />
 
 
 📊 **This Week I Spent My Time On:**

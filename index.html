@@ -191,7 +191,8 @@
 					</footer>
 				</div>
 			</article>
-
+		<!-- 返回顶部 -->
+			<div id="goTopBtn"><a class="goTopBtn">TOP</a></div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -199,9 +200,38 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		<!-- 返回顶部 -->
-			<div id="goTopBtn"><a class="goTopBtn">TOP</a></div>
-
+		<!-- 谷歌翻译 -->
+ 			<div id="google_translate_element"></div>
+			<script type="text/javascript">
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+				}
+			</script>       
+			<script>
+				function googleTranslateElementInit() {
+					var google_translate_element = document.getElementById('google_translate_element');
+					var timer = setInterval(function() {
+						google_translate_element = document.getElementById('google_translate_element');
+					if (google_translate_element) {
+						clearInterval(timer);
+					var langName = navigator.language ? navigator.language.split('-')[0].toLowerCase() : 'en';
+					new google.translate.TranslateElement({
+						pageLanguage: langName,
+                    //0，原生select，并且谷歌logo显示在按钮下方。1，原生select，并且谷歌logo显示在右侧。2，完全展开语言列表，适合pc，
+						layout: /mobile/i.test(navigator.userAgent) ? 0 : 2,
+					},
+						'google_translate_element'
+					);
+            // 清除图片的请求
+					img = [].slice.call(document.querySelectorAll('#goog-gt-tt img,#google_translate_element img'));
+					img.forEach(function(v, i) {
+						v.src = '';
+					});
+					}
+					}, 300);
+				}
+			</script>
+			<script id="translate_google_js" src="//translate.google.com/translate_a/element.js?&cb=googleTranslateElementInit"></script>
 
 
 	</body>

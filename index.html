@@ -5,6 +5,36 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20464626-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  
+  
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+ 
+<div id="google_translate_element"></div><script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'es',
+    autoDisplay: false,
+    gaTrack: true,
+    gaId: 'UA-20464626-1',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	</head>
 	<body class="is-preload">
 
@@ -200,39 +230,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		<!-- 谷歌翻译 -->
- 			<div id="google_translate_element"></div>
-			<script type="text/javascript">
-				function googleTranslateElementInit() {
-					new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-				}
-			</script>       
-			<script>
-				function googleTranslateElementInit() {
-					var google_translate_element = document.getElementById('google_translate_element');
-					var timer = setInterval(function() {
-						google_translate_element = document.getElementById('google_translate_element');
-					if (google_translate_element) {
-						clearInterval(timer);
-					var langName = navigator.language ? navigator.language.split('-')[0].toLowerCase() : 'en';
-					new google.translate.TranslateElement({
-						pageLanguage: langName,
-                    //0，原生select，并且谷歌logo显示在按钮下方。1，原生select，并且谷歌logo显示在右侧。2，完全展开语言列表，适合pc，
-						layout: /mobile/i.test(navigator.userAgent) ? 0 : 2,
-					},
-						'google_translate_element'
-					);
-            // 清除图片的请求
-					img = [].slice.call(document.querySelectorAll('#goog-gt-tt img,#google_translate_element img'));
-					img.forEach(function(v, i) {
-						v.src = '';
-					});
-					}
-					}, 300);
-				}
-			</script>
-			<script id="translate_google_js" src="//translate.google.cn/translate_a/element.js?&cb=googleTranslateElementInit"></script>
-
 
 	</body>
 </html>

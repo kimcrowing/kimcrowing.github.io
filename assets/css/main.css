@@ -2214,7 +2214,17 @@ input, select, textarea {
 					height: 24em;
 					margin: 0;
 				}
-
+			#goTopBtn {
+				position: fixed;
+				line-height: 46px;
+				text-align: center;
+				width: 46px;bottom: 35px;
+				height: 46px;cursor: pointer;
+				background: #fff;display: none;
+				border-radius: 6px;
+				box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+				font-size:10px;color:#999;
+			}
 	}
 
 /* Medium */
@@ -2231,7 +2241,17 @@ input, select, textarea {
 				#top .image {
 					margin: 0 auto 2em auto;
 				}
-
+			#goTopBtn {
+				position: fixed;
+				line-height: 46px;
+				text-align: center;
+				width: 46px;bottom: 35px;
+				height: 46px;cursor: pointer;
+				background: #fff;display: none;
+				border-radius: 6px;
+				box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+				font-size:10px;color:#999;
+			}
 	}
 
 /* Small */

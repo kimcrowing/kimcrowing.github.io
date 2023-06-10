@@ -1,0 +1,55 @@
+/* 定义黑暗模式的样式 */
+.dark {
+  /* 设置网页背景颜色为黑色 */
+  background-color: black;
+  /* 设置网页文字颜色为白色 */
+  color: white;
+}
+
+/* 定义开关按钮的样式 */
+.checkbox {
+  /* 隐藏开关按钮 */
+  display: none;
+}
+
+/* 定义开关图标的样式 */
+.switch {
+  /* 设置开关图标的宽度和高度 */
+  width: 60px;
+  height: 34px;
+  /* 设置开关图标的背景颜色为灰色 */
+  background-color: #ccc;
+  /* 设置开关图标的边框为圆角 */
+  border-radius: 34px;
+  /* 设置开关图标的位置为相对于正常流 */
+  position: relative;
+}
+
+/* 定义开关图标中的圆点的样式 */
+.switch::before {
+  /* 设置圆点的内容为空 */
+  content: "";
+  /* 设置圆点的宽度和高度 */
+  width: 26px;
+  height: 26px;
+  /* 设置圆点的背景颜色为白色 */
+  background-color: white;
+  /* 设置圆点的边框为圆形 */
+  border-radius: 50%;
+  /* 设置圆点的位置为绝对于开关图标 */
+  position: absolute;
+  /* 设置圆点的左边距和上边距 */
+  left: 4px;
+  top: 4px;
+}
+
+/* 当开关按钮被选中时，修改开关图标和圆点的样式 */
+.checkbox:checked + .switch {
+  /* 设置开关图标的背景颜色为蓝色 */
+  background-color: #2196f3;
+}
+
+.checkbox:checked + .switch::before {
+   /* 设置圆点的左边距为30px，即向右移动 */
+   left: 30px;
+}

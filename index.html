@@ -6,8 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="images/pic00.jpg" type="image/x-icon">
+        <!-- 链接外部的样式表文件，用于定义黑暗与白天模式的样式 -->
+        <link rel="stylesheet" href="assets/css/dark-light-mode.css" />
 	</head>
 	<body class="is-preload">
+
+        <!-- 添加一个开关按钮，用于让用户选择黑暗或白天模式 -->
+        <input type="checkbox" id="toggle" class="checkbox" />
+        <!-- 为开关按钮添加一个图标，用于显示当前的模式 -->
+        <label for="toggle" class="switch"></label>
 
 		<!-- Nav -->
 			<nav id="nav">
@@ -55,73 +62,67 @@
 			<article id="portfolio" class="wrapper style3">	
 			</article>
 
-		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Have me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
-							<ul class="social">
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="https://github.com/kimcrowing" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span class="label">Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span class="label">Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span class="label">Blogger</span></a></li>
-							</ul>
-							<hr />
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="https://github.com/kimcrowing">Kim</a></li>
-						</ul>
-					</footer>
-				</div>
+        <!-- Contact -->
+		 <article id = "contact"class = "wrapper style4">
+			 <div class = "container medium">
+				 <header >
+					 <h2 >Have me make stuff for you.</h2 >
+					 <p >Ornare nulla proin odio consequat sapien vestibulum ipsum.</p >
+				 </header >
+				 <div class = "row">
+					 <div class = "col-12">
+						 <form method = "post"action = "#">
+							 <div class = "row">
+								 <div class = "col-6 col-12-small">
+									 <input type = "text"name = "name"id = "name"placeholder = "Name"/>
+								 </div >
+								 <div class = "col-6 col-12-small">
+									 <input type = "text"name = "email"id = "email"placeholder = "Email"/>
+								 </div >
+								 <div class = "col-12">
+									 <input type = "text"name = "subject"id = "subject"placeholder = "Subject"/>
+								 </div >
+								 <div class = "col-12">
+									 <textarea name = "message"id = "message"placeholder = "Message"></textarea >
+								 </div >
+								 <div class = "col-12">
+									 <ul class = "actions">
+										 <li ><input type = "submit"value = "Send Message"/></li >
+										 <li ><input type = "reset"value = "Clear Form"class = "alt"/></li >
+									 </ul >
+								 </div >
+							 </div >
+						 </form >
+					 </div >
+					 <div class = "col-12">
+						 <hr />
+						 <h3 >Find me on ...</h3 >
+						 <ul class = "social">
+							 <li ><a href="#"class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							 <li ><a href="#"class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							 <li ><a href="#"class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							 <li ><a href="#"class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+							 <li ><a href="https://github.com/kimcrowing"class="icon brands fa-github"><span class="label">Github</s
 			</article>
-		<!-- 返回顶部 -->
-			<div id="goTopBtn"><a class="goTopBtn">TOP</a></div>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
+        <!-- 添加一些JavaScript代码，用于实现开关按钮的功能，即根据用户的选择切换黑暗或白天模式 -->
+        <script>
+            // 获取开关按钮和网页主体元素
+            const toggle = document.getElementById("toggle");
+            const body = document.body;
+
+            // 添加事件监听器，当开关按钮被点击时执行以下函数
+            toggle.addEventListener("input", (e) => {
+                // 获取开关按钮的状态（是否被选中）
+                const checked = e.target.checked;
+
+                // 如果开关按钮被选中，则为网页主体元素添加一个dark类名，否则移除该类名
+                if (checked) {
+                    body.classList.add("dark");
+                } else {
+                    body.classList.remove("dark");
+                }
+            });
+        </script>
 	</body>
 </html>

@@ -1,133 +1,41 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Mysite</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/pic00.jpg" type="image/x-icon">
-        <!-- 链接外部的样式表文件，用于定义黑暗与白天模式的样式 -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-	</head>
-	<body class="is-preload">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showContent('home')">Home</a>
+        <hr>
+        <a href="#" onclick="showContent('ai')">AI</a>
+        <hr>
+        <a href="#" onclick="showContent('chat')">Chat</a>
+        <hr>
+        主题
+        <label class="switch">
+            <input type="checkbox" id="theme-switcher">
+            <span class="slider round"></span>
+        </label>
+    </nav>
+    <main>
+        <div id="home" style="display:none;"><iframe src="https://www.bing.com" width="100%" height="1000px"></iframe></div>
+        <div id="ai" style="display:none;"><iframe src="https://www.wikipedia.org" width="100%" height="1000px"></iframe></div>
+        <div id="chat" style="display:none;"><iframe src="http://192.168.3.110:5244" width="100%" height="1000px"></iframe></div>
+    </main>
 
-        <!-- 添加一个开关按钮，用于让用户选择黑暗或白天模式 -->
-        <input type="checkbox" id="toggle" class="checkbox" />
-        <!-- 为开关按钮添加一个图标，用于显示当前的模式 -->
-        <label for="toggle" class="switch">
-			<i class="fas fa-moon"></i>
-			<i class="fas fa-sun"></i>
-		</label>
-
-
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Home</a></li>
-					<li><a href="http://113.206.15.230:8083">CoreELEC</a></li>
-					<li><a href="http://113.206.15.230:5244">Cloud</a></li>
-					<li><a href="https://113.206.15.230:9443">Portainer</a></li>
-					<li><a href="">AI</a></li>
-					<li><a href="http://113.206.15.230:5032">WebSHH</a></li>					
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
-
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/pic00.jpg" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Hi. I'm <strong>Kim</strong>.</h1>
-							</header>
-							<p><strong>My Motto: </strong>I don't know what big things are and what small things are, I just know what young people should do</a>.</p>
-							<p><strong>My Wish: </strong>Freedom is my wish. How nice it would be if no one interfered with me in doing anything! Also, pray to be strong and healthy, disease-free and painless</a>.</p>
-							<img align="left" alt="GIF" src="images/code.gif" width="320" height="210" /><p align="right"><img src="https://github-readme-stats.vercel.app/api?username=kimcrowing&show_icons=true&theme=gotham" alt="kimcrowing" width="450" height="250" />
-							<a href="#work" class="button small scrolly">Learn about what I do</a>
-						</div>
-					</div>
-				</div>
-			</article>
-
-		<!-- Work -->
-			<article id="work" class="wrapper style2">
-				<div class="container">
-				<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
-					</footer>
-				</div>
-			</article>
-
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">	
-			</article>
-
-        <!-- Contact -->
-		 <article id = "contact"class = "wrapper style4">
-			 <div class = "container medium">
-				 <header >
-					 <h2 >Have me make stuff for you.</h2 >
-					 <p >Ornare nulla proin odio consequat sapien vestibulum ipsum.</p >
-				 </header >
-				 <div class = "row">
-					 <div class = "col-12">
-						 <form method = "post"action = "#">
-							 <div class = "row">
-								 <div class = "col-6 col-12-small">
-									 <input type = "text"name = "name"id = "name"placeholder = "Name"/>
-								 </div >
-								 <div class = "col-6 col-12-small">
-									 <input type = "text"name = "email"id = "email"placeholder = "Email"/>
-								 </div >
-								 <div class = "col-12">
-									 <input type = "text"name = "subject"id = "subject"placeholder = "Subject"/>
-								 </div >
-								 <div class = "col-12">
-									 <textarea name = "message"id = "message"placeholder = "Message"></textarea >
-								 </div >
-								 <div class = "col-12">
-									 <ul class = "actions">
-										 <li ><input type = "submit"value = "Send Message"/></li >
-										 <li ><input type = "reset"value = "Clear Form"class = "alt"/></li >
-									 </ul >
-								 </div >
-							 </div >
-						 </form >
-					 </div >
-					 <div class = "col-12">
-						 <hr />
-						 <h3 >Find me on ...</h3 >
-						 <ul class = "social">
-							 <li ><a href="#"class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							 <li ><a href="#"class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							 <li ><a href="#"class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							 <li ><a href="#"class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-							 <li ><a href="https://github.com/kimcrowing"class="icon brands fa-github"><span class="label">Github</s
-			</article>
-
-        <!-- 添加一些JavaScript代码，用于实现开关按钮的功能，即根据用户的选择切换黑暗或白天模式 -->
-        <script>
-            // 获取开关按钮和网页主体元素
-            const toggle = document.getElementById("toggle");
-            const body = document.body;
-
-            // 添加事件监听器，当开关按钮被点击时执行以下函数
-            toggle.addEventListener("input", (e) => {
-                // 获取开关按钮的状态（是否被选中）
-                const checked = e.target.checked;
-
-                // 如果开关按钮被选中，则为网页主体元素添加一个dark类名，否则移除该类名
-                if (checked) {
-                    body.classList.add("dark");
-                } else {
-                    body.classList.remove("dark");
-                }
-            });
-        </script>
-	</body>
+    <script>
+        function showContent(id) {
+            var pages = document.querySelectorAll("main > div");
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = "none";
+            }
+            document.getElementById(id).style.display = "block";
+        }
+        
+        document.getElementById("theme-switcher").onclick = function() {
+            document.body.classList.toggle("dark-theme");
+        }
+    </script>
+</body>
 </html>

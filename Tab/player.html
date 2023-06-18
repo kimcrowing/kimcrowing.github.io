@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<video width="1300" height="900" controls id="videoPlayer">
+  您的浏览器不支持 video 标签。
+</video>
+
+<script>
+  // 获取 URL 中的参数
+  const urlParams = new URLSearchParams(window.location.search);
+  const videoUrl = urlParams.get('video');
+
+  // 设置视频播放器的 src 属性
+  const videoPlayer = document.getElementById('videoPlayer');
+  const source = document.createElement('source');
+  source.setAttribute('src', videoUrl);
+  videoPlayer.appendChild(source);
+</script>
+
+</body>
+</html>

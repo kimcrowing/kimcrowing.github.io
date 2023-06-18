@@ -1,0 +1,46 @@
+/* 设置容器的样式 */
+#container {
+    display: flex;
+}
+
+/* 设置视频库的样式 */
+#video-gallery {
+    flex: 1;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 10px;
+    overflow-y: auto;
+}
+
+/* 设置视频容器的样式 */
+#video-gallery > div {
+    border: 1px dashed #ccc;
+    padding: 10px;
+}
+
+/* 设置播放器框架的样式 */
+#playerFrame {
+    flex: 2;
+    display: none;
+}
+
+/* 当播放视频时修改容器的布局 */
+#container.playing {
+    flex-direction: row;
+}
+
+#container.playing #video-gallery {
+    width: 240px;
+    margin-right: 1350px;
+    grid-template-columns: none;
+}
+
+#container.playing #playerFrame {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1320px;
+	height: 1000px;
+}

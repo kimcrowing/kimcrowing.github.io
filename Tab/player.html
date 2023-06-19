@@ -2,7 +2,9 @@
 <html>
 <body>
 
-<video width="1300" height="900" controls id="videoPlayer">
+<div id="nfo"></div>
+
+<video width="100%" height="80%" controls id="videoPlayer">
   您的浏览器不支持 video 标签。
 </video>
 
@@ -10,12 +12,21 @@
   // 获取 URL 中的参数
   const urlParams = new URLSearchParams(window.location.search);
   const videoUrl = urlParams.get('video');
+  const nfoUrl = urlParams.get('nfo');
 
   // 设置视频播放器的 src 属性
   const videoPlayer = document.getElementById('videoPlayer');
   const source = document.createElement('source');
   source.setAttribute('src', videoUrl);
   videoPlayer.appendChild(source);
+
+  // 获取 nfo 文件的内容并显示
+  fetch(nfoUrl)
+    .then(response => response.text())
+    .then(text => {
+      const nfoElement = document.getElementById('nfo');
+      nfoElement.innerText = text;
+    });
 </script>
 
 </body>

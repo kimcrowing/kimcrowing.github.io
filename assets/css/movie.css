@@ -19,6 +19,12 @@
     padding: 10px;
 }
 
+/* 设置缩略图的大小 */
+#video-gallery img {
+    width: 100%;
+    height: 70%;
+}
+
 /* 设置播放器框架的样式 */
 #playerFrame {
     flex: 2;
@@ -31,8 +37,8 @@
 }
 
 #container.playing #video-gallery {
-    width: 240px;
-    margin-right: 1350px;
+    width: 16%;
+    margin-right: 84%;
     grid-template-columns: none;
 }
 
@@ -41,6 +47,31 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 1320px;
-	height: 1000px;
+    width: 83%;
+	height: 100%;
 }
+
+/* 媒体查询：当屏幕宽度小于600px时设置样式 
+@media (max-width: 600px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #video-gallery {
+        margin-right: 0;
+        grid-template-columns: none;
+        width: 100%;
+    }
+
+    #playerFrame {
+        display:block;
+        width:100%;
+        height:auto; 
+        position:relative; 
+        top:auto; 
+        right:auto; 
+        margin-right:auto; 
+        margin-left:auto; 
+    }
+}
+*/

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OneDrive Embed Example</title>
+  <script type="text/javascript" src="https://js.live.net/v7.2/OneDrive.js"></script>
+</head>
+<body>
+  <div id="onedrivepicker"></div>
+
+  <script type="text/javascript">
+    var odOptions = {
+      clientId: "0a2991a3-1674-4334-8561-671cc7349960",
+      action: "query",
+      multiSelect: false,
+      advanced: {
+        queryParameters: "select=id,name,size,file,folder,parentReference"
+      },
+      success: function(files) {
+        console.log(files);
+      },
+      cancel: function() {
+        console.log("User cancelled the picker.");
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    };
+    OneDrive.open(odOptions);
+  </script>
+</body>
+</html>

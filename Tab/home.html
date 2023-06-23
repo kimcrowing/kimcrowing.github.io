@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OneDrive Explorer</title>
+    <style>
+      /* 隐藏复选框 */
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      /* 隐藏未选中的子节点 */
+      input[type="checkbox"] ~ ul {
+        display: none;
+      }
+
+      /* 显示选中的子节点 */
+      input[type="checkbox"]:checked ~ ul {
+        display: block;
+      }
+
+      /* 设置文件夹图标 */
+      label:before {
+        content: "📁";
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>OneDrive Explorer</h2>
+    <div id="tree"></div>
+    <script>
+      // 替换为您的客户端 ID
+      const CLIENT_ID = '0a2991a3-1674-4334-8561-671cc7349960';
+      // 替换为您的客户端密钥
+      const CLIENT_SECRET = 'uw67Q~TCMqdJyH35hlcHHclv~mhNOGx.jfPFm';
+      // 替换为您的刷新令牌
+      const REFRESH_TOKEN = '0.AXEA2vnFdXOjf0ixjUt0Bezcg6ORKQp0FjRDhWFnHMc0mWBxABY.AgABAAEAAAD--DLA3VO7QrddgJg7WevrAgDs_wUA9P97RLfwX_Q4iwef60czGVYtBngib4rQ52GLlT9gffHzVNEy2FOfQAtfNla9C9pmBAv57EGBywSohh8_1aBUFoft-lKdIpZDZqioryMQKKqrhck9UIf0pRkkkt7e7aWH8PaWXtWS-eghiqEMRxz36hO0C7ZMpX28feZ6ZBzUnvQuBctAe3rfODf2nnMtUTYHADLsJ9LT7kjVcbZsm8JdRetF3h2_MmkIw4ya00Qyd6WKLfqBDOBNawUZ22YWLv6iKr0HX8qb6YhLUrxsOq0rkliVM26bNGxQKN6Can1IpWjzQAtx3Hs-IEPUbYliOJf2AjBJb5jw3uMT0yA1PTcppWIMblgO4mnVnuISrzpVvmINPZr5D8bkA0kkiunEI9khOdCKg-n8BRPHtto1W_phzMtGYdwf9HZVO7I3HWlfzhYf58WCjEl8m2oMbsLsNs7eCnS48rQgKw1hisgWg25lF6WUGg07raF0w2KIIvoW-zz1n3vm8q94YvEe5xAc-XmOrwRgoFkvplJxsVkjRhpmvcGwKQHDh2L_DZyasUM3-ug1W-HLClOl0vNmESc8EpIKz9je9ACm85MK1UU8rv1Nr5OfTq286PxjfqRTwAzXTWNV5jGRqWsQLVxjkxTojAJYFksuF2s-0tNzJ9jt8cymHHy_pVCZykKWNYhacqZODaILm3rIJEZJfHONG642xb5KNyIwjAGKSH4blL71K3MHvqXXCl7Hr21ZOOvzz0Q3QMuHClv8t1ENLEZ2vNW-ZPX8BPVAF0Q';
+
+      // 获取访问令牌
+      async function getAccessToken() {
+        const url = 'https://login.microsoftonline.com/common/oauth2/v2.0/token';
+        const data = {
+          client_id: CLIENT_ID,
+          client_secret: CLIENT_SECRET,
+          grant_type: 'refresh_token',
+          refresh_token: REFRESH_TOKEN,
+          scope: 'https://graph.microsoft.com/.default',
+        };
+        const response = await fetch(url, {
+          method: 'POST',
+          body: new URLSearchParams(data),
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          }
+        });
+        const responseJson = await response.json();
+        const accessToken = responseJson.access_token;
+        return accessToken;
+      }
+
+      // 获取文件夹内容
+      async function getFolderContent(accessToken, folderId) {
+        let url;
+        if (folderId) {
+          url = `https://graph.microsoft.com/v1.0/me/drive/items/${folderId}/children`;
+        } else {
+          url = 'https://graph.microsoft.com/v1.0/me/drive/root/children';
+        }
+        const response = await fetch(url, {
+          headers: {Authorization: 'Bearer ' + accessToken}
+        });
+        const responseJson = await response.json();
+        const items = responseJson.value;
+        return items;
+      }
+
+      // 创建目录树节点
+      async function createTreeNode(accessToken, folderId) {
+        // 获取文件夹内容
+        const items = await getFolderContent(accessToken, folderId);
+        // 创建无序列表元素
+        const ulElement = document.createElement('ul');
+        for (const item of items) {
+          // 创建列表项元素
+          const liElement = document.createElement('li');
+          if (item.folder) {
+            // 如果是文件夹，则创建复选框和标签元素
+            const checkboxElement = document.createElement('input');
+            checkboxElement.type = 'checkbox';
+            liElement.appendChild(checkboxElement);
+            const labelElement = document.createElement('label');
+            labelElement.textContent = item.name;
+            liElement.appendChild(labelElement);
+            // 递归创建子节点
+            const childUlElement = await createTreeNode(accessToken, item.id);
+            liElement.appendChild(childUlElement);
+          } else {
+            // 如果是文件，则只显示名称
+            liElement.textContent = item.name;
+          }
+          ulElement.appendChild(liElement);
+        }
+        return ulElement;
+      }
+
+      async function main() {
+        // 获取访问令牌
+        const accessToken = await getAccessToken();
+        // 创建目录树节点
+        const treeElement = await createTreeNode(accessToken);
+        // 将目录树节点添加到页面中
+        document.getElementById('tree').appendChild(treeElement);
+      }
+
+      main();
+    </script>
+  </body>
+</html>

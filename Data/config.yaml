@@ -168,6 +168,12 @@ rule-providers:
     url: "https://ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
+  advertising:
+    type: http
+    behavior: classical
+    url: "https://kimcrowing.github.io/Data/Advertising.yaml"
+    path: ./ruleset/Advertising.yaml
+    interval: 86400
 
   direct-classical:
     type: http
@@ -200,6 +206,7 @@ script:
         "proxy":"PROXY",
         "telegramcidr":"PROXY",
         "applications":"DIRECT",
+        "advertising":"REJECT",
         "private":"DIRECT",
         "icloud":"DIRECT",
         "apple":"DIRECT",

@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as r,V as t}from"./chunks/framework.8fe7dc8a.js";const f=JSON.parse('{"title":"What is Clash?","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),o={name:"index.md"},i=t("",13),l=[i];function s(n,h,c,d,p,u){return a(),r("div",null,l)}const b=e(o,[["render",s]]);export{f as __pageData,b as default};

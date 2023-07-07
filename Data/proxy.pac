@@ -1,17 +1,14 @@
 function FindProxyForURL(url, host) {
-  var proxy = "PROXY 113.206.13.167:7890"; //您的代理服务器
-  var direct = "DIRECT"; //直接连接
-
-  //本地地址直接连接
-  if (isPlainHostName(host)) {
-    return direct;
+  // 定义代理服务器的地址和端口，可以同时支持http和socks
+  var proxy = "PROXY 113.206.13.167:7890; SOCKS 113.206.13.167:7891";
+  // 定义需要代理的域名列表，这里只有google和youtube
+  var domains = [".google.com", ".youtube.com", ".pipe.aria.microsoft.com", ".bing.com"];
+  // 检查当前域名是否在列表中，如果是则返回代理服务器
+  for (var i = 0; i < domains.length; i++) {
+    if (dnsDomainIs(host, domains[i])) {
+      return proxy;
+    }
   }
-
-  //google域名和youtube域名通过代理访问
-  if (shExpMatch(host, "*.google.*") || shExpMatch(host, "*.youtube.*")) || shExpMatch(host, "*.pipe.aria.microsoft.*")) || shExpMatch(host, "*.bing.*")) {
-    return proxy;
-  }
-
-  //其余的域名不通过代理直接访问
-  return direct;
+  // 否则直接连接
+  return "DIRECT";
 }

@@ -11149,6 +11149,8 @@ var directDomains = {
 
 var domainsUsingProxy = {
   "000webhost.com": 1,
+  "bing.com": 1,
+  "pipe.aria.microsoft.com": 1,
   "030buy.com": 1,
   "0rz.tw": 1,
   "1-apple.com.tw": 1,
@@ -11715,7 +11717,6 @@ var domainsUsingProxy = {
   "biliworld.com": 1,
   "billypan.com": 1,
   "binance.com": 1,
-  "bing.com": 1,
   "binux.me": 1,
   "bird.so": 1,
   "bit-z.com": 1,

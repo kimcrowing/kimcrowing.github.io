@@ -8,7 +8,7 @@ function FindProxyForURL(url, host) {
   }
 
   //google域名和youtube域名通过代理访问
-  if (shExpMatch(host, "*.google.*") || shExpMatch(host, "*.youtube.*")) {
+  if (shExpMatch(host, "*.google.*") || shExpMatch(host, "*.youtube.*")) || shExpMatch(host, "*.pipe.aria.microsoft.*")) || shExpMatch(host, "*.bing.*")) {
     return proxy;
   }
 

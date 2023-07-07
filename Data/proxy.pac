@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-  var proxy = "PROXY 113.206.1.144:7890"; //您的代理服务器
+  var proxy = "PROXY 113.206.13.167:7890"; //您的代理服务器
   var direct = "DIRECT"; //直接连接
 
   //本地地址直接连接

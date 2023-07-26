@@ -1,95 +1,152 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Movie</title>
-    <link rel="stylesheet" href="/assets/css/movie.css">
-</head>
-<body>
-    <h1>电影季</h1>
-
-    <div id="container">
-        <div id="video-gallery"></div>
-        <iframe id="playerFrame" src="/Tab/player.html"></iframe>
+<!--
+*** Android MiniNAS 
+*** 运行在安卓手机上的轻 NAS 整合方案
+*** 时间：2022-06-17
+*** 感谢：Danny、Yaobus 、Juneix分享的导航页和主题、Juneix提供的整合方案
+-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/font.js"></script>
+    <script src="js/particles.min.js"></script>
+    <!--修改网站标题-->
+    <title>Android MiniNAS</title></head>
+  
+  <body>
+    <div id="container" style="position:absolute; text-align:center; top: 0; z-index: 0; width: 100%; height: 100%;"></div>
+    <script src='js/three.min.js'></script>
+    <script src='js/CopyShader.js'></script>
+    <script src='js/EffectComposer.js'></script>
+    <script src='js/FilmPass.js'></script>
+    <script src='js/FilmShader.js'></script>
+    <script src='js/ShaderPass.js'></script>
+    <script src='js/RenderPass.js'></script>
+    <script src="js/index.js"></script>
+	
+    <div id="wrap" style="position:relative; text-align:center; z-index:1;">
+        
+      <div id="top">
+        <div id="logo">
+          <img class="logo" src="/img/logo.png">
+          <p></p>
+          <div class="type-js headline">
+            <!--修改网站欢迎语-->
+          	<h1 class="text-js">Hi, Welcome to Android MiniNAS</h1>
+          </div>
+          <div id="kg-btn" class="">
+			<input class='tgl tgl-flip' id='qieh' type='checkbox' />
+			<label class='tgl-btn' data-tg-off='远程访问' data-tg-on='局域网' for='qieh'></label>
+          </div>
+		</div>
+      </div>
+      
+      <div id="main">
+        <!-- 外网网访问地址 -->
+        <div id="app" class="app animated fadeInLeft">
+          <ul>
+			 <li>
+			  <a href="https://zhiyou.smzdm.com/member/6090146490/" target="_blank">
+				<img class="shake" src="img/png/routeros.png" />
+				<strong>什么值得买</strong></a>
+			</li>
+            <li>
+              <a href="https://xxx.xxx.xxx/kodcloud" target="_blank">
+                <img class="shake" src="img/png/kodcloud.png" />
+                <strong>可道云</strong></a>
+            </li>
+            <li>
+              <a href="https://xxx.xxx.xxx/aria2" target="_blank">
+                <img class="shake" src="img/png/aria2dl.png" />
+                <strong>Aria2下载</strong></a>
+            </li>
+            <li>
+              <a href="https://xxx.xxx.xxx/typecho/" target="_blank">
+                <img class="shake" src="img/png/typecho.png" />
+                <strong>个人博客</strong></a>
+            </li>
+            <li>
+              <a href="https://xxx.xxx.xxx/lychee/" target="_blank">
+                <img class="shake" src="img/png/lychee.png" />
+                <strong>荔枝相册</strong></a>
+            </li>
+            <li>
+              <a href="https://support.qq.com/products/XXXXX" target="_blank">
+                <img class="shake" src="img/png/tucao.png" />
+                <strong>留言板</strong></a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- 内网网访问地址 -->
+        <div id="app1" class="app animated fadeInRight">
+          <ul>
+			<li>
+			 <a href="http://192.168.31.1" target="_blank">
+				<img class="shake" src="img/png/routeros.png" />
+				<strong>路由器</strong></a>
+			</li>
+            <li>
+              <a href="http://192.168.31.16:8080/kodcloud" target="_blank">
+                <img class="shake" src="img/png/kodcloud.png" />
+                <strong>可道云</strong></a>
+            </li>
+            <li>
+              <a href="http://192.168.31.16:8886" target="_blank">
+                <img class="shake" src="img/png/verysync.png" />
+                <strong>微力同步</strong></a>
+            </li>
+            <li>
+              <a href="http://192.168.31.16:8080/aria2" target="_blank">
+                <img class="shake" src="img/png/aria2dl.png" />
+                <strong>Aria2下载</strong></a>
+            </li>
+            <li>
+              <a href="http://192.168.31.16:8080/typecho/" target="_blank">
+                <img class="shake" src="img/png/typecho.png" />
+                <strong>个人博客</strong></a>
+            </li>
+            <li>
+              <a href="http://192.168.31.16:8080/lychee/" target="_blank">
+                <img class="shake" src="img/png/lychee.png" />
+                <strong>荔枝相册</strong></a>
+            </li>
+            <li>
+              <a href="http://192.168.31.16:8080/speedtest/" target="_blank">
+                <img class="shake" src="img/png/speedtest.png" />
+                <strong>网速测试</strong></a>
+            </li>
+            <li>
+              <a href="http://192.168.31.16:8002" target="_blank">
+                <img class="shake" src="img/png/ksweb.png" />
+                <strong>控制台</strong></a>
+            </li>
+            <li>
+              <a href="http://192.168.31.16:8001" target="_blank">
+                <img class="shake" src="img/png/mysql.png" />
+                <strong>数据库</strong></a>
+            </li>
+          </ul>
+		</div>
+        <div style="clear: both;"></div>
+      </div>
     </div>
 
-    <script>
-        // 定义一个函数，用于检查密码
-        function checkPassword() {
-            // 设置密码
-            let password = 'www';
+    <div id="footer">
+      <div class="footer-contents">
+        <div class="links">
+          <div class="line">
+            <p><span class="copyright">Copyright © 2022 <a href=" " target="_blank"> </a>.</span></p>
+            <span class="copyright">Theme by Danny & Yaobus.Project by Juneix.</span></div>
+        </div>
+      </div>
+    </div>
+  </body>
 
-            // 提示用户输入密码
-            let input = prompt('请输入密码：');
-
-            // 检查密码是否正确
-            if (input !== password) {
-                // 如果密码不正确，则显示错误消息并退出
-                alert('密码错误！');
-                window.location.href = 'about:blank';
-                return;
-            }
-        }
-
-        // 调用 checkPassword 函数检查密码
-        checkPassword();
-
-        // 创建一个新的XMLHttpRequest对象
-        let xhr = new XMLHttpRequest();
-
-        // 设置请求方法和URL
-        xhr.open('GET', '/Data/data.json');
-
-        // 设置响应类型为JSON
-        xhr.responseType = 'json';
-
-        // 添加事件监听器，当请求完成时执行
-        xhr.addEventListener('load', () => {
-            // 获取响应数据
-            let data = xhr.response;
-
-            // 获取视频库元素
-            let videoGallery = document.getElementById('video-gallery');
-
-            // 遍历数据并创建视频元素
-            data.forEach(video => {
-                // 创建一个新的div元素，用于包含缩略图和视频元素
-                let videoContainer = document.createElement('div');
-
-                // 为缩略图创建一个新的图像元素
-                let thumbElement = document.createElement('img');
-                thumbElement.src = video.thumb;
-
-                // 创建一个新的p元素，用于显示视频名称
-                let nameElement = document.createElement('p');
-                nameElement.textContent = video.name;
-
-                // 为缩略图添加事件监听器，当单击时更新 iframe 元素的 src 属性并显示它
-                thumbElement.addEventListener('click', () => {
-                    // 获取 iframe 元素
-                    let playerFrame = document.getElementById('playerFrame');
-
-                    // 更新 iframe 元素的 src 属性
-                    playerFrame.src = 'player.html?video=' + encodeURIComponent(video.raw_url);
-
-                    // 显示 iframe 元素
-                    playerFrame.style.display = 'block';
-
-                    // 修改容器的布局
-                    let container = document.getElementById('container');
-                    container.classList.add('playing');
-                });
-
-                // 将缩略图和名称附加到容器中
-                videoContainer.appendChild(thumbElement);
-                videoContainer.appendChild(nameElement);
-
-                // 将容器附加到库中
-                videoGallery.appendChild(videoContainer);
-            });
-        });
-
-        // 发送请求
-        xhr.send();
-    </script>
-</body>
 </html>

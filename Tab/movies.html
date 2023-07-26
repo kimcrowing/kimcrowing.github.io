@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie</title>
+    <link rel="stylesheet" href="/assets/css/movie.css">
+</head>
+<body>
+    <h1>电影季</h1>
+
+    <div id="container">
+        <div id="video-gallery"></div>
+        <iframe id="playerFrame" src="/Tab/player.html"></iframe>
+    </div>
+
+    <script>
+        // 定义一个函数，用于检查密码
+        function checkPassword() {
+            // 设置密码
+            let password = 'www';
+
+            // 提示用户输入密码
+            let input = prompt('请输入密码：');
+
+            // 检查密码是否正确
+            if (input !== password) {
+                // 如果密码不正确，则显示错误消息并退出
+                alert('密码错误！');
+                window.location.href = 'about:blank';
+                return;
+            }
+        }
+
+        // 调用 checkPassword 函数检查密码
+        checkPassword();
+
+        // 创建一个新的XMLHttpRequest对象
+        let xhr = new XMLHttpRequest();
+
+        // 设置请求方法和URL
+        xhr.open('GET', '/Data/data.json');
+
+        // 设置响应类型为JSON
+        xhr.responseType = 'json';
+
+        // 添加事件监听器，当请求完成时执行
+        xhr.addEventListener('load', () => {
+            // 获取响应数据
+            let data = xhr.response;
+
+            // 获取视频库元素
+            let videoGallery = document.getElementById('video-gallery');
+
+            // 遍历数据并创建视频元素
+            data.forEach(video => {
+                // 创建一个新的div元素，用于包含缩略图和视频元素
+                let videoContainer = document.createElement('div');
+
+                // 为缩略图创建一个新的图像元素
+                let thumbElement = document.createElement('img');
+                thumbElement.src = video.thumb;
+
+                // 创建一个新的p元素，用于显示视频名称
+                let nameElement = document.createElement('p');
+                nameElement.textContent = video.name;
+
+                // 为缩略图添加事件监听器，当单击时更新 iframe 元素的 src 属性并显示它
+                thumbElement.addEventListener('click', () => {
+                    // 获取 iframe 元素
+                    let playerFrame = document.getElementById('playerFrame');
+
+                    // 更新 iframe 元素的 src 属性
+                    playerFrame.src = 'player.html?video=' + encodeURIComponent(video.raw_url);
+
+                    // 显示 iframe 元素
+                    playerFrame.style.display = 'block';
+
+                    // 修改容器的布局
+                    let container = document.getElementById('container');
+                    container.classList.add('playing');
+                });
+
+                // 将缩略图和名称附加到容器中
+                videoContainer.appendChild(thumbElement);
+                videoContainer.appendChild(nameElement);
+
+                // 将容器附加到库中
+                videoGallery.appendChild(videoContainer);
+            });
+        });
+
+        // 发送请求
+        xhr.send();
+    </script>
+</body>
+</html>

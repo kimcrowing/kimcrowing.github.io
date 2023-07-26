@@ -1,118 +1,144 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OneDrive Explorer</title>
-    <style>
-      /* 隐藏复选框 */
-      input[type="checkbox"] {
-        display: none;
-      }
-
-      /* 隐藏未选中的子节点 */
-      input[type="checkbox"] ~ ul {
-        display: none;
-      }
-
-      /* 显示选中的子节点 */
-      input[type="checkbox"]:checked ~ ul {
-        display: block;
-      }
-
-      /* 设置文件夹图标 */
-      label:before {
-        content: "📁";
-        margin-right: 5px;
-      }
-    </style>
-  </head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/font.js"></script>
+    <script src="js/particles.min.js"></script>
+    <!--修改网站标题-->
+    <title>HomeWeb</title></head>
+  
   <body>
-    <h2>OneDrive Explorer</h2>
-    <div id="tree"></div>
-    <script>
-      // 替换为您的客户端 ID
-      const CLIENT_ID = '0a2991a3-1674-4334-8561-671cc7349960';
-      // 替换为您的客户端密钥
-      const CLIENT_SECRET = 'uw67Q~TCMqdJyH35hlcHHclv~mhNOGx.jfPFm';
-      // 替换为您的刷新令牌
-      const REFRESH_TOKEN = '0.AXEA2vnFdXOjf0ixjUt0Bezcg6ORKQp0FjRDhWFnHMc0mWBxABY.AgABAAEAAAD--DLA3VO7QrddgJg7WevrAgDs_wUA9P97RLfwX_Q4iwef60czGVYtBngib4rQ52GLlT9gffHzVNEy2FOfQAtfNla9C9pmBAv57EGBywSohh8_1aBUFoft-lKdIpZDZqioryMQKKqrhck9UIf0pRkkkt7e7aWH8PaWXtWS-eghiqEMRxz36hO0C7ZMpX28feZ6ZBzUnvQuBctAe3rfODf2nnMtUTYHADLsJ9LT7kjVcbZsm8JdRetF3h2_MmkIw4ya00Qyd6WKLfqBDOBNawUZ22YWLv6iKr0HX8qb6YhLUrxsOq0rkliVM26bNGxQKN6Can1IpWjzQAtx3Hs-IEPUbYliOJf2AjBJb5jw3uMT0yA1PTcppWIMblgO4mnVnuISrzpVvmINPZr5D8bkA0kkiunEI9khOdCKg-n8BRPHtto1W_phzMtGYdwf9HZVO7I3HWlfzhYf58WCjEl8m2oMbsLsNs7eCnS48rQgKw1hisgWg25lF6WUGg07raF0w2KIIvoW-zz1n3vm8q94YvEe5xAc-XmOrwRgoFkvplJxsVkjRhpmvcGwKQHDh2L_DZyasUM3-ug1W-HLClOl0vNmESc8EpIKz9je9ACm85MK1UU8rv1Nr5OfTq286PxjfqRTwAzXTWNV5jGRqWsQLVxjkxTojAJYFksuF2s-0tNzJ9jt8cymHHy_pVCZykKWNYhacqZODaILm3rIJEZJfHONG642xb5KNyIwjAGKSH4blL71K3MHvqXXCl7Hr21ZOOvzz0Q3QMuHClv8t1ENLEZ2vNW-ZPX8BPVAF0Q';
+    <div id="container" style="position:absolute; text-align:center; top: 0; z-index: 0; width: 100%; height: 100%;"></div>
+    <script src='js/three.min.js'></script>
+    <script src='js/CopyShader.js'></script>
+    <script src='js/EffectComposer.js'></script>
+    <script src='js/FilmPass.js'></script>
+    <script src='js/FilmShader.js'></script>
+    <script src='js/ShaderPass.js'></script>
+    <script src='js/RenderPass.js'></script>
+    <script src="js/index.js"></script>
+	
+    <div id="wrap" style="position:relative; text-align:center; z-index:1;">
+        
+      <div id="top">
+        <div id="logo">
+          <p></p>
+          <div class="type-js headline">
+            <!--修改网站欢迎语-->
+          	<h1 class="text-js">Welcome to Home</h1>
+          </div>
+          <div id="kg-btn" class="">
+			<input class='tgl tgl-flip' id='qieh' type='checkbox' />
+			<label class='tgl-btn' data-tg-off='远程' data-tg-on='局域网' for='qieh'></label>
+          </div>
+		</div>
+      </div>
+      
+      <div id="main">
+        <!-- 外网网访问地址 -->
+        <div id="app" class="app animated fadeInLeft">
+          <ul>
+			 <li>
+			  <a href="http://113.206.23.203:8083" target="_blank">
+				<img class="shake" src="img/png/routeros.png" />
+				<strong>Kodi</strong></a>
+			</li>
+            <li>
+              <a href="http://113.206.23.203:5244" target="_blank">
+                <img class="shake" src="img/png/kodcloud.png" />
+                <strong>Cloud</strong></a>
+            </li>
+            <li>
+              <a href="https://xxx.xxx.xxx/aria2" target="_blank">
+                <img class="shake" src="img/png/aria2dl.png" />
+                <strong>Aria2下载</strong></a>
+            </li>
+            <li>
+              <a href="http://113.206.23.203:5700" target="_blank">
+                <img class="shake" src="img/png/typecho.png" />
+                <strong>青龙面板</strong></a>
+            </li>
+            <li>
+              <a href="http://113.206.23.203:5032" target="_blank">
+                <img class="shake" src="img/png/lychee.png" />
+                <strong>WebSHH</strong></a>
+            </li>
+            <li>
+              <a href="https://113.206.23.203:9443" target="_blank">
+                <img class="shake" src="img/png/tucao.png" />
+                <strong>Portainer</strong></a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- 内网网访问地址 -->
+        <div id="app1" class="app animated fadeInRight">
+          <ul>
+			<li>
+			 <a href="http://113.206.23.203" target="_blank">
+				<img class="shake" src="img/png/routeros.png" />
+				<strong>路由器</strong></a>
+			</li>
+            <li>
+              <a href="http://113.206.23.203:8080/kodcloud" target="_blank">
+                <img class="shake" src="img/png/kodcloud.png" />
+                <strong>可道云</strong></a>
+            </li>
+            <li>
+              <a href="http://113.206.23.203:8886" target="_blank">
+                <img class="shake" src="img/png/verysync.png" />
+                <strong>微力同步</strong></a>
+            </li>
+            <li>
+              <a href="http://113.206.23.203:8080/aria2" target="_blank">
+                <img class="shake" src="img/png/aria2dl.png" />
+                <strong>Aria2下载</strong></a>
+            </li>
+            <li>
+              <a href="http://113.206.23.203:8080/typecho/" target="_blank">
+                <img class="shake" src="img/png/typecho.png" />
+                <strong>个人博客</strong></a>
+            </li>
+            <li>
+              <a href="http://113.206.23.203:8080/lychee/" target="_blank">
+                <img class="shake" src="img/png/lychee.png" />
+                <strong>荔枝相册</strong></a>
+            </li>
+            <li>
+              <a href="http://113.206.23.203:8080/speedtest/" target="_blank">
+                <img class="shake" src="img/png/speedtest.png" />
+                <strong>网速测试</strong></a>
+            </li>
+            <li>
+              <a href="http://113.206.23.203:8002" target="_blank">
+                <img class="shake" src="img/png/ksweb.png" />
+                <strong>控制台</strong></a>
+            </li>
+            <li>
+              <a href="http://113.206.23.203:8001" target="_blank">
+                <img class="shake" src="img/png/mysql.png" />
+                <strong>数据库</strong></a>
+            </li>
+          </ul>
+		</div>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
 
-      // 获取访问令牌
-      async function getAccessToken() {
-        const url = 'https://login.microsoftonline.com/common/oauth2/v2.0/token';
-        const data = {
-          client_id: CLIENT_ID,
-          client_secret: CLIENT_SECRET,
-          grant_type: 'refresh_token',
-          refresh_token: REFRESH_TOKEN,
-          scope: 'https://graph.microsoft.com/.default',
-        };
-        const response = await fetch(url, {
-          method: 'POST',
-          body: new URLSearchParams(data),
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
-        });
-        const responseJson = await response.json();
-        const accessToken = responseJson.access_token;
-        return accessToken;
-      }
-
-      // 获取文件夹内容
-      async function getFolderContent(accessToken, folderId) {
-        let url;
-        if (folderId) {
-          url = `https://graph.microsoft.com/v1.0/me/drive/items/${folderId}/children`;
-        } else {
-          url = 'https://graph.microsoft.com/v1.0/me/drive/root/children';
-        }
-        const response = await fetch(url, {
-          headers: {Authorization: 'Bearer ' + accessToken}
-        });
-        const responseJson = await response.json();
-        const items = responseJson.value;
-        return items;
-      }
-
-      // 创建目录树节点
-      async function createTreeNode(accessToken, folderId) {
-        // 获取文件夹内容
-        const items = await getFolderContent(accessToken, folderId);
-        // 创建无序列表元素
-        const ulElement = document.createElement('ul');
-        for (const item of items) {
-          // 创建列表项元素
-          const liElement = document.createElement('li');
-          if (item.folder) {
-            // 如果是文件夹，则创建复选框和标签元素
-            const checkboxElement = document.createElement('input');
-            checkboxElement.type = 'checkbox';
-            liElement.appendChild(checkboxElement);
-            const labelElement = document.createElement('label');
-            labelElement.textContent = item.name;
-            liElement.appendChild(labelElement);
-            // 递归创建子节点
-            const childUlElement = await createTreeNode(accessToken, item.id);
-            liElement.appendChild(childUlElement);
-          } else {
-            // 如果是文件，则只显示名称
-            liElement.textContent = item.name;
-          }
-          ulElement.appendChild(liElement);
-        }
-        return ulElement;
-      }
-
-      async function main() {
-        // 获取访问令牌
-        const accessToken = await getAccessToken();
-        // 创建目录树节点
-        const treeElement = await createTreeNode(accessToken);
-        // 将目录树节点添加到页面中
-        document.getElementById('tree').appendChild(treeElement);
-      }
-
-      main();
-    </script>
+    <div id="footer">
+      <div class="footer-contents">
+        <div class="links">
+          <div class="line">
+            <p><span class="copyright">Copyright © 2022 <a href=" " target="_blank"> </a>.</span></p></div>
+        </div>
+      </div>
+    </div>
   </body>
+
 </html>

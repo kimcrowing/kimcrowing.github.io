@@ -12,7 +12,21 @@
     <script src="js/particles.min.js"></script>
     <!--修改网站标题-->
     <title>HomeWeb</title></head>
-  
+  <script>
+    //设置密码
+    var password = "www";
+    //弹出输入框
+    var input = prompt("请输入访问密码：");
+    //判断密码是否正确
+    if (input == password) {
+      //密码正确，继续访问页面
+      alert("欢迎访问本网页！");
+    } else {
+      //密码错误，返回上一页或者退出浏览器
+      alert("密码错误，请重新输入或者退出浏览器！");
+      history.back();
+    }
+  </script> 
   <body>
     <div id="container" style="position:absolute; text-align:center; top: 0; z-index: 0; width: 100%; height: 100%;"></div>
     <script src='js/three.min.js'></script>
@@ -51,7 +65,7 @@
 			</li>
             <li>
               <a href="http://113.206.29.5:5244" target="_blank">
-                <img class="shake" src="img/png/alist.png" />
+                <img class="shake" src="img/png/alist.svg" />
                 <strong>Cloud</strong></a>
             </li>
             <li>
@@ -61,7 +75,7 @@
             </li>
             <li>
               <a href="http://113.206.29.5:5700" target="_blank">
-                <img class="shake" src="img/png/qinglong.png" />
+                <img class="shake" src="img/png/qinglong.svg" />
                 <strong>青龙面板</strong></a>
             </li>
             <li>

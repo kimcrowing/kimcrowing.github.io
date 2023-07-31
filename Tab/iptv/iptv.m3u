@@ -1,0 +1,197 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="1" tvg-name="CCTV1" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV1HD.png" group-title="央视频道",CCTV1HD
+http://tv.ncist.edu.cn:281/live/cctv1hd.flv
+#EXTINF:-1 tvg-id="2" tvg-name="CCTV2" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV2HD.png" group-title="央视频道",CCTV2HD
+http://tv.ncist.edu.cn:281/live/cctv2hd.flv
+#EXTINF:-1 tvg-id="3" tvg-name="CCTV3" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV3HD.png" group-title="央视频道",CCTV3HD
+http://tv.ncist.edu.cn:281/live/cctv3hd.flv
+#EXTINF:-1 tvg-id="4" tvg-name="CCTV4" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV4HD.png" group-title="央视频道",CCTV4HD
+http://tv.ncist.edu.cn:281/live/cctv4hd.flv
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV5HD.png" group-title="央视频道",CCTV5HD
+http://tv.ncist.edu.cn:281/live/cctv5hd.flv
+#EXTINF:-1 tvg-id="6" tvg-name="CCTV5+" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV5+HD.png" group-title="央视频道",CCTV5+HD
+http://tv.ncist.edu.cn:281/live/cctv5HD.flv
+#EXTINF:-1 tvg-id="7" tvg-name="CCTV6" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV6HD.png" group-title="央视频道",CCTV6HD
+http://tv.ncist.edu.cn:281/live/cctv6hd.flv
+#EXTINF:-1 tvg-id="8" tvg-name="CCTV7" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV7HD.png" group-title="央视频道",CCTV7HD
+http://tv.ncist.edu.cn:281/live/cctv7hd.flv
+#EXTINF:-1 tvg-id="9" tvg-name="CCTV8" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV8HD.png" group-title="央视频道",CCTV8HD
+http://tv.ncist.edu.cn:281/live/cctv8hdd.flv
+#EXTINF:-1 tvg-id="10" tvg-name="CCTV9" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV9HD.png" group-title="央视频道",CCTV9HD
+http://tv.ncist.edu.cn:281/live/cctv9hd.flv
+#EXTINF:-1 tvg-id="11" tvg-name="CCTV10" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV10HD.png" group-title="央视频道",CCTV10HD
+http://tv.ncist.edu.cn:281/live/cctv10hd.flv
+#EXTINF:-1 tvg-id="12" tvg-name="CCTV11" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV11HD.png" group-title="央视频道",CCTV11HD
+http://itv.ahau.edu.cn/hls/cctv11hd.m3u8
+#EXTINF:-1 tvg-id="13" tvg-name="CCTV12" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV12HD.png" group-title="央视频道",CCTV12HD
+http://tv.ncist.edu.cn:281/live/cctv12hd.flv
+#EXTINF:-1 tvg-id="14" tvg-name="CCTV13" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV13HD.png" group-title="央视频道",CCTV13HD
+http://112.50.243.8/PLTV/88888888/224/3221225817/1.m3u8
+#EXTINF:-1 tvg-id="15" tvg-name="CCTV14" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV14HD.png" group-title="央视频道",CCTV14HD
+http://itv.ahau.edu.cn/hls/cctv14hd.m3u8
+#EXTINF:-1 tvg-id="16" tvg-name="CCTV15" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV15HD.png" group-title="央视频道",CCTV15HD
+http://112.50.243.8/PLTV/88888888/224/3221225818/1.m3u8
+#EXTINF:-1 tvg-id="17" tvg-name="CCTV17" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTV17HD.png" group-title="央视频道",CCTV17HD
+http://ivi.bupt.edu.cn/hls/cctv17hd.m3u8
+#EXTINF:-1 tvg-id="18" tvg-name="CETV1" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CETV1HD.png" group-title="央视频道",CETV1HD
+http://itv.ahau.edu.cn/hls/cetv1hd.m3u8
+#EXTINF:-1 tvg-id="19" tvg-name="CETV2" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CETV2HD.png" group-title="央视频道",CETV2HD
+http://cctvalih5ca.v.myalicdn.com/cstv/cetv2_2/index.m3u8
+#EXTINF:-1 tvg-id="20" tvg-name="CETV3" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CETV3HD.png" group-title="央视频道",CETV3HD
+http://cctvalih5ca.v.myalicdn.com/cstv/cetv3_2/index.m3u8
+#EXTINF:-1 tvg-id="6560" tvg-name="世界地理" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTVshijiedili.png" group-title="央视频道",CCTV世界地理
+http://itv.ahau.edu.cn/hls/sjdltv.m3u8
+#EXTINF:-1 tvg-id="6563" tvg-name="兵器科技" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTVbingqikeji.png" group-title="央视频道",CCTV兵器科技
+http://itv.ahau.edu.cn/hls/gfjstv.m3u8
+#EXTINF:-1 tvg-id="6562" tvg-name="怀旧剧场" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTVhuaijiujuchang.png" group-title="央视频道",CCTV怀旧剧场
+http://itv.ahau.edu.cn/hls/hjjctv.m3u8
+#EXTINF:-1 tvg-id="6558" tvg-name="第一剧场" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTVdiyijuchang.png" group-title="央视频道",CCTV第一剧场
+http://itv.ahau.edu.cn/hls/dyjctv.m3u8
+#EXTINF:-1 tvg-id="6559" tvg-name="风云剧场" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTVfengyunjuchang.png" group-title="央视频道",CCTV风云剧场
+http://itv.ahau.edu.cn/hls/fyjctv.m3u8
+#EXTINF:-1 tvg-id="6000" tvg-name="风云足球" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTVfengyunzuqiu.png" group-title="央视频道",CCTV风云足球
+http://itv.ahau.edu.cn/hls/fyzqtv.m3u8
+#EXTINF:-1 tvg-id="6557" tvg-name="风云音乐" tvg-logo="https://kimcrowing.github.io/iptv/cctv/CCTVfengyunyinyue.png" group-title="央视频道",CCTV风云音乐
+http://itv.ahau.edu.cn/hls/fyyytv.m3u8
+#EXTINF:-1 tvg-id="20" tvg-name="CGTN" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/cgtn.png" group-title="央视频道",环球电视网CGTNHD
+http://121.31.30.90:8085/ysten-business/live/cctv-9/1.m3u8
+#EXTINF:-1 tvg-id="691" tvg-name="国家地理频道" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/natgeo.png" group-title="央视频道",国家地理
+http://iptv.pdsu.edu.cn/hls/natlgeo.m3u8
+#EXTINF:-1 tvg-id="30" tvg-name="北京卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/beijingHD.png" group-title="卫视频道",北京卫视HD
+http://112.50.243.8/PLTV/88888888/224/3221225826/1.m3u8
+#EXTINF:-1 tvg-id="31" tvg-name="东方卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/dongfangHD.png" group-title="卫视频道",东方卫视HD
+http://223.82.250.72/live/hddongfangstv/1.m3u8
+#EXTINF:-1 tvg-id="39" tvg-name="天津卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/tianjinHD.png" group-title="卫视频道",天津卫视HD
+http://112.50.243.8/PLTV/88888888/224/3221225830/1.m3u8
+#EXTINF:-1 tvg-id="40" tvg-name="重庆卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/chongqingHD.png" group-title="卫视频道",重庆卫视HD
+http://112.50.243.8/PLTV/88888888/224/3221225949/3.m3u8
+#EXTINF:-1 tvg-id="46" tvg-name="黑龙江卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/heilongjiangHD.png" group-title="卫视频道",黑龙江卫视HD
+http://223.82.250.72/live/hdheilongjiangstv/1.m3u8
+#EXTINF:-1 tvg-id="36" tvg-name="辽宁卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/liaoningHD.png" group-title="卫视频道",辽宁卫视HD
+http://hwottcdn.ln.chinamobile.com/PLTV/88888890/224/3221226049/index.m3u8
+#EXTINF:-1 tvg-id="52" tvg-name="内蒙古卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/neimenggu.png" group-title="卫视频道",内蒙古卫视
+http://iptv.pdsu.edu.cn/hls/nmtv.m3u8
+#EXTINF:-1 tvg-id="45" tvg-name="河北卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/hebeiHD.png" group-title="卫视频道",河北卫视HD
+http://iptv.pdsu.edu.cn/hls/hebhd.m3u8
+#EXTINF:-1 tvg-id="38" tvg-name="山东卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/shandongHD.png" group-title="卫视频道",山东卫视HD
+http://112.50.243.8/PLTV/88888888/224/3221225843/1.m3u8
+#EXTINF:-1 tvg-id="32" tvg-name="安徽卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/anhuiHD.png" group-title="卫视频道",安徽卫视HD
+http://hwottcdn.ln.chinamobile.com/PLTV/88888890/224/3221226045/index.m3u8
+#EXTINF:-1 tvg-id="48" tvg-name="湖北卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/hubeiHD.png" group-title="卫视频道",湖北卫视HD
+http://39.134.52.153/huaweicdn.hb.chinamobile.com/PLTV/88888888/224/3221225749/1.m3u8
+#EXTINF:-1 tvg-id="27" tvg-name="湖南卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/hunanHD.png" group-title="卫视频道",湖南卫视HD
+http://112.50.243.8/PLTV/88888888/224/3221225827/1.m3u8
+#EXTINF:-1 tvg-id="50" tvg-name="江西卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/jiangxiHD.png" group-title="卫视频道",江西卫视HD
+http://112.50.243.8/PLTV/88888888/224/3221225868/1.m3u8
+#EXTINF:-1 tvg-id="29" tvg-name="江苏卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/jiangsuHD.png" group-title="卫视频道",江苏卫视HD
+http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221225663/index.m3u8
+#EXTINF:-1 tvg-id="28" tvg-name="浙江卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/zhejiangHD.png" group-title="卫视频道",浙江卫视HD
+http://121.31.30.90:8085/ysten-business/live/hdzhejiangstv/1.m3u8
+#EXTINF:-1 tvg-id="41" tvg-name="东南卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/dongnanHD.png" group-title="卫视频道",东南卫视HD
+http://hwottcdn.ln.chinamobile.com/PLTV/88888890/224/3221226046/index.m3u8
+#EXTINF:-1 tvg-id="33" tvg-name="广东卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/guangdongHD.png" group-title="卫视频道",广东卫视HD
+http://iptv.pdsu.edu.cn/hls/gdhd.m3u8
+#EXTINF:-1 tvg-id="34" tvg-name="深圳卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/shenzhengHD.png" group-title="卫视频道",深圳卫视HD
+http://iptv.pdsu.edu.cn/hls/szhd.m3u8
+#EXTINF:-1 tvg-id="56" tvg-name="四川卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/sichuanHD.png" group-title="卫视频道",四川卫视HD
+http://iptv.pdsu.edu.cn/hls/schd.m3u8
+#EXTINF:-1 tvg-id="56" tvg-name="陕西卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/shanxiHD.png" group-title="卫视频道",陕西卫视HD
+http://ivi.bupt.edu.cn/hls/sxtv.m3u8
+#EXTINF:-1 tvg-id="56" tvg-name="贵州卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/guizhouHD.png" group-title="卫视频道",贵州卫视
+http://iptv.pdsu.edu.cn/hls/gztv.m3u8
+#EXTINF:-1 tvg-id="56" tvg-name="云南卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/yunnanHD.png" group-title="卫视频道",云南卫视HD
+http://ivi.bupt.edu.cn/hls/yntv.m3u8
+#EXTINF:-1 tvg-id="1873" tvg-name="BTV文艺" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/BTV文艺.png" group-title="卫视频道",北京文艺HD
+http://iptv.pdsu.edu.cn/hls/btv2hd.m3u8
+#EXTINF:-1 tvg-id="1875" tvg-name="BTV影视" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/BTV影视.png" group-title="卫视频道",北京影视HD
+http://iptv.pdsu.edu.cn/hls/btv4hd.m3u8
+#EXTINF:-1 tvg-id="1872" tvg-name="北京纪实" tvg-logo="https://kimcrowing.github.io/iptv/statetv/beijingjishiHD.png" group-title="卫视频道",北京纪实HD
+http://iptv.pdsu.edu.cn/hls/btv11hd.m3u8
+#EXTINF:-1 tvg-id="141" tvg-name="凤凰中文" tvg-logo="https://kimcrowing.github.io/iptv/statetv/fenghuangch.png" group-title="卫视频道",凤凰中文
+http://iptv.pdsu.edu.cn/hls/fhzw.m3u8
+#EXTINF:-1 tvg-id="142" tvg-name="凤凰资讯" tvg-logo="https://kimcrowing.github.io/iptv/statetv/fenghuangzixun.png" group-title="卫视频道",凤凰资讯
+http://iptv.pdsu.edu.cn/hls/fhzx.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="凤凰电影" tvg-logo="https://kimcrowing.github.io/iptv/statetv/fenghuangch.png" group-title="卫视频道",凤凰电影
+http://iptv.pdsu.edu.cn/hls/fhdy.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="星空卫视" tvg-logo="https://kimcrowing.github.io/iptv/statetv/xingkong.png" group-title="卫视频道",星空卫视
+http://iptv.pdsu.edu.cn/hls/startv.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="星空体育" tvg-logo="https://kimcrowing.github.io/iptv/statetv/xingkong.png" group-title="卫视频道",星空体育
+http://iptv.pdsu.edu.cn/hls/starsports.m3u8
+#EXTINF:-1 tvg-id="6241" tvg-name="CHC高清电影" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/CHC3.jpg" group-title="家庭影院频道",CHC高清电影
+http://ivi.bupt.edu.cn/hls/chchd.m3u8
+#EXTINF:-1 tvg-id="6245" tvg-name="CHC动作电影" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/CHC1.jpg" group-title="家庭影院频道",CHC动作电影
+http://iptv.pdsu.edu.cn/hls/chcatv.m3u8
+#EXTINF:-1 tvg-id="6246" tvg-name="CHC家庭电影" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/CHC2.jpg" group-title="家庭影院频道",CHC家庭影院
+http://iptv.pdsu.edu.cn/hls/chctv.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/iqiyi.png" group-title="网络频道",爱奇艺_精选电影
+http://101.72.196.41/r/baiducdnct.inter.iqiyi.com/tslive/c15_lb_dianyingjingxuan_1080p_t10/c15_lb_dianyingjingxuan_1080p_t10.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/iqiyi.png" group-title="网络频道",爱奇艺_好莱坞
+http://101.72.196.41/r/baiducdnct.inter.iqiyi.com/tslive/c16_lb_haolaiwudapian_1080p_t10/c16_lb_haolaiwudapian_1080p_t10.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/iqiyi.png" group-title="网络频道",爱奇艺_五星影院
+http://101.72.196.41/r/baiducdnct.inter.iqiyi.com/tslive/c15_lb_wuxingyingyuan_1080p_t10/c15_lb_wuxingyingyuan_1080p_t10.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/iqiyi.png" group-title="网络频道",爱奇艺_动作电影
+http://101.72.196.41/r/baiducdnct.inter.iqiyi.com/tslive/c16_lb_dongzuodianying_1080p_t10/c16_lb_dongzuodianying_1080p_t10.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/iqiyi.png" group-title="网络频道",爱奇艺_黑帮电影
+http://101.72.196.41/r/baiducdnct.inter.iqiyi.com/tslive/c16_lb_heibangdianying_1080p_t10/c16_lb_heibangdianying_1080p_t10.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/iqiyi.png" group-title="网络频道",爱奇艺_喜剧电影
+http://101.72.196.41/r/baiducdnct.inter.iqiyi.com/tslive/c16_lb_xijudianying_1080p_t10/c16_lb_xijudianying_1080p_t10.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/iqiyi.png" group-title="网络频道",爱奇艺_经典港片
+http://101.72.196.41/r/baiducdnct.inter.iqiyi.com/tslive/c15_lb_jingdianguangpian_1080p_t10/c15_lb_jingdianguangpian_1080p_t10.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/huashu.png" group-title="网络频道",华数_院线大片
+http://hls-ott-zhibo.wasu.tv/live/357/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/huashu.png" group-title="网络频道",华数_惊悚悬疑
+http://hls-ott-zhibo.wasu.tv/live/104_55913/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/huashu.png" group-title="网络频道",华数_热门网大
+http://hls-ott-zhibo.wasu.tv/live/107_50459/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/huashu.png" group-title="网络频道",华数_动漫电影
+http://hls-ott-zhibo.wasu.tv/live/356/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/huashu.png" group-title="网络频道",华数爱情电影
+http://hls-ott-zhibo.wasu.tv/live/269/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/huashu.png" group-title="网络频道",华数好莱坞大赏
+http://hls-ott-zhibo.wasu.tv/live/263/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://kimcrowing.github.io/iptv/statetv/huashu.png" group-title="网络频道",华数抗日剧场
+http://hls-ott-zhibo.wasu.tv/live/258/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P423200320U1.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV中国功夫
+http://111.40.205.76/PLTV/88888888/224/3221225681/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426221943132.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV军事评论
+http://111.40.205.76/PLTV/88888888/224/3221225668/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262226352Z.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV军旅剧场
+http://121.31.30.90:8085/ysten-business/live/junlvjc/1.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426222232647.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV农业致富
+http://121.31.30.90:8085/ysten-business/live/nongyezf/1.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="http://www.nettv.live/uploads/19/1-191215202451457.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV动作电影
+http://111.40.205.76/PLTV/88888888/224/3221225661/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262246003C.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV古装剧场
+http://111.40.205.76/PLTV/88888888/224/3221225663/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426224331251.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV家庭剧场
+http://111.40.205.76/PLTV/88888888/224/3221225677/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P42622394O34.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV惊悚悬疑
+http://111.40.205.76/PLTV/88888888/224/3221225665/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P426225Q10-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV搏击
+http://111.40.205.76/PLTV/88888888/224/3221225680/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P42616140Na.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV明星大片
+http://111.40.205.76/PLTV/88888888/224/3221225664/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P4262254200-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV潮妈辣婆
+http://117.148.187.37/PLTV/88888888/224/3221226666/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/19/1-191215192034I5.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV炫舞未来
+http://112.17.40.140/PLTV/88888888/224/3221226817/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P4262300110-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV爱情喜剧
+http://111.40.205.76/PLTV/88888888/224/3221225669/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426222R1296.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品体育
+http://121.31.30.90:8085/ysten-business/live/jtiyu/1.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/allimg/18/1-1P426223G10-L.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品大剧
+http://111.40.205.76/PLTV/88888888/224/3221225670/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品记录
+http://111.40.205.76/PLTV/88888888/224/3221225672/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品记录
+http://111.40.205.87/PLTV/88888888/224/3221225672/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品记录
+http://117.148.187.37/PLTV/88888888/224/3221226763/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P426223225b6.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV精品记录
+http://121.31.30.90:8085/ysten-business/live/jingpinjl/1.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="https://i.imgur.com/2PoLaXw.png" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV超级体育
+http://111.40.205.107/PLTV/88888888/224/3221225715/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese" tvg-logo="https://i.imgur.com/KukcTgh.png" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV超级电影
+http://112.50.243.12/PLTV/88888888/224/3221225804/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Chinese;Mandarin Chinese" tvg-logo="http://www.nettv.live/uploads/18/1-1P4262241042I.jpg" tvg-country="CN" tvg-url="" group-title="NewTV",NewTV金牌综艺
+http://111.40.205.76/PLTV/88888888/224/3221225666/index.m3u8

@@ -87,18 +87,9 @@ proxy-groups:
   type: select
   proxies:
   - LOAD-BALANCE
-  - URL-TEST
   - SELECT
 - name: SELECT
   type: select
-  use:
-   - 万维网
-   - www
-- name: URL-TEST
-  type: url-test
-  url: https://www.bing.com/search?mkt=us&q=Bing+AI&showconv=1
-  interval: 30
-  tolerance: 50
   use:
    - 万维网
    - www

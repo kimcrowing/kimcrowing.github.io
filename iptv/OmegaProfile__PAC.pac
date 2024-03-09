@@ -1,3 +1,16 @@
+var FindProxyForURL = function(init, profiles) {
+    return function(url, host) {
+        "use strict";
+        var result = init, scheme = url.substr(0, url.indexOf(":"));
+        do {
+            result = profiles[result];
+            if (typeof result === "function") result = result(url, host, scheme);
+        } while (typeof result !== "string" || result.charCodeAt(0) === 43);
+        return result;
+    };
+}("+\u672c\u673aPAC", {
+    "+\u672c\u673aPAC": function() {
+        ;
 var proxy = "PROXY 127.0.0.1:7890; SOCKS5 127.0.0.1:7890; DIRECT";
 
 var direct = 'DIRECT;';

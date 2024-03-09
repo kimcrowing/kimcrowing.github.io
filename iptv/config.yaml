@@ -95,8 +95,6 @@ proxy-groups:
    - www
 - name: LOAD-BALANCE
   type: load-balance
-  url: http://www.gstatic.com/generate_204
-  interval: 3600
   strategy: consistent-hashing
   use:
    - 万维网

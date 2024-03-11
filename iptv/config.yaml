@@ -130,7 +130,7 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    url: "https://kimcrowing.github.io/iptv/reject.txt"
     path: ./ruleset/reject.yaml
     interval: 86400
 

@@ -13972,6 +13972,7 @@ var domainsUsingProxy = {
   "juziyue.com": 1,
   "jwmusic.org": 1,
   "jyxf.net": 1,
+  "kimcrowing-my.sharepoint.com": 1,
   "k-doujin.net": 1,
   "ka-wai.com": 1,
   "kadokawa.co.jp": 1,

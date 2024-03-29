@@ -63,7 +63,7 @@ dns:
 proxy-providers:
   www:
     type: http
-    url: https://ghproxy.org/raw.githubusercontent.com/kimcrowing/Proxy/master/dist/clash.config.yaml
+    url: https://mirror.ghproxy.com/raw.githubusercontent.com/kimcrowing/Proxy/master/dist/clash.config.yaml
     path: ./provider1.yaml
     interval: 3600
     filter: '美国|德国|日本'
@@ -83,7 +83,7 @@ proxy-providers:
       interval: 900          
   w:
     type: http
-    url: https://ghproxy.org/github.com/aiboboxx/clashfree/blob/main/clash.yml
+    url: https://mirror.ghproxy.com/github.com/aiboboxx/clashfree/blob/main/clash.yml
     path: ./provider3.yaml
     interval: 3600
     filter: '美国|德国|加拿大|日本|法国'

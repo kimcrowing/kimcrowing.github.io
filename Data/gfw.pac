@@ -1,4 +1,4 @@
-var proxy = "PROXY 113.206.214.39:7890; SOCKS5 113.206.214.39:7891; DIRECT";
+var proxy = "PROXY 113.206.214.39:7890; SOCKS5 113.206.214.39:7890; DIRECT";
 
 var direct = 'DIRECT;';
 
@@ -13959,6 +13959,7 @@ var domainsUsingProxy = {
   "juziyue.com": 1,
   "jwmusic.org": 1,
   "jyxf.net": 1,
+  "sharepoint.com": 1,
   "k-doujin.net": 1,
   "ka-wai.com": 1,
   "kadokawa.co.jp": 1,

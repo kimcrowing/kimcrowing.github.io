@@ -1,16 +1,16 @@
-mixed-port: 7890
 socks-port: 7891
+mixed-port: 7890
 allow-lan: true
 mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
-external-ui: ui
+ipv6: true
 dns:
   enable: false
   listen: 0.0.0.0:53
   ipv6: false
   default-nameserver:
-  - 114.114.114.114
+  - 114.114.114.114  
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -70,17 +70,17 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 900  
+      interval: 300  
   ww:
     type: http
-    url: https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.cn.yaml
+    url: https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
     path: ./provider2.yaml
     interval: 3600
     filter: '美国|德国|加拿大|日本|法国'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 900          
+      interval: 300          
   w:
     type: http
     url: https://mirror.ghproxy.com/github.com/aiboboxx/clashfree/blob/main/clash.yml
@@ -90,12 +90,13 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 900         
+      interval: 300         
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - LOAD-BALANCE
+  - URL-test
   - SELECT
 - name: SELECT
   type: select
@@ -106,6 +107,15 @@ proxy-groups:
 - name: LOAD-BALANCE
   type: load-balance
   strategy: consistent-hashing
+  use:
+   - www
+   - ww
+   - w
+- name: URL-test
+  type: url-test
+  url: https://www.youtube.com/
+  interval: 300
+  timeout: 5
   use:
    - www
    - ww
@@ -130,98 +140,98 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: "https://kimcrowing.github.io/iptv/reject.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
     path: ./ruleset/reject.yaml
     interval: 86400
 
   icloud:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt"
     path: ./ruleset/icloud.yaml
     interval: 86400
 
   apple:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt"
     path: ./ruleset/apple.yaml
     interval: 86400
 
   google:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt"
     path: ./ruleset/google.yaml
     interval: 86400
 
   proxy:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    url: "https://kimcrowing.github.io/iptv/proxy.txt"
     path: ./ruleset/proxy.yaml
     interval: 86400
 
   direct:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    url: "https://kimcrowing.github.io/iptv/direct.txt"
     path: ./ruleset/direct.yaml
     interval: 86400
 
   private:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
     path: ./ruleset/private.yaml
     interval: 86400
 
   gfw:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
     path: ./ruleset/gfw.yaml
     interval: 86400
 
   greatfire:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt"
     path: ./ruleset/greatfire.yaml
     interval: 86400
 
   tld-not-cn:
     type: http
     behavior: domain
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
     path: ./ruleset/tld-not-cn.yaml
     interval: 86400
 
   telegramcidr:
     type: http
     behavior: ipcidr
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
 
   cncidr:
     type: http
     behavior: ipcidr
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
     path: ./ruleset/cncidr.yaml
     interval: 86400
 
   lancidr:
     type: http
     behavior: ipcidr
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
     path: ./ruleset/lancidr.yaml
     interval: 86400
 
   applications:
     type: http
     behavior: classical
-    url: "https://ghproxy.org/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
+    url: "https://mirror.ghproxy.com/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
 

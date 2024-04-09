@@ -1,4 +1,4 @@
-var proxy = "PROXY admin:www@113.206.210.137:7890; SOCKS5 admin:www@113.206.210.137:7890; DIRECT";
+var proxy = "PROXY 113.206.210.137:7890; SOCKS5 113.206.210.137:7890; DIRECT";
 
 var direct = 'DIRECT;';
 
@@ -10957,6 +10957,7 @@ var directDomains = {
   "jstv.com": 1,
   "jumei.com": 1,
   "kaixin001.com": 1,
+  "kimcrowing.github.io": 1,
   "kandian.com": 1,
   "kandian.net": 1,
   "kanimg.com": 1,

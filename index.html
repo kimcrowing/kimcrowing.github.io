@@ -1,160 +1,148 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mysite</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="images/pic00.jpg" type="image/x-icon">
-  <style>
-    /* 添加一些基本的CSS样式 */
-/* 设置网页的基本样式 */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url('images/background.jpg');
-  background-repeat: repeat;
-  background-size: 40% 40%; /* 设置背景图片的重复尺寸 */
-  color: #fff;
-  font-size: 16px;
-}
-
-/* 设置容器的样式,使其居中并占据90%的宽度 */
-.container {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 2% 2%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-/* 设置个人头像的样式,使其为圆形 */
-.profile-picture {
-  width: 12.5%;
-  height: 12.5%;
-  border-radius: 50%; /* 将边框圆角设置为50%,使其成为圆形 */
-  background-image: url('log.png');
-  background-size: cover;
-  margin: 0 auto 2%; /* 居中并添加底部边距 */
-}
-
-/* 设置顶部图片的样式 */
-.top-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  margin: 0 auto 2%; /* 居中并添加底部边距 */
-}
-
-/* 设置标题(h1)的样式 */
-h1 {
-  margin-top: 2.5%;
-  margin-bottom: 5.25%;
-  font-size: 2.5rem;
-  text-align: center; 
-}
-
-/* 设置副标题(p)的样式 */
-p {
-  margin-top: 0;
-  margin-bottom: 10.5%;
-  font-size: 2.125rem;
-  color: #ccc;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-/* 设置菜单的样式 */
-.menu {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2.5%;
-}
-
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 1.25%;
-}
-
-.menu a:hover {
-  color: #ccc;
-}
-
-/* 设置文本大小控制按钮的样式 */
-.text-size-controls {
-  margin-bottom: 2.5%;
-}
-
-.text-size-controls button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 0.625% 1.25%;
-  margin: 0 0.625%;
-  cursor: pointer;
-}
-
-.text-size-controls button:hover {
-  background-color: #555;
-}
-
-/* 针对小屏幕设备的样式调整 */
-@media (max-width: 767px) {
-  .container {
-    padding: 1.25% 1.25%;
-  }
-  .top-image {
-    margin-bottom: 2.5%;
-  }
-  h1 {
-    margin-top: 1.25%;
-    margin-bottom: 0.625%;
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-    margin-bottom: 1.25%;
-  }
-}
-  </style>
+    <title>Mysite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/pic00.jpg" type="image/x-icon">
+    <style>
+        /* 设置网页的基本CSS样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.jpg');
+            background-repeat: repeat;
+            background-size: 40% 40%; /* 设置背景图片的重复尺寸 */
+            color: #fff;
+            font-size: 16px;
+        }
+        /* 设置容器的样式,使其居中并占据90%的宽度 */
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 2% 2%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        /* 设置个人头像的样式,使其为圆形 */
+        .profile-picture {
+            width: 12.5%;
+            height: 12.5%;
+            border-radius: 50%; /* 将边框圆角设置为50%,使其成为圆形 */
+            background-image: url('log.png');
+            background-size: cover;
+            margin: 0 auto 2%; /* 居中并添加底部边距 */
+        }
+        /* 设置顶部图片的样式 */
+        .top-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin: 0 auto 2%; /* 居中并添加底部边距 */
+        }
+        /* 设置标题(h1)的样式 */
+        h1 {
+            margin-top: 2.5%;
+            margin-bottom: 5.25%;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        /* 设置副标题(p)的样式 */
+        p {
+            margin-top: 0;
+            margin-bottom: 10.5%;
+            font-size: 2.125rem;
+            color: #ccc;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        /* 设置菜单的样式 */
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5%;
+            font-size: 1.3rem; /* 设置菜单文本的字体大小 */
+        }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.25%;
+        }
+        .menu a:hover {
+            color: #ccc;
+        }
+        /* 设置文本大小控制按钮的样式 */
+        .text-size-controls {
+            margin-bottom: 2.5%;
+        }
+        .text-size-controls button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.625% 1.25%;
+            margin: 0 0.625%;
+            cursor: pointer;
+        }
+        .text-size-controls button:hover {
+            background-color: #555;
+        }
+        /* 针对小屏幕设备的样式调整 */
+        @media (max-width: 767px) {
+            .container {
+                padding: 1.25% 1.25%;
+            }
+            .top-image {
+                margin-bottom: 2.5%;
+            }
+            h1 {
+                margin-top: 1.25%;
+                margin-bottom: 0.625%;
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+                margin-bottom: 1.25%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <img class="top-image" src="images/log.png" alt="Top Image">
-	<div class="profile-picture"></div>
-    <h1>Kimcrowing</h1>
-    <p>Simply & Casually</p>
-    <div class="menu">
-      <a href="https://github.com/kimcrowing">Github</a>
-      <a>|</a>
-      <a href="Tab/home.html">Server</a>
-      <a>|</a>
-      <a href="#thinking">Thinking</a>
-      <a>|</a>
-      <a href="#weibo">Weibo</a>
-      <a>|</a>
-      <a href="#gallery">Gallery</a>
+    <div class="container">
+        <img class="top-image" src="images/log.png" alt="Top Image">
+        <div class="profile-picture"></div>
+        <h1>Kimcrowing</h1>
+        <p>Simply & Casually</p>
+        <div class="menu">
+            <a href="https://github.com/kimcrowing">Github</a>
+            <a>|</a>
+            <a href="Tab/home.html">Server</a>
+            <a>|</a>
+            <a href="#thinking">Thinking</a>
+            <a>|</a>
+            <a href="#weibo">Weibo</a>
+            <a>|</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+        <!-- 在这里添加各个模块的内容 -->
+        <div id="blog">
+            <!-- 博客模块的内容 -->
+        </div>
+        <div id="about">
+            <!-- 关于模块的内容 -->
+        </div>
+        <div id="thinking">
+            <!-- 思考模块的内容 -->
+        </div>
+        <div id="weibo">
+            <!-- 微博模块的内容 -->
+        </div>
+        <div id="gallery">
+            <!-- 画廊模块的内容 -->
+        </div>
     </div>
-    <!-- 在这里添加各个模块的内容 -->
-    <div id="blog">
-      <!-- 博客模块的内容 -->
-    </div>
-    <div id="about">
-      <!-- 关于模块的内容 -->
-    </div>
-    <div id="thinking">
-      <!-- 思考模块的内容 -->
-    </div>
-    <div id="weibo">
-      <!-- 微博模块的内容 -->
-    </div>
-    <div id="gallery">
-      <!-- 画廊模块的内容 -->
-    </div>
-  </div>
 </body>
 </html>

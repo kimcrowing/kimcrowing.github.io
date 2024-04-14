@@ -1,129 +1,156 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Mysite</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/pic00.jpg" type="image/x-icon">
-        <!-- 链接外部的样式表文件，用于定义黑暗与白天模式的样式 -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-	</head>
-	<body class="is-preload">
+<head>
+  <title>Mysite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/pic00.jpg" type="image/x-icon">
+  <style>
+    /* 添加一些基本的CSS样式 */
+/* 设置网页的基本样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/background.jpg');
+  background-repeat: repeat;
+  background-size: 40% 40%; /* 设置背景图片的重复尺寸 */
+  color: #fff;
+  font-size: 16px;
+}
 
-        <!-- 添加一个开关按钮，用于让用户选择黑暗或白天模式 -->
-        <input type="checkbox" id="toggle" class="checkbox" />
-        <!-- 为开关按钮添加一个图标，用于显示当前的模式 -->
-        <label for="toggle" class="switch">
-			<i class="fas fa-moon"></i>
-			<i class="fas fa-sun"></i>
-		</label>
+/* 设置容器的样式,使其居中并占据90%的宽度 */
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2% 2%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
 
+/* 设置个人头像的样式,使其为圆形 */
+.profile-picture {
+  width: 12.5%;
+  height: 12.5%;
+  border-radius: 50%; /* 将边框圆角设置为50%,使其成为圆形 */
+  background-image: url('log.png');
+  background-size: cover;
+  margin: 0 auto 2%; /* 居中并添加底部边距 */
+}
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Home</a></li>
-					<li><a href="Tab/home.html">Server</a></li>					
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+/* 设置顶部图片的样式 */
+.top-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto 2%; /* 居中并添加底部边距 */
+}
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/pic00.jpg" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Hi. I'm <strong>Kim</strong>.</h1>
-							</header>
-							<p><strong>My Motto: </strong>I don't know what big things are and what small things are, I just know what young people should do</a>.</p>
-							<p><strong>My Wish: </strong>Freedom is my wish. How nice it would be if no one interfered with me in doing anything! Also, pray to be strong and healthy, disease-free and painless</a>.</p>
-							<img align="left" alt="GIF" src="images/code.gif" width="320" height="210" /><p align="right"><img src="https://github-readme-stats.vercel.app/api?username=kimcrowing&show_icons=true&theme=gotham" alt="kimcrowing" width="450" height="250" />
-							<a href="#work" class="button small scrolly">Learn about what I do</a>
-						</div>
-					</div>
-				</div>
-			</article>
+/* 设置标题(h1)的样式 */
+h1 {
+  margin-top: 2.5%;
+  margin-bottom: 5.25%;
+  font-size: 2.5rem;
+  text-align: center; 
+}
 
-		<!-- Work -->
-			<article id="work" class="wrapper style2">
-				<div class="container">
-				<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
-					</footer>
-				</div>
-			</article>
+/* 设置副标题(p)的样式 */
+p {
+  margin-top: 0;
+  margin-bottom: 10.5%;
+  font-size: 2.125rem;
+  color: #ccc;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">	
-			</article>
+/* 设置菜单的样式 */
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5%;
+}
 
-        <!-- Contact -->
-		 <article id = "contact"class = "wrapper style4">
-			 <div class = "container medium">
-				 <header >
-					 <h2 >Have me make stuff for you.</h2 >
-					 <p >Ornare nulla proin odio consequat sapien vestibulum ipsum.</p >
-				 </header >
-				 <div class = "row">
-					 <div class = "col-12">
-						 <form method = "post"action = "#">
-							 <div class = "row">
-								 <div class = "col-6 col-12-small">
-									 <input type = "text"name = "name"id = "name"placeholder = "Name"/>
-								 </div >
-								 <div class = "col-6 col-12-small">
-									 <input type = "text"name = "email"id = "email"placeholder = "Email"/>
-								 </div >
-								 <div class = "col-12">
-									 <input type = "text"name = "subject"id = "subject"placeholder = "Subject"/>
-								 </div >
-								 <div class = "col-12">
-									 <textarea name = "message"id = "message"placeholder = "Message"></textarea >
-								 </div >
-								 <div class = "col-12">
-									 <ul class = "actions">
-										 <li ><input type = "submit"value = "Send Message"/></li >
-										 <li ><input type = "reset"value = "Clear Form"class = "alt"/></li >
-									 </ul >
-								 </div >
-							 </div >
-						 </form >
-					 </div >
-					 <div class = "col-12">
-						 <hr />
-						 <h3 >Find me on ...</h3 >
-						 <ul class = "social">
-							 <li ><a href="#"class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							 <li ><a href="#"class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							 <li ><a href="#"class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							 <li ><a href="#"class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-							 <li ><a href="https://github.com/kimcrowing"class="icon brands fa-github"><span class="label">Github</s
-			</article>
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1.25%;
+}
 
-        <!-- 添加一些JavaScript代码，用于实现开关按钮的功能，即根据用户的选择切换黑暗或白天模式 -->
-        <script>
-            // 获取开关按钮和网页主体元素
-            const toggle = document.getElementById("toggle");
-            const body = document.body;
+.menu a:hover {
+  color: #ccc;
+}
 
-            // 添加事件监听器，当开关按钮被点击时执行以下函数
-            toggle.addEventListener("input", (e) => {
-                // 获取开关按钮的状态（是否被选中）
-                const checked = e.target.checked;
+/* 设置文本大小控制按钮的样式 */
+.text-size-controls {
+  margin-bottom: 2.5%;
+}
 
-                // 如果开关按钮被选中，则为网页主体元素添加一个dark类名，否则移除该类名
-                if (checked) {
-                    body.classList.add("dark");
-                } else {
-                    body.classList.remove("dark");
-                }
-            });
-        </script>
-	</body>
+.text-size-controls button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.625% 1.25%;
+  margin: 0 0.625%;
+  cursor: pointer;
+}
+
+.text-size-controls button:hover {
+  background-color: #555;
+}
+
+/* 针对小屏幕设备的样式调整 */
+@media (max-width: 767px) {
+  .container {
+    padding: 1.25% 1.25%;
+  }
+  .top-image {
+    margin-bottom: 2.5%;
+  }
+  h1 {
+    margin-top: 1.25%;
+    margin-bottom: 0.625%;
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom: 1.25%;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="top-image" src="images/log.png" alt="Top Image">
+	<div class="profile-picture"></div>
+    <h1>Kimcrowing</h1>
+    <p>自由自我</p>
+    <div class="menu">
+      <a href="https://github.com/kimcrowing">Github</a>
+      <a href="Tab/home.html">Server</a>
+      <a href="#thinking">Thinking</a>
+      <a href="#weibo">Weibo</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+    <!-- 在这里添加各个模块的内容 -->
+    <div id="blog">
+      <!-- 博客模块的内容 -->
+    </div>
+    <div id="about">
+      <!-- 关于模块的内容 -->
+    </div>
+    <div id="thinking">
+      <!-- 思考模块的内容 -->
+    </div>
+    <div id="weibo">
+      <!-- 微博模块的内容 -->
+    </div>
+    <div id="gallery">
+      <!-- 画廊模块的内容 -->
+    </div>
+  </div>
+</body>
 </html>

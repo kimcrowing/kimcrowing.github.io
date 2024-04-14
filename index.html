@@ -119,7 +119,7 @@
         <div class="menu">
             <a href="https://github.com/kimcrowing">Github</a>
             <a>|</a>
-            <a href="Tab/home.html">Server</a>
+            <a href="#" onclick="loadHomePage()">Server</a>
             <a>|</a>
             <a href="#thinking">Thinking</a>
             <a>|</a>
@@ -128,9 +128,6 @@
             <a href="#gallery">Gallery</a>
         </div>
         <!-- 在这里添加各个模块的内容 -->
-        <div id="blog">
-            <!-- 博客模块的内容 -->
-        </div>
         <div id="about">
             <!-- 关于模块的内容 -->
         </div>
@@ -143,6 +140,18 @@
         <div id="gallery">
             <!-- 画廊模块的内容 -->
         </div>
+        <div id="home-page" style="display: none;">
+            <iframe src="about:blank" width="100%" height="500" frameborder="0" id="home-iframe"></iframe>
+        </div>
     </div>
+
+    <script>
+        function loadHomePage() {
+            var homePage = document.getElementById('home-page');
+            var homeIframe = document.getElementById('home-iframe');
+            homeIframe.src = 'Tab/home.html';
+            homePage.style.display = 'block';
+        }
+    </script>
 </body>
 </html>

@@ -43,9 +43,21 @@
             object-fit: cover;
             margin: 0 auto 2%; /* 居中并添加底部边距 */
         }
-        #home-page {
+        #home-page, #think-page {
             /*background-color: transparent;  设置主页面的背景为透明 */
             display: none;
+        }
+        #thinking {
+            width: 100%;
+            max-width: 400px;
+			height: auto;
+            margin: 0 auto;
+            padding: 2% 2%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+			background:rgba(0, 0, 0, 0.5);
+			display: none;
         }
         /* 设置标题(h1)的样式 */
         h1 {
@@ -65,13 +77,13 @@
             height: auto;
         }
         /* 设置菜单的样式 */
-        .menu {
+        .menu, #thinking {
             display: flex;
             justify-content: center;
             margin-bottom: 2.5%;
             font-size: 1.2rem; /* 设置菜单文本的字体大小 */
         }
-        .menu a {
+        .menu a, #thinking a {
             color: #fff;
             text-decoration: none;
             margin: 0 1.25%;
@@ -125,7 +137,7 @@
             <a>|</a>
             <a href="#" onclick="showPasswordPrompt()">Server</a>
             <a>|</a>
-            <a href="#thinking">Thinking</a>
+            <a href="#" onclick="showthink()">Thinking</a>
             <a>|</a>
             <a href="#weibo">Weibo</a>
             <a>|</a>
@@ -134,9 +146,6 @@
         <!-- 在这里添加各个模块的内容 -->
         <div id="about">
             <!-- 关于模块的内容 -->
-        </div>
-        <div id="thinking">
-            <!-- 思考模块的内容 -->
         </div>
         <div id="weibo">
             <!-- 微博模块的内容 -->
@@ -147,13 +156,33 @@
         <div id="home-page">
             <iframe src="about:blank" width="100%" height="500" frameborder="0" id="home-iframe"></iframe>
         </div>
+        <div id="think-page">
+			<div id="thinking">
+				<!-- 思考模块的内容 -->
+				<a href="http://113.206.22.116:5032">Webssh</a>
+				<a>|</a>
+				<a href="http://113.206.22.116:8083">Kodi</a>
+				<a>|</a>
+				<a href="http://113.206.22.116:5244">Cloud</a>
+				<a>|</a>
+				<a href="http://113.206.22.116:5700">Qinglong</a>
+				<a>|</a>
+				<a href="http://113.206.22.116:8081">Mitmproxy</a>
+				<a>|</a>
+				<a href="https://113.206.22.116:9443">Portainer</a>
+				<a>|</a>
+				<a href="movies.html">Movies</a>
+				<a>|</a>
+				<a href="#gallery">Gallery</a>
+			</div>
+        </div>		
     </div>
     <script>
         function showPasswordPrompt() {
             var password = "www"; // 设置正确的密码
             var input = prompt("请输入访问密码：");
             if (input === password) {
-                loadHomePage();
+                showthink();
             } else {
                 alert("密码错误，请重新输入或退出浏览器!");
             }
@@ -164,6 +193,12 @@
             var homeIframe = document.getElementById('home-iframe');
             homeIframe.src = 'Tab/home.html';
             homePage.style.display = 'block';
+        }
+        function showthink() {
+            var homePage = document.getElementById('think-page');
+            var homeIframe = document.getElementById('thinking');
+            homePage.style.display = 'block';
+            homeIframe.style.display = 'block';
         }
     </script>
 </body>

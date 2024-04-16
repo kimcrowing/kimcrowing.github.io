@@ -3,7 +3,7 @@
 <head>
     <title>Mysite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/pic00.jpg" type="image/x-icon">
+    <link rel="icon" href="images/log.png" type="image/x-icon">
     <style>
         /* 设置网页的基本CSS样式 */
         body {
@@ -18,7 +18,7 @@
         }
         /* 设置容器的样式,使其居中并占据90%的宽度 */
         .container {
-            width: 100%;
+            width: 50%;
             max-width: 400px;
             margin: 0 auto;
             padding: 2% 2%;
@@ -26,38 +26,41 @@
             position: relative;
             z-index: 1;
         }
-        /* 设置个人头像的样式,使其为圆形 */
-        .profile-picture {
-            width: 12.5%;
-            height: 12.5%;
-            border-radius: 50%; /* 将边框圆角设置为50%,使其成为圆形 */
-            background-image: url('log.png');
-            background-size: cover;
-            margin: 0 auto 2%; /* 居中并添加底部边距 */
-        }
+
         /* 设置顶部图片的样式 */
         .top-image {
-            width: 100%;
+            width: 50%;
             max-width: 100%;
             height: auto;
             object-fit: cover;
             margin: 0 auto 2%; /* 居中并添加底部边距 */
         }
-        #home-page, #think-page {
+        #cloud-page, #hom-page {
             /*background-color: transparent;  设置主页面的背景为透明 */
             display: none;
         }
-        #thinking {
+        #hom {
             width: 100%;
-            max-width: 350px;
-	    height: 200px;
-            margin: 0 auto;
+            max-width: 450px;
+			height: 80px;
+            margin: 200 auto;
             padding: 2% 2%;
-            text-align: left;
+            text-align: center;
             position: relative;
             z-index: 1;
-	    background:rgba(0, 0, 0, 0.5);
+			background:rgba(0, 0, 0, 0.5);
             display: none;
+        }
+        .cloud-page{
+            width: 100%;
+            max-width: 800px;
+			height: 50%;
+			max-height: 650px;
+            margin: 0 auto;
+            padding: 2% 2%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
         }
         /* 设置标题(h1)的样式 */
         h1 {
@@ -77,13 +80,13 @@
             height: auto;
         }
         /* 设置菜单的样式 */
-        .menu, #thinking {
+        .menu, #hom {
             display: flex;
             justify-content: center;
             margin-bottom: 2.5%;
             font-size: 1.2rem; /* 设置菜单文本的字体大小 */
         }
-        .menu a, #thinking a {
+        .menu a, #hom a {
             color: #fff;
             text-decoration: none;
             margin: 0 1.25%;
@@ -128,8 +131,8 @@
 </head>
 <body>
     <div class="container">
-        <img class="top-image" src="images/log.png" alt="Top Image">
-        <div class="profile-picture"></div>
+		<img class="top-image" src="images/log.png" alt="Top Image">	
+		    
         <h1>Kimcrowing</h1>
         <p>Simply & Casually</p>
         <div class="menu">
@@ -149,17 +152,15 @@
         <div id="gallery">
             <!-- 画廊模块的内容 -->
         </div>
-        <div id="home-page">
-            <iframe src="about:blank" width="100%" height="500" frameborder="0" id="home-iframe"></iframe>
-        </div>
-        <div id="think-page">
-			<div id="thinking">
+
+        <div id="hom-page">
+			<div id="hom">
 				<!-- 思考模块的内容 -->
-				<a href="http://113.206.22.116:5032">Webssh</a>
+				<a href="http://113.206.22.116:5032" >Webssh</a>
 				<a>|</a>
 				<a href="http://113.206.22.116:8083">Kodi</a>
 				<a>|</a>
-				<a href="http://113.206.22.116:5244">Cloud</a>
+				<a href="#" onclick="loadcloudPage()">Cloud</a>
 				<a>|</a>
 				<a href="http://113.206.22.116:5700">Qinglong</a>
 				<a>|</a>
@@ -171,6 +172,9 @@
 			</div>
         </div>		
     </div>
+        <div class="cloud-page">
+            <iframe src="about:blank" width="100%" height="450px" frameborder="0" id="cloud-iframe"></iframe>
+        </div>
     <script>
         function showPasswordPrompt() {
             var password = "www"; // 设置正确的密码
@@ -182,15 +186,15 @@
             }
         }
 
-        function loadHomePage() {
-            var homePage = document.getElementById('home-page');
-            var homeIframe = document.getElementById('home-iframe');
-            homeIframe.src = 'Tab/home.html';
-            homePage.style.display = 'block';
+        function loadcloudPage() {
+            var cloudPage = document.getElementById('cloud-page');
+            var cloudIframe = document.getElementById('cloud-iframe');
+            cloudIframe.src = 'http://113.206.22.116:5244';
+            cloudPage.style.display = 'block';
         }
         function showthink() {
-            var homePage = document.getElementById('think-page');
-            var homeIframe = document.getElementById('thinking');
+            var homePage = document.getElementById('hom-page');
+            var homeIframe = document.getElementById('hom');
             homePage.style.display = 'block';
             homeIframe.style.display = 'block';
         }

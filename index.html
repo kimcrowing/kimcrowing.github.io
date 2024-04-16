@@ -18,7 +18,7 @@
         }
         /* 设置容器的样式,使其居中并占据90%的宽度 */
         .container {
-            width: 50%;
+            width: 90%;
             max-width: 400px;
             margin: 0 auto;
             padding: 2% 2%;
@@ -35,7 +35,7 @@
             object-fit: cover;
             margin: 0 auto 2%; /* 居中并添加底部边距 */
         }
-        #cloud-page, #hom-page, #cloud-iframe {
+        #cloud-iframe, #hom-page {
             /*background-color: transparent;  设置主页面的背景为透明 */
             display: none;
         }
@@ -53,7 +53,7 @@
         }
         #cloud-page{
             width: 100%;
-            max-width: 450px;
+            max-width: 800px;
 			height: 50%;
 			max-height: 650px;
             margin: 0 auto;
@@ -61,7 +61,7 @@
             text-align: center;
             position: relative;
             z-index: 1;
-            display: none;
+			display: none;
         }
         /* 设置标题(h1)的样式 */
         h1 {
@@ -171,11 +171,12 @@
 				<a>|</a>
 				<a href="Tab/movies.html">Movies</a>
 			</div>
-        </div>		
+        </div>
+	
     </div>
         <div id="cloud-page">
             <iframe src="about:blank" width="100%" height="450px" frameborder="0" id="cloud-iframe"></iframe>
-        </div>
+        </div>	
     <script>
         function showPasswordPrompt() {
             var password = "www"; // 设置正确的密码
@@ -192,6 +193,7 @@
             var cloudIframe = document.getElementById('cloud-iframe');
             cloudIframe.src = 'http://113.206.148.17:5244';
             cloudPage.style.display = 'block';
+			cloudIframe.style.display = 'block';
         }
         function showthink() {
             var homePage = document.getElementById('hom-page');

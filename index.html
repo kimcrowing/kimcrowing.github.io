@@ -35,11 +35,11 @@
             object-fit: cover;
             margin: 0 auto 2%; /* 居中并添加底部边距 */
         }
-        #cloud-iframe, #hom-page {
+        #cloud-iframe, #hom-page, #next-page {
             /*background-color: transparent;  设置主页面的背景为透明 */
             display: none;
         }
-        #hom {
+        #hom, #next {
             width: 100%;
             max-width: 450px;
 			height: 80px;
@@ -81,13 +81,13 @@
             height: auto;
         }
         /* 设置菜单的样式 */
-        .menu, #hom {
+        .menu, #hom, #next {
             display: flex;
             justify-content: center;
             margin-bottom: 2.5%;
             font-size: 1.2rem; /* 设置菜单文本的字体大小 */
         }
-        .menu a, #hom a {
+        .menu a, #hom a, #next a {
             color: #fff;
             text-decoration: none;
             margin: 0 1.25%;
@@ -141,7 +141,7 @@
             <a>|</a>
             <a href="#" onclick="showPasswordPrompt()">Server</a>
             <a>|</a>
-            <a href="#" onclick="()">Next</a>
+            <a href="#" onclick="shownext()">Next</a>
         </div>
         <!-- 在这里添加各个模块的内容 -->
         <div id="about">
@@ -150,9 +150,42 @@
         <div id="weibo">
             <!-- 微博模块的内容 -->
         </div>
-        <div id="gallery">
-            <!-- 画廊模块的内容 -->
+        <div id="next-page">
+			<div id="next">
+				<!-- 思考模块的内容 -->
+				<a href="https://www.google.com"><img src="https://www.google.com/favicon.ico" alt="谷歌"></a>
+				<a> </a>
+				<a href="https://www.ithome.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://github.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://www.google.com"><img src="https://www.google.com/favicon.ico" alt="谷歌"></a>
+				<a> </a>
+				<a href="https://www.ithome.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a href="https://www.ithome.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a href="https://www.ithome.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a href="https://www.ithome.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a>|</a>
+				<a href="Tab/movies.html">Movies</a>
+			</div>
         </div>
+	
 
         <div id="hom-page">
 			<div id="hom">
@@ -187,7 +220,6 @@
                 alert("密码错误，请重新输入或退出浏览器!");
             }
         }
-
         function loadcloudPage() {
             var cloudPage = document.getElementById('cloud-page');
             var cloudIframe = document.getElementById('cloud-iframe');
@@ -198,6 +230,12 @@
         function showthink() {
             var homePage = document.getElementById('hom-page');
             var homeIframe = document.getElementById('hom');
+            homePage.style.display = 'block';
+            homeIframe.style.display = 'block';
+        }
+        function shownext() {
+            var homePage = document.getElementById('next-page');
+            var homeIframe = document.getElementById('next');
             homePage.style.display = 'block';
             homeIframe.style.display = 'block';
         }

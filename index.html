@@ -141,6 +141,45 @@
                 margin-bottom: 1.25%;
             }
         }
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    border-radius: 15px; /* 圆角边框 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+	position: relative; /* 确保子元素的绝对定位是相对于此容器 */
+  }
+  input[type="text"] {
+    border: none;
+    padding: 10px;
+    height: 20px;
+    color: white; /* 白色字体 */
+    background-color: transparent; /* 透明背景 */
+    outline: none; /* 去除焦点边框 */
+  }
+  select {
+    position: absolute;
+	right: 1px; /* 或者根据需要调整 */
+	top: 50%;
+	transform: translateY(-50%); /* 垂直居中 */
+    border: none;
+    padding: 10px;
+    height: 42px;
+    width: 45px; /* 设置一个固定宽度 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    color: white; /* 白色字体 */
+    -webkit-appearance: none; /* 移除默认样式 */
+    appearance: none; /* 移除默认样式 */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* 调整图标位置 */
+    background-size: 24px; /* 背景图标大小 */
+    text-indent: 110%; /* 将文本移出可视范围 */
+    overflow: hidden; /* 防止文本溢出 */
+  }
+  /* 默认的放大镜图标 */
+  select.default-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+  }
     </style>
 </head>
 <body>
@@ -156,6 +195,14 @@
             <a>|</a>
             <a href="#" onclick="shownext()">Next</a>
         </div>
+<div class="search-container">
+  <input type="text" id="search-query" placeholder="搜索..." onkeypress="search(event)">
+  <select id="search-engine" class="default-icon" onchange="updateIcon()">
+    <option value="" selected disabled hidden></option>
+    <option value="google">谷歌</option>
+    <option value="bing">必应</option>
+  </select>
+</div>
         <!-- 在这里添加各个模块的内容 -->
         <div id="about">
             <!-- 关于模块的内容 -->
@@ -168,13 +215,13 @@
 				<!-- 模块的内容 -->
 				<a href="https://www.google.com"><img src="https://www.google.com/favicon.ico" alt="谷歌"></a>
 				<a> </a>
-				<a href="https://www.ithome.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a href="https://copilot.microsoft.com"><img src="https://copilot.microsoft.com/favicon.ico" alt="Copilot"></a>
 				<a> </a>
-				<a href="https://github.com"><img src="https://github.com/favicon.ico" alt="IT之家"></a>
-				<a> </a>
-				<a href="https://www.google.com"><img src="https://www.google.com/favicon.ico" alt="谷歌"></a>
+				<a href="https://gemini.google.com/app"><img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" alt="Gemini"></a>
 				<a> </a>
 				<a href="https://www.ithome.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+				<a> </a>
+				<a href="https://github.com"><img src="https://github.com/favicon.ico" alt="Github"></a>
 				<a> </a>
 				<a href="https://github.com"><img src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
 				<a> </a>
@@ -248,6 +295,28 @@
             homePage.style.display = 'block';
             homeIframe.style.display = 'block';
         }
+  function search(event) {
+    var query = document.getElementById('search-query').value;
+    var engine = document.getElementById('search-engine').value;
+    if (query.trim() !== '' && event.key === 'Enter') {
+      var searchURL = '';
+      if (engine === 'google') {
+        searchURL = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+      } else if (engine === 'bing') {
+        searchURL = 'https://www.bing.com/search?q=' + encodeURIComponent(query);
+      }
+      window.open(searchURL, '_blank');
+    }
+  }
+  function updateIcon() {
+    var engine = document.getElementById('search-engine').value;
+    var selectElement = document.getElementById('search-engine');
+    if (engine === 'google') {
+      selectElement.style.backgroundImage = "url('https://www.google.com/favicon.ico')";
+    } else if (engine === 'bing') {
+      selectElement.style.backgroundImage = "url('https://www.bing.com/favicon.ico')";
+    }
+  }		
     </script>
 </body>
 </html>

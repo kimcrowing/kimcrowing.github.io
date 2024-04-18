@@ -29,7 +29,7 @@
 
         /* 设置顶部图片的样式 */
         .top-image {
-            width: 80%;
+            width: 75%;
             max-width: 100%;
             height: auto;
             object-fit: cover;
@@ -46,6 +46,7 @@
             margin: 2% auto;
             padding: 2% 2%;
             text-align: center;
+			
             position: relative;
             z-index: 1;
 			background:rgba(0, 0, 0, 0.5);
@@ -107,6 +108,12 @@
             text-decoration: none;
             margin: 0 1.25%;
         }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.25%;
+			font-size: 1.8rem;
+        }
         #next a {
             color: #fff;
             text-decoration: none;
@@ -114,21 +121,6 @@
         }
         .menu a:hover {
             color: #ccc;
-        }
-        /* 设置文本大小控制按钮的样式 */
-        .text-size-controls {
-            margin-bottom: 2.5%;
-        }
-        .text-size-controls button {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 0.625% 1.25%;
-            margin: 0 0.625%;
-            cursor: pointer;
-        }
-        .text-size-controls button:hover {
-            background-color: #555;
         }
         /* 设置搜索框的样式 */
         .search-container {
@@ -179,6 +171,9 @@
             .top-image {
                 margin-bottom: 2.5%;
             }
+			.menu a {
+				font-size: 1.2rem;
+			}
             h1 {
                 margin-top: 1.25%;
                 margin-bottom: 0.625%;
@@ -194,8 +189,7 @@
 </head>
 <body>
     <div class="container">
-		<img class="top-image" src="images/log.png" alt="Top Image">	
-		    
+		<img class="top-image" src="images/log.png" alt="Top Image">			    
         <h1>Kimcrowing</h1>
         <p>Simply & Casually</p>
         <div class="menu">

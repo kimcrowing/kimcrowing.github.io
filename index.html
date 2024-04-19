@@ -28,9 +28,16 @@
         }
 
         /* 设置顶部图片的样式 */
-        .top-image, .fav-image {
+        .top-image {
             width: 75%;
             max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin: 2% auto 2%; /* 居中并添加底部边距 */
+        }
+	.fav-image {
+            width: 10%;
+            max-width: 30%;
             height: auto;
             object-fit: cover;
             margin: 2% auto 2%; /* 居中并添加底部边距 */
@@ -42,14 +49,14 @@
         #hom {
             width: 90%;
             max-width: 450px;
-			height: 80px;
+	    height: 80px;
             margin: 2% auto;
             padding: 2% 2%;
             text-align: center;	
             position: relative;
             z-index: 1;
-			background:rgba(0, 0, 0, 0.5);
-			border-radius: 15px;
+	    background:rgba(0, 0, 0, 0.5);
+	    border-radius: 15px;
             display: none;
         }
         #next {

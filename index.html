@@ -39,7 +39,7 @@
             width: 10%;
             max-width: 30%;
             height: auto;
-            margin: 2% 1% 2%; /* 居中并添加底部边距 */
+            margin: 0; /* 居中并添加底部边距 */
         }
         #cloud-iframe, #hom-page, #next-page {
             /*background-color: transparent;  设置主页面的背景为透明 */
@@ -68,9 +68,9 @@
             text-align: center;
             position: relative;
             z-index: 1;
-			background:rgba(0, 0, 0, 0.3);
-			border-radius: 15px;
-            display: none;
+  display: grid; /* 添加网格布局 */
+  grid-template-columns: repeat(auto-fit, minmax(10%, 1fr)); /* 根据容器大小自动调整列数和列宽 */
+  grid-gap: 10px; /* 可选:添加网格间距 */
         }
 
         #cloud-page{

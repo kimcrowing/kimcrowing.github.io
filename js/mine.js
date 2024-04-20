@@ -22,7 +22,7 @@ function showthink() {
     homePage.style.display = 'block';
     homeIframe.style.display = 'block';
 }
-function shownext() {
+function showfavo() {
     var homePage = document.getElementById('next-page');
     var homeIframe = document.getElementById('next');
     homePage.style.display = 'block';

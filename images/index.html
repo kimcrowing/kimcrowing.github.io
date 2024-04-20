@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mysite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/log.png" type="image/x-icon">
+    <style>
+        /* 设置网页的基本CSS样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.jpg');
+            background-repeat: repeat;
+            background-size: auto; /* 将背景图片设置为覆盖整个容器 */
+            color: #fff;
+            font-size: 16px;
+        }
+        /* 设置容器的样式,使其居中并占据90%的宽度 */
+        .container {
+            width: 98%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 1% 1%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 设置顶部图片的样式 */
+        .top-image {
+            width: 70%;
+            max-width: 90%;
+            height: auto;
+            object-fit: cover;
+            margin: 1.5% auto 1.5%; /* 居中并添加底部边距 */
+        }
+	.fav-image {
+            width: 10%;
+            max-width: 30%;
+            height: auto;
+            margin: 0; /* 居中并添加底部边距 */
+        }
+        #cloud-iframe, #hom-page, #next-page {
+            /*background-color: transparent;  设置主页面的背景为透明 */
+            display: none;
+        }
+        #hom {
+            width: 95%;
+            max-width: 100%;
+	    height: 80px;
+            margin: 2% auto;
+            padding: 2% 2%;
+            text-align: center;	
+            position: relative;
+            z-index: 1;
+	    background:rgba(0, 0, 0, 0.5);
+	    border-radius: 15px;
+            display: none;
+        }
+        #next {
+            width: 95%;
+            max-width: 100%;
+	    height: auto;
+            max-height: 420px;
+            margin: 2% auto;
+            padding: 2% 2%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+background:rgba(0, 0, 0, 0.3);
+border-radius: 15px;
+display: grid; /* 添加网格布局 */
+grid-template-columns: repeat(auto-fit, minmax(10%, 1fr)); /* 根据容器大小自动调整列数和列宽 */
+grid-gap: 10px; /* 可选:添加网格间距 */
+justify-content: start; /* 将网格项目左对齐 */
+align-content: start; /* 将行与行之间的对齐方式设置为顶部对齐 */
+grid-auto-flow: row; /* 新增这一行 */
+        }
+
+        #cloud-page{
+            width: 100%;
+            max-width: 450px;
+			height: 50%;
+			max-height: 650px;
+            margin: 0 auto;
+            padding: 2% 2%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+			display: none;
+        }
+        /* 设置标题(h1)的样式 */
+        h1 {
+            margin-top: 2.5%;
+            margin-bottom: 5.25%;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        /* 设置副标题(p)的样式 */
+        p {
+            margin-top: 0;
+            margin-bottom: 5.25%;
+            font-size: 1.4rem;
+            color: #ccc;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        /* 设置菜单的样式 */
+        .menu, #hom, #next {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5%;
+            font-size: 1.2rem; /* 设置菜单文本的字体大小 */
+        }
+        .menu a, #hom a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.25%;
+        }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.25%;
+			font-size: 1.8rem;
+        }
+        #next a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.25%;
+        }
+        .menu a:hover {
+            color: #ccc;
+        }
+        /* 设置搜索框的样式 */
+        .search-container {
+            display: flex;
+            align-items: center;
+			height: 40px;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+            border-radius: 20px; /* 圆角边框 */
+            overflow: hidden; /* 隐藏溢出的内容 */
+            position: relative; /* 确保子元素的绝对定位是相对于此容器 */
+        }
+        input[type="text"] {
+            border: none;
+            padding: 18px;        
+            color: white; /* 白色字体 */
+			width: 85%; /* 设置一个固定宽度 */
+			font-size: 18px;
+            background-color: transparent; /* 透明背景 */
+            outline: none; /* 去除焦点边框 */
+        }
+        select {
+            position: absolute;
+            right: 1px; /* 或者根据需要调整 */
+            top: 50%;
+            transform: translateY(-50%); /* 垂直居中 */
+            border: none;
+            padding: 10px;
+            height: 42px;
+            width: 10%; /* 设置一个固定宽度 */
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+            color: white; /* 白色字体 */
+            -webkit-appearance: none; /* 移除默认样式 */
+            appearance: none; /* 移除默认样式 */
+            background-repeat: no-repeat;
+            background-position: right 10px center; /* 调整图标位置 */
+            background-size: 24px; /* 背景图标大小 */
+            text-indent: 110%; /* 将文本移出可视范围 */
+            overflow: hidden; /* 防止文本溢出 */
+        }
+        /* 默认的放大镜图标 */
+        select.default-icon {
+            background-image: url('images/search.svg');
+        }
+        /* 针对小屏幕设备的样式调整 */
+        @media (max-width: 767px) {
+            .container {
+                padding: 1.25% 1.25%;
+            }
+            .top-image {
+                margin-bottom: 2.5%;
+            }
+			.menu a {
+				font-size: 1.2rem;
+			}
+            h1 {
+                margin-top: 1.25%;
+                margin-bottom: 0.625%;
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+                margin-bottom: 1.25%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="top-image" src="images/log.png" alt="Top Image">			    
+        <h1>Kimcrowing</h1>
+        <p>Simply & Casually</p>
+        <div class="menu">
+            <a href="https://github.com/kimcrowing">Github</a>
+            <a>|</a>
+            <a href="#" onclick="showPasswordPrompt()">Server</a>
+            <a>|</a>
+            <a href="#" onclick="shownext()">Next</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-query" placeholder="搜索..." onkeypress="search(event)">
+            <select id="search-engine" class="default-icon" onchange="updateIcon()">
+                <option value="" selected disabled hidden></option>
+                <option value="google">谷歌</option>
+                <option value="bing">必应</option>
+            </select>
+        </div>
+        <!-- 在这里添加各个模块的内容 -->
+        <div id="about">
+            <!-- 关于模块的内容 -->
+        </div>
+        <div id="weibo">
+            <!-- 微博模块的内容 -->
+        </div>
+        <div id="next-page">
+            <div id="next">
+                <!-- 模块的内容 -->
+                <a href="https://www.google.com"><img class="fav-image" src="https://www.google.com/images/branding/product/1x/gsa_android_144dp.png" alt="谷歌"></a>
+                <a href="https://copilot.microsoft.com"><img class="fav-image" src="https://www.bing.com/rp/vE266_E90czuUc-Fs55Qoq9hIBc.svg" alt="Copilot"></a>
+                <a href="https://gemini.google.com/app"><img class="fav-image" src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" alt="Gemini"></a>
+                <a href="https://kimcrowing-my.sharepoint.com/personal/kimcrowing_kimcrowing_onmicrosoft_com/_layouts/15/onedrive.aspx?view=1"><img class="fav-image" src="https://res-1.cdn.office.net/files/sp-client/odsp-media-cc7da505/images/brand-icons/product-fluent/svg/onedrive_48x1.svg" alt="Onedrive"></a>
+                <a href="https://youtube.com"><img class="fav-image" src="https://www.youtube.com/s/desktop/050e6796/img/favicon_48x48.png" alt="Youtube"></a>
+                <a href="https://www.ithome.com"><img class="fav-image" src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+                <a href="https://github.com"><img class="fav-image" src="https://github.githubassets.com/favicons/favicon-dark.svg" alt="GitHub"></a>
+                <a href="https://springsunday.net/forums.php"><img class="fav-image" src="https://springsunday.net/favicon.ico" alt="IT之家"></a>
+                <a> </a>
+                <a href="https://github.com"><img class="fav-image" src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+                <a> </a>
+                <a href="https://github.com"><img class="fav-image" src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+                <a href="https://www.ithome.com"><img class="fav-image" src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+                <a> </a>
+                <a href="https://github.com"><img class="fav-image" src="https://www.ithome.com/favicon.ico" alt="IT之家"></a>
+            </div>
+        </div>
+        <div id="hom-page">
+            <div id="hom">
+                <!-- 模块的内容 -->
+                <a href="http://113.206.149.67:5032" >Webssh</a>
+                <a>|</a>
+                <a href="http://113.206.149.67:8083">Kodi</a>
+
+				<a>|</a>
+				<a href="http://113.206.149.67:8083">Kodi</a>
+				<a>|</a>
+				<a href="http://113.206.149.67:5244">Cloud</a>
+				<a>|</a>
+				<a href="http://113.206.149.67:5700">Qinglong</a>
+				<a>|</a>
+				<a href="http://113.206.149.67:8081">Mitmproxy</a>
+				<a>|</a>
+				<a href="https://113.206.149.67:9443">Portainer</a>
+				<a>|</a>
+				<a href="Tab/movies.html">Movies</a>
+			</div>
+        </div>
+    </div>
+         <!--div id="cloud-page"> <iframe src="about:blank" width="100%" height="450px" frameborder="0" id="cloud-iframe"></iframe></div-->	
+    <script>
+        function showPasswordPrompt() {
+            var password = "www"; // 设置正确的密码
+            var input = prompt("请输入访问密码：");
+            if (input === password) {
+                showthink();
+            } else {
+                alert("密码错误，请重新输入或退出浏览器!");
+            }
+        }
+        function loadcloudPage() {
+            var cloudPage = document.getElementById('cloud-page');
+            var cloudIframe = document.getElementById('cloud-iframe');
+            cloudIframe.src = 'http://113.206.149.67:5244';
+            cloudPage.style.display = 'block';
+			cloudIframe.style.display = 'block';
+        }
+        function showthink() {
+            var homePage = document.getElementById('hom-page');
+            var homeIframe = document.getElementById('hom');
+            homePage.style.display = 'block';
+            homeIframe.style.display = 'block';
+        }
+        function shownext() {
+            var homePage = document.getElementById('next-page');
+            var homeIframe = document.getElementById('next');
+            homePage.style.display = 'block';
+            homeIframe.style.display = 'block';
+        }
+		function search(event) {
+			var query = document.getElementById('search-query').value;
+			var engine = document.getElementById('search-engine').value;
+			if (query.trim() !== '' && event.key === 'Enter') {
+				var searchURL = '';
+				if (engine === 'google') {
+					searchURL = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+				} else {
+					// 当 engine 不是 'google' 时，默认使用必应搜索引擎
+					searchURL = 'https://www.bing.com/search?q=' + encodeURIComponent(query);
+				}
+				window.open(searchURL, '_blank');
+			}
+		}
+		function updateIcon() {
+			var engine = document.getElementById('search-engine').value;
+			var selectElement = document.getElementById('search-engine');
+			if (engine === 'google') {
+				selectElement.style.backgroundImage = "url('https://www.google.com/favicon.ico')";
+			} else if (engine === 'bing') {
+			selectElement.style.backgroundImage = "url('https://www.bing.com/favicon.ico')";
+			}
+		}		
+    </script>
+</body>
+</html>

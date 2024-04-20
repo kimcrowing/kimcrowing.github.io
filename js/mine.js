@@ -1,5 +1,5 @@
 function showPasswordPrompt() {
-    var passwordHash= "7C2ECD07F155648431E0F94B89247D713C5786E1E73E953F2FE7ECA39534CD6D"; // 设置正确的密码
+    var passwordHash= "7c2ecd07f155648431e0f94b89247d713c5786e1e73e953f2fe7eca39534cd6d"; // 设置正确的密码
     var input = prompt("请输入访问密码：");
 	var inputHash = CryptoJS.SHA256(input).toString();
 	

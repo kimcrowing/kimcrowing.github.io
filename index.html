@@ -68,9 +68,12 @@
             text-align: center;
             position: relative;
             z-index: 1;
-  display: grid; /* 添加网格布局 */
-  grid-template-columns: repeat(auto-fit, minmax(10%, 1fr)); /* 根据容器大小自动调整列数和列宽 */
-  grid-gap: 10px; /* 可选:添加网格间距 */
+background:rgba(0, 0, 0, 0.3);
+border-radius: 15px;
+display: grid; /* 添加网格布局 */
+grid-template-columns: repeat(auto-fit, minmax(10%, 1fr)); /* 根据容器大小自动调整列数和列宽 */
+grid-gap: 10px; /* 可选:添加网格间距 */
+justify-content: start; /* 将网格项目左对齐 */
         }
 
         #cloud-page{

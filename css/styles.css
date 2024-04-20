@@ -166,7 +166,7 @@ select {
 }
 /* 默认的放大镜图标 */
 select.default-icon {
-    background-image: url('images/search.svg');
+    background-image: url('../images/search.svg');
 }
 /* 针对小屏幕设备的样式调整 */
 @media (max-width: 767px) {

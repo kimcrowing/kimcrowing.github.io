@@ -172,6 +172,7 @@ select.default-icon {
 #hot-search-nav {
     display: flex;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
 /* 热门页面样式 */

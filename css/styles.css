@@ -107,7 +107,7 @@ p {
     margin-bottom: 2.5%;
     font-size: 1.2rem; /* 设置菜单文本的字体大小 */
 }
-.menu a, #hom a {
+.menu a, #hom a, #hot-search-nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 1.25%;

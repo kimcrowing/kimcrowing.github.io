@@ -20,7 +20,7 @@
             <a>|</a>
             <a href="#" onclick="showfavo()">Favorites</a>
             <a>|</a>
-            <a href="#" onclick="">Next</a>
+            <a href="#" onclick="showhot()">Next</a>
         </div>
         <div class="search-container">
             <input type="text" id="search-query" placeholder="搜索..." onkeypress="search(event)">
@@ -33,9 +33,6 @@
         <!-- 在这里添加各个模块的内容 -->
         <div id="about">
             <!-- 关于模块的内容 -->
-        </div>
-        <div id="weibo">
-            <!-- 微博模块的内容 -->
         </div>
         <div id="hom-page">
             <div id="hom">
@@ -71,10 +68,18 @@
                 <a href="https://springsunday.net/forums.php"><img class="fav-image" src="https://springsunday.net/favicon.ico" alt="springsunday"></a>
                 <a href="https://www.52pojie.cn/forum.php"><img class="fav-image" src="https://avatar.52pojie.cn/images/noavatar_small.gif" alt="吾爱破解"></a>
                 <a href="https://www.right.com.cn/forum"><img class="fav-image" src="https://www.right.com.cn/favicon.ico" alt="恩山无线论坛"></a>
-                <a href="https://github.com"><img class="fav-image" src="images/github.svg" alt="GitHub"></a>
+                <a href="https://pan666.net"><img class="fav-image" src="https://pan666.net/favicon.ico" alt="阿里站"></a>
             </div>
         </div>
-    </div>
+		<div id="hotpage">
+			<div id="hot-search-nav">
+				<div onclick="fetchHotSearch('weibo')">微博</div>
+				<div>|</div>
+				<div onclick="fetchHotSearch('baidu')">百度</div>
+			</div>
+			<ul id="hotSearchList"></ul>
+		</div>
+	</div>
     <!--div id="cloud-page"> <iframe src="about:blank" width="100%" height="450px" frameborder="0" id="cloud-iframe"></iframe></div-->	
 </body>
 </html>

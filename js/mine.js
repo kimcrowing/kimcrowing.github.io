@@ -54,7 +54,7 @@ function updateIcon() {
 // 热搜榜
 function showhot() {
     var homePage = document.getElementById('hotpage');
-    var homeIframe = document.getElementById('next');
+    var homeIframe = document.getElementById('hot-search-nav');
     homePage.style.display = 'block';
     homeIframe.style.display = 'block';
 }

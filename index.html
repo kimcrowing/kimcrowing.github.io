@@ -20,7 +20,7 @@
             <a>|</a>
             <a href="#" onclick="showfavo()">Favorites</a>
             <a>|</a>
-            <a href="#" onclick="">Next</a>
+            <a href="#" onclick="showhot()">Next</a>
         </div>
         <div class="search-container">
             <input type="text" id="search-query" placeholder="搜索..." onkeypress="search(event)">
@@ -34,23 +34,20 @@
         <div id="about">
             <!-- 关于模块的内容 -->
         </div>
-        <div id="weibo">
-            <!-- 微博模块的内容 -->
-        </div>
         <div id="hom-page">
             <div id="hom">
                 <!-- 模块的内容 -->
-                <a href="http://113.206.18.137:5032" >Webssh</a>
+                <a href="http://:5032" >Webssh</a>
                 <a>|</a>
-                <a href="http://113.206.18.137:8083">Kodi</a>
+                <a href="http://:8083">Kodi</a>
 		<a>|</a>
-		<a href="http://113.206.18.137:5244">Cloud</a>
+		<a href="http://:5244">Cloud</a>
 		<a>|</a>
-		<a href="http://113.206.18.137:5700">Qinglong</a>
+		<a href="http://:5700">Qinglong</a>
 		<a>|</a>
-		<a href="http://113.206.18.137:8081">Mitmproxy</a>
+		<a href="http://:8081">Mitmproxy</a>
 		<a>|</a>
-		<a href="https://113.206.18.137:9443">Portainer</a>
+		<a href="https://:9443">Portainer</a>
 		<a>|</a>
 		<a href="Tab/movies.html">Movies</a>
 	     </div>
@@ -74,7 +71,15 @@
                 <a href="https://pan666.net"><img class="fav-image" src="https://pan666.net/favicon.ico" alt="阿里站"></a>
             </div>
         </div>
-    </div>
+		<div class="hotpage">
+			<div class="hot-search-nav">
+				<div onclick="fetchHotSearch('weibo')">微博</div>
+				<div>|</div>
+				<div onclick="fetchHotSearch('baidu')">百度</div>
+			</div>
+			<ul id="hotSearchList"></ul>
+		</div>
+	</div>
     <!--div id="cloud-page"> <iframe src="about:blank" width="100%" height="450px" frameborder="0" id="cloud-iframe"></iframe></div-->	
 </body>
 </html>

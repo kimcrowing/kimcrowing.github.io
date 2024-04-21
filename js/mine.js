@@ -52,6 +52,12 @@ function updateIcon() {
 	}
 }
 // 热搜榜
+function showhot() {
+    var homePage = document.getElementById('hotpage');
+    var homeIframe = document.getElementById('next');
+    homePage.style.display = 'block';
+    homeIframe.style.display = 'block';
+}
 function fetchHotSearch(type) {
     const url = `https://nav.magictool.cn/plugins/topSearch/json?type=${type}`;
     fetch(url)

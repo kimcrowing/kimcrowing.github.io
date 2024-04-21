@@ -168,6 +168,74 @@ select {
 select.default-icon {
     background-image: url('../images/search.svg');
 }
+/* 热门搜索导航栏样式 */
+.hot-search-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* 热门页面样式 */
+.hotpage {
+    width: 98%;
+    max-width: 100%;
+    height: auto;
+    max-height: 420px;
+    margin: 1.5% auto;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+/* 热门搜索导航栏内的div样式 */
+.hot-search-nav div {
+    cursor: pointer;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    margin: 1.5% 0;
+    font-size: 1.5rem;
+}
+
+/* 热门搜索列表样式 */
+#hotSearchList {
+    list-style: none;
+    padding: 0 10px;
+    margin: 2% auto;
+    max-width: 100%;
+    max-height: 300px; /* 设置最大高度 */
+    overflow-y: auto; /* 高度方向可滚动 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    font-size: 1.125rem;
+}
+
+/* 针对Chrome, Safari, Opera浏览器隐藏滚动条 */
+#hotSearchList::-webkit-scrollbar {
+    display: none;
+}
+
+/* 热门搜索列表内的li样式 */
+#hotSearchList li {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 热门搜索列表内的链接样式 */
+#hotSearchList li a {
+    color: white; /* 设置链接颜色 */
+    text-decoration: none; /* 去除下划线 */
+}
+
 /* 针对小屏幕设备的样式调整 */
 @media (max-width: 767px) {
     .container {
@@ -189,3 +257,4 @@ select.default-icon {
         margin-bottom: 1.25%;
     }
 }
+

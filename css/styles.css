@@ -101,7 +101,7 @@ p {
     height: auto;
 }
 /* 设置菜单的样式 */
-.menu, #hom, #next {
+.menu, #hom, #next, #hot-search-nav {
     display: flex;
     justify-content: center;
     margin-bottom: 2.5%;
@@ -167,12 +167,6 @@ select {
 /* 默认的放大镜图标 */
 select.default-icon {
     background-image: url('../images/search.svg');
-}
-/* 热门搜索导航栏样式 */
-#hot-search-nav {
-    display: flex;
-    margin-bottom: 10px;
-    justify-content: center;
 }
 
 /* 热门页面样式 */

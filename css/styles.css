@@ -176,7 +176,7 @@ select.default-icon {
 }
 
 /* 热门页面样式 */
-.hotpage {
+#hotpage {
     width: 98%;
     max-width: 100%;
     height: auto;
@@ -188,16 +188,18 @@ select.default-icon {
     z-index: 1;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
+    display: none;
 }
 
 /* 热门搜索导航栏内的div样式 */
-.hot-search-nav div {
+#hot-search-nav div {
     cursor: pointer;
     padding: 0 10px;
     background-color: rgba(0, 0, 0, 0);
     color: white;
     margin: 1.5% 0;
     font-size: 1.5rem;
+    display: none;
 }
 
 /* 热门搜索列表样式 */

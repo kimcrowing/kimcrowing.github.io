@@ -14,13 +14,13 @@
         <h1>Kimcrowing</h1>
         <p>Simply & Casually</p>
         <div class="menu">
-            <a href="https://github.com/kimcrowing">Github</a>
-            <a>|</a>
-            <a href="#" onclick="showPasswordPrompt()">Server</a>
+            <a href="#" onclick="showPasswordPrompt()">Home</a>
             <a>|</a>
             <a href="#" onclick="showfavo()">Favorites</a>
             <a>|</a>
-            <a href="#" onclick="showhot()">Next</a>
+            <a href="#" onclick="showhot()">HotSearch</a>
+            <a>|</a>
+            <a href="https://github.com/kimcrowing">Next</a>
         </div>
         <div class="search-container">
             <input type="text" id="search-query" placeholder="搜索..." onkeypress="search(event)">
@@ -76,6 +76,11 @@
 				<a href="#" onclick="fetchHotSearch('weibo')">微博</a>
                                 <a>|</a>
 				<a href="#" onclick="fetchHotSearch('baidu')">百度</a>
+				<a href="#" onclick="fetchHotSearch('bilibili')">哔站</a>
+                                <a>|</a>
+				<a href="#" onclick="fetchHotSearch('zhihu')">知乎</a>
+                                <a>|</a>
+				<a href="#" onclick="fetchHotSearch('douyin')">抖音</a>
 			</div>
 			<ul id="hotSearchList"></ul>
 		</div>

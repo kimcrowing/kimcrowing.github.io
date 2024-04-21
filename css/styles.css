@@ -171,7 +171,6 @@ select.default-icon {
 /* 热门搜索导航栏样式 */
 #hot-search-nav {
     display: flex;
-    justify-content: center;
     margin-bottom: 10px;
 }
 

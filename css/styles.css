@@ -229,7 +229,7 @@ align-items: center; /* 垂直居中对齐 */
  color: white; /* 设置链接颜色 */
             text-decoration: none; /* 去除下划线 */
             flex-grow: 1; /* 让标题占据剩余空间 */
-            margin-right: 10px; /* 右边距 */
+            margin-left: 0px; /* 左边距 */
 ｝
 .index-column {
 	width: 30px;

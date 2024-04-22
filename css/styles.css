@@ -223,13 +223,13 @@ select.default-icon {
     position: relative;
     display: flex;
     justify-content: space-between;
-}
-
-/* 热门搜索列表内的链接样式 */
-#hotSearchList li a {
-    color: white; /* 设置链接颜色 */
-    text-decoration: none; /* 去除下划线 */
-}
+            align-items: center; /* 垂直居中对齐 */
+        }
+        #hotSearchList li a {
+            color: white; /* 设置链接颜色 */
+            text-decoration: none; /* 去除下划线 */
+            flex-grow: 1; /* 让标题占据剩余空间 */
+            margin-right: 10px; /* 右边距 */
 .index-column {
 	width: 30px;
         text-align: center;

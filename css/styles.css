@@ -102,6 +102,7 @@ p {
 }
 /* 设置菜单的样式 */
 .menu, #hom, #next, #hot-search-nav {
+	width: 95%;
     display: flex;
     justify-content: center;
     margin-bottom: 2.5%;
@@ -113,9 +114,6 @@ p {
     margin: 0 1.25%;
 }
 .menu a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1.25%;
 	font-size: 1.8rem;
 }
 #next a {

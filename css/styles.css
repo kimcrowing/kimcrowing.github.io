@@ -230,6 +230,13 @@ select.default-icon {
     color: white; /* 设置链接颜色 */
     text-decoration: none; /* 去除下划线 */
 }
+.index-column {
+	width: 30px;
+        text-align: center;
+}
+.colorful-index {
+        color: #FF0000; /* 红色 */
+}
 
 /* 针对小屏幕设备的样式调整 */
 @media (max-width: 767px) {

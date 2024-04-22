@@ -58,39 +58,46 @@ function showhot() {
     homePage.style.display = 'block';
     homeIframe.style.display = 'block';
 }
-function fetchHotSearch(type) {
-    const url = `https://nav.magictool.cn/plugins/topSearch/json?type=${type}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            const hotSearchList = data.data;
-            const listElement = document.getElementById('hotSearchList');
-            listElement.innerHTML = ''; // 清空列表
-            hotSearchList.forEach(item => {
-                const listItem = document.createElement('li');
-                const title = document.createElement('a');
-                title.href = item.url; // 设置链接
-                title.target = '_blank'; // 在新标签页中打开链接
-                title.textContent = item.title;
-                const hot = document.createElement('span');
-                hot.textContent = simplifyNumber(item.hot);
+    // 函数来获取和显示热搜数据
+    function fetchHotSearch(type) {
+        const url = `https://nav.magictool.cn/plugins/topSearch/json?type=${type}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const hotSearchList = data.data;
+                const sortedHotSearchList = hotSearchList.sort((a, b) => b.hot - a.hot); // 根据item.hot大小排序
+                const listElement = document.getElementById('hotSearchList');
+                listElement.innerHTML = ''; // 清空列表
+                sortedHotSearchList.forEach((item, index) => {
+                    const listItem = document.createElement('li');
+                    const indexColumn = document.createElement('span');
+                    indexColumn.className = 'index-column';
+                    indexColumn.classList.add(index < 5 ? 'colorful-index' : ''); // 设置1~5的序号颜色
+                    indexColumn.textContent = index + 1;
+                    const title = document.createElement('a');
+                    title.href = item.url; // 设置链接
+                    title.target = '_blank'; // 在新标签页中打开链接
+                    title.textContent = item.title;
+                    const hot = document.createElement('span');
+                    hot.textContent = simplifyNumber(item.hot);
+                    listItem.appendChild(indexColumn);
                 listItem.appendChild(title);
-                listItem.appendChild(hot);
-                listElement.appendChild(listItem);
-            });
-        })
-        .catch(error => console.error('Error:', error));
-}
+                        listItem.appendChild(hot);
+                        listElement.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
 
-// 简化数字表示
-function simplifyNumber(num) {
-    if (num >= 10000) {
-        return (num / 10000).toFixed(0) + '万';
-    }
-    return num.toString();
-}
+        // 简化数字表示
+        function simplifyNumber(num) {
+            if (num >= 10000) {
+                return (num / 10000).toFixed(0) + '万';
+            }
+            return num.toString();
+        }
 
-// 页面加载时默认获取微博热搜
-window.onload = function() {
-    fetchHotSearch('weibo');
-};
+        // 页面加载时默认获取微博热搜
+        window.onload = function() {
+            fetchHotSearch('weibo');
+        };

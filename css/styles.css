@@ -102,7 +102,6 @@ p {
 }
 /* 设置菜单的样式 */
 .menu, #hom, #next, #hot-search-nav {
-	width: 95%;
     display: flex;
     justify-content: center;
     margin-bottom: 2.5%;
@@ -114,6 +113,9 @@ p {
     margin: 0 1.25%;
 }
 .menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.25%;
 	font-size: 1.8rem;
 }
 #next a {
@@ -221,20 +223,12 @@ select.default-icon {
     position: relative;
     display: flex;
     justify-content: space-between;
-align-items: center; /* 垂直居中对齐 */
 }
+
+/* 热门搜索列表内的链接样式 */
 #hotSearchList li a {
- color: white; /* 设置链接颜色 */
-            text-decoration: none; /* 去除下划线 */
-            flex-grow: 1; /* 让标题占据剩余空间 */
-            margin-left: 0px; /* 左边距 */
-｝
-.index-column {
-	width: 30px;
-        text-align: center;
-}
-.colorful-index {
-        color: #FF0000; /* 红色 */
+    color: white; /* 设置链接颜色 */
+    text-decoration: none; /* 去除下划线 */
 }
 
 /* 针对小屏幕设备的样式调整 */
@@ -258,4 +252,3 @@ align-items: center; /* 垂直居中对齐 */
         margin-bottom: 1.25%;
     }
 }
-

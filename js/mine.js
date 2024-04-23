@@ -64,6 +64,7 @@ function fetchHotSearch(type) {
         .then(response => response.json())
         .then(data => {
             const hotSearchList = data.data;
+            const sortedHotSearchList = hotSearchList.sort((a, b) => b.hot - a.hot); // 根据item.hot大小排序
             const listElement = document.getElementById('hotSearchList');
             listElement.innerHTML = ''; // 清空列表
             hotSearchList.forEach(item => {

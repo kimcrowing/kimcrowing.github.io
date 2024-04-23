@@ -213,7 +213,7 @@ select.default-icon {
 /* 热门搜索列表样式 */
 #hotSearchList {
     list-style: none;
-    padding: 0 10px;
+    padding: 0 0px;
     margin: 2% auto;
     width: 100%;
     max-height: 300px; /* 设置最大高度 */

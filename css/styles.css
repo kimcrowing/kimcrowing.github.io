@@ -1,5 +1,5 @@
 /* 设置网页的基本CSS样式 */
-body {
+/*body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,6 +8,23 @@ body {
     background-size: auto; /* 将背景图片设置为覆盖整个容器 */
     color: #fff;
     font-size: 16px;
+}*/
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background:
+  radial-gradient(#fff 3px, transparent 4px),
+  radial-gradient(#fff 3px, transparent 4px),
+  linear-gradient(#465298 4px, transparent 0),
+  linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+  linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+  #465298;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  );
+color: #fff;
 }
 /* 设置容器的样式,使其居中并占据90%的宽度 */
 .container {

@@ -16698,6 +16698,7 @@ var domainsUsingProxy = {
   "wikipedia.org": 1,
   "wikiwand.com": 1,
   "wikiwiki.jp": 1,
+  "wiki.metacubex.one": 1,
   "wildammo.com": 1,
   "williamhill.com": 1,
   "willw.net": 1,

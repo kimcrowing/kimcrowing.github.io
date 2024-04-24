@@ -455,6 +455,7 @@ payload:
   - 'wwis-dubc1-vip98.adobe.com'
   - 'wwis-dubc1-vip99.adobe.com'
   - 'www-cdn.icloud.com.akadns.net'
+  - 'wiki.metacubex.one'
   - 'zeenews-fonts.s3.amazonaws.com'
   - 'ztedevices.com'
   - '+.000webhost.com'

@@ -29,7 +29,7 @@ color: #fff;
 /* 设置容器的样式,使其居中并占据90%的宽度 */
 .container {
     width: 98%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 1% 1%;
     text-align: center;

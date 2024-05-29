@@ -48,6 +48,8 @@ body {
     max-width: 30%;
     height: auto;
     margin: 0; /* 居中并添加底部边距 */
+	background:rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 #cloud-iframe, #hom-page, #next-page {
     /*background-color: transparent;  设置主页面的背景为透明 */

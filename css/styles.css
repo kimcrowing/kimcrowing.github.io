@@ -48,7 +48,7 @@ body {
     max-width: 30%;
     height: auto;
     margin: 0; /* 居中并添加底部边距 */
-	background:rgba(255, 255, 255, 1);
+	background:rgba(255, 255, 255, 0.7);
     border-radius: 10px;
 }
 #cloud-iframe, #hom-page, #next-page {

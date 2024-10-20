@@ -36,7 +36,7 @@ body {
 
 /* 设置顶部图片的样式 */
 .top-image {
-    width: 50%;
+    width: 30%;
     max-width: 90%;
     height: auto;
     object-fit: cover;

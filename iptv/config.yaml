@@ -66,7 +66,7 @@ proxy-providers:
     url: https://mirror.ghproxy.com/raw.githubusercontent.com/kimcrowing/Proxy/master/dist/clash.config.yaml
     path: ./provider1.yaml
     interval: 3600
-    filter: '美国|德国|日本'
+    filter: '美国|德国|加拿大|日本|法国|英国|澳大利亚|新加坡'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -76,7 +76,7 @@ proxy-providers:
     url: https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
     path: ./provider2.yaml
     interval: 3600
-    filter: '美国|德国|加拿大|日本|法国'
+    filter: '美国|德国|加拿大|日本|法国|英国|澳大利亚|新加坡'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -86,7 +86,7 @@ proxy-providers:
     url: https://mirror.ghproxy.com/github.com/aiboboxx/clashfree/blob/main/clash.yml
     path: ./provider3.yaml
     interval: 3600
-    filter: '美国|德国|加拿大|日本|法国'
+    filter: '美国|德国|加拿大|日本|法国|英国|澳大利亚|新加坡'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204

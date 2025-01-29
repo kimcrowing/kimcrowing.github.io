@@ -39,7 +39,7 @@ function search(event) {
 			// 当 engine 不是 'google' 时，默认使用必应搜索引擎
 			searchURL = 'https://www.bing.com/search?q=' + encodeURIComponent(query);
 		}
-		window.open(searchURL, '_blank');
+		window.open(searchURL);
 	}
 }
 function updateIcon() {

@@ -4,6 +4,8 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
+uthentication:
+  - "admin:www"  # 格式为"用户名:密码"
 ipv6: true
 dns:
   enable: false

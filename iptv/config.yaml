@@ -65,7 +65,7 @@ dns:
 proxy-providers:
   www:
     type: http
-    url: https://mirror.ghproxy.com/raw.githubusercontent.com/kimcrowing/Proxy/master/dist/clash.config.yaml
+    url: https://gitlab.com/wybgit/surge_conf/-/raw/main/myconfig/Clash/clashconfig.yaml
     path: ./provider1.yaml
     interval: 3600
     filter: '美国|德国|加拿大|日本|法国|英国|澳大利亚|新加坡'

@@ -65,33 +65,14 @@ dns:
 proxy-providers:
   www:
     type: http
-    url: https://gitlab.com/wybgit/surge_conf/-/raw/main/myconfig/Clash/clashconfig.yaml
+    url: https://kimcrowing.github.io/iptv/combined_proxies.yaml
     path: ./provider1.yaml
     interval: 3600
     filter: 'US|DE|FR|AU|GB|JP|CA'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300  
-  ww:
-    type: http
-    url: https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml
-    path: ./provider2.yaml
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
       interval: 300          
-  w:
-    type: http
-    url: https://ghfast.top/github.com/aiboboxx/clashfree/blob/main/clash.yml
-    path: ./provider3.yaml
-    interval: 3600
-    filter: '美国|德国|加拿大|日本|法国|英国|澳大利亚|新加坡'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300         
 proxy-groups:
 - name: PROXY
   type: select
@@ -103,15 +84,11 @@ proxy-groups:
   type: select
   use:
    - www
-   - ww
-   - w
 - name: LOAD-BALANCE
   type: load-balance
   strategy: consistent-hashing
   use:
    - www
-   - ww
-   - w
 - name: URL-test
   type: url-test
   url: https://www.youtube.com/
@@ -119,8 +96,6 @@ proxy-groups:
   timeout: 5
   use:
    - www
-   - ww
-   - w
 rules:
   - RULE-SET,applications,DIRECT
   - RULE-SET,private,DIRECT

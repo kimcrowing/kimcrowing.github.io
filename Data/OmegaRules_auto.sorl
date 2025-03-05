@@ -1,0 +1,40 @@
+[SwitchyOmega Conditions]
+; Require: SwitchyOmega >= 2.3.2
+; Date: 2025/3/5
+; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
+
+*.google.cn
+*.grok.com
+*.oaistatic.com
+*.oaiusercontent.com
+*.twimg.com
+*.brave.com
+*onedrive.live.com
+*.vercel.com
+*.youtube.com
+*.ibm.com
+*.gstatic.com
+*.googleusercontent.com
+*.ytimg.com
+*.google.com.hk
+*.google.com
+*.raw.githubusercontent.com
+*.google.hk
+*.perplexity.ai
+*.metacubex.one
+*.office.com
+*.chatgpt.com
+*.sub-webs.com
+*.anthropic.com
+*.cloud.microsoft
+*.x.ai
+*.clashmeta.org
+*.avatars.githubusercontent.com
+*.githubassets.com
+*.github.com
+*.huggingface.co
+*.gravatar.com
+*.awswaf.com
+*.hf.space
+*.openai.com
+*.claude.ai

@@ -21,6 +21,7 @@
 *.grok.com
 *.gravatar.com
 *.gstatic.com
+*.heroku.com
 *.hf.space
 *.huggingface.co
 *.ibm.com

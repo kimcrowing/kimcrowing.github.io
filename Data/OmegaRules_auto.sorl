@@ -12,6 +12,7 @@
 *.clashmeta.org
 *.cloudflareinsights.com
 *.cloud.microsoft
+*.docker.com
 *.github.com
 *.githubassets.com
 *.google.cn
@@ -41,6 +42,7 @@
 *.twimg.com
 *.vercel.com
 *.wikipedia.org
+*.workers.dev
 *.x.ai
 *.x.com
 *.youtube.com

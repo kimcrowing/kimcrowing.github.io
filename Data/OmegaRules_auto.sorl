@@ -13,6 +13,7 @@
 *.cloudflareinsights.com
 *.cloud.microsoft
 *.docker.com
+*.facebook.net
 *.github.com
 *.githubassets.com
 *.google.cn

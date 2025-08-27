@@ -101,6 +101,7 @@ function fetchHotSearch(type) {
 
 // 页面加载时默认获取微博热搜
 window.onload = function() {
-    fetchHotSearch('weibo');
+    fetchHotSearch('baidu');
 };
+
 

@@ -1,7 +1,7 @@
 proxies:
   - name: AAA
     server: 113.206.123.3
-    port: 8800
+    port: 10808
     type: vmess
     uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
     alterId: 0

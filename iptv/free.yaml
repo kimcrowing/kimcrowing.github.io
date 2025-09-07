@@ -1,11 +1,14 @@
 proxies:
-  - name: "AAA"
-    server: "113.206.123.3"
-    port: 10808
+  - name: AAA
+    server: 113.206.123.3
+    port: 8800
     type: vmess
-    uuid: "350ff379-b4d1-4e10-839a-edbf05a7e353"
+    uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
     alterId: 0
+    cipher: auto
+    tls: false
     network: ws
-    ws-path: "/"
-    tls: false # 根据你的信息，“底层传输安全”为空，此处设置为 false
-    host: "tjdownload.pan.wo.cn" # 伪装域名
+    ws-opts:
+      path: /
+      headers:
+        Host: tjdownload.pan.wo.cn

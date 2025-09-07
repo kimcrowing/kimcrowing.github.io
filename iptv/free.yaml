@@ -1,7 +1,7 @@
 proxies:
   - name: "GZV6"
-    server: "240e:3b0:a11:2b7e:948:cbc3:d60f:e15c"
-    port: 8800
+    server: "113.206.123.3"
+    port: 10808
     type: vmess
     uuid: "350ff379-b4d1-4e10-839a-edbf05a7e353"
     alterId: 0

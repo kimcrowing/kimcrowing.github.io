@@ -89,12 +89,12 @@ proxy-groups:
   type: select
   use:
    - www
+   - w
 - name: LOAD-BALANCE
   type: load-balance
   strategy: consistent-hashing
   use:
    - www
-   - w
 - name: URL-test
   type: url-test
   url: https://www.youtube.com/

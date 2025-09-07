@@ -1,0 +1,11 @@
+proxies:
+  - name: "GZV6"
+    server: "240e:3b0:a11:2b7e:948:cbc3:d60f:e15c"
+    port: 8800
+    type: vmess
+    uuid: "350ff379-b4d1-4e10-839a-edbf05a7e353"
+    alterId: 0
+    network: ws
+    ws-path: "/"
+    tls: false # 根据你的信息，“底层传输安全”为空，此处设置为 false
+    host: "tjdownload.pan.wo.cn" # 伪装域名

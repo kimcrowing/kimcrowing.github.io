@@ -11,4 +11,4 @@ proxies:
     ws-opts:
       path: /
       headers:
-        Host: tjdownload.pan.wo.cn
+        Host: tjtn.pan.wo.cn

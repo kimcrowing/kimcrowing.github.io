@@ -76,7 +76,7 @@ proxy-providers:
   w:
     type: http
     url: https://kimcrowing.github.io/iptv/free.yaml
-    path: ./provider2.yaml
+    path: ./provider6.yaml
     interval: 36000
     health-check:
       enable: true

@@ -76,12 +76,8 @@ proxy-providers:
   w:
     type: http
     url: https://kimcrowing.github.io/iptv/free.yaml
-    path: ./provider6.yaml
+    path: ./provider2.yaml
     interval: 36000
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 30000  
 proxy-groups:
 - name: PROXY
   type: select
@@ -99,6 +95,7 @@ proxy-groups:
   strategy: consistent-hashing
   use:
    - www
+   - w
 - name: URL-test
   type: url-test
   url: https://www.youtube.com/
@@ -106,10 +103,6 @@ proxy-groups:
   timeout: 5
   use:
    - www
-- name: Free
-  type: select
-  use:
-   - w
 rules:
   - RULE-SET,applications,DIRECT
   - RULE-SET,private,DIRECT

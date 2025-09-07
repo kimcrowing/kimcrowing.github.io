@@ -1,5 +1,5 @@
 proxies:
-  - name: "GZV6"
+  - name: "AAA"
     server: "113.206.123.3"
     port: 10808
     type: vmess

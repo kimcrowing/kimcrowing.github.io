@@ -1,25 +1,14 @@
 proxies:
-  - name: unicom-cloud
-    type: vmess
+  - name: AAA
     server: 113.206.244.103
     port: 10808
+    type: vmess
     uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
     alterId: 0
     cipher: auto
-    tls: true
-    skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
-      host: tjdownload.pan.wo.cn
+      headers:
+        Host: tjdownload.pan.wo.cn
     servername: tjdownload.pan.wo.cn
-
-proxy-groups:
-  - name: Proxy
-    type: select
-    proxies:
-      - unicom-cloud
-
-rules:
-  - DOMAIN-SUFFIX,tjdownload.pan.wo.cn,Proxy
-  - MATCH,Proxy

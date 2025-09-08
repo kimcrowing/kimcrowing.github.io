@@ -13,3 +13,18 @@ proxies:
       headers:
         Host: tjdownload.pan.wo.cn
     servername: tjdownload.pan.wo.cn
+  - name: BBB
+    server: https://bfefc939fc0c.ngrok-free.app
+    port: 10808
+    type: vmess
+    uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: tjdownload.pan.wo.cn
+    servername: tjdownload.pan.wo.cn
+

@@ -15,7 +15,7 @@ proxies:
     servername: tjdownload.pan.wo.cn
   - name: BBB
     server: https://bfefc939fc0c.ngrok-free.app
-    port: 10808
+    port: 443
     type: vmess
     uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
     alterId: 0

@@ -28,16 +28,17 @@ proxies:
         Host: tjdownload.pan.wo.cn
     servername: tjdownload.pan.wo.cn
   - name: CCC
-    server: 2408:8362:1871:f2e:c55b:2ebe:87d:af54
+    server: 113.206.244.103
     port: 10808
     type: vmess
     uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
     alterId: 0
     cipher: auto
     tls: false
-    network: ws
-    ws-opts:
+    network: http
+    http-opts:
       path: /
+      method: GET
       headers:
         Host: tjdownload.pan.wo.cn
     servername: tjdownload.pan.wo.cn

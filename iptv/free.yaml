@@ -6,7 +6,7 @@ proxies:
     uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
     alterId: 0
     cipher: auto
-    tls: true
+    tls: false
     network: ws
     ws-opts:
       path: /

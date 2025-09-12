@@ -1,6 +1,6 @@
 proxies:
   - name: AAA
-    server: 113.206.244.103
+    server: 113.206.23.108
     port: 10808
     type: vmess
     uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
@@ -11,5 +11,5 @@ proxies:
     ws-opts:
       path: /
       headers:
-        Host: tjdownload.pan.wo.cn
-    servername: tjdownload.pan.wo.cn
+        Host: hyownload.pan.wo.cn
+    servername: hydownload.pan.wo.cn

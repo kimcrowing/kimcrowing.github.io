@@ -14,6 +14,7 @@ proxies:
     tls: true  # 启用 TLS
     servername: "hydownload.pan.wo.cn"  # TLS SNI（服务器名称指示，必须匹配服务端 host）
     skip-cert-verify: true  # 跳过证书验证（生产环境设 false）
+    fingerprint: "chrome"
     ws-opts:  # WebSocket 选项
       path: "/openapi/download"  # WS 路径
       headers:

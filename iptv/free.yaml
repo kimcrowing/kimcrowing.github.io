@@ -1,12 +1,39 @@
 proxies:
-  - name: AAA
-    server: 113.206.23.108
-    port: 10808
+  - name: unicom-cloud
     type: vmess
+    server: 113.206.23.108
+    port: 10808 # Ngrok 端口
     uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
     alterId: 0
     cipher: auto
+    tls: true
+    skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
-      host: tjdownload.pan.wo.cn
+      path: /openapi/download
+      host: hydownload.pan.wo.cn
+    servername: hydownload.pan.wo.cn
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - unicom-cloud
+
+rules:
+  - DOMAIN-SUFFIX,pan.wo.cn,Proxy
+  - MATCH,Proxy # 所有流量走代理
+
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - 114.114.114.114
+  nameserver:
+    - 114.114.114.114
+
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true

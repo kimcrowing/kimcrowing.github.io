@@ -3,7 +3,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-  - name: "Xray"  # 节点名称，自定义
+  - name: "X"  # 节点名称，自定义
     type: vmess
     server: 113.206.23.108  # 服务端 IP 或域名
     port: 10808  # 服务端端口
@@ -13,7 +13,7 @@ proxies:
     network: ws  # 传输协议：ws (WebSocket)
     tls: true  # 启用 TLS
     servername: "hydownload.pan.wo.cn"  # TLS SNI（服务器名称指示，必须匹配服务端 host）
-    skip-cert-verify: false  # 跳过证书验证（生产环境设 false）
+    skip-cert-verify: true  # 跳过证书验证（生产环境设 false）
     ws-opts:  # WebSocket 选项
       path: "/openapi/download"  # WS 路径
       headers:
@@ -22,7 +22,7 @@ proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
-      - "Xray"  # 选择您的节点
+      - "X"  # 选择您的节点
       - DIRECT  # 直连选项
 rules:
   - MATCH,Proxy  # 简单规则：所有流量走 Proxy

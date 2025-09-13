@@ -2,9 +2,8 @@ mixed-port: 7890  # Clash 监听端口（HTTP/SOCKS）
 allow-lan: false
 mode: rule
 log-level: info
-
 proxies:
-  - name: "Xray-VMess-WS-TLS"  # 节点名称，自定义
+  - name: "Xray"  # 节点名称，自定义
     type: vmess
     server: 113.206.23.108  # 服务端 IP 或域名
     port: 10808  # 服务端端口
@@ -19,13 +18,11 @@ proxies:
       path: "/openapi/download"  # WS 路径
       headers:
         Host: "hydownload.pan.wo.cn"  # WS Host 头
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
-      - "Xray-VMess-WS-TLS"  # 选择您的节点
+      - "Xray"  # 选择您的节点
       - DIRECT  # 直连选项
-
 rules:
   - MATCH,Proxy  # 简单规则：所有流量走 Proxy

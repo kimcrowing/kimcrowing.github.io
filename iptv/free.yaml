@@ -1,39 +1,31 @@
+mixed-port: 7890  # Clash 监听端口（HTTP/SOCKS）
+allow-lan: false
+mode: rule
+log-level: info
+
 proxies:
-  - name: unicom-cloud
+  - name: "Xray-VMess-WS-TLS"  # 节点名称，自定义
     type: vmess
-    server: 113.206.23.108
-    port: 10808 # Ngrok 端口
-    uuid: 350ff379-b4d1-4e10-839a-edbf05a7e353
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /openapi/download
-      host: hydownload.pan.wo.cn
-    servername: hydownload.pan.wo.cn
+    server: 113.206.23.108  # 服务端 IP 或域名
+    port: 10808  # 服务端端口
+    uuid: "350ff379-b4d1-4e10-839a-edbf05a7e353"  # UUID
+    alterId: 0  # alterId
+    cipher: auto  # 加密方式（auto 自动）
+    network: ws  # 传输协议：ws (WebSocket)
+    tls: true  # 启用 TLS
+    servername: "hydownload.pan.wo.cn"  # TLS SNI（服务器名称指示，必须匹配服务端 host）
+    skip-cert-verify: false  # 跳过证书验证（生产环境设 false）
+    ws-opts:  # WebSocket 选项
+      path: "/openapi/download"  # WS 路径
+      headers:
+        Host: "hydownload.pan.wo.cn"  # WS Host 头
 
 proxy-groups:
-  - name: Proxy
+  - name: "Proxy"
     type: select
     proxies:
-      - unicom-cloud
+      - "Xray-VMess-WS-TLS"  # 选择您的节点
+      - DIRECT  # 直连选项
 
 rules:
-  - DOMAIN-SUFFIX,pan.wo.cn,Proxy
-  - MATCH,Proxy # 所有流量走代理
-
-dns:
-  enable: true
-  ipv6: false
-  default-nameserver:
-    - 114.114.114.114
-  nameserver:
-    - 114.114.114.114
-
-tun:
-  enable: true
-  stack: system
-  auto-route: true
-  auto-detect-interface: true
+  - MATCH,Proxy  # 简单规则：所有流量走 Proxy

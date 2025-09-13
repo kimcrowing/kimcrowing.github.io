@@ -9,4 +9,4 @@ proxies:
     network: ws
     ws-opts:
       path: /
-      host: hydownload.pan.wo.cn
+      host: tjdownload.pan.wo.cn

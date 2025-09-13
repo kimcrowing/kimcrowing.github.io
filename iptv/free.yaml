@@ -17,6 +17,7 @@ proxies:
     fingerprint: "chrome"
     ws-opts:  # WebSocket 选项
       path: "/openapi/download"  # WS 路径
+      alpn: ["http/1.1"]
       headers:
         Host: "hydownload.pan.wo.cn"  # WS Host 头
 proxy-groups:

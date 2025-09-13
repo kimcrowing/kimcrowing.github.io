@@ -1,30 +1,34 @@
-mixed-port: 7890  # Clash 监听端口（HTTP/SOCKS）
+mixed-port: 7890  # Clash 监听端口
 allow-lan: false
 mode: rule
-log-level: info
+log-level: info  # 查看更多连接细节
+
 proxies:
-  - name: "X"  # 节点名称，自定义
+  - name: "Xray-VMess-WS-TLS"
     type: vmess
-    server: 113.206.23.108  # 服务端 IP 或域名
-    port: 10808  # 服务端端口
-    uuid: "350ff379-b4d1-4e10-839a-edbf05a7e353"  # UUID
-    alterId: 0  # alterId
-    cipher: auto  # 加密方式（auto 自动）
-    network: ws  # 传输协议：ws (WebSocket)
-    tls: true  # 启用 TLS
-    servername: "hydownload.pan.wo.cn"  # TLS SNI（服务器名称指示，必须匹配服务端 host）
-    skip-cert-verify: true  # 跳过证书验证（生产环境设 false）
-    fingerprint: "chrome"
-    ws-opts:  # WebSocket 选项
-      path: "/openapi/download"  # WS 路径
-      alpn: ["http/1.1"]
+    server: 113.206.23.108  # 用 IP 避免 DNS 问题
+    port: 10808  # 与服务端匹配
+    uuid: "350ff379-b4d1-4e10-839a-edbf05a7e353"
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+    servername: "hydownload.pan.wo.cn"  # 匹配证书 CN
+    skip-cert-verify: true  # 自签名必需
+    udp: true  # 启用 UDP（游戏/视频）
+    client-fingerprint: "chrome"  # uTLS 伪装，防检测
+    ws-opts:
+      path: "/openapi/download"
       headers:
-        Host: "hydownload.pan.wo.cn"  # WS Host 头
+        Host: "hydownload.pan.wo.cn"
+      alpn: ["http/1.1"]  # 匹配服务端
+
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
-      - "X"  # 选择您的节点
-      - DIRECT  # 直连选项
+      - "Xray-VMess-WS-TLS"
+      - DIRECT
+
 rules:
-  - MATCH,Proxy  # 简单规则：所有流量走 Proxy
+  - MATCH,Proxy  # 所有流量走代理

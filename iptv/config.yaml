@@ -68,7 +68,6 @@ proxy-providers:
     url: https://kimcrowing.github.io/iptv/combined_proxies.yaml
     path: ./provider1.yaml
     interval: 3600
-    filter: 'US|DE|FR|AU|GB|JP|CA'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204

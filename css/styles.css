@@ -300,12 +300,12 @@ select.default-icon {
     width: 100%;
     max-height: 300px;
     overflow-y: auto;
-    overflow-x: hidden; /* 防止横向滚动 */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE */
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 #rss-content::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
 #rss-content li.rss-item {
     background: rgba(0, 0, 0, 0.3);
@@ -314,7 +314,7 @@ select.default-icon {
     margin: 1.5px;
     border-radius: 5px;
     justify-content: stretch;
-    word-wrap: break-word; /* 长内容换行 */
+    word-wrap: break-word;
 }
 #rss-content li.rss-item a {
     color: white;
@@ -322,8 +322,8 @@ select.default-icon {
     margin: auto 10px auto;
     text-align: center;
     padding: 1% 1%;
-    font-size: 0.9rem; /* 缩小标题字体 */
-    word-wrap: break-word; /* 标题换行 */
+    font-size: 0.8rem;
+    word-wrap: break-word;
 }
 #rss-content li.rss-item p {
     margin: auto 10px;
@@ -331,10 +331,10 @@ select.default-icon {
     color: white;
 }
 #rss-content li.rss-item p a {
-    color: #00f; /* 下载链接蓝色 */
+    color: white;
     text-decoration: none;
-    font-size: 0.9rem; /* 缩小下载链接字体 */
-    word-wrap: break-word; /* 下载链接换行 */
+    font-size: 0.8rem;
+    word-wrap: break-word;
 }
 #rss-content li.rss-item p a:hover {
     text-decoration: underline;

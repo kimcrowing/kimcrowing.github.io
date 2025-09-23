@@ -128,13 +128,13 @@ function showRSS() {
                 li.className = 'rss-item';
                 const link = item.link || '#';
                 const downloadLink = link.replace('details.php', 'download.php') + (PASSKEY ? '&passkey=' + PASSKEY : '');
-                const description = item.contentSnippet || item.description || `<a href="${downloadLink}" target="_blank">下载链接</a>`;
+                const description = item.contentSnippet || item.description || `<a href="${downloadLink}" target="_blank">下载</a>`;
                 
                 li.innerHTML = `
                     <span class="index-column">${index + 1}</span>
                     <a href="${link}" target="_blank">${item.title || '无标题'}</a>
                     <p>${description}</p>
-                    <span class="num">发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</span>
+                    <span class="num">发布于: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</span>
                 `;
                 content.appendChild(li);
             });
@@ -147,6 +147,7 @@ function showRSS() {
 window.onload = function() {
     fetchHotSearch('baidu');
 };
+
 
 
 

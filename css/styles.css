@@ -300,6 +300,7 @@ select.default-icon {
     width: 100%;
     max-height: 300px;
     overflow-y: auto;
+    overflow-x: hidden; /* 防止横向滚动 */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE */
 }
@@ -313,6 +314,7 @@ select.default-icon {
     margin: 1.5px;
     border-radius: 5px;
     justify-content: stretch;
+    word-wrap: break-word; /* 长内容换行 */
 }
 #rss-content li.rss-item a {
     color: white;
@@ -320,12 +322,22 @@ select.default-icon {
     margin: auto 10px auto;
     text-align: center;
     padding: 1% 1%;
-    font-size: 1rem;
+    font-size: 0.9rem; /* 缩小标题字体 */
+    word-wrap: break-word; /* 标题换行 */
 }
 #rss-content li.rss-item p {
     margin: auto 10px;
     font-size: 1rem;
     color: white;
+}
+#rss-content li.rss-item p a {
+    color: #00f; /* 下载链接蓝色 */
+    text-decoration: none;
+    font-size: 0.9rem; /* 缩小下载链接字体 */
+    word-wrap: break-word; /* 下载链接换行 */
+}
+#rss-content li.rss-item p a:hover {
+    text-decoration: underline;
 }
 #rss-content li.rss-item .index-column {
     width: 5%;
@@ -337,4 +349,3 @@ select.default-icon {
     font-size: 0.75rem;
     margin: auto 10px 10px auto;
 }
-

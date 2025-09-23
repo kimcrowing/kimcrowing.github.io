@@ -295,7 +295,7 @@ select.default-icon {
 }
 #rss-content {
     list-style: none;
-    padding: 0;
+    padding: 0 0px;
     margin: 2% auto;
     width: 100%;
     max-height: 300px;
@@ -309,24 +309,31 @@ select.default-icon {
 #rss-content li.rss-item {
     background: rgba(0, 0, 0, 0.3);
     color: white;
+    display: flex;
     margin: 1.5px;
-    padding: 10px;
     border-radius: 5px;
+    justify-content: stretch;
 }
-#rss-content li.rss-item h2 {
-    margin: 0 0 5px;
-    font-size: 1.2rem;
+#rss-content li.rss-item a {
+    color: white;
+    text-decoration: none;
+    margin: auto 10px auto;
+    text-align: center;
+    padding: 1% 1%;
+    font-size: 1rem;
 }
 #rss-content li.rss-item p {
-    margin: 5px 0;
+    margin: auto 10px;
     font-size: 1rem;
     color: white;
 }
-#rss-content li.rss-item a {
-    color: #00f;
-    text-decoration: none;
-    margin: 0 10px;
+#rss-content li.rss-item .index-column {
+    width: 5%;
+    margin: auto 0 auto;
+    text-align: center;
+    font-size: 1rem;
 }
-#rss-content li.rss-item a:hover {
-    text-decoration: underline;
+#rss-content li.rss-item .num {
+    font-size: 0.75rem;
+    margin: auto 10px 10px auto;
 }

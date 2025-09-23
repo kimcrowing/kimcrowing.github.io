@@ -99,9 +99,40 @@ function fetchHotSearch(type) {
         .catch(error => console.error('Error:', error));
 }
 
+function showRSS() {
+    const content = document.getElementById('content');
+    content.innerHTML = '<p style="color: white; text-align: center;">正在加载 RSS...</p>';
+
+    const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://springsunday.net/torrentrss.php?rows=20&cat501=1&cat502=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&freeleech=1&fl=1&passkey=YOUR_PASSKEY');
+    const parser = new RSSParser();
+
+    parser.parseURL(RSS_URL)
+        .then(feed => {
+            content.innerHTML = '';
+            if (!feed.items || feed.items.length === 0) {
+                content.innerHTML = '<p style="color: red; text-align: center;">没有找到资源！</p>';
+                return;
+            }
+            feed.items.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'item'; // 匹配 Favorites 和 Trending 的卡片样式
+                div.innerHTML = `
+                    <h2>${item.title || '无标题'}</h2>
+                    <p>${item.contentSnippet || item.description || '无描述'}</p>
+                    <a href="${item.link || '#'}" target="_blank">下载/详情</a>
+                    <p>发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</p>
+                `;
+                content.appendChild(div);
+            });
+        })
+        .catch(error => {
+            content.innerHTML = '<p style="color: red; text-align: center;">加载 RSS 失败: ' + error.message + '</p>';
+        });
+}
 // 页面加载时默认获取微博热搜
 window.onload = function() {
     fetchHotSearch('baidu');
 };
+
 
 

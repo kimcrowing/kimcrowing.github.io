@@ -100,10 +100,17 @@ function fetchHotSearch(type) {
 }
 
 function showRSS() {
-    const content = document.getElementById('content');
+    // 隐藏其他模块
+    document.getElementById('hom-page').style.display = 'none';
+    document.getElementById('next-page').style.display = 'none';
+    document.getElementById('hotpage').style.display = 'none';
+    document.getElementById('about').style.display = 'none';
+    document.getElementById('rss-page').style.display = 'block';
+
+    const content = document.getElementById('rss-content');
     content.innerHTML = '<p style="color: white; text-align: center;">正在加载 RSS...</p>';
 
-    const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://springsunday.net/torrentrss.php?rows=20&cat501=1&cat502=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&freeleech=1&fl=1&passkey=2878c08d261816a6266920ec33ea90d2');
+    const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://springsunday.net/torrentrss.php?rows=20&cat501=1&cat502=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&freeleech=1&fl=1&passkey=YOUR_PASSKEY');
     const parser = new RSSParser();
 
     parser.parseURL(RSS_URL)
@@ -113,17 +120,23 @@ function showRSS() {
                 content.innerHTML = '<p style="color: red; text-align: center;">没有找到资源！</p>';
                 return;
             }
+            const ul = document.createElement('ul');
+            ul.style.listStyle = 'none'; // 匹配 hotpage 的无序列表样式
             feed.items.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'item'; // 匹配 Favorites 和 Trending 的卡片样式
-                div.innerHTML = `
-                    <h2>${item.title || '无标题'}</h2>
-                    <p>${item.contentSnippet || item.description || '无描述'}</p>
-                    <a href="${item.link || '#'}" target="_blank">下载/详情</a>
-                    <p>发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</p>
+                const li = document.createElement('li');
+                li.style.margin = '10px 0';
+                li.style.padding = '10px';
+                li.style.background = 'rgba(0, 0, 0, 0.5)'; // 匹配卡片样式
+                li.style.borderRadius = '5px';
+                li.innerHTML = `
+                    <h2 style="color: white; margin: 0 0 5px; font-size: 1.2em;">${item.title || '无标题'}</h2>
+                    <p style="color: white; margin: 5px 0;">${item.contentSnippet || item.description || '无描述'}</p>
+                    <a href="${item.link || '#'}" style="color: #00f; text-decoration: none;" target="_blank">下载/详情</a>
+                    <p style="color: white; margin: 5px 0;">发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</p>
                 `;
-                content.appendChild(div);
+                ul.appendChild(li);
             });
+            content.appendChild(ul);
         })
         .catch(error => {
             content.innerHTML = '<p style="color: red; text-align: center;">加载 RSS 失败: ' + error.message + '</p>';
@@ -133,6 +146,7 @@ function showRSS() {
 window.onload = function() {
     fetchHotSearch('baidu');
 };
+
 
 
 

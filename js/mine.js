@@ -103,7 +103,7 @@ function showRSS() {
     const content = document.getElementById('content');
     content.innerHTML = '<p style="color: white; text-align: center;">正在加载 RSS...</p>';
 
-    const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://springsunday.net/torrentrss.php?rows=20&cat501=1&cat502=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&freeleech=1&fl=1&passkey=YOUR_PASSKEY');
+    const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://springsunday.net/torrentrss.php?rows=20&cat501=1&cat502=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&freeleech=1&fl=1&passkey=2878c08d261816a6266920ec33ea90d2');
     const parser = new RSSParser();
 
     parser.parseURL(RSS_URL)
@@ -133,6 +133,7 @@ function showRSS() {
 window.onload = function() {
     fetchHotSearch('baidu');
 };
+
 
 
 

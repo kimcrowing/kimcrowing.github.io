@@ -112,7 +112,7 @@ function showRSS() {
 
     const PASSKEY = '2878c08d261816a6266920ec33ea90d2'; // 本地测试替换为 ，部署前移除
     const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(
-        'https://springsunday.net/torrentrss.php?rows=20&cat501=1&cat502=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&freeleech=1&fl=1&passkey=' + PASSKEY
+        'https://springsunday.net/torrentrss.php?rows=30&cat501=1&cat502=1&med1=1&med4=1&med2=1&med6=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&icat=1&ismalldescr=1&isize=1&freeleech=1&fl=1&passkey=' + PASSKEY
     );
     const parser = new RSSParser();
 
@@ -147,6 +147,7 @@ function showRSS() {
 window.onload = function() {
     fetchHotSearch('baidu');
 };
+
 
 
 

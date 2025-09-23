@@ -278,3 +278,55 @@ select.default-icon {
         margin-bottom: 1.25%;
     }
 }
+
+#rss-page {
+    width: 98%;
+    max-width: 100%;
+    height: auto;
+    max-height: 420px;
+    margin: 1.5% auto;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    display: none;
+}
+#rss-content {
+    list-style: none;
+    padding: 0;
+    margin: 2% auto;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE */
+}
+#rss-content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+#rss-content li.rss-item {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    margin: 1.5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#rss-content li.rss-item h2 {
+    margin: 0 0 5px;
+    font-size: 1.2rem;
+}
+#rss-content li.rss-item p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: white;
+}
+#rss-content li.rss-item a {
+    color: #00f;
+    text-decoration: none;
+    margin: 0 10px;
+}
+#rss-content li.rss-item a:hover {
+    text-decoration: underline;
+}

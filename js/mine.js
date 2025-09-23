@@ -108,7 +108,7 @@ function showRSS() {
     document.getElementById('rss-page').style.display = 'block';
 
     const content = document.getElementById('rss-content');
-    content.innerHTML = '<p style="color: white; text-align: center;">正在加载 RSS...</p>';
+    content.innerHTML = '<li style="color: white; text-align: center; padding: 10px;">正在加载 RSS...</li>';
 
     const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://springsunday.net/torrentrss.php?rows=20&cat501=1&cat502=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&freeleech=1&fl=1&passkey=2878c08d261816a6266920ec33ea90d2');
     const parser = new RSSParser();
@@ -117,35 +117,30 @@ function showRSS() {
         .then(feed => {
             content.innerHTML = '';
             if (!feed.items || feed.items.length === 0) {
-                content.innerHTML = '<p style="color: red; text-align: center;">没有找到资源！</p>';
+                content.innerHTML = '<li style="color: red; text-align: center; padding: 10px;">没有找到资源！</li>';
                 return;
             }
-            const ul = document.createElement('ul');
-            ul.style.listStyle = 'none'; // 匹配 hotpage 的无序列表样式
-            feed.items.forEach(item => {
+            feed.items.forEach((item, index) => {
                 const li = document.createElement('li');
-                li.style.margin = '10px 0';
-                li.style.padding = '10px';
-                li.style.background = 'rgba(0, 0, 0, 0.5)'; // 匹配卡片样式
-                li.style.borderRadius = '5px';
+                li.className = 'rss-item';
                 li.innerHTML = `
-                    <h2 style="color: white; margin: 0 0 5px; font-size: 1.2em;">${item.title || '无标题'}</h2>
-                    <p style="color: white; margin: 5px 0;">${item.contentSnippet || item.description || '无描述'}</p>
-                    <a href="${item.link || '#'}" style="color: #00f; text-decoration: none;" target="_blank">下载/详情</a>
-                    <p style="color: white; margin: 5px 0;">发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</p>
+                    <span class="index-column">${index + 1}</span>
+                    <a href="${item.link || '#'}" target="_blank">${item.title || '无标题'}</a>
+                    <p>${item.contentSnippet || item.description || '无描述'}</p>
+                    <span class="num">发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</span>
                 `;
-                ul.appendChild(li);
+                content.appendChild(li);
             });
-            content.appendChild(ul);
         })
         .catch(error => {
-            content.innerHTML = '<p style="color: red; text-align: center;">加载 RSS 失败: ' + error.message + '</p>';
+            content.innerHTML = '<li style="color: red; text-align: center; padding: 10px;">加载 RSS 失败: ' + error.message + '</li>';
         });
 }
 // 页面加载时默认获取微博热搜
 window.onload = function() {
     fetchHotSearch('baidu');
 };
+
 
 
 

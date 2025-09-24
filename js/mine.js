@@ -1,14 +1,17 @@
 function showPasswordPrompt() {
-    var passwordHash= "7c2ecd07f155648431e0f94b89247d713c5786e1e73e953f2fe7eca39534cd6d"; // 设置正确的密码
+    var passwordHash = "7c2ecd07f155648431e0f94b89247d713c5786e1e73e953f2fe7eca39534cd6d"; // 设置正确的密码哈希
     var input = prompt("请输入访问密码：");
-	var inputHash = CryptoJS.SHA256(input).toString();
-	
+    var inputHash = CryptoJS.SHA256(input).toString();
+    
     if (inputHash === passwordHash) {
         showthink();
+        return input; // 返回明文密码作为密钥
     } else {
         alert("密码错误，请重新输入或退出浏览器!");
+        return null; // 密码错误返回 null
     }
 }
+
 function loadcloudPage() {
     var cloudPage = document.getElementById('cloud-page');
     var cloudIframe = document.getElementById('cloud-iframe');
@@ -16,18 +19,21 @@ function loadcloudPage() {
     cloudPage.style.display = 'block';
 	cloudIframe.style.display = 'block';
 }
+
 function showthink() {
     var homePage = document.getElementById('hom-page');
     var homeIframe = document.getElementById('hom');
     homePage.style.display = 'block';
     homeIframe.style.display = 'block';
 }
+
 function showfavo() {
     var homePage = document.getElementById('next-page');
     var homeIframe = document.getElementById('next');
     homePage.style.display = 'block';
     homeIframe.style.display = 'block';
 }
+
 // 默认搜索引擎
 var defaultEngine = 'bing';
 
@@ -60,6 +66,7 @@ function performSearch() {
     window.location.href = searchURL; // 跳转到搜索结果页
   }
 }
+
 // 热搜榜
 function showhot() {
     var homePage = document.getElementById('hotpage');
@@ -110,7 +117,26 @@ function showRSS() {
     const content = document.getElementById('rss-content');
     content.innerHTML = '<li style="color: white; text-align: center; padding: 10px;">正在加载 RSS...</li>';
 
-    const PASSKEY = '2878c08d261816a6266920ec33ea90d2'; // 本地测试替换为 ，部署前移除
+    // 硬编码加密 Passkey（替换为你的加密字符串）
+    const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g=='; // 替换为步骤1生成的加密字符串
+
+    // 输入密码作为密钥
+    const secretKey = showPasswordPrompt(); // 借用现有函数输入密码
+    if (!secretKey) {
+        content.innerHTML = '<li style="color: red; text-align: center; padding: 10px;">未输入密码，无法加载 RSS！</li>';
+        return;
+    }
+
+    // 解密 Passkey
+    let PASSKEY;
+    try {
+        PASSKEY = CryptoJS.AES.decrypt(encryptedPasskey, secretKey).toString(CryptoJS.enc.Utf8);
+        if (!PASSKEY) throw new Error('解密失败');
+    } catch (error) {
+        content.innerHTML = '<li style="color: red; text-align: center; padding: 10px;">密码错误，解密失败！</li>';
+        return;
+    }
+
     const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(
         'https://springsunday.net/torrentrss.php?rows=40&cat501=1&cat502=1&cat503=1&cat505=1&cat508=1&med1=1&med4=1&med2=1&med6=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&ismalldescr=1&isize=1&freeleech=1&fl=1&passkey=' + PASSKEY
     );
@@ -147,7 +173,6 @@ function showRSS() {
 window.onload = function() {
     fetchHotSearch('baidu');
 };
-
 
 
 

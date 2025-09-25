@@ -66,48 +66,17 @@ function loadCardContent(contentElement) {
     cardContainer.style.display = 'block';
     cardContainer.classList.add('show');
     // 强制重绘
-    cardContainer.style.opacity = '0';
-    cardContainer.offsetHeight; // 触发 reflow
-    cardContainer.style.opacity = '1';
-    // 检查图片加载
-    const images = cardContainer.querySelectorAll('.fav-image');
-    let loadedCount = 0;
-    const totalImages = images.length;
-    if (totalImages === 0) {
-        console.log('loadCardContent: No images to load');
+    requestAnimationFrame(() => {
+        cardContainer.style.opacity = '0';
+        cardContainer.offsetHeight; // 触发 reflow
+        cardContainer.style.opacity = '1';
+        console.log('loadCardContent: Forced redraw of card-container');
         // 验证 hotSearchList 内容
         const hotSearchList = cardContainer.querySelector('#hotSearchList');
         if (hotSearchList) {
             console.log('loadCardContent: hotSearchList items:', hotSearchList.children.length);
         }
         isLoading = false;
-        return;
-    }
-    images.forEach(img => {
-        img.addEventListener('load', () => {
-            loadedCount++;
-            console.log(`loadCardContent: Image loaded (${loadedCount}/${totalImages}): ${img.src}`);
-            if (loadedCount === totalImages) {
-                console.log('loadCardContent: All images loaded, display: block, opacity: 1');
-                // 强制重绘
-                cardContainer.style.opacity = '0';
-                cardContainer.offsetHeight; // 触发 reflow
-                cardContainer.style.opacity = '1';
-                isLoading = false;
-            }
-        });
-        img.addEventListener('error', () => {
-            console.error(`loadCardContent: Image failed to load: ${img.src}`);
-            loadedCount++;
-            if (loadedCount === totalImages) {
-                console.log('loadCardContent: All images processed, display: block, opacity: 1');
-                // 强制重绘
-                cardContainer.style.opacity = '0';
-                cardContainer.offsetHeight; // 触发 reflow
-                cardContainer.style.opacity = '1';
-                isLoading = false;
-            }
-        });
     });
 }
 
@@ -155,6 +124,17 @@ function showhot() {
 
 function fetchHotSearch(type) {
     console.log('fetchHotSearch: Triggered for type:', type);
+    const cardContainer = document.getElementById('card-container');
+    if (!cardContainer) {
+        console.error('Error: #card-container not found in DOM');
+        isLoading = false;
+        return;
+    }
+    // 显示加载中提示
+    cardContainer.style.display = 'block';
+    cardContainer.innerHTML = '<p style="color: var(--text-color); text-align: center; padding: 8px;">正在加载热搜...</p>';
+    cardContainer.classList.add('show');
+
     const url = `https://nav.magictool.cn/plugins/topSearch/json?type=${type}`;
     console.log('fetchHotSearch: Fetching URL:', url);
     fetch(url)
@@ -165,20 +145,16 @@ function fetchHotSearch(type) {
         .then(data => {
             if (data.code !== 1 || !data.data || data.data.length === 0) {
                 console.log('fetchHotSearch: No valid data received');
-                const cardContainer = document.getElementById('card-container');
-                if (cardContainer) {
-                    cardContainer.style.display = 'block';
-                    cardContainer.innerHTML = '<p style="color: red; text-align: center;">无热搜数据！</p>';
-                    cardContainer.classList.add('show');
-                }
+                cardContainer.innerHTML = '<p style="color: red; text-align: center;">无热搜数据！</p>';
+                cardContainer.classList.add('show');
                 isLoading = false;
                 return;
             }
             const hotSearchList = data.data;
             const sortedHotSearchList = hotSearchList.sort((a, b) => b.hot - a.hot);
-            // 创建热搜容器
-            const hotpage = document.createElement('div');
-            hotpage.id = 'hotpage';
+            // 创建热搜内容
+            const content = document.createElement('div');
+            content.id = 'hotpage';
             // 创建导航栏
             const hotSearchNav = document.createElement('div');
             hotSearchNav.id = 'hot-search-nav';
@@ -213,20 +189,19 @@ function fetchHotSearch(type) {
                 listItem.appendChild(hot);
                 listElement.appendChild(listItem);
             });
-            hotpage.appendChild(hotSearchNav);
-            hotpage.appendChild(listElement);
+            content.appendChild(hotSearchNav);
+            content.appendChild(listElement);
             console.log('fetchHotSearch: Hot search list updated, items:', sortedHotSearchList.length);
             console.log('fetchHotSearch: hotSearchList items in DOM:', listElement.children.length);
             // 加载到卡片容器
-            loadCardContent(hotpage);
-            // 额外重绘
+            loadCardContent(content);
+            // 额外验证
             setTimeout(() => {
-                const cardContainer = document.getElementById('card-container');
-                if (cardContainer) {
-                    cardContainer.style.opacity = '0';
-                    cardContainer.offsetHeight; // 触发 reflow
-                    cardContainer.style.opacity = '1';
-                    console.log('fetchHotSearch: Forced redraw of card-container');
+                const hotSearchListCheck = cardContainer.querySelector('#hotSearchList');
+                if (hotSearchListCheck) {
+                    console.log('fetchHotSearch: Verified hotSearchList items:', hotSearchListCheck.children.length);
+                } else {
+                    console.error('fetchHotSearch: hotSearchList not found in card-container');
                 }
             }, 100);
             console.log('fetchHotSearch: Hot search content loaded');
@@ -234,12 +209,8 @@ function fetchHotSearch(type) {
         })
         .catch(error => {
             console.error('Error fetching hot search:', error);
-            const cardContainer = document.getElementById('card-container');
-            if (cardContainer) {
-                cardContainer.style.display = 'block';
-                cardContainer.innerHTML = '<p style="color: red; text-align: center;">加载热搜失败: ' + error.message + '</p>';
-                cardContainer.classList.add('show');
-            }
+            cardContainer.innerHTML = '<p style="color: red; text-align: center;">加载热搜失败: ' + error.message + '</p>';
+            cardContainer.classList.add('show');
             console.log('fetchHotSearch: Hot search loading failed');
             isLoading = false;
         });
@@ -367,4 +338,3 @@ function initializeTheme() {
     updateThemeToggleButton(initialTheme);
     console.log('initializeTheme: Set theme to', initialTheme);
 }
-

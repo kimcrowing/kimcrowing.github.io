@@ -37,7 +37,7 @@ function clearCardContainer() {
         return;
     }
     console.log('clearCardContainer: Clearing content');
-    cardContainer.style.opacity = '0';
+    cardContainer.style.display = 'none';
     cardContainer.classList.remove('show');
     cardContainer.innerHTML = '';
     isLoading = false;
@@ -60,12 +60,40 @@ function loadCardContent(contentElement) {
         isLoading = false;
         return;
     }
-    console.log('loadCardContent: Loading content');
+    console.log('loadCardContent: Loading content from', contentElement.id);
     cardContainer.style.display = 'block';
-    cardContainer.innerHTML = contentElement.innerHTML;
+    // 使用 cloneNode 保留样式和事件
+    const clonedContent = contentElement.cloneNode(true);
+    cardContainer.innerHTML = '';
+    cardContainer.appendChild(clonedContent);
     cardContainer.classList.add('show');
-    console.log('loadCardContent: Content loaded, display: block, opacity: 1');
-    isLoading = false;
+    // 检查图片加载
+    const images = cardContainer.querySelectorAll('.fav-image');
+    let loadedCount = 0;
+    const totalImages = images.length;
+    if (totalImages === 0) {
+        console.log('loadCardContent: No images to load');
+        isLoading = false;
+        return;
+    }
+    images.forEach(img => {
+        img.addEventListener('load', () => {
+            loadedCount++;
+            console.log(`loadCardContent: Image loaded (${loadedCount}/${totalImages}): ${img.src}`);
+            if (loadedCount === totalImages) {
+                console.log('loadCardContent: All images loaded, display: block, opacity: 1');
+                isLoading = false;
+            }
+        });
+        img.addEventListener('error', () => {
+            console.error(`loadCardContent: Image failed to load: ${img.src}`);
+            loadedCount++;
+            if (loadedCount === totalImages) {
+                console.log('loadCardContent: All images processed, display: block, opacity: 1');
+                isLoading = false;
+            }
+        });
+    });
 }
 
 function showthink() {

@@ -257,7 +257,7 @@ function showRSS() {
     content.innerHTML = '<li style="color: var(--text-color); text-align: center; padding: 8px;">正在加载 RSS...</li>';
     loadCardContent(content);
 
-    const encryptedPasskey = 'U2FsdGVkX1/ABC123DEF=='; // 替换为实际值
+    const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g=='; // 替换为实际值
     const secretKey = showPasswordPrompt();
     if (!secretKey) {
         content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';
@@ -367,3 +367,4 @@ function initializeTheme() {
     updateThemeToggleButton(initialTheme);
     console.log('initializeTheme: Set theme to', initialTheme);
 }
+

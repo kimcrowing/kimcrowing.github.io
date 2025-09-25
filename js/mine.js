@@ -60,10 +60,9 @@ function loadCardContent(contentElement) {
         isLoading = false;
         return;
     }
-    console.log('loadCardContent: Loading content from', contentElement.id);
-    const clonedContent = contentElement.cloneNode(true);
+    console.log('loadCardContent: Loading content from', contentElement.id || contentElement.tagName);
     cardContainer.innerHTML = '';
-    cardContainer.appendChild(clonedContent);
+    cardContainer.appendChild(contentElement);
     cardContainer.style.display = 'block';
     cardContainer.classList.add('show');
     // 强制重绘
@@ -151,14 +150,7 @@ function showfavo() {
 function showhot() {
     console.log('showhot: Triggered');
     clearCardContainer();
-    const hotpage = document.getElementById('hotpage');
-    if (!hotpage) {
-        console.error('Error: #hotpage not found in DOM');
-        isLoading = false;
-        return;
-    }
-    // 仅调用 fetchHotSearch，渲染移到 fetchHotSearch 中
-    fetchHotSearch('baidu');
+    fetchHotSearch('baidu'); // 默认加载百度热搜
 }
 
 function fetchHotSearch(type) {
@@ -184,13 +176,26 @@ function fetchHotSearch(type) {
             }
             const hotSearchList = data.data;
             const sortedHotSearchList = hotSearchList.sort((a, b) => b.hot - a.hot);
-            const listElement = document.getElementById('hotSearchList');
-            if (!listElement) {
-                console.error('Error: #hotSearchList not found in DOM');
-                isLoading = false;
-                return;
-            }
-            listElement.innerHTML = '';
+            // 创建热搜容器
+            const hotpage = document.createElement('div');
+            hotpage.id = 'hotpage';
+            // 创建导航栏
+            const hotSearchNav = document.createElement('div');
+            hotSearchNav.id = 'hot-search-nav';
+            hotSearchNav.innerHTML = `
+                <a href="javascript:void(0)" onclick="fetchHotSearch('weibo')">微博</a>
+                <a>|</a>
+                <a href="javascript:void(0)" onclick="fetchHotSearch('baidu')">百度</a>
+                <a>|</a>
+                <a href="javascript:void(0)" onclick="fetchHotSearch('bilibili')">哔站</a>
+                <a>|</a>
+                <a href="javascript:void(0)" onclick="fetchHotSearch('zhiHu')">知乎</a>
+                <a>|</a>
+                <a href="javascript:void(0)" onclick="fetchHotSearch('douyin')">抖音</a>
+            `;
+            // 创建热搜列表
+            const listElement = document.createElement('ul');
+            listElement.id = 'hotSearchList';
             sortedHotSearchList.forEach((item, index) => {
                 const listItem = document.createElement('li');
                 const indexColumn = document.createElement('span');
@@ -208,16 +213,11 @@ function fetchHotSearch(type) {
                 listItem.appendChild(hot);
                 listElement.appendChild(listItem);
             });
+            hotpage.appendChild(hotSearchNav);
+            hotpage.appendChild(listElement);
             console.log('fetchHotSearch: Hot search list updated, items:', sortedHotSearchList.length);
-            // 验证 DOM 更新
             console.log('fetchHotSearch: hotSearchList items in DOM:', listElement.children.length);
-            // 重新加载 hotpage
-            const hotpage = document.getElementById('hotpage');
-            if (!hotpage) {
-                console.error('Error: #hotpage not found in DOM');
-                isLoading = false;
-                return;
-            }
+            // 加载到卡片容器
             loadCardContent(hotpage);
             // 额外重绘
             setTimeout(() => {
@@ -257,7 +257,7 @@ function showRSS() {
     content.innerHTML = '<li style="color: var(--text-color); text-align: center; padding: 8px;">正在加载 RSS...</li>';
     loadCardContent(content);
 
-    const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g=='; // 替换为实际值
+    const encryptedPasskey = 'U2FsdGVkX1/ABC123DEF=='; // 替换为实际值
     const secretKey = showPasswordPrompt();
     if (!secretKey) {
         content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';

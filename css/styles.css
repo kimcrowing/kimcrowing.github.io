@@ -1,351 +1,390 @@
-/* 设置网页的基本CSS样式 */
-/*body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('../images/background.jpg');
-    background-repeat: repeat;
-    background-size: auto; /* 将背景图片设置为覆盖整个容器 */
-    color: #fff;
-    font-size: 16px;
-}*/
+/* 定义主题变量 */
+:root {
+    --background-color: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    --text-color: #ffffff; /* 深色主题：白色 */
+    --link-color: #ffffff;
+    --link-hover-color: #a0b1c5;
+    --container-bg: rgba(0, 0, 0, 0.3);
+    --item-bg: rgba(0, 0, 0, 0.3);
+    --search-bg: rgba(0, 0, 0, 0.5);
+    --fav-bg: rgba(255, 255, 255, 0.7);
+    --card-bg: rgba(0, 0, 0, 0.3);
+    --logo-fill: #ffffff;
+}
+
+[data-theme="light"] {
+    --background-color: linear-gradient(135deg, #f3f4f6 0%, #e2e8f0 100%);
+    --text-color: #1f2937; /* 浅色主题：深灰 */
+    --link-color: #2563eb;
+    --link-hover-color: #1e40af;
+    --container-bg: rgba(255, 255, 255, 0.85);
+    --item-bg: rgba(255, 255, 255, 0.85);
+    --search-bg: rgba(255, 255, 255, 0.9);
+    --fav-bg: rgba(0, 0, 0, 0.15);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --logo-fill: #1f2937;
+}
+
 body, html {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
 }
+
 body {
-	background-color:#607A8B;
-	background-image:
-		radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-		radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-		radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-		radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-	background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-	background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
 }
-/* 设置容器的样式,使其居中并占据90%的宽度 */
+
+/* 容器 */
 .container {
     width: 98%;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 1% 1%;
+    padding: 0.4% 0.4%;
     text-align: center;
     position: relative;
     z-index: 1;
 }
 
-/* 设置顶部图片的样式 */
-.top-image {
-    width: 30%;
-    max-width: 90%;
-    height: auto;
-    object-fit: cover;
-    margin: 1.5% auto 1.5%; /* 居中并添加底部边距 */
+/* 卡片容器 */
+#card-container {
+    width: 98%;
+    max-width: 100%;
+    margin: 0.4% auto;
+    padding: 0.8% 0.8%;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+    min-height: 120px;
+    max-height: 360px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
-/* 设置网站图标的样式 */
+
+#card-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 顶部图标 */
+.logo-image {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0.3% auto;
+}
+
+/* 网站图标 */
 .fav-image {
-    width: 10%;
-    max-width: 30%;
-    height: auto;
-    margin: 0; /* 居中并添加底部边距 */
-	background:rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-}
-#cloud-iframe, #hom-page, #next-page {
-    /*background-color: transparent;  设置主页面的背景为透明 */
-    display: none;
-}
-#hom {
-    width: 95%;
-    max-width: 100%;
-	height: 80px;
-    margin: 2% auto;
-    padding: 2% 2%;
-    text-align: center;	
-    position: relative;
-    z-index: 1;
-	background:rgba(0, 0, 0, 0.5);
-	border-radius: 15px;
-    display: none;
-}
-#next {
-    width: 95%;
-    max-width: 100%;
-	height: auto;
-    max-height: 420px;
-    margin: 2% auto;
-    padding: 2% 2%;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    background:rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    display: grid; /* 添加网格布局 */
-    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr)); /* 根据容器大小自动调整列数和列宽 */
-    grid-gap: 10px; /* 可选:添加网格间距 */
-    justify-content: start; /* 将网格项目左对齐 */
-    align-content: start; /* 将行与行之间的对齐方式设置为顶部对齐 */
-    grid-auto-flow: row; /* 新增这一行 */
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    background: var(--fav-bg);
+    border-radius: 6px;
+    filter: contrast(1.3) brightness(1.2);
+    transition: filter 0.3s ease;
 }
 
-#cloud-page{
+/* 隐藏模块 */
+#hom-page, #next-page, #hotpage, #rss-page {
+    display: none;
+}
+
+#hom {
     width: 100%;
-    max-width: 450px;
-	height: 50%;
-	max-height: 650px;
-    margin: 0 auto;
-    padding: 2% 2%;
+    height: auto;
+    margin: 0;
+    padding: 0.4% 0.4%;
     text-align: center;
-    position: relative;
-    z-index: 1;
-	display: none;
+    background: transparent;
+    border-radius: 0;
 }
-/* 设置标题(h1)的样式 */
+
+#next {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    margin: 0;
+    padding: 0.4% 0.4%;
+    text-align: center;
+    background: transparent;
+    border-radius: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+    grid-gap: 5px;
+    justify-content: center;
+    align-content: start;
+    grid-auto-flow: row;
+}
+
+/* 标题 */
 h1, h1 a {
-    margin-top: 2.5%;
-    margin-bottom: 5.25%;
-    font-size: 1.5rem;
+    margin: 0.4% 0;
+    font-size: 1.2rem;
     text-align: center;
+    color: var(--text-color);
 }
-/* 设置副标题(p)的样式 */
+
+/* 副标题 */
 p {
-    margin-top: 0;
-    margin-bottom: 5.25%;
-    font-size: 1.4rem;
-    color: #ccc;
+    margin: 0 0 0.4%;
+    font-size: 1rem;
+    color: var(--text-color);
     width: 100%;
     max-width: 100%;
     height: auto;
 }
-/* 设置菜单的样式 */
-.menu, #hom, #next, #hot-search-nav {
+
+/* 菜单 */
+.menu, #hom, #hot-search-nav {
     display: flex;
     justify-content: center;
-    margin-bottom: 2.5%;
-    font-size: 1.2rem; /* 设置菜单文本的字体大小 */
+    margin-bottom: 0.4%;
+    font-size: 0.85rem;
 }
-.menu a, #hom a, #hot-search-nav a,h1 a {
-    color: #fff;
+
+.menu a, #hom a, #hot-search-nav a, h1 a {
+    color: var(--link-color);
     text-decoration: none;
-    margin: 5% 1.25%;
+    margin: 0.2% 0.2%;
 }
+
 .menu a {
-	font-size: 1.8rem;
+    font-size: 1.2rem;
 }
+
 #next a {
-    color: #fff;
+    color: var(--link-color);
     text-decoration: none;
-    margin: 0 1.25%;
+    margin: 0 0.2%;
 }
-.menu a:hover {
-    color: #ccc;
+
+.menu a:hover, #hom a:hover, #hot-search-nav a:hover, h1 a:hover, #next a:hover {
+    color: var(--link-hover-color);
 }
-/* 设置搜索框的样式 */
+
+/* 搜索框 */
 .search-container {
     display: flex;
     align-items: center;
-	height: 40px;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
-    border-radius: 20px; /* 圆角边框 */
-    overflow: hidden; /* 隐藏溢出的内容 */
-    position: relative; /* 确保子元素的绝对定位是相对于此容器 */
+    height: 30px;
+    background-color: var(--search-bg);
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0.4%;
 }
+
 input[type="text"] {
     border: none;
-    padding: 18px;        
-    color: white; /* 白色字体 */
-	width: 85%; /* 设置一个固定宽度 */
-	font-size: 18px;
-    background-color: transparent; /* 透明背景 */
-    outline: none; /* 去除焦点边框 */
+    padding: 7px;
+    color: var(--text-color);
+    width: 85%;
+    font-size: 13px;
+    background-color: transparent;
+    outline: none;
 }
+
 select {
     position: absolute;
-    right: 1px; /* 或者根据需要调整 */
+    right: 1px;
     top: 50%;
-    transform: translateY(-50%); /* 垂直居中 */
+    transform: translateY(-50%);
     border: none;
-    padding: 10px;
-    height: 42px;
-    width: 10%; /* 设置一个固定宽度 */
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
-    color: white; /* 白色字体 */
-    -webkit-appearance: none; /* 移除默认样式 */
-    appearance: none; /* 移除默认样式 */
+    padding: 5px;
+    height: 30px;
+    width: 10%;
+    background-color: var(--search-bg);
+    color: var(--text-color);
+    -webkit-appearance: none;
+    appearance: none;
     background-repeat: no-repeat;
-    background-position: right 10px center; /* 调整图标位置 */
-    background-size: 24px; /* 背景图标大小 */
-    text-indent: 110%; /* 将文本移出可视范围 */
-    overflow: hidden; /* 防止文本溢出 */
+    background-position: right 7px center;
+    background-size: 16px;
+    text-indent: 110%;
+    overflow: hidden;
 }
-/* 默认的放大镜图标 */
+
 select.default-icon {
     background-image: url('../images/search.svg');
 }
 
-/* 热门页面样式 */
-#hotpage {
-    width: 98%;
-    max-width: 100%;
-    height: auto;
-    max-height: 420px;
-    margin: 1.5% auto;
-    padding: 0;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    display: none;
+/* 热门页面 */
+#hot-search-nav {
+    background: transparent;
+    border-radius: 0;
 }
 
-/* 热门搜索导航栏内的div样式 */
-#hot-search-nav div {
-    cursor: pointer;
-    padding: 0 10px;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    margin: 1.5% 0;
-    font-size: 1.5rem;
-}
-
-/* 热门搜索列表样式 */
 #hotSearchList {
     list-style: none;
-    padding: 0 0px;
-    margin: 2% auto;
+    padding: 0;
+    margin: 0.4% auto;
     width: 100%;
-    max-height: 300px; /* 设置最大高度 */
-    overflow-y: auto; /* 高度方向可滚动 */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    font-size: 1.125rem;
+    max-height: 240px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-size: 0.85rem;
 }
 
-/* 针对Chrome, Safari, Opera浏览器隐藏滚动条 */
 #hotSearchList::-webkit-scrollbar {
     display: none;
 }
 
-/* 热门搜索列表内的li样式 */
 #hotSearchList li {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    background-color: var(--item-bg);
+    color: var(--text-color);
     display: flex;
-    margin: 1.5px;
-    border-radius: 5px;
+    margin: 0.4px;
+    border-radius: 4px;
     justify-content: stretch;
 }
-/* 热门搜索列表内的链接样式 */
+
 #hotSearchList li a {
-    color: white; /* 设置链接颜色 */
-    text-decoration: none; /* 去除下划线 */
-    margin: auto 10px auto;
+    color: var(--link-color);
+    text-decoration: none;
+    margin: auto 5px auto;
     text-align: center;
-    padding: 1% 1%;
-    font-size: 1rem;
+    padding: 0.4% 0.4%;
+    font-size: 0.9rem;
 }
+
+#hotSearchList li a:hover {
+    color: var(--link-hover-color);
+}
+
 .num {
-    font-size: 0.75rem;
-    margin: auto 10px 10px auto;
+    font-size: 0.65rem;
+    margin: auto 5px 5px auto;
+    color: var(--text-color);
 }
+
 .index-column {
     width: 5%;
     margin: auto 0 auto;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-color);
 }
 
-
-/* 针对小屏幕设备的样式调整 */
-@media (max-width: 767px) {
-    .container {
-        padding: 1.25% 1.25%;
-    }
-    .top-image {
-        margin-bottom: 2.5%;
-    }
-	.menu a {
-		font-size: 1.2rem;
-	}
-    h1 {
-        margin-top: 1.25%;
-        margin-bottom: 0.625%;
-        font-size: 2rem;
-    }
-    p {
-        font-size: 1rem;
-        margin-bottom: 1.25%;
-    }
-}
-
-#rss-page {
-    width: 98%;
-    max-width: 100%;
-    height: auto;
-    max-height: 420px;
-    margin: 1.5% auto;
-    padding: 0;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    display: none;
-}
+/* RSS 页面 */
 #rss-content {
     list-style: none;
-    padding: 0 0px;
-    margin: 2% auto;
+    padding: 0;
+    margin: 0.4% auto;
     width: 100%;
-    max-height: 300px;
+    max-height: 240px;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+
 #rss-content::-webkit-scrollbar {
     display: none;
 }
+
 #rss-content li.rss-item {
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
+    background: var(--item-bg);
+    color: var(--text-color);
     display: flex;
-    margin: 1.5px;
-    border-radius: 5px;
+    margin: 0.4px;
+    border-radius: 4px;
     justify-content: stretch;
     word-wrap: break-word;
 }
+
 #rss-content li.rss-item a {
-    color: white;
+    color: var(--link-color);
     text-decoration: none;
-    margin: auto 10px auto;
+    margin: auto 5px auto;
     text-align: center;
-    padding: 1% 1%;
-    font-size: 0.8rem;
+    padding: 0.4% 0.4%;
+    font-size: 0.9rem;
     word-wrap: break-word;
 }
-#rss-content li.rss-item p {
-    margin: auto 10px;
-    font-size: 1rem;
-    color: white;
+
+#rss-content li.rss-item a:hover {
+    color: var(--link-hover-color);
 }
+
+#rss-content li.rss-item p {
+    margin: auto 5px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    word-wrap: break-word;
+}
+
 #rss-content li.rss-item p a {
-    color: white;
+    color: var(--link-color);
     text-decoration: none;
     font-size: 0.8rem;
     word-wrap: break-word;
 }
+
 #rss-content li.rss-item p a:hover {
-    text-decoration: underline;
+    color: var(--link-hover-color);
 }
+
 #rss-content li.rss-item .index-column {
     width: 5%;
     margin: auto 0 auto;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-color);
 }
+
 #rss-content li.rss-item .num {
-    font-size: 0.75rem;
-    margin: auto 10px 10px auto;
+    font-size: 0.65rem;
+    margin: auto 5px 5px auto;
+    color: var(--text-color);
+}
+
+/* 小屏幕适配 */
+@media (max-width: 767px) {
+    .container {
+        padding: 0.4% 0.4%;
+    }
+    .logo-image {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 0.4%;
+    }
+    .menu a {
+        font-size: 1rem;
+    }
+    h1 {
+        margin: 0.4% 0;
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.85rem;
+        margin-bottom: 0.4%;
+    }
+    .fav-image {
+        width: 45px;
+        height: 45px;
+    }
+    #next {
+        grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+    }
+    #card-container {
+        padding: 0.8% 0.8%;
+    }
 }

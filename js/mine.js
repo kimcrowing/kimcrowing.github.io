@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 不默认加载任何标签页
 });
 
+// 状态标志，防止重复清空
+let isLoading = false;
+
 function showPasswordPrompt() {
     const passwordHash = "7c2ecd07f155648431e0f94b89247d713c5786e1e73e953f2fe7eca39534cd6d";
     const input = prompt("请输入访问密码：");
@@ -22,15 +25,19 @@ function showPasswordPrompt() {
 
 // 清空卡片容器
 function clearCardContainer() {
+    if (isLoading) return; // 防止重复清空
+    isLoading = true;
     const cardContainer = document.getElementById('card-container');
     if (!cardContainer) {
         console.error('Error: #card-container not found in DOM');
+        isLoading = false;
         return;
     }
     cardContainer.style.opacity = '0';
+    cardContainer.classList.remove('show');
     setTimeout(() => {
         cardContainer.innerHTML = '';
-        cardContainer.style.display = 'none'; // 确保清空后隐藏
+        isLoading = false;
     }, 300);
 }
 
@@ -45,12 +52,15 @@ function loadCardContent(contentElement) {
         console.error('Error: contentElement is null');
         cardContainer.style.display = 'block';
         cardContainer.innerHTML = '<p style="color: red; text-align: center;">加载内容失败！</p>';
+        cardContainer.classList.add('show');
+        isLoading = false;
         return;
     }
-    cardContainer.style.display = 'block'; // 显示卡片容器
+    cardContainer.style.display = 'block';
     setTimeout(() => {
         cardContainer.innerHTML = contentElement.innerHTML;
-        cardContainer.style.opacity = '1';
+        cardContainer.classList.add('show');
+        isLoading = false;
     }, 300);
 }
 
@@ -61,106 +71,115 @@ function showthink() {
         if (cardContainer) {
             cardContainer.style.display = 'block';
             cardContainer.innerHTML = '<p style="color: red; text-align: center;">密码错误，无法加载 Home！</p>';
+            cardContainer.classList.add('show');
         }
         return;
     }
     clearCardContainer();
-    const hom = document.getElementById('hom');
-    if (!hom) {
-        console.error('Error: #hom not found in DOM');
-        return;
-    }
-    loadCardContent(hom);
+    setTimeout(() => {
+        const hom = document.getElementById('hom');
+        if (!hom) {
+            console.error('Error: #hom not found in DOM');
+            return;
+        }
+        loadCardContent(hom);
+    }, 300);
 }
 
 function showfavo() {
     clearCardContainer();
-    const next = document.getElementById('next');
-    if (!next) {
-        console.error('Error: #next not found in DOM');
-        return;
-    }
-    loadCardContent(next);
+    setTimeout(() => {
+        const next = document.getElementById('next');
+        if (!next) {
+            console.error('Error: #next not found in DOM');
+            return;
+        }
+        loadCardContent(next);
+    }, 300);
 }
 
 function showhot() {
     clearCardContainer();
-    const hotpage = document.getElementById('hotpage');
-    if (!hotpage) {
-        console.error('Error: #hotpage not found in DOM');
-        return;
-    }
-    loadCardContent(hotpage);
-    fetchHotSearch('baidu');
+    setTimeout(() => {
+        const hotpage = document.getElementById('hotpage');
+        if (!hotpage) {
+            console.error('Error: #hotpage not found in DOM');
+            return;
+        }
+        loadCardContent(hotpage);
+        fetchHotSearch('baidu');
+    }, 300);
 }
 
 function showRSS() {
     clearCardContainer();
-    const content = document.getElementById('rss-content');
-    if (!content) {
-        console.error('Error: #rss-content not found in DOM');
-        return;
-    }
-    content.innerHTML = '<li style="color: var(--text-color); text-align: center; padding: 8px;">正在加载 RSS...</li>';
-    loadCardContent(content);
-
-    // 硬编码加密 Passkey（替换为实际值）
-    const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g=='; // 替换为 Console 生成的值
-
-    const secretKey = showPasswordPrompt();
-    if (!secretKey) {
-        content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';
+    setTimeout(() => {
+        const content = document.getElementById('rss-content');
+        if (!content) {
+            console.error('Error: #rss-content not found in DOM');
+            return;
+        }
+        content.innerHTML = '<li style="color: var(--text-color); text-align: center; padding: 8px;">正在加载 RSS...</li>';
         loadCardContent(content);
-        return;
-    }
 
-    let PASSKEY;
-    try {
-        PASSKEY = CryptoJS.AES.decrypt(encryptedPasskey, secretKey).toString(CryptoJS.enc.Utf8);
-        if (!PASSKEY) throw new Error('解密失败');
-    } catch (error) {
-        console.error('Decryption Error:', error);
-        content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">密码错误，解密失败！</li>';
-        loadCardContent(content);
-        return;
-    }
+        // 硬编码加密 Passkey（替换为实际值）
+        const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g=='; // 替换为 Console 生成的值
 
-    const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(
-        'https://springsunday.net/torrentrss.php?rows=40&cat501=1&cat502=1&cat503=1&cat505=1&cat508=1&med1=1&med4=1&med2=1&med6=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&ismalldescr=1&isize=1&freeleech=1&fl=1&passkey=' + encodeURIComponent(PASSKEY)
-    );
-    console.log('RSS URL:', RSS_URL);
-    const parser = new RSSParser();
+        const secretKey = showPasswordPrompt();
+        if (!secretKey) {
+            content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';
+            loadCardContent(content);
+            return;
+        }
 
-    parser.parseURL(RSS_URL)
-        .then(feed => {
-            content.innerHTML = '';
-            if (!feed.items || feed.items.length === 0) {
-                content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">没有找到资源！</li>';
+        let PASSKEY;
+        try {
+            PASSKEY = CryptoJS.AES.decrypt(encryptedPasskey, secretKey).toString(CryptoJS.enc.Utf8);
+            if (!PASSKEY) throw new Error('解密失败');
+        } catch (error) {
+            console.error('Decryption Error:', error);
+            content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">密码错误，解密失败！</li>';
+            loadCardContent(content);
+            return;
+        }
+
+        const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(
+            'https://springsunday.net/torrentrss.php?rows=40&cat501=1&cat502=1&cat503=1&cat505=1&cat508=1&med1=1&med4=1&med2=1&med6=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&ismalldescr=1&isize=1&freeleech=1&fl=1&passkey=' + encodeURIComponent(PASSKEY)
+        );
+        console.log('RSS URL:', RSS_URL);
+        const parser = new RSSParser();
+
+        parser.parseURL(RSS_URL)
+            .then(feed => {
+                content.innerHTML = '';
+                if (!feed.items || feed.items.length === 0) {
+                    content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">没有找到资源！</li>';
+                    loadCardContent(content);
+                    return;
+                }
+                feed.items.forEach((item, index) => {
+                    const li = document.createElement('li');
+                    li.className = 'rss-item';
+                    const link = item.link || '#';
+                    const downloadLink = link.replace('details.php', 'download.php') + (PASSKEY ? '&passkey=' + encodeURIComponent(PASSKEY) : '');
+                    const description = item.contentSnippet || item.description || '';
+                    
+                    li.innerHTML = `
+                        <span class="index-column">${index + 1}</span>
+                        <a href="${downloadLink}" target="_blank">${item.title || '无标题'}</a>
+                        <p>${description}</p>
+                        <span class="num">发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</span>
+                    `;
+                    content.appendChild(li);
+                });
                 loadCardContent(content);
-                return;
-            }
-            feed.items.forEach((item, index) => {
-                const li = document.createElement('li');
-                li.className = 'rss-item';
-                const link = item.link || '#';
-                const downloadLink = link.replace('details.php', 'download.php') + (PASSKEY ? '&passkey=' + encodeURIComponent(PASSKEY) : '');
-                const description = item.contentSnippet || item.description || '';
-                
-                li.innerHTML = `
-                    <span class="index-column">${index + 1}</span>
-                    <a href="${downloadLink}" target="_blank">${item.title || '无标题'}</a>
-                    <p>${description}</p>
-                    <span class="num">发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</span>
-                `;
-                content.appendChild(li);
+            })
+            .catch(error => {
+                console.error('RSS Error:', error);
+                content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">加载 RSS 失败: ' + error.message + '</li>';
+                loadCardContent(content);
             });
-            loadCardContent(content);
-        })
-        .catch(error => {
-            console.error('RSS Error:', error);
-            content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">加载 RSS 失败: ' + error.message + '</li>';
-            loadCardContent(content);
-        });
+    }, 300);
 }
 
 var defaultEngine = 'bing';
@@ -215,7 +234,15 @@ function fetchHotSearch(type) {
             });
             loadCardContent(document.getElementById('hotpage'));
         })
-        .catch(error => console.error('Error fetching hot search:', error));
+        .catch(error => {
+            console.error('Error fetching hot search:', error);
+            const cardContainer = document.getElementById('card-container');
+            if (cardContainer) {
+                cardContainer.style.display = 'block';
+                cardContainer.innerHTML = '<p style="color: red; text-align: center;">加载热搜失败！</p>';
+                cardContainer.classList.add('show');
+            }
+        });
 }
 
 function toggleTheme() {

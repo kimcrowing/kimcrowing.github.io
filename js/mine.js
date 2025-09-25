@@ -1,10 +1,10 @@
 // 确保 DOM 加载完成
 document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
-    // 不默认加载任何标签页
+    console.log('DOM loaded, #card-container initial state: hidden');
 });
 
-// 状态标志，防止重复清空或加载
+// 状态标志，防止重复操作
 let isLoading = false;
 
 function showPasswordPrompt() {
@@ -25,7 +25,10 @@ function showPasswordPrompt() {
 
 // 清空卡片容器
 function clearCardContainer() {
-    if (isLoading) return; // 防止重复清空
+    if (isLoading) {
+        console.log('clearCardContainer: Skipped due to ongoing operation');
+        return;
+    }
     isLoading = true;
     const cardContainer = document.getElementById('card-container');
     if (!cardContainer) {
@@ -33,12 +36,11 @@ function clearCardContainer() {
         isLoading = false;
         return;
     }
+    console.log('clearCardContainer: Clearing content');
     cardContainer.style.opacity = '0';
     cardContainer.classList.remove('show');
-    setTimeout(() => {
-        cardContainer.innerHTML = '';
-        isLoading = false;
-    }, 300);
+    cardContainer.innerHTML = '';
+    isLoading = false;
 }
 
 // 加载卡片内容
@@ -54,18 +56,20 @@ function loadCardContent(contentElement) {
         cardContainer.style.display = 'block';
         cardContainer.innerHTML = '<p style="color: red; text-align: center;">加载内容失败！</p>';
         cardContainer.classList.add('show');
+        console.log('loadCardContent: Failed to load content');
         isLoading = false;
         return;
     }
+    console.log('loadCardContent: Loading content');
     cardContainer.style.display = 'block';
-    setTimeout(() => {
-        cardContainer.innerHTML = contentElement.innerHTML;
-        cardContainer.classList.add('show');
-        isLoading = false;
-    }, 300);
+    cardContainer.innerHTML = contentElement.innerHTML;
+    cardContainer.classList.add('show');
+    console.log('loadCardContent: Content loaded, display: block, opacity: 1');
+    isLoading = false;
 }
 
 function showthink() {
+    console.log('showthink: Triggered');
     const secretKey = showPasswordPrompt();
     if (!secretKey) {
         const cardContainer = document.getElementById('card-container');
@@ -73,124 +77,123 @@ function showthink() {
             cardContainer.style.display = 'block';
             cardContainer.innerHTML = '<p style="color: red; text-align: center;">密码错误，无法加载 Home！</p>';
             cardContainer.classList.add('show');
+            console.log('showthink: Password error, showing error message');
         }
         isLoading = false;
         return;
     }
     clearCardContainer();
-    setTimeout(() => {
-        const hom = document.getElementById('hom');
-        if (!hom) {
-            console.error('Error: #hom not found in DOM');
-            isLoading = false;
-            return;
-        }
-        loadCardContent(hom);
-    }, 300);
+    const hom = document.getElementById('hom');
+    if (!hom) {
+        console.error('Error: #hom not found in DOM');
+        isLoading = false;
+        return;
+    }
+    loadCardContent(hom);
 }
 
 function showfavo() {
+    console.log('showfavo: Triggered');
     clearCardContainer();
-    setTimeout(() => {
-        const next = document.getElementById('next');
-        if (!next) {
-            console.error('Error: #next not found in DOM');
-            isLoading = false;
-            return;
-        }
-        loadCardContent(next);
-    }, 300);
+    const next = document.getElementById('next');
+    if (!next) {
+        console.error('Error: #next not found in DOM');
+        isLoading = false;
+        return;
+    }
+    loadCardContent(next);
 }
 
 function showhot() {
+    console.log('showhot: Triggered');
     clearCardContainer();
-    setTimeout(() => {
-        const hotpage = document.getElementById('hotpage');
-        if (!hotpage) {
-            console.error('Error: #hotpage not found in DOM');
-            isLoading = false;
-            return;
-        }
-        loadCardContent(hotpage);
-        fetchHotSearch('baidu');
-    }, 300);
+    const hotpage = document.getElementById('hotpage');
+    if (!hotpage) {
+        console.error('Error: #hotpage not found in DOM');
+        isLoading = false;
+        return;
+    }
+    loadCardContent(hotpage);
+    fetchHotSearch('baidu');
 }
 
 function showRSS() {
+    console.log('showRSS: Triggered');
     clearCardContainer();
-    setTimeout(() => {
-        const content = document.getElementById('rss-content');
-        if (!content) {
-            console.error('Error: #rss-content not found in DOM');
-            isLoading = false;
-            return;
-        }
-        content.innerHTML = '<li style="color: var(--text-color); text-align: center; padding: 8px;">正在加载 RSS...</li>';
+    const content = document.getElementById('rss-content');
+    if (!content) {
+        console.error('Error: #rss-content not found in DOM');
+        isLoading = false;
+        return;
+    }
+    content.innerHTML = '<li style="color: var(--text-color); text-align: center; padding: 8px;">正在加载 RSS...</li>';
+    loadCardContent(content);
+
+    const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g=='; // 替换为实际值
+    const secretKey = showPasswordPrompt();
+    if (!secretKey) {
+        content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';
         loadCardContent(content);
+        console.log('showRSS: Password error, showing error message');
+        isLoading = false;
+        return;
+    }
 
-        // 硬编码加密 Passkey（替换为实际值）
-        const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g=='; // 替换为 Console 生成的值
+    let PASSKEY;
+    try {
+        PASSKEY = CryptoJS.AES.decrypt(encryptedPasskey, secretKey).toString(CryptoJS.enc.Utf8);
+        if (!PASSKEY) throw new Error('解密失败');
+    } catch (error) {
+        console.error('Decryption Error:', error);
+        content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">密码错误，解密失败！</li>';
+        loadCardContent(content);
+        console.log('showRSS: Decryption failed');
+        isLoading = false;
+        return;
+    }
 
-        const secretKey = showPasswordPrompt();
-        if (!secretKey) {
-            content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';
-            loadCardContent(content);
-            isLoading = false;
-            return;
-        }
+    const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(
+        'https://springsunday.net/torrentrss.php?rows=40&cat501=1&cat502=1&cat503=1&cat505=1&cat508=1&med1=1&med4=1&med2=1&med6=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&ismalldescr=1&isize=1&freeleech=1&fl=1&passkey=' + encodeURIComponent(PASSKEY)
+    );
+    console.log('showRSS: Fetching RSS URL:', RSS_URL);
+    const parser = new RSSParser();
 
-        let PASSKEY;
-        try {
-            PASSKEY = CryptoJS.AES.decrypt(encryptedPasskey, secretKey).toString(CryptoJS.enc.Utf8);
-            if (!PASSKEY) throw new Error('解密失败');
-        } catch (error) {
-            console.error('Decryption Error:', error);
-            content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">密码错误，解密失败！</li>';
-            loadCardContent(content);
-            isLoading = false;
-            return;
-        }
-
-        const RSS_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(
-            'https://springsunday.net/torrentrss.php?rows=40&cat501=1&cat502=1&cat503=1&cat505=1&cat508=1&med1=1&med4=1&med2=1&med6=1&med7=1&cod1=1&cod2=1&sta1=1&internal=1&ismalldescr=1&isize=1&freeleech=1&fl=1&passkey=' + encodeURIComponent(PASSKEY)
-        );
-        console.log('RSS URL:', RSS_URL);
-        const parser = new RSSParser();
-
-        parser.parseURL(RSS_URL)
-            .then(feed => {
-                content.innerHTML = '';
-                if (!feed.items || feed.items.length === 0) {
-                    content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">没有找到资源！</li>';
-                    loadCardContent(content);
-                    isLoading = false;
-                    return;
-                }
-                feed.items.forEach((item, index) => {
-                    const li = document.createElement('li');
-                    li.className = 'rss-item';
-                    const link = item.link || '#';
-                    const downloadLink = link.replace('details.php', 'download.php') + (PASSKEY ? '&passkey=' + encodeURIComponent(PASSKEY) : '');
-                    const description = item.contentSnippet || item.description || '';
-                    
-                    li.innerHTML = `
-                        <span class="index-column">${index + 1}</span>
-                        <a href="${downloadLink}" target="_blank">${item.title || '无标题'}</a>
-                        <p>${description}</p>
-                        <span class="num">发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</span>
-                    `;
-                    content.appendChild(li);
-                });
+    parser.parseURL(RSS_URL)
+        .then(feed => {
+            content.innerHTML = '';
+            if (!feed.items || feed.items.length === 0) {
+                content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">没有找到资源！</li>';
                 loadCardContent(content);
+                console.log('showRSS: No RSS items found');
                 isLoading = false;
-            })
-            .catch(error => {
-                console.error('RSS Error:', error);
-                content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">加载 RSS 失败: ' + error.message + '</li>';
-                loadCardContent(content);
-                isLoading = false;
+                return;
+            }
+            feed.items.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.className = 'rss-item';
+                const link = item.link || '#';
+                const downloadLink = link.replace('details.php', 'download.php') + (PASSKEY ? '&passkey=' + encodeURIComponent(PASSKEY) : '');
+                const description = item.contentSnippet || item.description || '';
+                
+                li.innerHTML = `
+                    <span class="index-column">${index + 1}</span>
+                    <a href="${downloadLink}" target="_blank">${item.title || '无标题'}</a>
+                    <p>${description}</p>
+                    <span class="num">发布时间: ${item.pubDate ? new Date(item.pubDate).toLocaleString() : '未知'}</span>
+                `;
+                content.appendChild(li);
             });
-    }, 300);
+            loadCardContent(content);
+            console.log('showRSS: RSS content loaded');
+            isLoading = false;
+        })
+        .catch(error => {
+            console.error('RSS Error:', error);
+            content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">加载 RSS 失败: ' + error.message + '</li>';
+            loadCardContent(content);
+            console.log('showRSS: RSS loading failed');
+            isLoading = false;
+        });
 }
 
 var defaultEngine = 'bing';
@@ -213,8 +216,9 @@ function performSearch() {
 }
 
 function fetchHotSearch(type) {
+    console.log('fetchHotSearch: Triggered for type:', type);
     const url = `https://nav.magictool.cn/plugins/topSearch/json?type=${type}`;
-    console.log('Hot Search URL:', url);
+    console.log('fetchHotSearch: Fetching URL:', url);
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -245,6 +249,7 @@ function fetchHotSearch(type) {
                 listElement.appendChild(listItem);
             });
             loadCardContent(document.getElementById('hotpage'));
+            console.log('fetchHotSearch: Hot search content loaded');
             isLoading = false;
         })
         .catch(error => {
@@ -255,6 +260,7 @@ function fetchHotSearch(type) {
                 cardContainer.innerHTML = '<p style="color: red; text-align: center;">加载热搜失败！</p>';
                 cardContainer.classList.add('show');
             }
+            console.log('fetchHotSearch: Hot search loading failed');
             isLoading = false;
         });
 }
@@ -265,6 +271,7 @@ function toggleTheme() {
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeToggleButton(newTheme);
+    console.log('toggleTheme: Switched to', newTheme);
 }
 
 function updateThemeToggleButton(theme) {
@@ -280,4 +287,5 @@ function initializeTheme() {
     const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', initialTheme);
     updateThemeToggleButton(initialTheme);
+    console.log('initializeTheme: Set theme to', initialTheme);
 }

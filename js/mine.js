@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 不默认加载任何标签页
 });
 
-// 状态标志，防止重复清空
+// 状态标志，防止重复清空或加载
 let isLoading = false;
 
 function showPasswordPrompt() {
@@ -46,6 +46,7 @@ function loadCardContent(contentElement) {
     const cardContainer = document.getElementById('card-container');
     if (!cardContainer) {
         console.error('Error: #card-container not found in DOM');
+        isLoading = false;
         return;
     }
     if (!contentElement) {
@@ -73,6 +74,7 @@ function showthink() {
             cardContainer.innerHTML = '<p style="color: red; text-align: center;">密码错误，无法加载 Home！</p>';
             cardContainer.classList.add('show');
         }
+        isLoading = false;
         return;
     }
     clearCardContainer();
@@ -80,6 +82,7 @@ function showthink() {
         const hom = document.getElementById('hom');
         if (!hom) {
             console.error('Error: #hom not found in DOM');
+            isLoading = false;
             return;
         }
         loadCardContent(hom);
@@ -92,6 +95,7 @@ function showfavo() {
         const next = document.getElementById('next');
         if (!next) {
             console.error('Error: #next not found in DOM');
+            isLoading = false;
             return;
         }
         loadCardContent(next);
@@ -104,6 +108,7 @@ function showhot() {
         const hotpage = document.getElementById('hotpage');
         if (!hotpage) {
             console.error('Error: #hotpage not found in DOM');
+            isLoading = false;
             return;
         }
         loadCardContent(hotpage);
@@ -117,6 +122,7 @@ function showRSS() {
         const content = document.getElementById('rss-content');
         if (!content) {
             console.error('Error: #rss-content not found in DOM');
+            isLoading = false;
             return;
         }
         content.innerHTML = '<li style="color: var(--text-color); text-align: center; padding: 8px;">正在加载 RSS...</li>';
@@ -129,6 +135,7 @@ function showRSS() {
         if (!secretKey) {
             content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';
             loadCardContent(content);
+            isLoading = false;
             return;
         }
 
@@ -140,6 +147,7 @@ function showRSS() {
             console.error('Decryption Error:', error);
             content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">密码错误，解密失败！</li>';
             loadCardContent(content);
+            isLoading = false;
             return;
         }
 
@@ -155,6 +163,7 @@ function showRSS() {
                 if (!feed.items || feed.items.length === 0) {
                     content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">没有找到资源！</li>';
                     loadCardContent(content);
+                    isLoading = false;
                     return;
                 }
                 feed.items.forEach((item, index) => {
@@ -173,11 +182,13 @@ function showRSS() {
                     content.appendChild(li);
                 });
                 loadCardContent(content);
+                isLoading = false;
             })
             .catch(error => {
                 console.error('RSS Error:', error);
                 content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">加载 RSS 失败: ' + error.message + '</li>';
                 loadCardContent(content);
+                isLoading = false;
             });
     }, 300);
 }
@@ -212,6 +223,7 @@ function fetchHotSearch(type) {
             const listElement = document.getElementById('hotSearchList');
             if (!listElement) {
                 console.error('Error: #hotSearchList not found in DOM');
+                isLoading = false;
                 return;
             }
             listElement.innerHTML = '';
@@ -233,6 +245,7 @@ function fetchHotSearch(type) {
                 listElement.appendChild(listItem);
             });
             loadCardContent(document.getElementById('hotpage'));
+            isLoading = false;
         })
         .catch(error => {
             console.error('Error fetching hot search:', error);
@@ -242,6 +255,7 @@ function fetchHotSearch(type) {
                 cardContainer.innerHTML = '<p style="color: red; text-align: center;">加载热搜失败！</p>';
                 cardContainer.classList.add('show');
             }
+            isLoading = false;
         });
 }
 

@@ -3,15 +3,16 @@
 <head>
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/log.png" type="image/x-icon">
-	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/crypto-js.min.js"></script>
-	<script src="js/mine.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/rss-parser@3.13.0/dist/rss-parser.min.js"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <a href="http://556r52594h.goho.co:5244" target="_blank"><img class="top-image" src="images/log.png" alt="Top Image"></a>		    
+        <a href="http://556r52594h.goho.co:5244" target="_blank">
+            <svg class="logo-image" width="60" height="60" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2C7.373 2 2 7.373 2 14C2 20.627 7.373 26 14 26C20.627 26 26 20.627 26 14C26 7.373 20.627 2 14 2ZM14 5C18.418 5 22 8.582 22 13C22 17.418 18.418 21 14 21C9.582 21 6 17.418 6 13C6 8.582 9.582 5 14 5Z" fill="var(--logo-fill, #ffffff)"/>
+            </svg>
+        </a>
         <h1><a href="https://github.com/kimcrowing">Simply & Casually</a></h1>
         <div class="menu">
             <a href="#" onclick="showPasswordPrompt()">Home</a>
@@ -20,45 +21,44 @@
             <a>|</a>
             <a href="#" onclick="showhot()">Trending</a>
             <a>|</a>
-			<a href="#" onclick="showRSS()">RSS</a>
+            <a href="#" onclick="showRSS()">RSS</a>
             <a>|</a>
             <a href="https://kimcrowing.github.io/Origin/">Next</a>
+            <a>|</a>
+            <a href="#" onclick="toggleTheme()" id="theme-toggle">🌙</a>
         </div>
         <div class="search-container">
             <input type="text" id="search-query" placeholder="搜索..." onkeypress="search(event)">
         </div>
-        <!-- 在这里添加各个模块的内容 -->
-        <div id="about">
-            <!-- 关于模块的内容 -->
-        </div>
-        <div id="hom-page">
+        <div id="about"></div>
+        <div id="card-container" style="display: none;"></div>
+        <!-- 隐藏的标签页内容 -->
+        <div id="hom-page" style="display: none;">
             <div id="hom">
-                <!-- 模块的内容 -->
                 <a href="http://113.206.14.175:5032" target="_blank">Webssh</a>
                 <a>|</a>
                 <a href="http://113.206.14.175:8083" target="_blank">Kodi</a>
-		<a>|</a>
-		<a href="http://123.60.110.241:5244" target="_blank">Cloud</a>
-		<a>|</a>
-		<a href="http://113.206.14.175:5700" target="_blank">Qinglong</a>
-		<a>|</a>
-		<a href="http://113.206.14.175:8081" target="_blank">Mitmproxy</a>
-		<a>|</a>
-		<a href="https://113.206.14.175:9443" target="_blank">Portainer</a>
-		<a>|</a>
-		<a href="Tab/movies.html">Movies</a>
-	     </div>
+                <a>|</a>
+                <a href="http://123.60.110.241:5244" target="_blank">Cloud</a>
+                <a>|</a>
+                <a href="http://113.206.14.175:5700" target="_blank">Qinglong</a>
+                <a>|</a>
+                <a href="http://113.206.14.175:8081" target="_blank">Mitmproxy</a>
+                <a>|</a>
+                <a href="https://113.206.14.175:9443" target="_blank">Portainer</a>
+                <a>|</a>
+                <a href="Tab/movies.html">Movies</a>
+            </div>
         </div>
-        <div id="next-page">
+        <div id="next-page" style="display: none;">
             <div id="next">
-                <!-- 模块的内容 -->
                 <a href="https://www.google.com" target="_blank"><img class="fav-image" src="images/google.png" alt="谷歌"></a>
                 <a href="https://copilot.microsoft.com" target="_blank"><img class="fav-image" src="images/copilot.svg" alt="Copilot"></a>
                 <a href="https://claude.ai/chat" target="_blank"><img class="fav-image" src="images/claude.png" alt="claude"></a>
                 <a href="https://gemini.google.com/app" target="_blank"><img class="fav-image" src="images/gemini.svg" alt="Gemini"></a>
                 <a href="https://huggingface.co/chat" target="_blank"><img class="fav-image" src="images/huggingchat.svg" alt="huggingchat"></a>
                 <a href="https://chatgpt.com" target="_blank"><img class="fav-image" src="images/chatgpt.png" alt="chatgpt"></a>
-		<a href="https://www.perplexity.ai" target="_blank"><img class="fav-image" src="images/perplexity.png" alt="perplexity"></a>  
+                <a href="https://www.perplexity.ai" target="_blank"><img class="fav-image" src="images/perplexity.png" alt="perplexity"></a>
                 <a href="https://chat.deepseek.com" target="_blank"><img class="fav-image" src="images/deepseek.svg" alt="zerotier"></a>
                 <a href="https://grok.com" target="_blank"><img class="fav-image" src="images/grok.png" alt="grok"></a>
                 <a href="https://youtube.com" target="_blank"><img class="fav-image" src="images/youtube.png" alt="Youtube"></a>
@@ -70,29 +70,31 @@
                 <a href="https://www.right.com.cn/forum" target="_blank"><img class="fav-image" src="https://www.right.com.cn/favicon.ico" alt="恩山无线论坛"></a>
                 <a href="https://www.panwiki.com" target="_blank"><img class="fav-image" src="images/pan666.png" alt="阿里站"></a>
                 <a href="https://xiaoyi.huawei.com/chat" target="_blank"><img class="fav-image" src="images/xiaoyi.png" alt="小艺"></a>
-		<a href="https://taobao.com" target="_blank"><img class="fav-image" src="images/taobao.ico" alt="淘宝"></a>
-		<a href="https://outlook.live.com" target="_blank"><img class="fav-image" src="images/outlook.jpg" alt="outlook"></a>
-		<a href="https://mail.google.com" target="_blank"><img class="fav-image" src="images/gmail.ico" alt="outlook"></a>	    
+                <a href="https://taobao.com" target="_blank"><img class="fav-image" src="images/taobao.ico" alt="淘宝"></a>
+                <a href="https://outlook.live.com" target="_blank"><img class="fav-image" src="images/outlook.jpg" alt="outlook"></a>
+                <a href="https://mail.google.com" target="_blank"><img class="fav-image" src="images/gmail.ico" alt="outlook"></a>
             </div>
         </div>
-		<div id="hotpage">
-			<div id="hot-search-nav">
-				<a href="#" onclick="fetchHotSearch('weibo')">微博</a>
-                                <a>|</a>
-				<a href="#" onclick="fetchHotSearch('baidu')">百度</a>
-				<a>|</a>
-				<a href="#" onclick="fetchHotSearch('bilibili')">哔站</a>
-                                <a>|</a>
-				<a href="#" onclick="fetchHotSearch('zhiHu')">知乎</a>
-                                <a>|</a>
-				<a href="#" onclick="fetchHotSearch('douyin')">抖音</a>
-			</div>
-			<ul id="hotSearchList"></ul>
-		</div>
-		<div id="rss-page">
-            <div id="rss-content"></div> <!-- RSS 内容区域 -->
+        <div id="hotpage" style="display: none;">
+            <div id="hot-search-nav">
+                <a href="#" onclick="fetchHotSearch('weibo')">微博</a>
+                <a>|</a>
+                <a href="#" onclick="fetchHotSearch('baidu')">百度</a>
+                <a>|</a>
+                <a href="#" onclick="fetchHotSearch('bilibili')">哔站</a>
+                <a>|</a>
+                <a href="#" onclick="fetchHotSearch('zhiHu')">知乎</a>
+                <a>|</a>
+                <a href="#" onclick="fetchHotSearch('douyin')">抖音</a>
+            </div>
+            <ul id="hotSearchList"></ul>
         </div>
-	</div>
-    <!--div id="cloud-page"> <iframe src="about:blank" width="100%" height="450px" frameborder="0" id="cloud-iframe"></iframe></div-->	
+        <div id="rss-page" style="display: none;">
+            <div id="rss-content"></div>
+        </div>
+    </div>
+    <script src="js/crypto-js.min.js"></script>
+    <script src="js/mine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rss-parser@3.13.0/dist/rss-parser.min.js"></script>
 </body>
 </html>

@@ -5,10 +5,10 @@
     --link-color: #ffffff;
     --link-hover-color: #a0b1c5;
     --container-bg: rgba(0, 0, 0, 0.3);
-    --item-bg: rgba(0, 0, 0, 0.5); /* 增加背景不透明度 */
+    --item-bg: rgba(0, 0, 0, 0.5); /* 高对比度背景 */
     --search-bg: rgba(0, 0, 0, 0.5);
     --fav-bg: rgba(255, 255, 255, 0.7);
-    --card-bg: rgba(0, 0, 0, 0.5); /* 增加卡片背景不透明度 */
+    --card-bg: rgba(0, 0, 0, 0.5);
     --logo-fill: #ffffff;
 }
 
@@ -18,10 +18,10 @@
     --link-color: #1f2937;
     --link-hover-color: #4b5563;
     --container-bg: rgba(255, 255, 255, 0.85);
-    --item-bg: rgba(255, 255, 255, 0.9); /* 增加背景不透明度 */
+    --item-bg: rgba(255, 255, 255, 0.9);
     --search-bg: rgba(255, 255, 255, 0.9);
     --fav-bg: rgba(0, 0, 0, 0.15);
-    --card-bg: rgba(255, 255, 255, 0.9); /* 增加卡片背景不透明度 */
+    --card-bg: rgba(255, 255, 255, 0.9);
     --logo-fill: #1f2937;
 }
 
@@ -53,18 +53,18 @@ body {
     width: 98%;
     max-width: 100%;
     margin: 0.4% auto;
-    padding: 1.5% 1.5%; /* 增加内边距 */
+    padding: 1.5% 1.5%;
     background: var(--card-bg);
     border-radius: 8px;
     border: 2px solid red; /* 调试边框 */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    min-height: 300px; /* 提高最小高度 */
-    max-height: 800px; /* 增加最大高度 */
+    min-height: 300px;
+    max-height: 800px;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
     opacity: 1;
-    visibility: visible; /* 强制可见 */
+    visibility: visible;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -94,7 +94,7 @@ body {
     border-radius: 6px;
     display: block;
     opacity: 1;
-    visibility: visible; /* 强制可见 */
+    visibility: visible;
     border: 2px solid blue; /* 调试边框 */
 }
 
@@ -187,14 +187,14 @@ p {
     padding: 0;
     margin: 0.8% auto;
     width: 100%;
-    max-height: 700px; /* 增加最大高度 */
+    max-height: 700px;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    font-size: 1rem; /* 提高字体大小 */
+    font-size: 1rem;
     color: var(--text-color);
     opacity: 1;
-    visibility: visible; /* 强制可见 */
+    visibility: visible;
     border: 2px solid green; /* 调试边框 */
 }
 
@@ -208,11 +208,11 @@ p {
     display: flex;
     align-items: center;
     margin: 4px 0;
-    padding: 10px; /* 增加内边距 */
+    padding: 10px;
     border-radius: 4px;
     border: 1px solid cyan; /* 调试边框 */
     opacity: 1;
-    visibility: visible; /* 强制可见 */
+    visibility: visible;
 }
 
 #hotSearchList li a {
@@ -222,7 +222,7 @@ p {
     font-size: 1rem;
     flex-grow: 1;
     opacity: 1;
-    visibility: visible; /* 强制可见 */
+    visibility: visible;
 }
 
 #hotSearchList li a:hover {
@@ -234,7 +234,7 @@ p {
     margin: auto 10px;
     color: var(--text-color);
     opacity: 1;
-    visibility: visible; /* 强制可见 */
+    visibility: visible;
 }
 
 /* 搜索框 */

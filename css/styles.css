@@ -58,12 +58,17 @@ body {
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.3s ease-in-out;
     min-height: 120px;
     max-height: 360px;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    opacity: 0; /* 初始透明，动画控制显示 */
+}
+
+#card-container.show {
+    opacity: 1;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 #card-container::-webkit-scrollbar {

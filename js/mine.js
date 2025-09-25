@@ -61,21 +61,26 @@ function loadCardContent(contentElement) {
         return;
     }
     console.log('loadCardContent: Loading content from', contentElement.id);
-    cardContainer.style.display = 'block';
     const clonedContent = contentElement.cloneNode(true);
     cardContainer.innerHTML = '';
     cardContainer.appendChild(clonedContent);
+    cardContainer.style.display = 'block';
     cardContainer.classList.add('show');
+    // 强制重绘
+    cardContainer.style.opacity = '0';
+    cardContainer.offsetHeight; // 触发 reflow
+    cardContainer.style.opacity = '1';
     // 检查图片加载
     const images = cardContainer.querySelectorAll('.fav-image');
     let loadedCount = 0;
     const totalImages = images.length;
     if (totalImages === 0) {
         console.log('loadCardContent: No images to load');
-        // 强制重绘
-        cardContainer.style.display = 'none';
-        cardContainer.offsetHeight; // 触发重绘
-        cardContainer.style.display = 'block';
+        // 验证 hotSearchList 内容
+        const hotSearchList = cardContainer.querySelector('#hotSearchList');
+        if (hotSearchList) {
+            console.log('loadCardContent: hotSearchList items:', hotSearchList.children.length);
+        }
         isLoading = false;
         return;
     }
@@ -86,9 +91,9 @@ function loadCardContent(contentElement) {
             if (loadedCount === totalImages) {
                 console.log('loadCardContent: All images loaded, display: block, opacity: 1');
                 // 强制重绘
-                cardContainer.style.display = 'none';
-                cardContainer.offsetHeight; // 触发重绘
-                cardContainer.style.display = 'block';
+                cardContainer.style.opacity = '0';
+                cardContainer.offsetHeight; // 触发 reflow
+                cardContainer.style.opacity = '1';
                 isLoading = false;
             }
         });
@@ -98,9 +103,9 @@ function loadCardContent(contentElement) {
             if (loadedCount === totalImages) {
                 console.log('loadCardContent: All images processed, display: block, opacity: 1');
                 // 强制重绘
-                cardContainer.style.display = 'none';
-                cardContainer.offsetHeight; // 触发重绘
-                cardContainer.style.display = 'block';
+                cardContainer.style.opacity = '0';
+                cardContainer.offsetHeight; // 触发 reflow
+                cardContainer.style.opacity = '1';
                 isLoading = false;
             }
         });
@@ -152,9 +157,7 @@ function showhot() {
         isLoading = false;
         return;
     }
-    // 先显示导航栏
-    loadCardContent(hotpage);
-    // 加载热搜数据
+    // 仅调用 fetchHotSearch，渲染移到 fetchHotSearch 中
     fetchHotSearch('baidu');
 }
 
@@ -168,17 +171,18 @@ function fetchHotSearch(type) {
             return response.json();
         })
         .then(data => {
-            const hotSearchList = data.data;
-            if (!hotSearchList || hotSearchList.length === 0) {
-                console.log('fetchHotSearch: No data received');
+            if (data.code !== 1 || !data.data || data.data.length === 0) {
+                console.log('fetchHotSearch: No valid data received');
                 const cardContainer = document.getElementById('card-container');
                 if (cardContainer) {
+                    cardContainer.style.display = 'block';
                     cardContainer.innerHTML = '<p style="color: red; text-align: center;">无热搜数据！</p>';
                     cardContainer.classList.add('show');
                 }
                 isLoading = false;
                 return;
             }
+            const hotSearchList = data.data;
             const sortedHotSearchList = hotSearchList.sort((a, b) => b.hot - a.hot);
             const listElement = document.getElementById('hotSearchList');
             if (!listElement) {
@@ -198,15 +202,33 @@ function fetchHotSearch(type) {
                 title.textContent = item.title || '无标题';
                 const hot = document.createElement('span');
                 hot.className = 'num';
-                hot.textContent = item.hot || '未知';
+                hot.textContent = item.hot ? (item.hot / 10000).toFixed(1) + '万' : '未知';
                 listItem.appendChild(indexColumn);
                 listItem.appendChild(title);
                 listItem.appendChild(hot);
                 listElement.appendChild(listItem);
             });
             console.log('fetchHotSearch: Hot search list updated, items:', sortedHotSearchList.length);
+            // 验证 DOM 更新
+            console.log('fetchHotSearch: hotSearchList items in DOM:', listElement.children.length);
             // 重新加载 hotpage
-            loadCardContent(document.getElementById('hotpage'));
+            const hotpage = document.getElementById('hotpage');
+            if (!hotpage) {
+                console.error('Error: #hotpage not found in DOM');
+                isLoading = false;
+                return;
+            }
+            loadCardContent(hotpage);
+            // 额外重绘
+            setTimeout(() => {
+                const cardContainer = document.getElementById('card-container');
+                if (cardContainer) {
+                    cardContainer.style.opacity = '0';
+                    cardContainer.offsetHeight; // 触发 reflow
+                    cardContainer.style.opacity = '1';
+                    console.log('fetchHotSearch: Forced redraw of card-container');
+                }
+            }, 100);
             console.log('fetchHotSearch: Hot search content loaded');
             isLoading = false;
         })

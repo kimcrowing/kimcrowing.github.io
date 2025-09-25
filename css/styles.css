@@ -177,7 +177,7 @@ p {
     background: var(--item-bg);
     padding: 8px;
     border-radius: 4px;
-    border: 2px solid yellow; /* 调试边框 */
+    border: 2px solid #1f2937; /* 调试边框 */
 }
 
 /* 热搜列表 */
@@ -389,4 +389,5 @@ select.default-icon {
         padding: 8px;
     }
 }
+
 

@@ -5,10 +5,10 @@
     --link-color: #ffffff;
     --link-hover-color: #a0b1c5;
     --container-bg: rgba(0, 0, 0, 0.3);
-    --item-bg: rgba(0, 0, 0, 0.5); /* 高对比度背景 */
+    --item-bg: rgba(0, 0, 0, 0.6); /* 提高对比度 */
     --search-bg: rgba(0, 0, 0, 0.5);
     --fav-bg: rgba(255, 255, 255, 0.7);
-    --card-bg: rgba(0, 0, 0, 0.5);
+    --card-bg: rgba(0, 0, 0, 0.6); /* 提高对比度 */
     --logo-fill: #ffffff;
 }
 
@@ -18,10 +18,10 @@
     --link-color: #1f2937;
     --link-hover-color: #4b5563;
     --container-bg: rgba(255, 255, 255, 0.85);
-    --item-bg: rgba(255, 255, 255, 0.9);
+    --item-bg: rgba(255, 255, 255, 0.95); /* 提高对比度 */
     --search-bg: rgba(255, 255, 255, 0.9);
     --fav-bg: rgba(0, 0, 0, 0.15);
-    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-bg: rgba(255, 255, 255, 0.95); /* 提高对比度 */
     --logo-fill: #1f2937;
 }
 
@@ -59,7 +59,6 @@ body {
     border: 2px solid red; /* 调试边框 */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     min-height: 300px;
-    max-height: 800px;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -99,7 +98,7 @@ body {
 }
 
 /* 隐藏模块 */
-#hom-page, #next-page, #hotpage, #rss-page {
+#hom-page, #next-page, #rss-page {
     display: none;
 }
 
@@ -187,10 +186,6 @@ p {
     padding: 0;
     margin: 0.8% auto;
     width: 100%;
-    max-height: 700px;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
     font-size: 1rem;
     color: var(--text-color);
     opacity: 1;

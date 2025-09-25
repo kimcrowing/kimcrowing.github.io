@@ -5,10 +5,10 @@
     --link-color: #ffffff;
     --link-hover-color: #a0b1c5;
     --container-bg: rgba(0, 0, 0, 0.3);
-    --item-bg: rgba(0, 0, 0, 0.3);
+    --item-bg: rgba(0, 0, 0, 0.5); /* 增加背景不透明度 */
     --search-bg: rgba(0, 0, 0, 0.5);
     --fav-bg: rgba(255, 255, 255, 0.7);
-    --card-bg: rgba(0, 0, 0, 0.3);
+    --card-bg: rgba(0, 0, 0, 0.5); /* 增加卡片背景不透明度 */
     --logo-fill: #ffffff;
 }
 
@@ -18,10 +18,10 @@
     --link-color: #1f2937;
     --link-hover-color: #4b5563;
     --container-bg: rgba(255, 255, 255, 0.85);
-    --item-bg: rgba(255, 255, 255, 0.85);
+    --item-bg: rgba(255, 255, 255, 0.9); /* 增加背景不透明度 */
     --search-bg: rgba(255, 255, 255, 0.9);
     --fav-bg: rgba(0, 0, 0, 0.15);
-    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-bg: rgba(255, 255, 255, 0.9); /* 增加卡片背景不透明度 */
     --logo-fill: #1f2937;
 }
 
@@ -53,23 +53,24 @@ body {
     width: 98%;
     max-width: 100%;
     margin: 0.4% auto;
-    padding: 0.8% 0.8%;
+    padding: 1.5% 1.5%; /* 增加内边距 */
     background: var(--card-bg);
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    min-height: 200px; /* 提高最小高度 */
-    max-height: 480px; /* 增加最大高度 */
+    border: 2px solid red; /* 调试边框 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    min-height: 300px; /* 提高最小高度 */
+    max-height: 800px; /* 增加最大高度 */
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
     opacity: 1;
+    visibility: visible; /* 强制可见 */
     transition: opacity 0.3s ease-in-out;
-    border: 1px solid red; /* 调试边框 */
 }
 
 #card-container:not(.show) {
     opacity: 0;
+    visibility: hidden;
 }
 
 #card-container::-webkit-scrollbar {
@@ -92,8 +93,9 @@ body {
     background: var(--fav-bg);
     border-radius: 6px;
     display: block;
-    opacity: 1; /* 强制可见 */
-    border: 1px solid blue; /* 调试边框 */
+    opacity: 1;
+    visibility: visible; /* 强制可见 */
+    border: 2px solid blue; /* 调试边框 */
 }
 
 /* 隐藏模块 */
@@ -114,15 +116,15 @@ body {
 #next {
     width: 100%;
     height: auto;
-    min-height: 200px; /* 确保网格可见 */
+    min-height: 200px;
     margin: 0;
     padding: 0.4% 0.4%;
     text-align: center;
     background: transparent;
     border-radius: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr)); /* 增加最小宽度 */
-    grid-gap: 12px; /* 增加间距 */
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    grid-gap: 12px;
     justify-content: center;
     align-content: start;
     grid-auto-flow: row;
@@ -171,19 +173,29 @@ p {
     display: block;
 }
 
-/* 强制热搜列表文字可见 */
+/* 热搜导航 */
+#hot-search-nav {
+    background: var(--item-bg);
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid yellow; /* 调试边框 */
+}
+
+/* 热搜列表 */
 #hotSearchList {
     list-style: none;
     padding: 0;
-    margin: 0.4% auto;
+    margin: 0.8% auto;
     width: 100%;
-    max-height: 360px;
+    max-height: 700px; /* 增加最大高度 */
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    font-size: 0.85rem;
+    font-size: 1rem; /* 提高字体大小 */
     color: var(--text-color);
-    opacity: 1; /* 强制可见 */
+    opacity: 1;
+    visibility: visible; /* 强制可见 */
+    border: 2px solid green; /* 调试边框 */
 }
 
 #hotSearchList::-webkit-scrollbar {
@@ -194,22 +206,23 @@ p {
     background-color: var(--item-bg);
     color: var(--text-color);
     display: flex;
-    margin: 0.4px;
+    align-items: center;
+    margin: 4px 0;
+    padding: 10px; /* 增加内边距 */
     border-radius: 4px;
-    justify-content: stretch;
-    padding: 8px; /* 增加内边距 */
-    opacity: 1; /* 强制可见 */
-    border: 1px solid green; /* 调试边框 */
+    border: 1px solid cyan; /* 调试边框 */
+    opacity: 1;
+    visibility: visible; /* 强制可见 */
 }
 
 #hotSearchList li a {
     color: var(--link-color);
     text-decoration: none;
-    margin: auto 5px auto;
-    text-align: center;
-    padding: 0.4% 0.4%;
-    font-size: 0.9rem;
-    opacity: 1; /* 强制可见 */
+    margin: auto 10px;
+    font-size: 1rem;
+    flex-grow: 1;
+    opacity: 1;
+    visibility: visible; /* 强制可见 */
 }
 
 #hotSearchList li a:hover {
@@ -217,10 +230,11 @@ p {
 }
 
 .num, .index-column {
-    font-size: 0.85rem;
-    margin: auto 5px;
+    font-size: 0.9rem;
+    margin: auto 10px;
     color: var(--text-color);
-    opacity: 1; /* 强制可见 */
+    opacity: 1;
+    visibility: visible; /* 强制可见 */
 }
 
 /* 搜索框 */
@@ -275,7 +289,7 @@ select.default-icon {
     padding: 0;
     margin: 0.4% auto;
     width: 100%;
-    max-height: 360px;
+    max-height: 700px;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -294,7 +308,7 @@ select.default-icon {
     border-radius: 4px;
     justify-content: stretch;
     word-wrap: break-word;
-    padding: 8px;
+    padding: 10px;
 }
 
 #rss-content li.rss-item a {
@@ -333,7 +347,7 @@ select.default-icon {
     width: 5%;
     margin: auto 0 auto;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-color);
 }
 
@@ -372,7 +386,11 @@ select.default-icon {
         grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
     }
     #card-container {
-        padding: 0.8% 0.8%;
-        min-height: 180px;
+        padding: 1.5% 1.5%;
+        min-height: 240px;
+    }
+    #hotSearchList li {
+        font-size: 0.9rem;
+        padding: 8px;
     }
 }

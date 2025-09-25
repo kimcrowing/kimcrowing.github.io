@@ -13,10 +13,10 @@
 }
 
 [data-theme="light"] {
-    --background-color: linear-gradient(135deg, #f3f4f6 0%, #e2e8f0 100%);
-    --text-color: #1f2937; /* 浅色主题：深灰 */
-    --link-color: #2563eb;
-    --link-hover-color: #1e40af;
+    --background-color: linear-gradient(135deg, #f5f5f4 0%, #fff7ed 100%); /* 米白色 */
+    --text-color: #1f2937; /* 黑灰色 */
+    --link-color: #1f2937; /* 黑灰色 */
+    --link-hover-color: #4b5563; /* 较浅灰色 */
     --container-bg: rgba(255, 255, 255, 0.85);
     --item-bg: rgba(255, 255, 255, 0.85);
     --search-bg: rgba(255, 255, 255, 0.9);
@@ -63,7 +63,7 @@ body {
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    opacity: 0; /* 初始透明，动画控制显示 */
+    opacity: 0; /* 初始透明 */
 }
 
 #card-container.show {

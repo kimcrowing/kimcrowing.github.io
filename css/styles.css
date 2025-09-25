@@ -56,7 +56,7 @@ body {
     padding: 1.5% 1.5%;
     background: var(--card-bg);
     border-radius: 8px;
-    border: 2px solid red; /* 调试边框 */
+    border: 2px solid #1f2937; /* 调试边框 */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     min-height: 300px;
     overflow-y: auto;
@@ -94,7 +94,7 @@ body {
     display: block;
     opacity: 1;
     visibility: visible;
-    border: 2px solid blue; /* 调试边框 */
+    border: 2px solid #1f2937; /* 调试边框 */
 }
 
 /* 隐藏模块 */
@@ -190,7 +190,7 @@ p {
     color: var(--text-color);
     opacity: 1;
     visibility: visible;
-    border: 2px solid green; /* 调试边框 */
+    border: 2px solid #1f2937; /* 调试边框 */
 }
 
 #hotSearchList::-webkit-scrollbar {
@@ -205,7 +205,7 @@ p {
     margin: 4px 0;
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid cyan; /* 调试边框 */
+    border: 1px solid #1f2937; /* 调试边框 */
     opacity: 1;
     visibility: visible;
 }
@@ -389,3 +389,4 @@ select.default-icon {
         padding: 8px;
     }
 }
+

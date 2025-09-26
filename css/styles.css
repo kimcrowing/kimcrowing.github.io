@@ -177,7 +177,7 @@ p {
     background: var(--item-bg);
     padding: 8px;
     border-radius: 4px;
-    border: 2px solid #1f2937; /* 调试边框 */
+    border: 1px solid #1f2937; /* 调试边框 */
 }
 
 /* 热搜列表 */
@@ -190,7 +190,7 @@ p {
     color: var(--text-color);
     opacity: 1;
     visibility: visible;
-    border: 2px solid #1f2937; /* 调试边框 */
+    border: 1px solid #1f2937; /* 调试边框 */
 }
 
 #hotSearchList::-webkit-scrollbar {
@@ -389,6 +389,7 @@ select.default-icon {
         padding: 8px;
     }
 }
+
 
 
 

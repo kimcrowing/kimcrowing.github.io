@@ -1,16 +1,4 @@
 proxies:
-- name: ❓ 001
-  type: trojan
-  server: www.bing.com
-  port: 12345
-  password: /123456789
-  sni: www.bing.com
-- name: ❓ 002
-  type: ss
-  server: www.bing.com
-  port: 443
-  cipher: aes-128-gcm
-  password: password
 - name: 🇦🇺 001
   type: ss
   server: 1.2.3.4

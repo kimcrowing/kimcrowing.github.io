@@ -97,7 +97,6 @@ proxy-groups:
 - name: SELECT
   type: select
   use:
-   - www
    - ww
 - name: FREE
   type: select

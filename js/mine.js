@@ -8,62 +8,81 @@ document.addEventListener('DOMContentLoaded', () => {
 let isLoading = false;
 
 // 密码缓存：检查和获取缓存密码
-function getCachedPassword() {
-    const cachedData = localStorage.getItem('passwordData');
+function getCachedPassword(type) {
+    const cacheKey = type === 'home' ? 'passwordDataHome' : 'passwordDataRSS';
+    const cachedData = localStorage.getItem(cacheKey);
     if (!cachedData) return null;
 
     try {
-        const { hash, timestamp } = JSON.parse(cachedData);
+        const { value, timestamp } = JSON.parse(cachedData);
         const now = Date.now();
         const oneDayInMs = 24 * 60 * 60 * 1000; // 1天 = 24小时
         if (now - timestamp < oneDayInMs) {
-            console.log('getCachedPassword: Using valid cached password');
-            return hash;
+            console.log(`getCachedPassword: Using valid cached ${type} password`);
+            return value;
         } else {
-            console.log('getCachedPassword: Cache expired, clearing');
-            localStorage.removeItem('passwordData');
+            console.log(`getCachedPassword: ${type} cache expired, clearing`);
+            localStorage.removeItem(cacheKey);
             return null;
         }
     } catch (error) {
-        console.error('getCachedPassword: Error parsing cache', error);
-        localStorage.removeItem('passwordData');
+        console.error(`getCachedPassword: Error parsing ${type} cache`, error);
+        localStorage.removeItem(cacheKey);
         return null;
     }
 }
 
-// 密码缓存：保存密码哈希
-function cachePassword(input) {
-    const inputHash = CryptoJS.SHA256(input).toString();
+// 密码缓存：保存密码
+function cachePassword(input, type) {
+    const cacheKey = type === 'home' ? 'passwordDataHome' : 'passwordDataRSS';
     const cacheData = {
-        hash: inputHash,
+        value: type === 'home' ? CryptoJS.SHA256(input).toString() : input, // Home存hash，RSS存原文
         timestamp: Date.now()
     };
-    localStorage.setItem('passwordData', JSON.stringify(cacheData));
-    console.log('cachePassword: Password cached for 1 day');
-    return inputHash;
+    localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+    console.log(`cachePassword: ${type} password cached for 1 day`);
+    return cacheData.value;
 }
 
-function showPasswordPrompt() {
+function showPasswordPrompt(type) {
     const passwordHash = "7c2ecd07f155648431e0f94b89247d713c5786e1e73e953f2fe7eca39534cd6d";
     // 检查缓存
-    const cachedHash = getCachedPassword();
-    if (cachedHash === passwordHash) {
-        return cachedHash; // 返回缓存的哈希（模拟密码）
+    const cachedValue = getCachedPassword(type);
+    if (type === 'home' && cachedValue === passwordHash) {
+        return cachedValue; // Home: 返回缓存的哈希
+    }
+    if (type === 'rss' && cachedValue) {
+        return cachedValue; // RSS: 返回缓存的原文密码
     }
 
     // 无有效缓存，提示输入
-    const input = prompt("请输入访问密码：");
+    const input = prompt(`请输入${type === 'home' ? '首页' : 'RSS'}访问密码：`);
     if (!input) {
         alert("密码不能为空！");
         return null;
     }
-    const inputHash = CryptoJS.SHA256(input).toString();
-    if (inputHash === passwordHash) {
-        cachePassword(input); // 缓存有效密码
-        return inputHash;
+    if (type === 'home') {
+        const inputHash = CryptoJS.SHA256(input).toString();
+        if (inputHash === passwordHash) {
+            return cachePassword(input, 'home'); // 缓存哈希
+        } else {
+            alert("密码错误，请重新输入或退出浏览器！");
+            return null;
+        }
     } else {
-        alert("密码错误，请重新输入或退出浏览器！");
-        return null;
+        // RSS: 验证通过尝试解密
+        const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g==';
+        try {
+            const decrypted = CryptoJS.AES.decrypt(encryptedPasskey, input).toString(CryptoJS.enc.Utf8);
+            if (decrypted) {
+                return cachePassword(input, 'rss'); // 缓存原文
+            } else {
+                throw new Error('解密失败');
+            }
+        } catch (error) {
+            alert("RSS密码错误，请重新输入！");
+            return null;
+        }
     }
 }
 
@@ -127,7 +146,7 @@ function loadCardContent(contentElement) {
 
 function showthink() {
     console.log('showthink: Triggered');
-    const secretKey = showPasswordPrompt();
+    const secretKey = showPasswordPrompt('home');
     if (!secretKey) {
         const cardContainer = document.getElementById('card-container');
         if (cardContainer) {
@@ -274,7 +293,7 @@ function showRSS() {
     loadCardContent(content);
 
     const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g==';
-    const secretKey = showPasswordPrompt();
+    const secretKey = showPasswordPrompt('rss');
     if (!secretKey) {
         content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';
         loadCardContent(content);

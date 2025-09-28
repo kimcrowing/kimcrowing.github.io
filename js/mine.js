@@ -233,23 +233,28 @@ function fetchHotSearch(type) {
                 <a>|</a>
                 <a href="javascript:void(0)" onclick="fetchHotSearch('douyin')">抖音</a>
             `;
-            // 创建热搜列表
+            // 创建热搜列表（模仿 RSS 结构）
             const listElement = document.createElement('ul');
             listElement.id = 'hotSearchList';
+            listElement.className = 'rss-item-list'; // 添加类以匹配 RSS 样式
             sortedHotSearchList.forEach((item, index) => {
                 const listItem = document.createElement('li');
+                listItem.className = 'rss-item';
                 const indexColumn = document.createElement('span');
                 indexColumn.className = 'index-column';
                 indexColumn.textContent = index + 1;
                 const title = document.createElement('a');
-                title.href = item.url;
+                title.href = item.url || '#';
                 title.target = '_blank';
                 title.textContent = item.title || '无标题';
+                const description = document.createElement('p');
+                description.textContent = item.desc || ''; // 使用 item.desc 或空字符串
                 const hot = document.createElement('span');
                 hot.className = 'num';
                 hot.textContent = item.hot ? (item.hot / 10000).toFixed(1) + '万' : '未知';
                 listItem.appendChild(indexColumn);
                 listItem.appendChild(title);
+                listItem.appendChild(description);
                 listItem.appendChild(hot);
                 listElement.appendChild(listItem);
             });

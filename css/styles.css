@@ -94,7 +94,7 @@ body {
     display: block;
     opacity: 1;
     visibility: visible;
-    border: 2px solid #1f2937; /* 调试边框 */
+    border: 0.1px solid #1f2937; /* 调试边框 */
 }
 
 /* 隐藏模块 */
@@ -389,6 +389,7 @@ select.default-icon {
         padding: 8px;
     }
 }
+
 
 
 

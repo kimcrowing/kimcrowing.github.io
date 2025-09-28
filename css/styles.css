@@ -90,7 +90,7 @@ body {
     height: 36px;
     margin: 0;
     background: var(--fav-bg);
-    border-radius: 6px;
+    border-radius: 8px;
     display: block;
     opacity: 1;
     visibility: visible;
@@ -389,6 +389,7 @@ select.default-icon {
         padding: 8px;
     }
 }
+
 
 
 

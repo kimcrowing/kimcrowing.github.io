@@ -7,8 +7,51 @@ document.addEventListener('DOMContentLoaded', () => {
 // 状态标志，防止重复操作
 let isLoading = false;
 
+// 密码缓存：检查和获取缓存密码
+function getCachedPassword() {
+    const cachedData = localStorage.getItem('passwordData');
+    if (!cachedData) return null;
+
+    try {
+        const { hash, timestamp } = JSON.parse(cachedData);
+        const now = Date.now();
+        const oneDayInMs = 24 * 60 * 60 * 1000; // 1天 = 24小时
+        if (now - timestamp < oneDayInMs) {
+            console.log('getCachedPassword: Using valid cached password');
+            return hash;
+        } else {
+            console.log('getCachedPassword: Cache expired, clearing');
+            localStorage.removeItem('passwordData');
+            return null;
+        }
+    } catch (error) {
+        console.error('getCachedPassword: Error parsing cache', error);
+        localStorage.removeItem('passwordData');
+        return null;
+    }
+}
+
+// 密码缓存：保存密码哈希
+function cachePassword(input) {
+    const inputHash = CryptoJS.SHA256(input).toString();
+    const cacheData = {
+        hash: inputHash,
+        timestamp: Date.now()
+    };
+    localStorage.setItem('passwordData', JSON.stringify(cacheData));
+    console.log('cachePassword: Password cached for 1 day');
+    return inputHash;
+}
+
 function showPasswordPrompt() {
     const passwordHash = "7c2ecd07f155648431e0f94b89247d713c5786e1e73e953f2fe7eca39534cd6d";
+    // 检查缓存
+    const cachedHash = getCachedPassword();
+    if (cachedHash === passwordHash) {
+        return cachedHash; // 返回缓存的哈希（模拟密码）
+    }
+
+    // 无有效缓存，提示输入
     const input = prompt("请输入访问密码：");
     if (!input) {
         alert("密码不能为空！");
@@ -16,7 +59,8 @@ function showPasswordPrompt() {
     }
     const inputHash = CryptoJS.SHA256(input).toString();
     if (inputHash === passwordHash) {
-        return input;
+        cachePassword(input); // 缓存有效密码
+        return inputHash;
     } else {
         alert("密码错误，请重新输入或退出浏览器！");
         return null;
@@ -229,7 +273,7 @@ function showRSS() {
     content.innerHTML = '<li style="color: var(--text-color); text-align: center; padding: 8px;">正在加载 RSS...</li>';
     loadCardContent(content);
 
-    const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g=='; // 替换为实际值
+    const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g==';
     const secretKey = showPasswordPrompt();
     if (!secretKey) {
         content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';
@@ -274,7 +318,6 @@ function showRSS() {
                 const link = item.link || '#';
                 const downloadLink = link.replace('details.php', 'download.php') + (PASSKEY ? '&passkey=' + encodeURIComponent(PASSKEY) : '');
                 const description = item.contentSnippet || item.description || '';
-                
                 li.innerHTML = `
                     <span class="index-column">${index + 1}</span>
                     <a href="${downloadLink}" target="_blank">${item.title || '无标题'}</a>
@@ -308,7 +351,7 @@ function search(event) {
 function performSearch() {
     const query = document.getElementById('search-query')?.value;
     if (query?.trim() !== '') {
-        const searchURL = defaultEngine === 'google' 
+        const searchURL = defaultEngine === 'google'
             ? 'https://www.google.com/search?q=' + encodeURIComponent(query)
             : 'https://www.bing.com/search?q=' + encodeURIComponent(query);
         window.location.href = searchURL;

@@ -236,7 +236,7 @@ p {
 .search-container {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 40px;
     background-color: var(--search-bg);
     border-radius: 14px;
     overflow: hidden;
@@ -389,6 +389,7 @@ select.default-icon {
         padding: 8px;
     }
 }
+
 
 
 

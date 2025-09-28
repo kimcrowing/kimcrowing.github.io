@@ -1,49 +1,6 @@
-// 确保 DOM 加载完成
-document.addEventListener('DOMContentLoaded', () => {
-    initializeTheme();
-    console.log('DOM loaded, #card-container initial state: hidden');
-});
+// ... (保持原有代码不变，直到 loadCardContent)
 
-// 状态标志，防止重复操作
-let isLoading = false;
-
-function showPasswordPrompt() {
-    const passwordHash = "7c2ecd07f155648431e0f94b89247d713c5786e1e73e953f2fe7eca39534cd6d";
-    const input = prompt("请输入访问密码：");
-    if (!input) {
-        alert("密码不能为空！");
-        return null;
-    }
-    const inputHash = CryptoJS.SHA256(input).toString();
-    if (inputHash === passwordHash) {
-        return input;
-    } else {
-        alert("密码错误，请重新输入或退出浏览器！");
-        return null;
-    }
-}
-
-// 清空卡片容器
-function clearCardContainer() {
-    if (isLoading) {
-        console.log('clearCardContainer: Skipped due to ongoing operation');
-        return;
-    }
-    isLoading = true;
-    const cardContainer = document.getElementById('card-container');
-    if (!cardContainer) {
-        console.error('Error: #card-container not found in DOM');
-        isLoading = false;
-        return;
-    }
-    console.log('clearCardContainer: Clearing content');
-    cardContainer.style.display = 'none';
-    cardContainer.classList.remove('show');
-    cardContainer.innerHTML = '';
-    isLoading = false;
-}
-
-// 加载卡片内容
+// 修改：加载卡片内容 - 使用克隆而非移动
 function loadCardContent(contentElement) {
     const cardContainer = document.getElementById('card-container');
     if (!cardContainer) {
@@ -62,7 +19,9 @@ function loadCardContent(contentElement) {
     }
     console.log('loadCardContent: Loading content from', contentElement.id || contentElement.tagName);
     cardContainer.innerHTML = '';
-    cardContainer.appendChild(contentElement);
+    // 克隆元素以保留原始 DOM
+    const clonedContent = contentElement.cloneNode(true);
+    cardContainer.appendChild(clonedContent);
     cardContainer.style.display = 'block';
     cardContainer.classList.add('show');
     // 强制重绘
@@ -71,7 +30,6 @@ function loadCardContent(contentElement) {
         cardContainer.offsetHeight; // 触发 reflow
         cardContainer.style.opacity = '1';
         console.log('loadCardContent: Forced redraw of card-container');
-        // 验证 hotSearchList 内容
         const hotSearchList = cardContainer.querySelector('#hotSearchList');
         if (hotSearchList) {
             console.log('loadCardContent: hotSearchList items:', hotSearchList.children.length);
@@ -80,6 +38,7 @@ function loadCardContent(contentElement) {
     });
 }
 
+// 修改：showthink - 保持逻辑不变
 function showthink() {
     console.log('showthink: Triggered');
     const secretKey = showPasswordPrompt();
@@ -104,6 +63,7 @@ function showthink() {
     loadCardContent(hom);
 }
 
+// 修改：showfavo
 function showfavo() {
     console.log('showfavo: Triggered');
     clearCardContainer();
@@ -116,12 +76,14 @@ function showfavo() {
     loadCardContent(next);
 }
 
+// 修改：showhot - 确保热搜内容克隆
 function showhot() {
     console.log('showhot: Triggered');
     clearCardContainer();
-    fetchHotSearch('baidu'); // 默认加载百度热搜
+    fetchHotSearch('baidu');
 }
 
+// 修改：fetchHotSearch - 克隆动态生成的内容
 function fetchHotSearch(type) {
     console.log('fetchHotSearch: Triggered for type:', type);
     const cardContainer = document.getElementById('card-container');
@@ -130,7 +92,6 @@ function fetchHotSearch(type) {
         isLoading = false;
         return;
     }
-    // 显示加载中提示
     cardContainer.style.display = 'block';
     cardContainer.innerHTML = '<p style="color: var(--text-color); text-align: center; padding: 8px;">正在加载热搜...</p>';
     cardContainer.classList.add('show');
@@ -152,10 +113,8 @@ function fetchHotSearch(type) {
             }
             const hotSearchList = data.data;
             const sortedHotSearchList = hotSearchList.sort((a, b) => b.hot - a.hot);
-            // 创建热搜内容
             const content = document.createElement('div');
             content.id = 'hotpage';
-            // 创建导航栏
             const hotSearchNav = document.createElement('div');
             hotSearchNav.id = 'hot-search-nav';
             hotSearchNav.innerHTML = `
@@ -169,7 +128,6 @@ function fetchHotSearch(type) {
                 <a>|</a>
                 <a href="javascript:void(0)" onclick="fetchHotSearch('douyin')">抖音</a>
             `;
-            // 创建热搜列表
             const listElement = document.createElement('ul');
             listElement.id = 'hotSearchList';
             sortedHotSearchList.forEach((item, index) => {
@@ -192,10 +150,7 @@ function fetchHotSearch(type) {
             content.appendChild(hotSearchNav);
             content.appendChild(listElement);
             console.log('fetchHotSearch: Hot search list updated, items:', sortedHotSearchList.length);
-            console.log('fetchHotSearch: hotSearchList items in DOM:', listElement.children.length);
-            // 加载到卡片容器
-            loadCardContent(content);
-            // 额外验证
+            loadCardContent(content); // 直接加载克隆内容
             setTimeout(() => {
                 const hotSearchListCheck = cardContainer.querySelector('#hotSearchList');
                 if (hotSearchListCheck) {
@@ -204,7 +159,6 @@ function fetchHotSearch(type) {
                     console.error('fetchHotSearch: hotSearchList not found in card-container');
                 }
             }, 100);
-            console.log('fetchHotSearch: Hot search content loaded');
             isLoading = false;
         })
         .catch(error => {
@@ -216,6 +170,7 @@ function fetchHotSearch(type) {
         });
 }
 
+// 修改：showRSS
 function showRSS() {
     console.log('showRSS: Triggered');
     clearCardContainer();
@@ -228,7 +183,7 @@ function showRSS() {
     content.innerHTML = '<li style="color: var(--text-color); text-align: center; padding: 8px;">正在加载 RSS...</li>';
     loadCardContent(content);
 
-    const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g=='; // 替换为实际值
+    const encryptedPasskey = 'U2FsdGVkX1/yP6psZ7QSpo+u87R1biYFA5GH7Eva7m8VLlqashyLJfYUyi56qJftfUxKWz/kskgLJUid/NOG8g==';
     const secretKey = showPasswordPrompt();
     if (!secretKey) {
         content.innerHTML = '<li style="color: red; text-align: center; padding: 8px;">未输入密码，无法加载 RSS！</li>';
@@ -273,7 +228,6 @@ function showRSS() {
                 const link = item.link || '#';
                 const downloadLink = link.replace('details.php', 'download.php') + (PASSKEY ? '&passkey=' + encodeURIComponent(PASSKEY) : '');
                 const description = item.contentSnippet || item.description || '';
-                
                 li.innerHTML = `
                     <span class="index-column">${index + 1}</span>
                     <a href="${downloadLink}" target="_blank">${item.title || '无标题'}</a>
@@ -295,46 +249,4 @@ function showRSS() {
         });
 }
 
-var defaultEngine = 'bing';
-
-function search(event) {
-    if (event.key === 'Enter' || event.keyCode === 13) {
-        event.preventDefault();
-        performSearch();
-    }
-}
-
-function performSearch() {
-    const query = document.getElementById('search-query')?.value;
-    if (query?.trim() !== '') {
-        const searchURL = defaultEngine === 'google' 
-            ? 'https://www.google.com/search?q=' + encodeURIComponent(query)
-            : 'https://www.bing.com/search?q=' + encodeURIComponent(query);
-        window.location.href = searchURL;
-    }
-}
-
-function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeToggleButton(newTheme);
-    console.log('toggleTheme: Switched to', newTheme);
-}
-
-function updateThemeToggleButton(theme) {
-    const toggleButton = document.getElementById('theme-toggle');
-    if (toggleButton) {
-        toggleButton.textContent = theme === 'light' ? '🌙' : '☀️';
-    }
-}
-
-function initializeTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', initialTheme);
-    updateThemeToggleButton(initialTheme);
-    console.log('initializeTheme: Set theme to', initialTheme);
-}
+// ... (其余代码不变：search, performSearch, toggleTheme, updateThemeToggleButton, initializeTheme)

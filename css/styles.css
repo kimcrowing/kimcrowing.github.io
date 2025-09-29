@@ -50,8 +50,8 @@ body {
 
 /* 卡片容器 */
 #card-container {
-    width: 98%;
-    max-width: 100%;
+    width: 96%;
+    max-width: 98%;
     margin: 0.4% auto;
     padding: 1.5% 1.5%;
     background: var(--card-bg);
@@ -389,6 +389,7 @@ select.default-icon {
         padding: 8px;
     }
 }
+
 
 
 

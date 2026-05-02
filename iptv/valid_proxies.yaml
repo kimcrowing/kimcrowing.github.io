@@ -17,99 +17,359 @@ dns:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
 proxies:
-- name: 🇪🇸西班牙-01
-  type: vless
-  server: 79.117.121.85
-  port: 35766
-  uuid: ebf7d712-7690-4028-81f7-616c106cfd5f
-  servername: apple.com
+- name: 🇧🇬BG-01
+  type: trojan
+  server: 78.159.131.12
+  port: 28259
+  password: MeaDiUmPlkWbZJ2BON8tz
+  sni: ads.x5.ru
+  skip-cert-verify: true
+  tls: true
+  udp: true
+- name: 🇧🇷巴西-01
+  type: vmess
+  server: 78.111.102.232
+  port: 3389
+  uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+  alterId: 0
+  cipher: auto
   tls: false
-  flow: xtls-rprx-vision
+  skip-cert-verify: false
   udp: true
-- name: 🇬🇧英国-01
+- name: 🇨🇦加拿大-01
   type: vless
-  server: s642.ccgfw.top
+  server: s356.ccgfw.online
   port: 443
   uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031u4c78s642.ccgfw.top
+  servername: 09d7s356.ccgfw.online
   tls: true
   flow: xtls-rprx-vision
   client-fingerprint: random
   udp: true
-- name: 🇬🇧英国-02
+- name: 🇨🇦加拿大-02
   type: vless
-  server: s643.ccgfw.top
-  port: 443
-  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031u7190s643.ccgfw.top
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  udp: true
-- name: 🇬🇧英国-03
-  type: vless
-  server: s644.ccgfw.top
-  port: 443
-  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031ud3c8s644.ccgfw.top
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  udp: true
-- name: 🇭🇰香港-01
-  type: vless
-  server: s306.okgg.top
-  port: 443
-  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031ue788s306.okgg.top
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  udp: true
-- name: 🇭🇰香港-02
-  type: vless
-  server: cf.008500.xyz
-  port: 443
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
+  server: 23.173.104.220
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   network: ws
-  servername: vless.lrdxw.club
+  servername: sni.111000.v6.rocks
   tls: true
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: vless.lrdxw.club
+      Host: sni.111000.v6.rocks
   udp: true
-- name: 🇮🇩印尼-01
+- name: 🇨🇦加拿大-03
   type: vmess
-  server: v24.hdacd.com
-  port: 30824
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
+  server: 502.outline-vpn.cloud
+  port: 443
+  uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: glweidf.sbs
+  udp: true
+- name: 🇨🇭瑞士-01
+  type: vless
+  server: 91.245.225.69
+  port: 443
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  network: ws
+  servername: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
+  udp: true
+- name: 🇨🇭瑞士-02
+  type: vless
+  server: 185.18.250.185
+  port: 2053
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  tls: true
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+  udp: true
+- name: 🇨🇾CY-01
+  type: vmess
+  server: 195.85.59.154
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 52aa-super-river-52aa.pobin49599.workers.dev
+  udp: true
+- name: 🇪🇸西班牙-01
+  type: trojan
+  server: es-full.privateip.net
+  port: 443
+  password: e2486b91-71a6-421b-9d53-3c080fb0edb8
+  skip-cert-verify: true
+  tls: true
+  udp: true
+- name: 🇫🇮芬兰-01
+  type: vless
+  server: 64.188.93.158
+  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.v6.rocks
+  tls: true
+  ws-opts:
+    path: /?ed=2560&https://t.me/WangCai2🇨🇳
+    headers:
+      Host: sni.111000.v6.rocks
+  udp: true
+- name: 🇫🇷法国-01
+  type: vmess
+  server: 2001:bc8:32d7:225::1
+  port: 23456
+  uuid: bd48e0ac-e90e-4451-a4f2-abf061cfb890
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /alvin9999.com
+    headers:
+      Host: www.bing.com
+  udp: true
+- name: 🇬🇧英国-01
+  type: vless
+  server: 94.247.142.245
+  port: 2096
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  tls: true
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+  udp: true
+- name: 🇬🇧英国-02
+  type: vless
+  server: 91.193.58.98
+  port: 2096
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇬🇧英国-03
+  type: vmess
+  server: cg1c12.waimaojd.com
+  port: 443
+  uuid: 6fc84fd2-0442-405f-baa7-6daf66b81a10
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: cg1c12.waimaojd.com
+  network: ws
+  ws-opts:
+    path: /api/v1/graphql
+    headers:
+      Host: cg1c12.waimaojd.com
+  udp: true
+- name: 🇭🇰香港-01
+  type: trojan
+  server: 18.163.116.37
+  port: 9412
+  password: BxceQaOe
+  sni: t.me%2Fripaojiedian
+  skip-cert-verify: true
+  tls: true
+  udp: true
+- name: 🇭🇰香港-02
+  type: trojan
+  server: bestcdn1.express.868863.xyz
+  port: 2053
+  password: bc9f374a-a822-4c5a-8c4e-d99e9fb5eeda
+  sni: 17776908485481.206352.xyz
+  skip-cert-verify: false
+  tls: true
+  udp: true
+- name: 🇭🇰香港-03
+  type: trojan
+  server: bestcdn2.express.868863.xyz
+  port: 2087
+  password: bc9f374a-a822-4c5a-8c4e-d99e9fb5eeda
+  sni: 17776908487988.206353.xyz
+  skip-cert-verify: false
+  tls: true
+  udp: true
+- name: 🇭🇰香港-04
+  type: vless
+  server: cdn.091224.xyz
+  port: 443
+  uuid: b5fb6b8c-f6f8-458d-ad75-fd36f5527474
+  network: ws
+  servername: hk666.6807251.xyz
+  tls: true
+  client-fingerprint: firefox
+  ws-opts:
+    path: /
+    headers:
+      Host: hk666.6807251.xyz
+  udp: true
+- name: 🇭🇰香港-05
+  type: vless
+  server: s298.okgg.top
+  port: 443
+  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
+  servername: 3556s298.okgg.top
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: random
+  udp: true
+- name: 🇭🇰香港-06
+  type: vless
+  server: 47.75.101.0
+  port: 3443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇭🇰香港-07
+  type: vless
+  server: 45.78.16.178
+  port: 443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇭🇰香港-08
+  type: vless
+  server: 129.227.139.137
+  port: 443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇭🇰香港-09
+  type: vless
+  server: 8.210.21.65
+  port: 2096
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇭🇰香港-10
+  type: vless
+  server: 47.242.232.14
+  port: 2083
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇭🇰香港-11
+  type: vless
+  server: 154.3.37.27
+  port: 9004
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇭🇰香港-12
+  type: vmess
+  server: 103.181.164.145
+  port: 51556
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: false
   udp: true
-- name: 🇮🇩印尼-02
+- name: 🇭🇰香港-13
   type: vmess
-  server: v29.hdacd.com
-  port: 30829
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
+  server: 103.181.164.145
+  port: 54022
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: false
   udp: true
-- name: 🇮🇩印尼-03
+- name: 🇮🇳印度-01
   type: vmess
-  server: v8.hdacd.com
-  port: 30808
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
+  server: 139.59.24.215
+  port: 3389
+  uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+  alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵日本-01
+  type: trojan
+  server: jp.111000.cc.cd
+  port: 443
+  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  sni: sni.111000.dynv6.net
+  alpn:
+  - http/1.1
+  skip-cert-verify: false
+  tls: true
+  ws-opts:
+    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    headers:
+      Host: sni.111000.dynv6.net
+  udp: true
+- name: 🇯🇵日本-02
   type: trojan
   server: jp2-8sb.6121999.dpdns.org
   port: 24534
@@ -118,7 +378,25 @@ proxies:
   skip-cert-verify: false
   tls: true
   udp: true
-- name: 🇯🇵日本-02
+- name: 🇯🇵日本-03
+  type: trojan
+  server: 54.238.146.34
+  port: 4019
+  password: 69ecb45889d99f31b8ccc10bf8f76a72
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+- name: 🇯🇵日本-04
+  type: trojan
+  server: 3.112.1.63
+  port: 9201
+  password: 69ecb45889d99f31b8ccc10bf8f76a72
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+- name: 🇯🇵日本-05
   type: vless
   server: dongjing4.zqjsqapi.com
   port: 443
@@ -131,23 +409,47 @@ proxies:
     headers:
       Host: dongjing4.zqjsqapi.com
   udp: true
-- name: 🇯🇵日本-03
+- name: 🇯🇵日本-06
   type: vless
-  server: 47.79.85.210
-  port: 11307
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 153.121.45.101
+  port: 443
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
   network: ws
-  servername: sni.111000.v6.rocks
+  servername: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
+  udp: true
+- name: 🇯🇵日本-07
+  type: vless
+  server: 207.56.224.184
+  port: 16438
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  servername: xfxl35a.node-edge.gfw.hidns.co
   tls: true
   ws-opts:
-    path: /?ed=2560&https://t.me/wangcai2🇨🇳
+    path: /danfengfp=chrome
     headers:
-      Host: sni.111000.v6.rocks
+      Host: xfxl35a.node-edge.gfw.hidns.co
+  udp: true
+- name: 🇯🇵日本-08
+  type: vmess
+  server: 103.127.243.60
+  port: 55386
+  uuid: 22d4ef9c-b269-4f82-9f59-6c2c0d8ce16d
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
   udp: true
 - name: 🇰🇷韩国-01
   type: vless
-  server: 59.10.201.102
-  port: 18246
+  server: 114.110.181.49
+  port: 443
   uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
   network: ws
   servername: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
@@ -159,40 +461,114 @@ proxies:
   udp: true
 - name: 🇰🇷韩国-02
   type: vless
-  server: 59.12.46.51
-  port: 30303
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  server: 140.238.13.96
+  port: 443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
   network: ws
-  servername: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
+  servername: cfed.tgzdyz2.top
   tls: true
   ws-opts:
-    path: /
+    path: tg@zdyz2
     headers:
-      Host: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
+      Host: cfed.tgzdyz2.top
   udp: true
-- name: 🇰🇿KZ-01
+- name: 🇰🇷韩国-03
   type: vless
-  server: 83.222.23.81
-  port: 38065
-  uuid: 4b9063e0-3288-44e9-9aac-80fbfce323a0
-  servername: yahoo.com
+  server: 14.52.249.135
+  port: 10082
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  network: ws
+  servername: juzibaipiao.5112233.xyz
   tls: true
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: dSSDPTK6AHfAdRAXD9i4rzqcNIY65RxlF25UyCKdiyo
-    short-id: fa
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
   udp: true
-- name: 🇲🇾马来西亚-01
+- name: 🇰🇷韩国-04
+  type: vless
+  server: 132.145.91.171
+  port: 8443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇰🇷韩国-05
+  type: vless
+  server: 183.103.4.162
+  port: 10912
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  servername: xfxl35a.node-edge.gfw.hidns.co
+  tls: true
+  ws-opts:
+    path: /danfengfp=chrome
+    headers:
+      Host: xfxl35a.node-edge.gfw.hidns.co
+  udp: true
+- name: 🇰🇷韩国-06
   type: vmess
-  server: v12.hdacd.com
-  port: 30812
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  server: kr02.a0a.xyz
+  port: 80
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr02.a0a.xyz
   udp: true
-- name: 🇲🇾马来西亚-02
+- name: 🇰🇷韩国-07
+  type: vmess
+  server: 152.67.218.38
+  port: 443
+  uuid: b5e9480a-b7aa-40a4-f9a7-5299b5e363b4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.67.218.38
+  udp: true
+- name: 🇱🇹LT-01
+  type: vless
+  server: 89.116.180.130
+  port: 2053
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  tls: true
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+  udp: true
+- name: 🇱🇻LV-01
+  type: vless
+  server: 31.128.32.98
+  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.v6.navy
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.v6.navy
+  udp: true
+- name: 🇲🇾马来西亚-01
   type: vmess
   server: v30.hdacd.com
   port: 30830
@@ -202,7 +578,7 @@ proxies:
   tls: false
   skip-cert-verify: false
   udp: true
-- name: 🇲🇾马来西亚-03
+- name: 🇲🇾马来西亚-02
   type: vmess
   server: v33.hdacd.com
   port: 30833
@@ -212,7 +588,27 @@ proxies:
   tls: false
   skip-cert-verify: false
   udp: true
+- name: 🇲🇾马来西亚-03
+  type: vmess
+  server: v24.hdacd.com
+  port: 30824
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  udp: true
 - name: 🇲🇾马来西亚-04
+  type: vmess
+  server: v29.hdacd.com
+  port: 30829
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  udp: true
+- name: 🇲🇾马来西亚-05
   type: vmess
   server: v36.hdacd.com
   port: 30836
@@ -222,7 +618,17 @@ proxies:
   tls: false
   skip-cert-verify: false
   udp: true
-- name: 🇲🇾马来西亚-05
+- name: 🇲🇾马来西亚-06
+  type: vmess
+  server: v8.hdacd.com
+  port: 30808
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  udp: true
+- name: 🇲🇾马来西亚-07
   type: vmess
   server: v9.hdacd.com
   port: 30809
@@ -232,9 +638,124 @@ proxies:
   tls: false
   skip-cert-verify: false
   udp: true
+- name: 🇲🇾马来西亚-08
+  type: vmess
+  server: v35.hdacd.com
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  udp: true
 - name: 🇳🇱荷兰-01
+  type: trojan
+  server: hl-freedom-1.undef.network
+  port: 443
+  password: GZOof2R1ej4yML1NxajR2frGQ
+  sni: hl-freedom-1.undef.network
+  skip-cert-verify: false
+  tls: true
+  udp: true
+- name: 🇳🇱荷兰-02
+  type: trojan
+  server: hl-freedom-1.undef.network
+  port: 443
+  password: JaFKnqNcvnBT63t3rquidGsln
+  sni: HL-FREEDOM-1.UNDEF.NETWORK
+  skip-cert-verify: false
+  tls: true
+  ws-opts:
+    path: /f2fc2a1f
+    headers:
+      Host: hl-freedom-1.undef.network
+  udp: true
+- name: 🇳🇱荷兰-03
   type: vless
-  server: 94.228.219.60
+  server: s326.ccgfw.top
+  port: 443
+  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
+  servername: 1941s326.ccgfw.top
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: random
+  udp: true
+- name: 🇳🇱荷兰-04
+  type: vless
+  server: s678.ccgfw.top
+  port: 443
+  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
+  servername: b838s678.ccgfw.top
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: random
+  udp: true
+- name: 🇳🇱荷兰-05
+  type: vless
+  server: s677.ccgfw.top
+  port: 443
+  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
+  servername: 8594s677.ccgfw.top
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: random
+  udp: true
+- name: 🇳🇱荷兰-06
+  type: vless
+  server: 217.65.79.122
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.dns.army
+  tls: true
+  ws-opts:
+    path: /?ed=2560&https://t.me/WangCai2🇨🇳
+    headers:
+      Host: sni.111000.dns.army
+  udp: true
+- name: 🇳🇱荷兰-07
+  type: vless
+  server: 193.178.172.225
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.dns.army
+  tls: true
+  ws-opts:
+    path: /?ed=2560&https://t.me/WangCai2🇨🇳
+    headers:
+      Host: sni.111000.dns.army
+  udp: true
+- name: 🇳🇱荷兰-08
+  type: vless
+  server: 193.56.8.103
+  port: 8443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.dns.army
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.dns.army
+  udp: true
+- name: 🇳🇱荷兰-09
+  type: vless
+  server: 195.93.253.207
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.indevs.in
+  tls: true
+  ws-opts:
+    path: /?Telegram🇨🇳+@WangCai2=
+    headers:
+      Host: sni.111000.indevs.in
+  udp: true
+- name: 🇳🇱荷兰-10
+  type: vless
+  server: 94.228.219.45
   port: 443
   uuid: f189684b-6213-4c0d-a2e3-cb8860f5d4c5
   servername: hls-svod.itunes.apple.com
@@ -245,57 +766,7 @@ proxies:
     public-key: 9WnuH4KUb9-cCqbApq4bVLDhrqhPbpnd5eTn14bGciA
     short-id: 27e540
   udp: true
-- name: 🇳🇱荷兰-02
-  type: vless
-  server: s326.ccgfw.top
-  port: 443
-  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031u1941s326.ccgfw.top
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  udp: true
-- name: 🇳🇱荷兰-03
-  type: vless
-  server: s677.ccgfw.top
-  port: 443
-  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031u8594s677.ccgfw.top
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  udp: true
-- name: 🇳🇱荷兰-04
-  type: vless
-  server: s678.ccgfw.top
-  port: 443
-  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031ub838s678.ccgfw.top
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  udp: true
-- name: 🇳🇱荷兰-05
-  type: trojan
-  server: hl-freedom-1.undef.network
-  port: 443
-  password: GZOof2R1ej4yML1NxajR2frGQ
-  sni: HL-FREEDOM-1.UNDEF.NETWORK
-  skip-cert-verify: false
-  tls: true
-  ws-opts:
-    path: /f2fc2a1f
-  udp: true
 - name: 🇵🇱波兰-01
-  type: vless
-  server: pl-1.illusion-vpn.ru
-  port: 443
-  uuid: bf263367-bb63-4663-b4a1-34946107a72e
-  servername: pl-1.illusion-vpn.ru
-  tls: false
-  flow: xtls-rprx-vision
-  udp: true
-- name: 🇵🇱波兰-02
   type: vless
   server: pl74.mechvpn.online
   port: 443
@@ -304,350 +775,2709 @@ proxies:
   tls: true
   flow: xtls-rprx-vision
   udp: true
-- name: 🇸🇪瑞典-01
+- name: 🇸🇨SC-01
   type: vless
-  server: pl2-gws4.onnstreaming.ru
+  server: 154.219.5.92
   port: 443
-  uuid: 19ef3d02-1c55-4fec-9794-6def8cbac396
-  servername: pl2-gws4.onnstreaming.ru
-  tls: false
-  flow: xtls-rprx-vision
-  udp: true
-- name: 🇹🇭泰国-01
-  type: trojan
-  server: svip-tg.xiaobaivpn.icu
-  port: 28804
-  password: cebc8955-cb85-4c2c-82c3-1909cb897287
-  skip-cert-verify: false
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  network: ws
+  servername: juzibaipiao.5112233.xyz
   tls: true
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+  udp: true
+- name: 🇸🇬新加坡-01
+  type: vless
+  server: 47.128.164.52
+  port: 9999
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
   udp: true
 - name: 🇹🇼台湾-01
   type: vless
-  server: 35.229.245.133
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  server: 125.227.219.98
+  port: 6235
+  uuid: f6ddddaf-dfd6-4134-9dae-03b93b03d146
   network: ws
-  servername: b.8.q.1.z.7.c.5.y.k.2.v.x.0.a.m.6.n.d.h.3.h.u.9.danfeng.rr.kg
+  servername: baidu.com
   tls: true
+  client-fingerprint: chrome
   ws-opts:
-    path: /danfengfp=chrome
+    path: /xxxxhttp
     headers:
-      Host: b.8.q.1.z.7.c.5.y.k.2.v.x.0.a.m.6.n.d.h.3.h.u.9.danfeng.rr.kg
+      Host: baidu.com
+  udp: true
+- name: 🇹🇼台湾-02
+  type: vless
+  server: 211.75.74.232
+  port: 4443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇹🇼台湾-03
+  type: vless
+  server: 61.220.41.143
+  port: 36633
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇹🇼台湾-04
+  type: vless
+  server: 211.22.240.107
+  port: 30686
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
   udp: true
 - name: 🇺🇸美国-01
-  type: vless
-  server: 95.164.85.33
-  port: 443
-  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  servername: www.rakuten.co.jp
-  tls: false
-  flow: xtls-rprx-vision
+  type: trojan
+  server: 167.68.4.199
+  port: 2053
+  password: Aimer
+  sni: epge.muarua.filegear-sg.me
+  skip-cert-verify: false
+  tls: true
+  ws-opts:
+    path: /?ed=2560&proxyip=ts.hpc.tw
+    headers:
+      Host: epge.muarua.filegear-sg.me
   udp: true
 - name: 🇺🇸美国-02
-  type: vless
-  server: download.lastilhame.monster
+  type: trojan
+  server: 104.18.11.110
   port: 443
-  uuid: a8da758c-510d-4827-83cf-2f2b51c49c5b
-  tls: false
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: false
+  tls: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
   udp: true
 - name: 🇺🇸美国-03
-  type: vless
-  server: s123.ccgfw.online
+  type: trojan
+  server: 104.20.5.134
   port: 443
-  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031u71bfs123.ccgfw.online
+  password: mszfvhuczd
+  sni: abest.api-tel.xyz
+  skip-cert-verify: false
   tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
   udp: true
 - name: 🇺🇸美国-04
+  type: trojan
+  server: 172.64.152.23
+  port: 443
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: false
+  tls: true
+  udp: true
+- name: 🇺🇸美国-05
+  type: trojan
+  server: 104.18.32.47
+  port: 443
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: false
+  tls: true
+  udp: true
+- name: 🇺🇸美国-06
+  type: vless
+  server: 173.245.58.112
+  port: 8443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-07
+  type: vless
+  server: 172.64.146.53
+  port: 443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-08
+  type: vless
+  server: 162.159.46.151
+  port: 8443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-09
+  type: vless
+  server: 104.18.38.100
+  port: 8443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-10
+  type: vless
+  server: 104.19.36.52
+  port: 8443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-11
+  type: vless
+  server: 104.18.33.98
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-12
+  type: vless
+  server: 104.18.46.50
+  port: 443
+  uuid: 3264ccbe-dbc5-4d14-8dbe-1c62041cc43f
+  network: ws
+  servername: sk-hk1.feimavip.sbs
+  tls: true
+  client-fingerprint: ios
+  ws-opts:
+    path: /hk/1
+    headers:
+      Host: sk-hk1.feimavip.sbs
+  udp: true
+- name: 🇺🇸美国-13
+  type: vless
+  server: 173.245.59.230
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-14
+  type: vless
+  server: 104.19.40.29
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-15
+  type: vless
+  server: 172.64.144.12
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-16
+  type: vless
+  server: 172.64.145.53
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-17
+  type: vless
+  server: 104.19.63.181
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-18
+  type: vless
+  server: 104.19.35.69
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-19
+  type: vless
+  server: 172.64.145.154
+  port: 2087
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-20
+  type: vless
+  server: 162.159.152.95
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-21
+  type: vless
+  server: 104.19.51.170
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-22
+  type: vless
+  server: 104.19.51.241
+  port: 2083
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-23
+  type: vless
+  server: 172.64.144.187
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-24
+  type: vless
+  server: 104.19.35.52
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-25
+  type: vless
+  server: 162.159.152.32
+  port: 2087
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-26
+  type: vless
+  server: 162.159.42.31
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-27
+  type: vless
+  server: 94.183.184.239
+  port: 2053
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+  network: ws
+  servername: babayaga-6i7.pages.dev
+  tls: true
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳@wangcai2
+    headers:
+      Host: babayaga-6i7.pages.dev
+  udp: true
+- name: 🇺🇸美国-28
+  type: vless
+  server: 104.19.38.210
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-29
+  type: vless
+  server: 173.245.58.70
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-30
+  type: vless
+  server: 104.19.44.27
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-31
+  type: vless
+  server: 173.245.59.86
+  port: 2087
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-32
+  type: vless
+  server: 104.19.35.4
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-33
+  type: vless
+  server: 173.245.58.112
+  port: 2083
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-34
+  type: vless
+  server: 104.19.43.7
+  port: 2083
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-35
+  type: vless
+  server: 104.19.33.162
+  port: 2087
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-36
+  type: vless
+  server: 162.159.153.28
+  port: 2087
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-37
+  type: vless
+  server: 69.164.245.25
+  port: 443
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+  network: ws
+  servername: babayaga-6i7.pages.dev
+  tls: true
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳@WangCai2
+    headers:
+      Host: babayaga-6i7.pages.dev
+  udp: true
+- name: 🇺🇸美国-38
+  type: vless
+  server: 172.64.229.148
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-39
+  type: vless
+  server: 172.64.146.75
+  port: 8443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇺🇸美国-40
+  type: vless
+  server: 192.0.54.231
+  port: 443
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+  network: ws
+  servername: babayaga-6i7.pages.dev
+  tls: true
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳@WangCai2
+    headers:
+      Host: babayaga-6i7.pages.dev
+  udp: true
+- name: 🇺🇸美国-41
   type: vless
   server: s136.ccgfw.online
   port: 443
   uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031u3776s136.ccgfw.online
+  servername: 3776s136.ccgfw.online
   tls: true
   flow: xtls-rprx-vision
   client-fingerprint: random
   udp: true
-- name: 🇺🇸美国-05
+- name: 🇺🇸美国-42
   type: vless
-  server: ciallo-egb.pages.dev
+  server: cloudflare.182682.xyz
   port: 443
-  uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9
+  uuid: 15235ce9-4cd2-4483-b6b6-7fc4a3f44735
   network: ws
-  servername: CiaLLO-egb.PAGeS.dEV
+  servername: snip.ere.de5.net
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: snip.ere.de5.net
+  udp: true
+- name: 🇺🇸美国-43
+  type: vless
+  server: 104.18.77.36
+  port: 443
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  tls: true
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+  udp: true
+- name: 🇺🇸美国-44
+  type: vless
+  server: 104.18.33.181
+  port: 443
+  uuid: 15235ce9-4cd2-4483-b6b6-7fc4a3f44735
+  network: ws
+  servername: snip.ere.de5.net
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: snip.ere.de5.net
+  udp: true
+- name: 🇺🇸美国-45
+  type: vless
+  server: 216.116.134.43
+  port: 2053
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  tls: true
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+  udp: true
+- name: 🇺🇸美国-46
+  type: vless
+  server: 104.20.6.134
+  port: 443
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  servername: snippet.danfeng.rr.kg
+  tls: true
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.danfeng.rr.kg
+  udp: true
+- name: 🇺🇸美国-47
+  type: vless
+  server: 159.112.235.14
+  port: 8443
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  tls: true
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+  udp: true
+- name: 🇺🇸美国-48
+  type: vless
+  server: 172.64.144.22
+  port: 443
+  uuid: 15235ce9-4cd2-4483-b6b6-7fc4a3f44735
+  network: ws
+  servername: snip.ere.de5.net
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: snip.ere.de5.net
+  udp: true
+- name: 🇺🇸美国-49
+  type: vless
+  server: 66.235.200.158
+  port: 2083
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  network: ws
+  servername: juzibaipiao.5112233.xyz
+  tls: true
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+  udp: true
+- name: 🇺🇸美国-50
+  type: vless
+  server: 172.245.11.73
+  port: 443
+  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
+  servername: s844.ccgfw.top
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: random
+  udp: true
+- name: 🇺🇸美国-51
+  type: vless
+  server: 34.136.119.149
+  port: 443
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+  network: ws
+  servername: babayaga-6i7.pages.dev
+  tls: true
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳@wangcai2
+    headers:
+      Host: babayaga-6i7.pages.dev
+  udp: true
+- name: 🇺🇸美国-52
+  type: vless
+  server: 38.55.99.62
+  port: 58916
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  ws-opts:
+    path: tg@zdyz2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇺🇸美国-53
+  type: vless
+  server: 159.65.165.75
+  port: 8443
+  uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
+  network: ws
+  servername: cfed.tgzdyz2.top
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: TG@ZDYZ2
+    headers:
+      Host: cfed.tgzdyz2.top
+  udp: true
+- name: 🇺🇸美国-54
+  type: vless
+  server: 104.18.125.5
+  port: 80
+  uuid: 17ebee4e-97ea-4cad-8737-cc228478ca9d
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: lively-brook-c471.nedena3319.workers.dev
+  udp: true
+- name: 🇺🇸美国-55
+  type: vless
+  server: 172.64.147.104
+  port: 443
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  network: ws
+  servername: 3-2h8.pages.dev
   tls: true
   ws-opts:
     path: /
+    headers:
+      Host: 3-2h8.pages.dev
   udp: true
-- name: 🇺🇸美国-06
+- name: 🇺🇸美国-56
+  type: vless
+  server: 172.64.145.202
+  port: 2083
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  network: ws
+  servername: newwk1.f1w.de5.net
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: newwk1.f1w.de5.net
+  udp: true
+- name: 🇺🇸美国-57
+  type: vless
+  server: 162.120.94.138
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.indevs.in
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.indevs.in
+  udp: true
+- name: 🇺🇸美国-58
+  type: vless
+  server: 135.84.73.129
+  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.dynv6.net
+  tls: true
+  ws-opts:
+    path: /?Telegram🇨🇳@WangCai2=
+    headers:
+      Host: sni.111000.dynv6.net
+  udp: true
+- name: 🇺🇸美国-59
+  type: vless
+  server: 104.18.12.229
+  port: 2052
+  uuid: cdec8542-a21f-4377-9da3-ea60bb6d3a30
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: chosenflyesqt-q3y28ipf-v2.chosen-fly-esqt.workers.dev
+  udp: true
+- name: 🇺🇸美国-60
+  type: vless
+  server: 172.64.155.209
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.indevs.in
+  tls: true
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: sni.111000.indevs.in
+  udp: true
+- name: 🇺🇸美国-61
+  type: vless
+  server: 103.116.7.138
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.indevs.in
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.indevs.in
+  udp: true
+- name: 🇺🇸美国-62
+  type: vless
+  server: 172.64.149.54
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  servername: sni.111000.indevs.in
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.indevs.in
+  udp: true
+- name: 🇺🇸美国-63
   type: vmess
-  server: 47.90.244.153
-  port: 8443
-  uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af
+  server: s842.ccgfw.top
+  port: 443
+  uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: s842.ccgfw.top
+  network: ws
+  ws-opts:
+    path: /ssp-ws
+    headers:
+      Host: s842.ccgfw.top
+  udp: true
+- name: 🇺🇸美国-64
+  type: vmess
+  server: cg1c16.waimaojd.com
+  port: 443
+  uuid: 6fc84fd2-0442-405f-baa7-6daf66b81a10
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: cg1c16.waimaojd.com
+  network: ws
+  ws-opts:
+    path: /api/v1/graphql
+    headers:
+      Host: cg1c16.waimaojd.com
+  udp: true
+- name: 🇺🇸美国-65
+  type: vmess
+  server: vc.fly.dev
+  port: 443
+  uuid: 35379219-6535-4f2e-a4fe-3e44f61e0eee
+  alterId: 32
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: vc.fly.dev
+  network: ws
+  ws-opts:
+    path: /vc
+    headers:
+      Host: vc.fly.dev
+  udp: true
+- name: 🇺🇸美国-66
+  type: vmess
+  server: 104.21.234.74
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /ws
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt1.ir
+  udp: true
+- name: 🇺🇸美国-67
+  type: vmess
+  server: 104.21.224.56
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: a.prapt1.ir
+  udp: true
+- name: 🇺🇸美国-68
+  type: vmess
+  server: 104.21.239.77
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt4.ir
+  udp: true
+- name: 🇺🇸美国-69
+  type: vmess
+  server: 104.21.229.47
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt1.ir
+  udp: true
+- name: 🇺🇸美国-70
+  type: vmess
+  server: 104.21.226.14
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳 @WangCai08
+    headers:
+      Host: a.prapt4.ir
+  udp: true
+- name: 🇺🇸美国-71
+  type: vmess
+  server: 104.21.238.90
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt1.ir
+  udp: true
+- name: 🇺🇸美国-72
+  type: vmess
+  server: 172.64.134.48
+  port: 80
+  uuid: 1cfaad16-d2ba-4c49-af07-d7b9f11f43d0
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: newde11.xn--mes53ddysu0o3gl.top
+  udp: true
+- name: 🇺🇸美国-73
+  type: vmess
+  server: 104.21.235.76
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳 @WangCai08
+    headers:
+      Host: a.prapt1.ir
+  udp: true
+- name: 🇺🇸美国-74
+  type: vmess
+  server: 162.159.5.6
+  port: 8080
+  uuid: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm
+    headers:
+      Host: pcs-referenced-camera-concerns.trycloudflare.com
+  udp: true
+- name: 🇺🇸美国-75
+  type: vmess
+  server: 104.21.75.244
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: janett.click
+  udp: true
+- name: 🇺🇸美国-76
+  type: vmess
+  server: 172.67.136.12
+  port: 8080
+  uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: www.ywnouvbale.biz
+  udp: true
+- name: 🇺🇸美国-77
+  type: vmess
+  server: 104.21.221.135
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: a.prapt1.ir
+  udp: true
+- name: 🇺🇸美国-78
+  type: vmess
+  server: cg1c04.waimaojd.com
+  port: 443
+  uuid: be8e3136-b874-4085-bd23-ec3699300490
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /api/v1/graphql
+    headers:
+      Host: cg1c04.waimaojd.com
+  udp: true
+- name: 🇺🇸美国-79
+  type: vmess
+  server: 172.67.152.214
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: meroiy.icu
+  udp: true
+- name: 🇺🇸美国-80
+  type: vmess
+  server: 104.21.235.57
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳 @WangCai08
+    headers:
+      Host: a.prapt4.ir
+  udp: true
+- name: 🇺🇸美国-81
+  type: vmess
+  server: 104.21.228.42
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt4.ir
+  udp: true
+- name: 🇺🇸美国-82
+  type: vmess
+  server: 104.16.67.38
+  port: 80
+  uuid: f8c92b3b-5447-44a5-9e54-23cdc269cb93
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: aq.daozhang.link
+  udp: true
+- name: 🇺🇸美国-83
+  type: vmess
+  server: 104.21.16.62
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: irene.lat
+  udp: true
+- name: 🇺🇸美国-84
+  type: vmess
+  server: meroiy.icu
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: meroiy.icu
+  udp: true
+- name: 🇺🇸美国-85
+  type: vmess
+  server: 104.21.224.24
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt1.ir
+  udp: true
+- name: 🇺🇸美国-86
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: 209.126.84.189
+  udp: true
+- name: 🇺🇸美国-87
+  type: vmess
+  server: 38.92.10.226
+  port: 45979
+  uuid: 23bdf6df-c482-46d0-c0f4-5a98d534ea11
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /test
+  udp: true
+- name: 🇺🇸美国-88
+  type: vmess
+  server: 104.21.230.31
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt1.ir
+  udp: true
+- name: 🇺🇸美国-89
+  type: vmess
+  server: 172.67.116.48
+  port: 80
+  uuid: 22a13aa2-4854-44cb-e090-ec71ab84b1ff
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: wap.hostmjj.com
+  udp: true
+- name: 🇺🇸美国-90
+  type: vmess
+  server: 104.21.224.8
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt1.ir
   udp: true
 - name: 🇻🇳越南-01
   type: vless
   server: s226.okgg.top
   port: 443
   uuid: 8f8ccdc5-fe99-38d7-a8a6-422f8c88ef0a
-  servername: u712031ua6bas226.okgg.top
+  servername: a6bas226.okgg.top
   tls: true
   flow: xtls-rprx-vision
   client-fingerprint: random
+  udp: true
+- name: 🇽🇽未知-01
+  type: vless
+  server: 104.26.7.166
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-02
+  type: vless
+  server: 104.26.6.93
+  port: 8443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-03
+  type: vless
+  server: 104.26.6.20
+  port: 8443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-04
+  type: vless
+  server: 104.26.15.27
+  port: 8443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-05
+  type: vless
+  server: 8.39.125.8
+  port: 2087
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-06
+  type: vless
+  server: 8.39.125.57
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-07
+  type: vless
+  server: 8.35.211.240
+  port: 2083
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-08
+  type: vless
+  server: 108.162.198.70
+  port: 2087
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-09
+  type: vless
+  server: 198.41.223.113
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-10
+  type: vless
+  server: 8.35.211.190
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-11
+  type: vless
+  server: 108.162.198.2
+  port: 2087
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-12
+  type: vless
+  server: 198.41.223.18
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-13
+  type: vless
+  server: 8.39.125.122
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-14
+  type: vless
+  server: 108.162.198.141
+  port: 2083
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-15
+  type: vless
+  server: 108.162.198.153
+  port: 2053
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-16
+  type: vless
+  server: 108.162.198.176
+  port: 2096
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  network: ws
+  servername: kalami-eew.pages.dev
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: kalami-eew.pages.dev
+  udp: true
+- name: 🇽🇽未知-17
+  type: vless
+  server: 198.41.223.110
+  port: 443
+  uuid: 15235ce9-4cd2-4483-b6b6-7fc4a3f44735
+  network: ws
+  servername: snip.ere.de5.net
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: snip.ere.de5.net
+  udp: true
+- name: 🇽🇽未知-18
+  type: vless
+  server: 8.39.125.167
+  port: 443
+  uuid: 15235ce9-4cd2-4483-b6b6-7fc4a3f44735
+  network: ws
+  servername: snip.ere.de5.net
+  tls: true
+  client-fingerprint: random
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: snip.ere.de5.net
+  udp: true
+- name: 🇽🇽未知-19
+  type: vless
+  server: 8.35.211.15
+  port: 2087
+  uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+  network: ws
+  servername: l.ayovo.netlib.re
+  tls: true
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: l.ayovo.netlib.re
+  udp: true
+- name: 🇽🇽未知-20
+  type: vmess
+  server: 188.114.97.3
+  port: 443
+  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: afrhms16v.bestxray.buzz
   udp: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
-  - 🇰🇿KZ-01
-  - 🇳🇱荷兰-01
-  - 🇺🇸美国-01
-  - 🇺🇸美国-02
   - 🇯🇵日本-01
-  - 🇵🇱波兰-01
-  - 🇸🇪瑞典-01
-  - 🇵🇱波兰-02
-  - 🇺🇸美国-03
-  - 🇺🇸美国-04
-  - 🇻🇳越南-01
-  - 🇭🇰香港-01
+  - 🇯🇵日本-02
+  - 🇺🇸美国-01
+  - 🇳🇱荷兰-01
+  - 🇺🇸美国-02
   - 🇳🇱荷兰-02
-  - 🇬🇧英国-01
-  - 🇬🇧英国-02
-  - 🇬🇧英国-03
+  - 🇪🇸西班牙-01
+  - 🇯🇵日本-03
+  - 🇺🇸美国-03
+  - 🇯🇵日本-04
+  - 🇧🇬BG-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇳🇱荷兰-03
+  - 🇻🇳越南-01
   - 🇳🇱荷兰-04
-  - 🇹🇭泰国-01
+  - 🇵🇱波兰-01
+  - 🇳🇱荷兰-05
+  - 🇹🇼台湾-01
+  - 🇭🇰香港-04
+  - 🇭🇰香港-05
+  - 🇺🇸美国-06
+  - 🇽🇽未知-01
+  - 🇽🇽未知-02
+  - 🇽🇽未知-03
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇺🇸美国-09
+  - 🇺🇸美国-10
+  - 🇽🇽未知-04
+  - 🇯🇵日本-05
+  - 🇺🇸美国-11
+  - 🇺🇸美国-12
+  - 🇽🇽未知-05
+  - 🇽🇽未知-06
+  - 🇺🇸美国-13
+  - 🇺🇸美国-14
+  - 🇺🇸美国-15
+  - 🇽🇽未知-07
+  - 🇺🇸美国-16
+  - 🇺🇸美国-17
+  - 🇺🇸美国-18
+  - 🇽🇽未知-08
+  - 🇽🇽未知-09
+  - 🇺🇸美国-19
+  - 🇽🇽未知-10
+  - 🇺🇸美国-20
+  - 🇺🇸美国-21
+  - 🇺🇸美国-22
+  - 🇺🇸美国-23
+  - 🇺🇸美国-24
+  - 🇺🇸美国-25
+  - 🇺🇸美国-26
+  - 🇺🇸美国-27
+  - 🇽🇽未知-11
+  - 🇺🇸美国-28
+  - 🇺🇸美国-29
+  - 🇺🇸美国-30
+  - 🇺🇸美国-31
+  - 🇽🇽未知-12
+  - 🇽🇽未知-13
+  - 🇽🇽未知-14
+  - 🇺🇸美国-32
+  - 🇺🇸美国-33
+  - 🇺🇸美国-34
+  - 🇺🇸美国-35
+  - 🇺🇸美国-36
+  - 🇽🇽未知-15
+  - 🇽🇽未知-16
+  - 🇳🇱荷兰-06
+  - 🇰🇷韩国-01
+  - 🇳🇱荷兰-07
+  - 🇺🇸美国-37
+  - 🇳🇱荷兰-08
+  - 🇨🇭瑞士-01
+  - 🇺🇸美国-38
+  - 🇱🇻LV-01
+  - 🇺🇸美国-39
+  - 🇯🇵日本-06
+  - 🇺🇸美国-40
+  - 🇭🇰香港-06
+  - 🇹🇼台湾-02
+  - 🇽🇽未知-17
+  - 🇺🇸美国-41
+  - 🇱🇹LT-01
+  - 🇺🇸美国-42
+  - 🇺🇸美国-43
+  - 🇭🇰香港-07
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇬🇧英国-01
+  - 🇺🇸美国-44
+  - 🇺🇸美国-45
+  - 🇺🇸美国-46
+  - 🇺🇸美国-47
+  - 🇰🇷韩国-04
+  - 🇨🇦加拿大-01
+  - 🇭🇰香港-08
+  - 🇺🇸美国-48
+  - 🇸🇨SC-01
+  - 🇺🇸美国-49
+  - 🇽🇽未知-18
+  - 🇭🇰香港-09
+  - 🇹🇼台湾-03
+  - 🇺🇸美国-50
+  - 🇨🇭瑞士-02
+  - 🇬🇧英国-02
+  - 🇨🇦加拿大-02
+  - 🇸🇬新加坡-01
+  - 🇺🇸美国-51
+  - 🇽🇽未知-19
+  - 🇺🇸美国-52
+  - 🇭🇰香港-10
+  - 🇹🇼台湾-04
+  - 🇭🇰香港-11
+  - 🇺🇸美国-53
+  - 🇰🇷韩国-05
+  - 🇳🇱荷兰-09
+  - 🇯🇵日本-07
+  - 🇺🇸美国-54
+  - 🇺🇸美国-55
+  - 🇫🇮芬兰-01
+  - 🇺🇸美国-56
+  - 🇺🇸美国-57
+  - 🇺🇸美国-58
+  - 🇺🇸美国-59
+  - 🇳🇱荷兰-10
+  - 🇺🇸美国-60
+  - 🇺🇸美国-61
+  - 🇺🇸美国-62
+  - 🇺🇸美国-63
+  - 🇺🇸美国-64
+  - 🇬🇧英国-03
+  - 🇫🇷法国-01
   - 🇲🇾马来西亚-01
-  - 🇮🇩印尼-01
-  - 🇮🇩印尼-02
   - 🇲🇾马来西亚-02
   - 🇲🇾马来西亚-03
   - 🇲🇾马来西亚-04
-  - 🇮🇩印尼-03
   - 🇲🇾马来西亚-05
-  - 🇪🇸西班牙-01
-  - 🇭🇰香港-02
-  - 🇺🇸美国-05
-  - 🇯🇵日本-02
-  - 🇳🇱荷兰-05
-  - 🇹🇼台湾-01
-  - 🇯🇵日本-03
-  - 🇺🇸美国-06
-  - 🇰🇷韩国-01
-  - 🇰🇷韩国-02
+  - 🇭🇰香港-12
+  - 🇲🇾马来西亚-06
+  - 🇭🇰香港-13
+  - 🇲🇾马来西亚-07
+  - 🇺🇸美国-65
+  - 🇰🇷韩国-06
+  - 🇰🇷韩国-07
+  - 🇽🇽未知-20
+  - 🇺🇸美国-66
+  - 🇺🇸美国-67
+  - 🇺🇸美国-68
+  - 🇺🇸美国-69
+  - 🇺🇸美国-70
+  - 🇺🇸美国-71
+  - 🇺🇸美国-72
+  - 🇯🇵日本-08
+  - 🇺🇸美国-73
+  - 🇺🇸美国-74
+  - 🇨🇦加拿大-03
+  - 🇺🇸美国-75
+  - 🇺🇸美国-76
+  - 🇺🇸美国-77
+  - 🇺🇸美国-78
+  - 🇺🇸美国-79
+  - 🇮🇳印度-01
+  - 🇨🇾CY-01
+  - 🇺🇸美国-80
+  - 🇺🇸美国-81
+  - 🇺🇸美国-82
+  - 🇺🇸美国-83
+  - 🇺🇸美国-84
+  - 🇺🇸美国-85
+  - 🇺🇸美国-86
+  - 🇺🇸美国-87
+  - 🇺🇸美国-88
+  - 🇧🇷巴西-01
+  - 🇺🇸美国-89
+  - 🇺🇸美国-90
+  - 🇲🇾马来西亚-08
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇰🇿KZ-01
-  - 🇳🇱荷兰-01
-  - 🇺🇸美国-01
-  - 🇺🇸美国-02
   - 🇯🇵日本-01
-  - 🇵🇱波兰-01
-  - 🇸🇪瑞典-01
-  - 🇵🇱波兰-02
-  - 🇺🇸美国-03
-  - 🇺🇸美国-04
-  - 🇻🇳越南-01
-  - 🇭🇰香港-01
+  - 🇯🇵日本-02
+  - 🇺🇸美国-01
+  - 🇳🇱荷兰-01
+  - 🇺🇸美国-02
   - 🇳🇱荷兰-02
-  - 🇬🇧英国-01
-  - 🇬🇧英国-02
-  - 🇬🇧英国-03
+  - 🇪🇸西班牙-01
+  - 🇯🇵日本-03
+  - 🇺🇸美国-03
+  - 🇯🇵日本-04
+  - 🇧🇬BG-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇳🇱荷兰-03
+  - 🇻🇳越南-01
   - 🇳🇱荷兰-04
-  - 🇹🇭泰国-01
+  - 🇵🇱波兰-01
+  - 🇳🇱荷兰-05
+  - 🇹🇼台湾-01
+  - 🇭🇰香港-04
+  - 🇭🇰香港-05
+  - 🇺🇸美国-06
+  - 🇽🇽未知-01
+  - 🇽🇽未知-02
+  - 🇽🇽未知-03
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇺🇸美国-09
+  - 🇺🇸美国-10
+  - 🇽🇽未知-04
+  - 🇯🇵日本-05
+  - 🇺🇸美国-11
+  - 🇺🇸美国-12
+  - 🇽🇽未知-05
+  - 🇽🇽未知-06
+  - 🇺🇸美国-13
+  - 🇺🇸美国-14
+  - 🇺🇸美国-15
+  - 🇽🇽未知-07
+  - 🇺🇸美国-16
+  - 🇺🇸美国-17
+  - 🇺🇸美国-18
+  - 🇽🇽未知-08
+  - 🇽🇽未知-09
+  - 🇺🇸美国-19
+  - 🇽🇽未知-10
+  - 🇺🇸美国-20
+  - 🇺🇸美国-21
+  - 🇺🇸美国-22
+  - 🇺🇸美国-23
+  - 🇺🇸美国-24
+  - 🇺🇸美国-25
+  - 🇺🇸美国-26
+  - 🇺🇸美国-27
+  - 🇽🇽未知-11
+  - 🇺🇸美国-28
+  - 🇺🇸美国-29
+  - 🇺🇸美国-30
+  - 🇺🇸美国-31
+  - 🇽🇽未知-12
+  - 🇽🇽未知-13
+  - 🇽🇽未知-14
+  - 🇺🇸美国-32
+  - 🇺🇸美国-33
+  - 🇺🇸美国-34
+  - 🇺🇸美国-35
+  - 🇺🇸美国-36
+  - 🇽🇽未知-15
+  - 🇽🇽未知-16
+  - 🇳🇱荷兰-06
+  - 🇰🇷韩国-01
+  - 🇳🇱荷兰-07
+  - 🇺🇸美国-37
+  - 🇳🇱荷兰-08
+  - 🇨🇭瑞士-01
+  - 🇺🇸美国-38
+  - 🇱🇻LV-01
+  - 🇺🇸美国-39
+  - 🇯🇵日本-06
+  - 🇺🇸美国-40
+  - 🇭🇰香港-06
+  - 🇹🇼台湾-02
+  - 🇽🇽未知-17
+  - 🇺🇸美国-41
+  - 🇱🇹LT-01
+  - 🇺🇸美国-42
+  - 🇺🇸美国-43
+  - 🇭🇰香港-07
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇬🇧英国-01
+  - 🇺🇸美国-44
+  - 🇺🇸美国-45
+  - 🇺🇸美国-46
+  - 🇺🇸美国-47
+  - 🇰🇷韩国-04
+  - 🇨🇦加拿大-01
+  - 🇭🇰香港-08
+  - 🇺🇸美国-48
+  - 🇸🇨SC-01
+  - 🇺🇸美国-49
+  - 🇽🇽未知-18
+  - 🇭🇰香港-09
+  - 🇹🇼台湾-03
+  - 🇺🇸美国-50
+  - 🇨🇭瑞士-02
+  - 🇬🇧英国-02
+  - 🇨🇦加拿大-02
+  - 🇸🇬新加坡-01
+  - 🇺🇸美国-51
+  - 🇽🇽未知-19
+  - 🇺🇸美国-52
+  - 🇭🇰香港-10
+  - 🇹🇼台湾-04
+  - 🇭🇰香港-11
+  - 🇺🇸美国-53
+  - 🇰🇷韩国-05
+  - 🇳🇱荷兰-09
+  - 🇯🇵日本-07
+  - 🇺🇸美国-54
+  - 🇺🇸美国-55
+  - 🇫🇮芬兰-01
+  - 🇺🇸美国-56
+  - 🇺🇸美国-57
+  - 🇺🇸美国-58
+  - 🇺🇸美国-59
+  - 🇳🇱荷兰-10
+  - 🇺🇸美国-60
+  - 🇺🇸美国-61
+  - 🇺🇸美国-62
+  - 🇺🇸美国-63
+  - 🇺🇸美国-64
+  - 🇬🇧英国-03
+  - 🇫🇷法国-01
   - 🇲🇾马来西亚-01
-  - 🇮🇩印尼-01
-  - 🇮🇩印尼-02
   - 🇲🇾马来西亚-02
   - 🇲🇾马来西亚-03
   - 🇲🇾马来西亚-04
-  - 🇮🇩印尼-03
   - 🇲🇾马来西亚-05
-  - 🇪🇸西班牙-01
-  - 🇭🇰香港-02
-  - 🇺🇸美国-05
-  - 🇯🇵日本-02
-  - 🇳🇱荷兰-05
-  - 🇹🇼台湾-01
-  - 🇯🇵日本-03
-  - 🇺🇸美国-06
-  - 🇰🇷韩国-01
-  - 🇰🇷韩国-02
+  - 🇭🇰香港-12
+  - 🇲🇾马来西亚-06
+  - 🇭🇰香港-13
+  - 🇲🇾马来西亚-07
+  - 🇺🇸美国-65
+  - 🇰🇷韩国-06
+  - 🇰🇷韩国-07
+  - 🇽🇽未知-20
+  - 🇺🇸美国-66
+  - 🇺🇸美国-67
+  - 🇺🇸美国-68
+  - 🇺🇸美国-69
+  - 🇺🇸美国-70
+  - 🇺🇸美国-71
+  - 🇺🇸美国-72
+  - 🇯🇵日本-08
+  - 🇺🇸美国-73
+  - 🇺🇸美国-74
+  - 🇨🇦加拿大-03
+  - 🇺🇸美国-75
+  - 🇺🇸美国-76
+  - 🇺🇸美国-77
+  - 🇺🇸美国-78
+  - 🇺🇸美国-79
+  - 🇮🇳印度-01
+  - 🇨🇾CY-01
+  - 🇺🇸美国-80
+  - 🇺🇸美国-81
+  - 🇺🇸美国-82
+  - 🇺🇸美国-83
+  - 🇺🇸美国-84
+  - 🇺🇸美国-85
+  - 🇺🇸美国-86
+  - 🇺🇸美国-87
+  - 🇺🇸美国-88
+  - 🇧🇷巴西-01
+  - 🇺🇸美国-89
+  - 🇺🇸美国-90
+  - 🇲🇾马来西亚-08
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
 - name: 🌍 国外媒体
   type: select
   proxies:
-  - 🇰🇿KZ-01
-  - 🇳🇱荷兰-01
-  - 🇺🇸美国-01
-  - 🇺🇸美国-02
   - 🇯🇵日本-01
-  - 🇵🇱波兰-01
-  - 🇸🇪瑞典-01
-  - 🇵🇱波兰-02
-  - 🇺🇸美国-03
-  - 🇺🇸美国-04
-  - 🇻🇳越南-01
-  - 🇭🇰香港-01
+  - 🇯🇵日本-02
+  - 🇺🇸美国-01
+  - 🇳🇱荷兰-01
+  - 🇺🇸美国-02
   - 🇳🇱荷兰-02
-  - 🇬🇧英国-01
-  - 🇬🇧英国-02
-  - 🇬🇧英国-03
+  - 🇪🇸西班牙-01
+  - 🇯🇵日本-03
+  - 🇺🇸美国-03
+  - 🇯🇵日本-04
+  - 🇧🇬BG-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇳🇱荷兰-03
+  - 🇻🇳越南-01
   - 🇳🇱荷兰-04
-  - 🇹🇭泰国-01
+  - 🇵🇱波兰-01
+  - 🇳🇱荷兰-05
+  - 🇹🇼台湾-01
+  - 🇭🇰香港-04
+  - 🇭🇰香港-05
+  - 🇺🇸美国-06
+  - 🇽🇽未知-01
+  - 🇽🇽未知-02
+  - 🇽🇽未知-03
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇺🇸美国-09
+  - 🇺🇸美国-10
+  - 🇽🇽未知-04
+  - 🇯🇵日本-05
+  - 🇺🇸美国-11
+  - 🇺🇸美国-12
+  - 🇽🇽未知-05
+  - 🇽🇽未知-06
+  - 🇺🇸美国-13
+  - 🇺🇸美国-14
+  - 🇺🇸美国-15
+  - 🇽🇽未知-07
+  - 🇺🇸美国-16
+  - 🇺🇸美国-17
+  - 🇺🇸美国-18
+  - 🇽🇽未知-08
+  - 🇽🇽未知-09
+  - 🇺🇸美国-19
+  - 🇽🇽未知-10
+  - 🇺🇸美国-20
+  - 🇺🇸美国-21
+  - 🇺🇸美国-22
+  - 🇺🇸美国-23
+  - 🇺🇸美国-24
+  - 🇺🇸美国-25
+  - 🇺🇸美国-26
+  - 🇺🇸美国-27
+  - 🇽🇽未知-11
+  - 🇺🇸美国-28
+  - 🇺🇸美国-29
+  - 🇺🇸美国-30
+  - 🇺🇸美国-31
+  - 🇽🇽未知-12
+  - 🇽🇽未知-13
+  - 🇽🇽未知-14
+  - 🇺🇸美国-32
+  - 🇺🇸美国-33
+  - 🇺🇸美国-34
+  - 🇺🇸美国-35
+  - 🇺🇸美国-36
+  - 🇽🇽未知-15
+  - 🇽🇽未知-16
+  - 🇳🇱荷兰-06
+  - 🇰🇷韩国-01
+  - 🇳🇱荷兰-07
+  - 🇺🇸美国-37
+  - 🇳🇱荷兰-08
+  - 🇨🇭瑞士-01
+  - 🇺🇸美国-38
+  - 🇱🇻LV-01
+  - 🇺🇸美国-39
+  - 🇯🇵日本-06
+  - 🇺🇸美国-40
+  - 🇭🇰香港-06
+  - 🇹🇼台湾-02
+  - 🇽🇽未知-17
+  - 🇺🇸美国-41
+  - 🇱🇹LT-01
+  - 🇺🇸美国-42
+  - 🇺🇸美国-43
+  - 🇭🇰香港-07
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇬🇧英国-01
+  - 🇺🇸美国-44
+  - 🇺🇸美国-45
+  - 🇺🇸美国-46
+  - 🇺🇸美国-47
+  - 🇰🇷韩国-04
+  - 🇨🇦加拿大-01
+  - 🇭🇰香港-08
+  - 🇺🇸美国-48
+  - 🇸🇨SC-01
+  - 🇺🇸美国-49
+  - 🇽🇽未知-18
+  - 🇭🇰香港-09
+  - 🇹🇼台湾-03
+  - 🇺🇸美国-50
+  - 🇨🇭瑞士-02
+  - 🇬🇧英国-02
+  - 🇨🇦加拿大-02
+  - 🇸🇬新加坡-01
+  - 🇺🇸美国-51
+  - 🇽🇽未知-19
+  - 🇺🇸美国-52
+  - 🇭🇰香港-10
+  - 🇹🇼台湾-04
+  - 🇭🇰香港-11
+  - 🇺🇸美国-53
+  - 🇰🇷韩国-05
+  - 🇳🇱荷兰-09
+  - 🇯🇵日本-07
+  - 🇺🇸美国-54
+  - 🇺🇸美国-55
+  - 🇫🇮芬兰-01
+  - 🇺🇸美国-56
+  - 🇺🇸美国-57
+  - 🇺🇸美国-58
+  - 🇺🇸美国-59
+  - 🇳🇱荷兰-10
+  - 🇺🇸美国-60
+  - 🇺🇸美国-61
+  - 🇺🇸美国-62
+  - 🇺🇸美国-63
+  - 🇺🇸美国-64
+  - 🇬🇧英国-03
+  - 🇫🇷法国-01
   - 🇲🇾马来西亚-01
-  - 🇮🇩印尼-01
-  - 🇮🇩印尼-02
   - 🇲🇾马来西亚-02
   - 🇲🇾马来西亚-03
   - 🇲🇾马来西亚-04
-  - 🇮🇩印尼-03
   - 🇲🇾马来西亚-05
-  - 🇪🇸西班牙-01
-  - 🇭🇰香港-02
-  - 🇺🇸美国-05
-  - 🇯🇵日本-02
-  - 🇳🇱荷兰-05
-  - 🇹🇼台湾-01
-  - 🇯🇵日本-03
-  - 🇺🇸美国-06
-  - 🇰🇷韩国-01
-  - 🇰🇷韩国-02
+  - 🇭🇰香港-12
+  - 🇲🇾马来西亚-06
+  - 🇭🇰香港-13
+  - 🇲🇾马来西亚-07
+  - 🇺🇸美国-65
+  - 🇰🇷韩国-06
+  - 🇰🇷韩国-07
+  - 🇽🇽未知-20
+  - 🇺🇸美国-66
+  - 🇺🇸美国-67
+  - 🇺🇸美国-68
+  - 🇺🇸美国-69
+  - 🇺🇸美国-70
+  - 🇺🇸美国-71
+  - 🇺🇸美国-72
+  - 🇯🇵日本-08
+  - 🇺🇸美国-73
+  - 🇺🇸美国-74
+  - 🇨🇦加拿大-03
+  - 🇺🇸美国-75
+  - 🇺🇸美国-76
+  - 🇺🇸美国-77
+  - 🇺🇸美国-78
+  - 🇺🇸美国-79
+  - 🇮🇳印度-01
+  - 🇨🇾CY-01
+  - 🇺🇸美国-80
+  - 🇺🇸美国-81
+  - 🇺🇸美国-82
+  - 🇺🇸美国-83
+  - 🇺🇸美国-84
+  - 🇺🇸美国-85
+  - 🇺🇸美国-86
+  - 🇺🇸美国-87
+  - 🇺🇸美国-88
+  - 🇧🇷巴西-01
+  - 🇺🇸美国-89
+  - 🇺🇸美国-90
+  - 🇲🇾马来西亚-08
 - name: 📲 电报信息
   type: select
   proxies:
-  - 🇰🇿KZ-01
-  - 🇳🇱荷兰-01
-  - 🇺🇸美国-01
-  - 🇺🇸美国-02
   - 🇯🇵日本-01
-  - 🇵🇱波兰-01
-  - 🇸🇪瑞典-01
-  - 🇵🇱波兰-02
-  - 🇺🇸美国-03
-  - 🇺🇸美国-04
-  - 🇻🇳越南-01
-  - 🇭🇰香港-01
+  - 🇯🇵日本-02
+  - 🇺🇸美国-01
+  - 🇳🇱荷兰-01
+  - 🇺🇸美国-02
   - 🇳🇱荷兰-02
-  - 🇬🇧英国-01
-  - 🇬🇧英国-02
-  - 🇬🇧英国-03
+  - 🇪🇸西班牙-01
+  - 🇯🇵日本-03
+  - 🇺🇸美国-03
+  - 🇯🇵日本-04
+  - 🇧🇬BG-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇳🇱荷兰-03
+  - 🇻🇳越南-01
   - 🇳🇱荷兰-04
-  - 🇹🇭泰国-01
+  - 🇵🇱波兰-01
+  - 🇳🇱荷兰-05
+  - 🇹🇼台湾-01
+  - 🇭🇰香港-04
+  - 🇭🇰香港-05
+  - 🇺🇸美国-06
+  - 🇽🇽未知-01
+  - 🇽🇽未知-02
+  - 🇽🇽未知-03
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇺🇸美国-09
+  - 🇺🇸美国-10
+  - 🇽🇽未知-04
+  - 🇯🇵日本-05
+  - 🇺🇸美国-11
+  - 🇺🇸美国-12
+  - 🇽🇽未知-05
+  - 🇽🇽未知-06
+  - 🇺🇸美国-13
+  - 🇺🇸美国-14
+  - 🇺🇸美国-15
+  - 🇽🇽未知-07
+  - 🇺🇸美国-16
+  - 🇺🇸美国-17
+  - 🇺🇸美国-18
+  - 🇽🇽未知-08
+  - 🇽🇽未知-09
+  - 🇺🇸美国-19
+  - 🇽🇽未知-10
+  - 🇺🇸美国-20
+  - 🇺🇸美国-21
+  - 🇺🇸美国-22
+  - 🇺🇸美国-23
+  - 🇺🇸美国-24
+  - 🇺🇸美国-25
+  - 🇺🇸美国-26
+  - 🇺🇸美国-27
+  - 🇽🇽未知-11
+  - 🇺🇸美国-28
+  - 🇺🇸美国-29
+  - 🇺🇸美国-30
+  - 🇺🇸美国-31
+  - 🇽🇽未知-12
+  - 🇽🇽未知-13
+  - 🇽🇽未知-14
+  - 🇺🇸美国-32
+  - 🇺🇸美国-33
+  - 🇺🇸美国-34
+  - 🇺🇸美国-35
+  - 🇺🇸美国-36
+  - 🇽🇽未知-15
+  - 🇽🇽未知-16
+  - 🇳🇱荷兰-06
+  - 🇰🇷韩国-01
+  - 🇳🇱荷兰-07
+  - 🇺🇸美国-37
+  - 🇳🇱荷兰-08
+  - 🇨🇭瑞士-01
+  - 🇺🇸美国-38
+  - 🇱🇻LV-01
+  - 🇺🇸美国-39
+  - 🇯🇵日本-06
+  - 🇺🇸美国-40
+  - 🇭🇰香港-06
+  - 🇹🇼台湾-02
+  - 🇽🇽未知-17
+  - 🇺🇸美国-41
+  - 🇱🇹LT-01
+  - 🇺🇸美国-42
+  - 🇺🇸美国-43
+  - 🇭🇰香港-07
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇬🇧英国-01
+  - 🇺🇸美国-44
+  - 🇺🇸美国-45
+  - 🇺🇸美国-46
+  - 🇺🇸美国-47
+  - 🇰🇷韩国-04
+  - 🇨🇦加拿大-01
+  - 🇭🇰香港-08
+  - 🇺🇸美国-48
+  - 🇸🇨SC-01
+  - 🇺🇸美国-49
+  - 🇽🇽未知-18
+  - 🇭🇰香港-09
+  - 🇹🇼台湾-03
+  - 🇺🇸美国-50
+  - 🇨🇭瑞士-02
+  - 🇬🇧英国-02
+  - 🇨🇦加拿大-02
+  - 🇸🇬新加坡-01
+  - 🇺🇸美国-51
+  - 🇽🇽未知-19
+  - 🇺🇸美国-52
+  - 🇭🇰香港-10
+  - 🇹🇼台湾-04
+  - 🇭🇰香港-11
+  - 🇺🇸美国-53
+  - 🇰🇷韩国-05
+  - 🇳🇱荷兰-09
+  - 🇯🇵日本-07
+  - 🇺🇸美国-54
+  - 🇺🇸美国-55
+  - 🇫🇮芬兰-01
+  - 🇺🇸美国-56
+  - 🇺🇸美国-57
+  - 🇺🇸美国-58
+  - 🇺🇸美国-59
+  - 🇳🇱荷兰-10
+  - 🇺🇸美国-60
+  - 🇺🇸美国-61
+  - 🇺🇸美国-62
+  - 🇺🇸美国-63
+  - 🇺🇸美国-64
+  - 🇬🇧英国-03
+  - 🇫🇷法国-01
   - 🇲🇾马来西亚-01
-  - 🇮🇩印尼-01
-  - 🇮🇩印尼-02
   - 🇲🇾马来西亚-02
   - 🇲🇾马来西亚-03
   - 🇲🇾马来西亚-04
-  - 🇮🇩印尼-03
   - 🇲🇾马来西亚-05
-  - 🇪🇸西班牙-01
-  - 🇭🇰香港-02
-  - 🇺🇸美国-05
-  - 🇯🇵日本-02
-  - 🇳🇱荷兰-05
-  - 🇹🇼台湾-01
-  - 🇯🇵日本-03
-  - 🇺🇸美国-06
-  - 🇰🇷韩国-01
-  - 🇰🇷韩国-02
+  - 🇭🇰香港-12
+  - 🇲🇾马来西亚-06
+  - 🇭🇰香港-13
+  - 🇲🇾马来西亚-07
+  - 🇺🇸美国-65
+  - 🇰🇷韩国-06
+  - 🇰🇷韩国-07
+  - 🇽🇽未知-20
+  - 🇺🇸美国-66
+  - 🇺🇸美国-67
+  - 🇺🇸美国-68
+  - 🇺🇸美国-69
+  - 🇺🇸美国-70
+  - 🇺🇸美国-71
+  - 🇺🇸美国-72
+  - 🇯🇵日本-08
+  - 🇺🇸美国-73
+  - 🇺🇸美国-74
+  - 🇨🇦加拿大-03
+  - 🇺🇸美国-75
+  - 🇺🇸美国-76
+  - 🇺🇸美国-77
+  - 🇺🇸美国-78
+  - 🇺🇸美国-79
+  - 🇮🇳印度-01
+  - 🇨🇾CY-01
+  - 🇺🇸美国-80
+  - 🇺🇸美国-81
+  - 🇺🇸美国-82
+  - 🇺🇸美国-83
+  - 🇺🇸美国-84
+  - 🇺🇸美国-85
+  - 🇺🇸美国-86
+  - 🇺🇸美国-87
+  - 🇺🇸美国-88
+  - 🇧🇷巴西-01
+  - 🇺🇸美国-89
+  - 🇺🇸美国-90
+  - 🇲🇾马来西亚-08
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
-  - 🇰🇿KZ-01
-  - 🇳🇱荷兰-01
-  - 🇺🇸美国-01
-  - 🇺🇸美国-02
   - 🇯🇵日本-01
-  - 🇵🇱波兰-01
-  - 🇸🇪瑞典-01
-  - 🇵🇱波兰-02
-  - 🇺🇸美国-03
-  - 🇺🇸美国-04
-  - 🇻🇳越南-01
-  - 🇭🇰香港-01
+  - 🇯🇵日本-02
+  - 🇺🇸美国-01
+  - 🇳🇱荷兰-01
+  - 🇺🇸美国-02
   - 🇳🇱荷兰-02
-  - 🇬🇧英国-01
-  - 🇬🇧英国-02
-  - 🇬🇧英国-03
+  - 🇪🇸西班牙-01
+  - 🇯🇵日本-03
+  - 🇺🇸美国-03
+  - 🇯🇵日本-04
+  - 🇧🇬BG-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇳🇱荷兰-03
+  - 🇻🇳越南-01
   - 🇳🇱荷兰-04
-  - 🇹🇭泰国-01
+  - 🇵🇱波兰-01
+  - 🇳🇱荷兰-05
+  - 🇹🇼台湾-01
+  - 🇭🇰香港-04
+  - 🇭🇰香港-05
+  - 🇺🇸美国-06
+  - 🇽🇽未知-01
+  - 🇽🇽未知-02
+  - 🇽🇽未知-03
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇺🇸美国-09
+  - 🇺🇸美国-10
+  - 🇽🇽未知-04
+  - 🇯🇵日本-05
+  - 🇺🇸美国-11
+  - 🇺🇸美国-12
+  - 🇽🇽未知-05
+  - 🇽🇽未知-06
+  - 🇺🇸美国-13
+  - 🇺🇸美国-14
+  - 🇺🇸美国-15
+  - 🇽🇽未知-07
+  - 🇺🇸美国-16
+  - 🇺🇸美国-17
+  - 🇺🇸美国-18
+  - 🇽🇽未知-08
+  - 🇽🇽未知-09
+  - 🇺🇸美国-19
+  - 🇽🇽未知-10
+  - 🇺🇸美国-20
+  - 🇺🇸美国-21
+  - 🇺🇸美国-22
+  - 🇺🇸美国-23
+  - 🇺🇸美国-24
+  - 🇺🇸美国-25
+  - 🇺🇸美国-26
+  - 🇺🇸美国-27
+  - 🇽🇽未知-11
+  - 🇺🇸美国-28
+  - 🇺🇸美国-29
+  - 🇺🇸美国-30
+  - 🇺🇸美国-31
+  - 🇽🇽未知-12
+  - 🇽🇽未知-13
+  - 🇽🇽未知-14
+  - 🇺🇸美国-32
+  - 🇺🇸美国-33
+  - 🇺🇸美国-34
+  - 🇺🇸美国-35
+  - 🇺🇸美国-36
+  - 🇽🇽未知-15
+  - 🇽🇽未知-16
+  - 🇳🇱荷兰-06
+  - 🇰🇷韩国-01
+  - 🇳🇱荷兰-07
+  - 🇺🇸美国-37
+  - 🇳🇱荷兰-08
+  - 🇨🇭瑞士-01
+  - 🇺🇸美国-38
+  - 🇱🇻LV-01
+  - 🇺🇸美国-39
+  - 🇯🇵日本-06
+  - 🇺🇸美国-40
+  - 🇭🇰香港-06
+  - 🇹🇼台湾-02
+  - 🇽🇽未知-17
+  - 🇺🇸美国-41
+  - 🇱🇹LT-01
+  - 🇺🇸美国-42
+  - 🇺🇸美国-43
+  - 🇭🇰香港-07
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇬🇧英国-01
+  - 🇺🇸美国-44
+  - 🇺🇸美国-45
+  - 🇺🇸美国-46
+  - 🇺🇸美国-47
+  - 🇰🇷韩国-04
+  - 🇨🇦加拿大-01
+  - 🇭🇰香港-08
+  - 🇺🇸美国-48
+  - 🇸🇨SC-01
+  - 🇺🇸美国-49
+  - 🇽🇽未知-18
+  - 🇭🇰香港-09
+  - 🇹🇼台湾-03
+  - 🇺🇸美国-50
+  - 🇨🇭瑞士-02
+  - 🇬🇧英国-02
+  - 🇨🇦加拿大-02
+  - 🇸🇬新加坡-01
+  - 🇺🇸美国-51
+  - 🇽🇽未知-19
+  - 🇺🇸美国-52
+  - 🇭🇰香港-10
+  - 🇹🇼台湾-04
+  - 🇭🇰香港-11
+  - 🇺🇸美国-53
+  - 🇰🇷韩国-05
+  - 🇳🇱荷兰-09
+  - 🇯🇵日本-07
+  - 🇺🇸美国-54
+  - 🇺🇸美国-55
+  - 🇫🇮芬兰-01
+  - 🇺🇸美国-56
+  - 🇺🇸美国-57
+  - 🇺🇸美国-58
+  - 🇺🇸美国-59
+  - 🇳🇱荷兰-10
+  - 🇺🇸美国-60
+  - 🇺🇸美国-61
+  - 🇺🇸美国-62
+  - 🇺🇸美国-63
+  - 🇺🇸美国-64
+  - 🇬🇧英国-03
+  - 🇫🇷法国-01
   - 🇲🇾马来西亚-01
-  - 🇮🇩印尼-01
-  - 🇮🇩印尼-02
   - 🇲🇾马来西亚-02
   - 🇲🇾马来西亚-03
   - 🇲🇾马来西亚-04
-  - 🇮🇩印尼-03
   - 🇲🇾马来西亚-05
-  - 🇪🇸西班牙-01
-  - 🇭🇰香港-02
-  - 🇺🇸美国-05
-  - 🇯🇵日本-02
-  - 🇳🇱荷兰-05
-  - 🇹🇼台湾-01
-  - 🇯🇵日本-03
-  - 🇺🇸美国-06
-  - 🇰🇷韩国-01
-  - 🇰🇷韩国-02
+  - 🇭🇰香港-12
+  - 🇲🇾马来西亚-06
+  - 🇭🇰香港-13
+  - 🇲🇾马来西亚-07
+  - 🇺🇸美国-65
+  - 🇰🇷韩国-06
+  - 🇰🇷韩国-07
+  - 🇽🇽未知-20
+  - 🇺🇸美国-66
+  - 🇺🇸美国-67
+  - 🇺🇸美国-68
+  - 🇺🇸美国-69
+  - 🇺🇸美国-70
+  - 🇺🇸美国-71
+  - 🇺🇸美国-72
+  - 🇯🇵日本-08
+  - 🇺🇸美国-73
+  - 🇺🇸美国-74
+  - 🇨🇦加拿大-03
+  - 🇺🇸美国-75
+  - 🇺🇸美国-76
+  - 🇺🇸美国-77
+  - 🇺🇸美国-78
+  - 🇺🇸美国-79
+  - 🇮🇳印度-01
+  - 🇨🇾CY-01
+  - 🇺🇸美国-80
+  - 🇺🇸美国-81
+  - 🇺🇸美国-82
+  - 🇺🇸美国-83
+  - 🇺🇸美国-84
+  - 🇺🇸美国-85
+  - 🇺🇸美国-86
+  - 🇺🇸美国-87
+  - 🇺🇸美国-88
+  - 🇧🇷巴西-01
+  - 🇺🇸美国-89
+  - 🇺🇸美国-90
+  - 🇲🇾马来西亚-08
 - name: 🍎 苹果服务
   type: select
   proxies:
-  - 🇰🇿KZ-01
-  - 🇳🇱荷兰-01
-  - 🇺🇸美国-01
-  - 🇺🇸美国-02
   - 🇯🇵日本-01
-  - 🇵🇱波兰-01
-  - 🇸🇪瑞典-01
-  - 🇵🇱波兰-02
-  - 🇺🇸美国-03
-  - 🇺🇸美国-04
-  - 🇻🇳越南-01
-  - 🇭🇰香港-01
+  - 🇯🇵日本-02
+  - 🇺🇸美国-01
+  - 🇳🇱荷兰-01
+  - 🇺🇸美国-02
   - 🇳🇱荷兰-02
-  - 🇬🇧英国-01
-  - 🇬🇧英国-02
-  - 🇬🇧英国-03
+  - 🇪🇸西班牙-01
+  - 🇯🇵日本-03
+  - 🇺🇸美国-03
+  - 🇯🇵日本-04
+  - 🇧🇬BG-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇳🇱荷兰-03
+  - 🇻🇳越南-01
   - 🇳🇱荷兰-04
-  - 🇹🇭泰国-01
+  - 🇵🇱波兰-01
+  - 🇳🇱荷兰-05
+  - 🇹🇼台湾-01
+  - 🇭🇰香港-04
+  - 🇭🇰香港-05
+  - 🇺🇸美国-06
+  - 🇽🇽未知-01
+  - 🇽🇽未知-02
+  - 🇽🇽未知-03
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇺🇸美国-09
+  - 🇺🇸美国-10
+  - 🇽🇽未知-04
+  - 🇯🇵日本-05
+  - 🇺🇸美国-11
+  - 🇺🇸美国-12
+  - 🇽🇽未知-05
+  - 🇽🇽未知-06
+  - 🇺🇸美国-13
+  - 🇺🇸美国-14
+  - 🇺🇸美国-15
+  - 🇽🇽未知-07
+  - 🇺🇸美国-16
+  - 🇺🇸美国-17
+  - 🇺🇸美国-18
+  - 🇽🇽未知-08
+  - 🇽🇽未知-09
+  - 🇺🇸美国-19
+  - 🇽🇽未知-10
+  - 🇺🇸美国-20
+  - 🇺🇸美国-21
+  - 🇺🇸美国-22
+  - 🇺🇸美国-23
+  - 🇺🇸美国-24
+  - 🇺🇸美国-25
+  - 🇺🇸美国-26
+  - 🇺🇸美国-27
+  - 🇽🇽未知-11
+  - 🇺🇸美国-28
+  - 🇺🇸美国-29
+  - 🇺🇸美国-30
+  - 🇺🇸美国-31
+  - 🇽🇽未知-12
+  - 🇽🇽未知-13
+  - 🇽🇽未知-14
+  - 🇺🇸美国-32
+  - 🇺🇸美国-33
+  - 🇺🇸美国-34
+  - 🇺🇸美国-35
+  - 🇺🇸美国-36
+  - 🇽🇽未知-15
+  - 🇽🇽未知-16
+  - 🇳🇱荷兰-06
+  - 🇰🇷韩国-01
+  - 🇳🇱荷兰-07
+  - 🇺🇸美国-37
+  - 🇳🇱荷兰-08
+  - 🇨🇭瑞士-01
+  - 🇺🇸美国-38
+  - 🇱🇻LV-01
+  - 🇺🇸美国-39
+  - 🇯🇵日本-06
+  - 🇺🇸美国-40
+  - 🇭🇰香港-06
+  - 🇹🇼台湾-02
+  - 🇽🇽未知-17
+  - 🇺🇸美国-41
+  - 🇱🇹LT-01
+  - 🇺🇸美国-42
+  - 🇺🇸美国-43
+  - 🇭🇰香港-07
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇬🇧英国-01
+  - 🇺🇸美国-44
+  - 🇺🇸美国-45
+  - 🇺🇸美国-46
+  - 🇺🇸美国-47
+  - 🇰🇷韩国-04
+  - 🇨🇦加拿大-01
+  - 🇭🇰香港-08
+  - 🇺🇸美国-48
+  - 🇸🇨SC-01
+  - 🇺🇸美国-49
+  - 🇽🇽未知-18
+  - 🇭🇰香港-09
+  - 🇹🇼台湾-03
+  - 🇺🇸美国-50
+  - 🇨🇭瑞士-02
+  - 🇬🇧英国-02
+  - 🇨🇦加拿大-02
+  - 🇸🇬新加坡-01
+  - 🇺🇸美国-51
+  - 🇽🇽未知-19
+  - 🇺🇸美国-52
+  - 🇭🇰香港-10
+  - 🇹🇼台湾-04
+  - 🇭🇰香港-11
+  - 🇺🇸美国-53
+  - 🇰🇷韩国-05
+  - 🇳🇱荷兰-09
+  - 🇯🇵日本-07
+  - 🇺🇸美国-54
+  - 🇺🇸美国-55
+  - 🇫🇮芬兰-01
+  - 🇺🇸美国-56
+  - 🇺🇸美国-57
+  - 🇺🇸美国-58
+  - 🇺🇸美国-59
+  - 🇳🇱荷兰-10
+  - 🇺🇸美国-60
+  - 🇺🇸美国-61
+  - 🇺🇸美国-62
+  - 🇺🇸美国-63
+  - 🇺🇸美国-64
+  - 🇬🇧英国-03
+  - 🇫🇷法国-01
   - 🇲🇾马来西亚-01
-  - 🇮🇩印尼-01
-  - 🇮🇩印尼-02
   - 🇲🇾马来西亚-02
   - 🇲🇾马来西亚-03
   - 🇲🇾马来西亚-04
-  - 🇮🇩印尼-03
   - 🇲🇾马来西亚-05
-  - 🇪🇸西班牙-01
-  - 🇭🇰香港-02
-  - 🇺🇸美国-05
-  - 🇯🇵日本-02
-  - 🇳🇱荷兰-05
-  - 🇹🇼台湾-01
-  - 🇯🇵日本-03
-  - 🇺🇸美国-06
-  - 🇰🇷韩国-01
-  - 🇰🇷韩国-02
+  - 🇭🇰香港-12
+  - 🇲🇾马来西亚-06
+  - 🇭🇰香港-13
+  - 🇲🇾马来西亚-07
+  - 🇺🇸美国-65
+  - 🇰🇷韩国-06
+  - 🇰🇷韩国-07
+  - 🇽🇽未知-20
+  - 🇺🇸美国-66
+  - 🇺🇸美国-67
+  - 🇺🇸美国-68
+  - 🇺🇸美国-69
+  - 🇺🇸美国-70
+  - 🇺🇸美国-71
+  - 🇺🇸美国-72
+  - 🇯🇵日本-08
+  - 🇺🇸美国-73
+  - 🇺🇸美国-74
+  - 🇨🇦加拿大-03
+  - 🇺🇸美国-75
+  - 🇺🇸美国-76
+  - 🇺🇸美国-77
+  - 🇺🇸美国-78
+  - 🇺🇸美国-79
+  - 🇮🇳印度-01
+  - 🇨🇾CY-01
+  - 🇺🇸美国-80
+  - 🇺🇸美国-81
+  - 🇺🇸美国-82
+  - 🇺🇸美国-83
+  - 🇺🇸美国-84
+  - 🇺🇸美国-85
+  - 🇺🇸美国-86
+  - 🇺🇸美国-87
+  - 🇺🇸美国-88
+  - 🇧🇷巴西-01
+  - 🇺🇸美国-89
+  - 🇺🇸美国-90
+  - 🇲🇾马来西亚-08
 - name: 🎯 全球直连
   type: select
   proxies: []
@@ -660,43 +3490,187 @@ proxy-groups:
 - name: 🐟 漏网之鱼
   type: select
   proxies:
-  - 🇰🇿KZ-01
-  - 🇳🇱荷兰-01
-  - 🇺🇸美国-01
-  - 🇺🇸美国-02
   - 🇯🇵日本-01
-  - 🇵🇱波兰-01
-  - 🇸🇪瑞典-01
-  - 🇵🇱波兰-02
-  - 🇺🇸美国-03
-  - 🇺🇸美国-04
-  - 🇻🇳越南-01
-  - 🇭🇰香港-01
+  - 🇯🇵日本-02
+  - 🇺🇸美国-01
+  - 🇳🇱荷兰-01
+  - 🇺🇸美国-02
   - 🇳🇱荷兰-02
-  - 🇬🇧英国-01
-  - 🇬🇧英国-02
-  - 🇬🇧英国-03
+  - 🇪🇸西班牙-01
+  - 🇯🇵日本-03
+  - 🇺🇸美国-03
+  - 🇯🇵日本-04
+  - 🇧🇬BG-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇳🇱荷兰-03
+  - 🇻🇳越南-01
   - 🇳🇱荷兰-04
-  - 🇹🇭泰国-01
+  - 🇵🇱波兰-01
+  - 🇳🇱荷兰-05
+  - 🇹🇼台湾-01
+  - 🇭🇰香港-04
+  - 🇭🇰香港-05
+  - 🇺🇸美国-06
+  - 🇽🇽未知-01
+  - 🇽🇽未知-02
+  - 🇽🇽未知-03
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇺🇸美国-09
+  - 🇺🇸美国-10
+  - 🇽🇽未知-04
+  - 🇯🇵日本-05
+  - 🇺🇸美国-11
+  - 🇺🇸美国-12
+  - 🇽🇽未知-05
+  - 🇽🇽未知-06
+  - 🇺🇸美国-13
+  - 🇺🇸美国-14
+  - 🇺🇸美国-15
+  - 🇽🇽未知-07
+  - 🇺🇸美国-16
+  - 🇺🇸美国-17
+  - 🇺🇸美国-18
+  - 🇽🇽未知-08
+  - 🇽🇽未知-09
+  - 🇺🇸美国-19
+  - 🇽🇽未知-10
+  - 🇺🇸美国-20
+  - 🇺🇸美国-21
+  - 🇺🇸美国-22
+  - 🇺🇸美国-23
+  - 🇺🇸美国-24
+  - 🇺🇸美国-25
+  - 🇺🇸美国-26
+  - 🇺🇸美国-27
+  - 🇽🇽未知-11
+  - 🇺🇸美国-28
+  - 🇺🇸美国-29
+  - 🇺🇸美国-30
+  - 🇺🇸美国-31
+  - 🇽🇽未知-12
+  - 🇽🇽未知-13
+  - 🇽🇽未知-14
+  - 🇺🇸美国-32
+  - 🇺🇸美国-33
+  - 🇺🇸美国-34
+  - 🇺🇸美国-35
+  - 🇺🇸美国-36
+  - 🇽🇽未知-15
+  - 🇽🇽未知-16
+  - 🇳🇱荷兰-06
+  - 🇰🇷韩国-01
+  - 🇳🇱荷兰-07
+  - 🇺🇸美国-37
+  - 🇳🇱荷兰-08
+  - 🇨🇭瑞士-01
+  - 🇺🇸美国-38
+  - 🇱🇻LV-01
+  - 🇺🇸美国-39
+  - 🇯🇵日本-06
+  - 🇺🇸美国-40
+  - 🇭🇰香港-06
+  - 🇹🇼台湾-02
+  - 🇽🇽未知-17
+  - 🇺🇸美国-41
+  - 🇱🇹LT-01
+  - 🇺🇸美国-42
+  - 🇺🇸美国-43
+  - 🇭🇰香港-07
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇬🇧英国-01
+  - 🇺🇸美国-44
+  - 🇺🇸美国-45
+  - 🇺🇸美国-46
+  - 🇺🇸美国-47
+  - 🇰🇷韩国-04
+  - 🇨🇦加拿大-01
+  - 🇭🇰香港-08
+  - 🇺🇸美国-48
+  - 🇸🇨SC-01
+  - 🇺🇸美国-49
+  - 🇽🇽未知-18
+  - 🇭🇰香港-09
+  - 🇹🇼台湾-03
+  - 🇺🇸美国-50
+  - 🇨🇭瑞士-02
+  - 🇬🇧英国-02
+  - 🇨🇦加拿大-02
+  - 🇸🇬新加坡-01
+  - 🇺🇸美国-51
+  - 🇽🇽未知-19
+  - 🇺🇸美国-52
+  - 🇭🇰香港-10
+  - 🇹🇼台湾-04
+  - 🇭🇰香港-11
+  - 🇺🇸美国-53
+  - 🇰🇷韩国-05
+  - 🇳🇱荷兰-09
+  - 🇯🇵日本-07
+  - 🇺🇸美国-54
+  - 🇺🇸美国-55
+  - 🇫🇮芬兰-01
+  - 🇺🇸美国-56
+  - 🇺🇸美国-57
+  - 🇺🇸美国-58
+  - 🇺🇸美国-59
+  - 🇳🇱荷兰-10
+  - 🇺🇸美国-60
+  - 🇺🇸美国-61
+  - 🇺🇸美国-62
+  - 🇺🇸美国-63
+  - 🇺🇸美国-64
+  - 🇬🇧英国-03
+  - 🇫🇷法国-01
   - 🇲🇾马来西亚-01
-  - 🇮🇩印尼-01
-  - 🇮🇩印尼-02
   - 🇲🇾马来西亚-02
   - 🇲🇾马来西亚-03
   - 🇲🇾马来西亚-04
-  - 🇮🇩印尼-03
   - 🇲🇾马来西亚-05
-  - 🇪🇸西班牙-01
-  - 🇭🇰香港-02
-  - 🇺🇸美国-05
-  - 🇯🇵日本-02
-  - 🇳🇱荷兰-05
-  - 🇹🇼台湾-01
-  - 🇯🇵日本-03
-  - 🇺🇸美国-06
-  - 🇰🇷韩国-01
-  - 🇰🇷韩国-02
+  - 🇭🇰香港-12
+  - 🇲🇾马来西亚-06
+  - 🇭🇰香港-13
+  - 🇲🇾马来西亚-07
+  - 🇺🇸美国-65
+  - 🇰🇷韩国-06
+  - 🇰🇷韩国-07
+  - 🇽🇽未知-20
+  - 🇺🇸美国-66
+  - 🇺🇸美国-67
+  - 🇺🇸美国-68
+  - 🇺🇸美国-69
+  - 🇺🇸美国-70
+  - 🇺🇸美国-71
+  - 🇺🇸美国-72
+  - 🇯🇵日本-08
+  - 🇺🇸美国-73
+  - 🇺🇸美国-74
+  - 🇨🇦加拿大-03
+  - 🇺🇸美国-75
+  - 🇺🇸美国-76
+  - 🇺🇸美国-77
+  - 🇺🇸美国-78
+  - 🇺🇸美国-79
+  - 🇮🇳印度-01
+  - 🇨🇾CY-01
+  - 🇺🇸美国-80
+  - 🇺🇸美国-81
+  - 🇺🇸美国-82
+  - 🇺🇸美国-83
+  - 🇺🇸美国-84
+  - 🇺🇸美国-85
+  - 🇺🇸美国-86
+  - 🇺🇸美国-87
+  - 🇺🇸美国-88
+  - 🇧🇷巴西-01
+  - 🇺🇸美国-89
+  - 🇺🇸美国-90
+  - 🇲🇾马来西亚-08
 rule-providers:
   LocalAreaNetwork:
     type: http

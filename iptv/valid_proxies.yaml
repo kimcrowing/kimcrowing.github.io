@@ -30,44 +30,17 @@ proxies:
     headers:
       Host: vpn5.rnmcnm.com
   udp: true
-- name: 🇨🇭瑞士-01
+- name: 🇨🇿捷克-01
   type: vless
-  server: 138.124.244.248
-  port: 443
-  uuid: 476caa1d-7c04-48ab-8de5-2c1af0d13a66
-  servername: yahoo.com
+  server: 188.130.208.220
+  port: 5443
+  uuid: ae5ba4be-7262-4199-bd62-210ed8999b9f
+  servername: max.ru
   tls: true
+  flow: xtls-rprx-vision
   client-fingerprint: chrome
   reality-opts:
-    public-key: PYX0lu3m0L_h28eW4186s63gRFHXoTc3K9wKeFewDUQ
-    short-id: e9a8
-  udp: true
-- name: 🇨🇭瑞士-02
-  type: vless
-  server: 185.18.250.127
-  port: 2096
-  uuid: 2ee26119-94e5-40b4-ba3a-16354021b600
-  network: ws
-  servername: 69565ce3109804e7813f98ee.mmdbay.blog
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /graphql
-    headers:
-      Host: 69565ce3109804e7813f98ee.mmdbay.blog
-  udp: true
-- name: 🇩🇰丹麦-01
-  type: trojan
-  server: 193.180.209.21
-  port: 443
-  password: rYuChHcwQZskq9E0zdoR
-  sni: vpn5.rnmcnm.com
-  skip-cert-verify: true
-  tls: true
-  ws-opts:
-    path: /ws-79dffb8106db
-    headers:
-      Host: vpn5.rnmcnm.com
+    public-key: LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ
   udp: true
 - name: 🇪🇸西班牙-01
   type: trojan
@@ -84,30 +57,16 @@ proxies:
   udp: true
 - name: 🇫🇷法国-01
   type: vless
-  server: 147.90.14.161
-  port: 8443
-  uuid: a8f7bfbc-4bb8-4f10-ac8f-93e0ce4cc46a
-  servername: www.cloudflare.com
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: TxeJaR7AeMcpnSi8A45lOSc8xMSFlYu6x7mHjeQMQWU
-    short-id: 4adcbc3df6cdd138
-  udp: true
-- name: 🇫🇷法国-02
-  type: vless
   server: 194.226.169.36
   port: 443
   uuid: fae3277c-0541-4ae9-bbbb-8247453ea652
   servername: yahoo.com
   tls: true
-  client-fingerprint: chrome
   reality-opts:
     public-key: i4Mx_tDND0Xxac3WyA7HgT9rvXdZlXpm5m1EGiQF-Uk
     short-id: b8aa
   udp: true
-- name: 🇫🇷法国-03
+- name: 🇫🇷法国-02
   type: vless
   server: 194.226.169.36
   port: 443
@@ -120,16 +79,6 @@ proxies:
     short-id: b8aa
   udp: true
 - name: 🇭🇰香港-01
-  type: vmess
-  server: world.t.51guangtaobao.com
-  port: 2512
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇭🇰香港-02
   type: vless
   server: 103.123.162.50
   port: 10011
@@ -142,27 +91,17 @@ proxies:
     public-key: 82bbZIdU-0s8fydncIhp9_sNDYQQH9ZY_7RVI5apXnk
     short-id: 447f3a05ace2b748
   udp: true
-- name: 🇭🇰香港-03
-  type: vmess
-  server: world.t.51guangtaobao.com
-  port: 2510
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇭🇰香港-04
+- name: 🇭🇰香港-02
   type: vmess
   server: 103.181.164.145
   port: 54022
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 0
+  alterId: 64
   cipher: auto
   tls: false
   skip-cert-verify: false
   udp: true
-- name: 🇭🇰香港-05
+- name: 🇭🇰香港-03
   type: vmess
   server: 103.181.164.145
   port: 51556
@@ -172,16 +111,67 @@ proxies:
   tls: false
   skip-cert-verify: false
   udp: true
+- name: 🇭🇰香港-04
+  type: vmess
+  server: 47.244.120.197
+  port: 36703
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /arki?ed=2048
+  udp: true
+- name: 🇭🇰香港-05
+  type: vmess
+  server: 8.210.239.58
+  port: 443
+  uuid: 5fdc6ab1-8347-411c-9bbf-fbc3ea853d2f
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: n1761296889.4u9ma.icu
+  network: ws
+  ws-opts:
+    path: /
+  udp: true
 - name: 🇭🇰香港-06
   type: trojan
   server: 95.40.4.37
   port: 2520
   password: BxceQaOe
-  sni: t.me%2Fripaojiedian
+  sni: t.me/ripaojiedian
   skip-cert-verify: true
   tls: true
   udp: true
 - name: 🇭🇰香港-07
+  type: trojan
+  server: 95.40.68.192
+  port: 17801
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
+  skip-cert-verify: true
+  tls: true
+  udp: true
+- name: 🇭🇰香港-08
+  type: vmess
+  server: speedtest.org
+  port: 80
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  alterId: 0
+  cipher: chacha20-poly1305
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+    headers:
+      Host: de2.ping-game.ir
+  udp: true
+- name: 🇭🇰香港-09
   type: vmess
   server: v10.hdacd.com
   port: 30807
@@ -191,32 +181,55 @@ proxies:
   tls: false
   skip-cert-verify: false
   udp: true
+- name: 🇭🇰香港-10
+  type: vmess
+  server: world.t.51guangtaobao.com
+  port: 2510
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  udp: true
+- name: 🇭🇰香港-11
+  type: vmess
+  server: world.t.51guangtaobao.com
+  port: 2512
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  udp: true
 - name: 🇮🇩印尼-01
   type: vmess
-  server: v6.hdacd.com
-  port: 30806
+  server: v8.hdacd.com
+  port: 30808
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
   tls: false
   skip-cert-verify: false
   udp: true
-- name: 🇮🇩印尼-02
-  type: vmess
-  server: v9.hdacd.com
-  port: 30809
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
+- name: 🇮🇹意大利-01
+  type: vless
+  server: 31.76.113.112
+  port: 443
+  uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de
+  servername: it.s3-cloud.xyz
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY
+    short-id: 7a3f9e2b1c8d4f6a
   udp: true
 - name: 🇯🇵日本-01
   type: trojan
-  server: 52.69.79.73
-  port: 29440
+  server: 18.183.163.141
+  port: 50712
   password: BxceQaOe
-  sni: t.me%252Fripaojiedian
+  sni: t.me/ripaojiedian
   skip-cert-verify: true
   tls: true
   udp: true
@@ -232,53 +245,7 @@ proxies:
   ws-opts:
     path: /@Marisa_kristi
   udp: true
-- name: 🇯🇵日本-03
-  type: vless
-  server: 45.129.8.65
-  port: 30000
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  network: ws
-  servername: fx.222395.xyz
-  tls: true
-  ws-opts:
-    path: /
-  udp: true
-- name: 🇯🇵日本-04
-  type: vmess
-  server: 2a02:6ea0:d32f::f8fe:349b
-  port: 24202
-  uuid: b20a7042-70ff-4376-a79f-b68f9edb7519
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /github.com/Alvin9999-newpac/fanqiang
-  udp: true
 - name: 🇰🇷韩国-01
-  type: vless
-  server: 47.80.14.130
-  port: 443
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-  servername: api.company-target.com
-  tls: true
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  udp: true
-- name: 🇰🇷韩国-02
-  type: vless
-  server: 222.113.18.214
-  port: 11310
-  uuid: b2b62085-f202-4c49-9f19-a44676a3d76d
-  network: ws
-  servername: vpn2.rnmcnm.com
-  tls: true
-  ws-opts:
-    path: /ray
-  udp: true
-- name: 🇰🇷韩国-03
   type: trojan
   server: 119.195.0.158
   port: 35342
@@ -291,16 +258,98 @@ proxies:
     headers:
       Host: vpn5.rnmcnm.com
   udp: true
-- name: 🇰🇷韩国-04
+- name: 🇰🇷韩国-02
   type: trojan
   server: 218.152.227.25
   port: 12000
   password: 433e785b-2077-47f7-a43d-985f63dd18d1
   sni: vpn.rnmcnm.com
-  skip-cert-verify: false
+  skip-cert-verify: true
   tls: true
   ws-opts:
     path: /trojan
+  udp: true
+- name: 🇰🇷韩国-03
+  type: vless
+  server: 222.113.18.214
+  port: 11310
+  uuid: b2b62085-f202-4c49-9f19-a44676a3d76d
+  network: ws
+  servername: vpn2.rnmcnm.com
+  tls: true
+  ws-opts:
+    path: /ray
+  udp: true
+- name: 🇰🇷韩国-04
+  type: vless
+  server: 47.80.14.130
+  port: 443
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+  servername: api.company-target.com
+  tls: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  udp: true
+- name: 🇱🇹LT-01
+  type: vless
+  server: 45.153.7.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime11.workers.dev
+  udp: true
+- name: 🇱🇹LT-02
+  type: vless
+  server: 45.153.7.40
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime11.workers.dev
+  udp: true
+- name: 🇱🇹LT-03
+  type: vless
+  server: 45.153.7.50
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime11.workers.dev
+  udp: true
+- name: 🇱🇹LT-04
+  type: vless
+  server: 89.117.112.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime11.workers.dev
+  udp: true
+- name: 🇱🇹LT-05
+  type: vless
+  server: 89.117.112.40
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime11.workers.dev
   udp: true
 - name: 🇱🇻LV-01
   type: vless
@@ -315,93 +364,19 @@ proxies:
     short-id: 9e
   udp: true
 - name: 🇲🇾马来西亚-01
-  type: trojan
-  server: a.twodnwnpoe.xyz
-  port: 33650
-  password: da292191-b895-3264-b41c-200512b8f965
-  sni: 1.lossyesterday.xyz
-  skip-cert-verify: true
-  tls: true
+  type: vmess
+  server: v6.hdacd.com
+  port: 30806
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
   udp: true
 - name: 🇲🇾马来西亚-02
-  type: trojan
-  server: a.twodnwnpoe.xyz
-  port: 32544
-  password: da292191-b895-3264-b41c-200512b8f965
-  sni: water.waittomorrow.top
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇲🇾马来西亚-03
-  type: trojan
-  server: a.twodnwnpoe.xyz
-  port: 52225
-  password: da292191-b895-3264-b41c-200512b8f965
-  sni: i.comfortableyou.top
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇲🇾马来西亚-04
   type: vmess
-  server: 23.27.28.61
-  port: 33137
-  uuid: 3cc5c851-2668-45e4-c376-e2d53027751f
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇲🇾马来西亚-05
-  type: trojan
-  server: a.twodnwnpoe.xyz
-  port: 40017
-  password: da292191-b895-3264-b41c-200512b8f965
-  sni: water.waittomorrow.top
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇲🇾马来西亚-06
-  type: trojan
-  server: a.twodnwnpoe.xyz
-  port: 41666
-  password: da292191-b895-3264-b41c-200512b8f965
-  sni: water.waittomorrow.top
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇲🇾马来西亚-07
-  type: vmess
-  server: v35.hdacd.com
-  port: 30835
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇲🇾马来西亚-08
-  type: vmess
-  server: v8.hdacd.com
-  port: 30808
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇲🇾马来西亚-09
-  type: trojan
-  server: a.twodnwnpoe.xyz
-  port: 40015
-  password: da292191-b895-3264-b41c-200512b8f965
-  sni: 1.lossyesterday.xyz
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇲🇾马来西亚-10
-  type: vmess
-  server: v4.hdacd.com
-  port: 30804
+  server: v9.hdacd.com
+  port: 30809
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
@@ -410,87 +385,38 @@ proxies:
   udp: true
 - name: 🇳🇱荷兰-01
   type: vless
-  server: vnldc.mostserv.xyz
+  server: 150.251.158.76
   port: 443
-  uuid: 0ddc1b7c-ce23-4a30-8ede-8a9e19f02fb7
-  servername: vnldc.mostserv.xyz
+  uuid: 10550754-cf62-3d3b-ba6a-50be27a275d7
+  servername: s646.okgg.top
   tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  reality-opts:
-    public-key: 3WzSgL8uXA3vE3IHrfdBpJmOO4MYrsWpczDSY_jJRjI
-    short-id: 226509f017e4c36d
+  client-fingerprint: random
   udp: true
-- name: 🇳🇿新西兰-01
+- name: 🇷🇴罗马尼亚-01
   type: vless
-  server: 202.37.33.81
-  port: 443
-  uuid: 3b01a777-55e7-49f6-8637-d94ee69607c6
-  network: ws
-  servername: m.udemy.com.cyylr.eu.cc
+  server: cdn7-39.vk-cdnvideo.com
+  port: 8443
+  uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f
   tls: true
-  ws-opts:
-    path: /id-tksi
-    headers:
-      Host: m.udemy.com.cyylr.eu.cc
-  udp: true
-- name: 🇵🇱波兰-01
-  type: vless
-  server: poland-1.bexum.fun
-  port: 443
-  uuid: ae5ba4be-7262-4199-bd62-210ed8999b9f
-  servername: poland-1.bexum.fun
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: randomized
-  reality-opts:
-    public-key: j97RCvxVfMu5XWcXuAc4s8TnBTdl8PQrNFrZDQpAkng
-    short-id: 5dd747e98058584b
-  udp: true
-- name: 🇸🇨SC-01
-  type: vless
-  server: 45.130.125.0
-  port: 443
-  uuid: d08d180d-cb07-4d82-b1bd-1e42fa523cd7
-  network: ws
-  servername: ads.ruangguru.com.cyylr.eu.cc
-  tls: true
-  ws-opts:
-    path: /sg-orcl
-    headers:
-      Host: ads.ruangguru.com.cyylr.eu.cc
-  udp: true
-- name: 🇸🇪瑞典-01
-  type: vless
-  server: 78.40.117.131
-  port: 443
-  uuid: bb2b0112-577f-4862-886a-3c2ee004ca23
-  servername: www.tele2.se
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: FurqA-2jJHS4vNj92Ya5i2ZTxf0sWSjUTaz5Y_KMBgk
-    short-id: 57cc65bfd5ef7465
   udp: true
 - name: 🇸🇬新加坡-01
-  type: vless
-  server: 43.160.201.33
-  port: 666
-  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
-  network: ws
-  servername: 43.160.201.33
-  tls: true
-  ws-opts:
-    path: /proxy
-  udp: true
-- name: 🇸🇬新加坡-02
   type: vless
   server: 192.124.176.37
   port: 666
   uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
   network: ws
   servername: 192.124.176.37
+  tls: true
+  ws-opts:
+    path: /proxy
+  udp: true
+- name: 🇸🇬新加坡-02
+  type: vless
+  server: 43.160.201.33
+  port: 666
+  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
+  network: ws
+  servername: 43.160.201.33
   tls: true
   ws-opts:
     path: /proxy
@@ -507,70 +433,7 @@ proxies:
   ws-opts:
     path: /@Marisa_kristi
   udp: true
-- name: 🇸🇬新加坡-04
-  type: vmess
-  server: 1b267619c4812cc46ee281747884ca50.qos.onl
-  port: 10034
-  uuid: 52f9cbfb-5bb3-3dd3-b947-725e365c59f3
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: v2pr9feoh0z86anj2gz9onnjg9viuev0j.mobgslb.tbcache.com
-  udp: true
-- name: 🇸🇬新加坡-05
-  type: vless
-  server: 27.50.48.49
-  port: 443
-  uuid: 197f5e5c-fc15-4db6-8444-50248c2c394d
-  network: ws
-  servername: somersby.pt.cyylr.eu.cc
-  tls: true
-  ws-opts:
-    path: /sg-amz
-    headers:
-      Host: somersby.pt.cyylr.eu.cc
-  udp: true
-- name: 🇸🇬新加坡-06
-  type: vless
-  server: 27.50.48.49
-  port: 443
-  uuid: 228639b0-48de-4162-a818-d5651ee297b3
-  network: ws
-  servername: investors.spotify.com.cyylr.eu.cc
-  tls: true
-  ws-opts:
-    path: /in-do
-    headers:
-      Host: investors.spotify.com.cyylr.eu.cc
-  udp: true
 - name: 🇹🇭泰国-01
-  type: vless
-  server: 47.81.39.100
-  port: 443
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-  servername: api.digital-help-prd.autodesk.com
-  tls: true
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  udp: true
-- name: 🇹🇭泰国-02
-  type: vless
-  server: 43.164.1.152
-  port: 666
-  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
-  network: ws
-  servername: 43.164.1.152
-  tls: true
-  ws-opts:
-    path: /proxy
-  udp: true
-- name: 🇹🇭泰国-03
   type: vless
   server: 43.164.0.59
   port: 666
@@ -581,15 +444,18 @@ proxies:
   ws-opts:
     path: /proxy
   udp: true
-- name: 🇹🇷土耳其-01
-  type: trojan
-  server: tr-1.stunnel.cc
-  port: 8441
-  password: tunnel-ljlcf
-  skip-cert-verify: false
+- name: 🇹🇭泰国-02
+  type: vless
+  server: 47.81.39.100
+  port: 443
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+  servername: api.digital-help-prd.autodesk.com
   tls: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
   udp: true
-- name: 🇹🇷土耳其-02
+- name: 🇹🇷土耳其-01
   type: vless
   server: 78.135.93.239
   port: 666
@@ -602,6 +468,15 @@ proxies:
   udp: true
 - name: 🇹🇼台湾-01
   type: trojan
+  server: 211.76.176.98
+  port: 19128
+  password: gcuCpQfaiVeDBdWG
+  sni: yazhou10.dynu.net
+  skip-cert-verify: false
+  tls: true
+  udp: true
+- name: 🇹🇼台湾-02
+  type: trojan
   server: jpbgp.netvigor.cc
   port: 19128
   password: gcuCpQfaiVeDBdWG
@@ -609,86 +484,34 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
-- name: 🇹🇼台湾-02
-  type: vmess
-  server: v11.zgtfqs.click
-  port: 30811
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
 - name: 🇺🇸美国-01
   type: trojan
-  server: 90081bb25c.node.tro.cac.cab
-  port: 41943
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: az.01.naiun.bilibili.com
-  skip-cert-verify: true
+  server: 104.20.6.134
+  port: 443
+  password: humanity
+  sni: www.calmloud.com
+  alpn:
+  - http/1.1
+  skip-cert-verify: false
   tls: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmloud.com
   udp: true
 - name: 🇺🇸美国-02
-  type: trojan
-  server: 90081bb25c.node.tro.cac.cab
-  port: 45619
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: fr.01.naiun.bilibili.com
-  skip-cert-verify: true
-  tls: true
+  type: vless
+  server: 104.21.31.4
+  port: 8880
+  uuid: 0a5ab719-2407-4398-b507-8437ef365023
+  network: ws
+  tls: false
+  ws-opts:
+    path: /FCHANNEL---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY---ELiV2-RAY
+    headers:
+      Host: underthegun.cfd.
   udp: true
 - name: 🇺🇸美国-03
-  type: trojan
-  server: 90081bb25c.node.tro.cac.cab
-  port: 45553
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: ch.01.naiun.bilibili.com
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇺🇸美国-04
-  type: vless
-  server: 38.14.232.201
-  port: 53501
-  uuid: 98aa28b3-78ac-4c54-bf6e-0e7d0e65259b
-  servername: apple.com
-  tls: true
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: tbgvM-W4DB5oZ-BvaLPC_TUPzdWPDOYp9Zm3sKaCH04
-    short-id: 8a190670
-  udp: true
-- name: 🇺🇸美国-05
-  type: vmess
-  server: gtm-sg-cc54q7d1q01.365cloud0285.com
-  port: 6004
-  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇸美国-06
-  type: vmess
-  server: gtm-sg-cc54q7d1q01.365cloud0285.com
-  port: 6001
-  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇸美国-07
-  type: vmess
-  server: gtm-sg-cc54q7d1q01.365cloud0285.com
-  port: 6003
-  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇸美国-08
   type: vless
   server: 134.33.73.249
   port: 54254
@@ -700,6 +523,62 @@ proxies:
   reality-opts:
     public-key: HFEz9fAOugljXea_ZVOUHMju08su8h0P9RANNcHP2y4
     short-id: db35ffdc
+  udp: true
+- name: 🇺🇸美国-04
+  type: trojan
+  server: 165.215.250.14
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  udp: true
+- name: 🇺🇸美国-05
+  type: trojan
+  server: 172.64.152.23
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  tls: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  udp: true
+- name: 🇺🇸美国-06
+  type: vless
+  server: 172.65.111.43
+  port: 22
+  uuid: monacoVPN
+  tls: false
+  udp: true
+- name: 🇺🇸美国-07
+  type: vless
+  server: 172.67.185.178
+  port: 443
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  network: ws
+  servername: hhlfy.twiladaphne.ndjp.net
+  tls: true
+  ws-opts:
+    path: /
+  udp: true
+- name: 🇺🇸美国-08
+  type: vless
+  server: 185.139.214.254
+  port: 443
+  uuid: c55a51d9-48bd-11f1-941f-54db13ea7d40
+  servername: cloudcdn-m9-15.cdn.yandex.net
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: randomized
+  reality-opts:
+    public-key: APwi9yR-ezZtFU6xj2a3SBoXvEoWOoiRuZSit0N9xWI
   udp: true
 - name: 🇺🇸美国-09
   type: vless
@@ -716,91 +595,16 @@ proxies:
   udp: true
 - name: 🇺🇸美国-10
   type: vless
-  server: 172.65.111.43
-  port: 22
-  uuid: monacoVPN
-  tls: false
+  server: 43.162.115.192
+  port: 666
+  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
+  network: ws
+  servername: 43.162.115.192
+  tls: true
+  ws-opts:
+    path: /proxy
   udp: true
 - name: 🇺🇸美国-11
-  type: vmess
-  server: 38.80.188.69
-  port: 50997
-  uuid: 7350d615-d1a5-4a5b-a004-18aafee8e1d8
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇸美国-12
-  type: vless
-  server: 194.154.27.103
-  port: 2026
-  uuid: 9287f532-4150-48ff-a755-64b21e30e9c3
-  servername: api.vk.ru
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: cH-LYLxYIolfsrn2V3wqkhw-hkVPPDW7ljE9KqcuJX4
-  udp: true
-- name: 🇺🇸美国-13
-  type: trojan
-  server: 90081bb25c.node.tro.cac.cab
-  port: 47909
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: is.01.naiun.bilibili.com
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇺🇸美国-14
-  type: trojan
-  server: 90081bb25c.node.tro.cac.cab
-  port: 46424
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: de.01.naiun.bilibili.com
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇺🇸美国-15
-  type: vmess
-  server: 103.182.97.25
-  port: 30806
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇸美国-16
-  type: vmess
-  server: 103.182.97.25
-  port: 30824
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇸美国-17
-  type: trojan
-  server: 90081bb25c.node.tro.cac.cab
-  port: 48697
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: gh.01.naiun.bilibili.com
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇺🇸美国-18
-  type: vmess
-  server: 103.182.97.12
-  port: 30806
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇺🇸美国-19
   type: vless
   server: 43.162.85.247
   port: 666
@@ -811,16 +615,89 @@ proxies:
   ws-opts:
     path: /proxy
   udp: true
-- name: 🇺🇸美国-20
-  type: vless
-  server: 43.162.115.192
-  port: 666
-  uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
-  network: ws
-  servername: 43.162.115.192
+- name: 🇺🇸美国-12
+  type: trojan
+  server: 90081bb25c.node.tro.cac.cab
+  port: 47909
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: is.01.naiun.bilibili.com
+  skip-cert-verify: true
   tls: true
-  ws-opts:
-    path: /proxy
+  udp: true
+- name: 🇺🇸美国-13
+  type: trojan
+  server: 90081bb25c.node.tro.cac.cab
+  port: 48697
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: gh.01.naiun.bilibili.com
+  skip-cert-verify: true
+  tls: true
+  udp: true
+- name: 🇺🇸美国-14
+  type: trojan
+  server: 90081bb25c.node.tro.cac.cab
+  port: 41943
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: az.01.naiun.bilibili.com
+  skip-cert-verify: true
+  tls: true
+  udp: true
+- name: 🇺🇸美国-15
+  type: trojan
+  server: 90081bb25c.node.tro.cac.cab
+  port: 45553
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: ch.01.naiun.bilibili.com
+  skip-cert-verify: true
+  tls: true
+  udp: true
+- name: 🇺🇸美国-16
+  type: trojan
+  server: 90081bb25c.node.tro.cac.cab
+  port: 45619
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: fr.01.naiun.bilibili.com
+  skip-cert-verify: true
+  tls: true
+  udp: true
+- name: 🇺🇸美国-17
+  type: trojan
+  server: 90081bb25c.node.tro.cac.cab
+  port: 46424
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: de.01.naiun.bilibili.com
+  skip-cert-verify: true
+  tls: true
+  udp: true
+- name: 🇺🇸美国-18
+  type: vmess
+  server: gtm-sg-cc54q7d1q01.365cloud0285.com
+  port: 6001
+  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  udp: true
+- name: 🇺🇸美国-19
+  type: vmess
+  server: gtm-sg-cc54q7d1q01.365cloud0285.com
+  port: 6004
+  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  udp: true
+- name: 🇺🇸美国-20
+  type: vmess
+  server: gtm-sg-cc54q7d1q01.365cloud0285.com
+  port: 6003
+  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
   udp: true
 - name: 🇺🇸美国-21
   type: vless
@@ -837,7 +714,7 @@ proxies:
   udp: true
 - name: 🇺🇸美国-22
   type: vless
-  server: store.ubi.com
+  server: mfa.gov.ua
   port: 443
   uuid: 00000000-0000-4000-8000-000000000000
   network: ws
@@ -849,6 +726,17 @@ proxies:
   udp: true
 - name: 🇺🇸美国-23
   type: vless
+  server: nuclear.us.kg
+  port: 443
+  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+  network: ws
+  servername: nuclear.us.kg
+  tls: true
+  ws-opts:
+    path: /free/1.226.227.169:50001
+  udp: true
+- name: 🇺🇸美国-24
+  type: vless
   server: staticdelivery.nexusmods.com
   port: 443
   uuid: 00000000-0000-4000-8000-000000000000
@@ -859,67 +747,9 @@ proxies:
   ws-opts:
     path: /@Marisa_kristi
   udp: true
-- name: 🇺🇸美国-24
-  type: vless
-  server: 216.24.57.1
-  port: 443
-  uuid: 565b50d4-604d-4a60-9fc2-d9d3dac0aec6
-  network: ws
-  servername: dl.cvs.freefiremobile.com.cyylr.eu.cc
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /id-pusat
-  udp: true
 - name: 🇺🇸美国-25
   type: vless
-  server: nuclear.us.kg
-  port: 443
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  network: ws
-  servername: nuclear.us.kg
-  tls: true
-  ws-opts:
-    path: /free/1.226.227.169:50001
-  udp: true
-- name: 🇺🇸美国-26
-  type: trojan
-  server: blackshadow.dpdns.org
-  port: 443
-  password: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  sni: support.zoom.us.blackshadow.dpdns.org
-  skip-cert-verify: false
-  tls: true
-  ws-opts:
-    path: /195.123.218.174-443
-    headers:
-      Host: support.zoom.us.blackshadow.dpdns.org
-  udp: true
-- name: 🇺🇸美国-27
-  type: vless
-  server: cf.tencentapp.cn
-  port: 443
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  servername: tianshu13.pages.dev
-  tls: true
-  ws-opts:
-    path: /
-  udp: true
-- name: 🇺🇸美国-28
-  type: trojan
-  server: 172.64.152.23
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  tls: true
-  ws-opts:
-    path: /assignment
-  udp: true
-- name: 🇺🇸美国-29
-  type: vless
-  server: mfa.gov.ua
+  server: store.ubi.com
   port: 443
   uuid: 00000000-0000-4000-8000-000000000000
   network: ws
@@ -929,85 +759,40 @@ proxies:
   ws-opts:
     path: /@Marisa_kristi
   udp: true
-- name: 🇺🇸美国-30
-  type: vless
-  server: 172.67.185.178
-  port: 443
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  servername: hhlfy.twiladaphne.ndjp.net
-  tls: true
-  ws-opts:
-    path: /
-  udp: true
-- name: 🇺🇸美国-31
-  type: vless
-  server: 151.101.193.57
-  port: 80
-  uuid: 2c15f192-3812-98db-85a2-88cd7d02b868
-  network: ws
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: Vpsdelta.com
-  udp: true
-- name: 🇺🇸美国-32
+- name: 🇺🇸美国-26
   type: vmess
-  server: yg7.ygkkk.dpdns.org
-  port: 8443
-  uuid: c1a8dee0-bdad-4b6d-9926-5e15c3c8ed7d
-  alterId: 0
+  server: v33.hdacd.com
+  port: 30833
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: false
-  servername: marco-visibility-tops-estimate.trycloudflare.com
-  network: ws
-  ws-opts:
-    path: /c1a8dee0-bdad-4b6d-9926-5e15c3c8ed7d-vm
-    headers:
-      Host: marco-visibility-tops-estimate.trycloudflare.com
   udp: true
-- name: 🇺🇸美国-33
-  type: vless
-  server: 216.24.57.1
+- name: 🇺🇸美国-27
+  type: vmess
+  server: v35.hdacd.com
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  udp: true
+- name: 🇺🇸美国-28
+  type: trojan
+  server: wing2452.nyc.mn
   port: 443
-  uuid: 6e593426-1a8e-4226-984f-0ea174e218c7
-  network: ws
-  servername: dl.cvs.freefiremobile.com.cyylr.eu.cc
+  password: bpb-trojan
+  sni: wing2452.nyc.mn
+  skip-cert-verify: false
   tls: true
-  client-fingerprint: chrome
   ws-opts:
-    path: /id-pusat
+    path: /tr
     headers:
-      Host: dl.cvs.freefiremobile.com.cyylr.eu.cc
+      Host: wing2452.nyc.mn
   udp: true
 - name: 🇽🇽未知-01
-  type: vless
-  server: mybb.com
-  port: 443
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  network: ws
-  servername: rayan-007.nastaran.dpdns.org
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-  udp: true
-- name: 🇽🇽未知-02
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: d0dc32f6-e531-41af-9df6-1547adfb2f35
-  network: ws
-  servername: www.genflix.co.id.cyylr.eu.cc
-  tls: true
-  ws-opts:
-    path: /ae-bo
-    headers:
-      Host: www.genflix.co.id.cyylr.eu.cc
-  udp: true
-- name: 🇽🇽未知-03
   type: vless
   server: 141.101.121.196
   port: 443
@@ -1021,588 +806,454 @@ proxies:
     headers:
       Host: blackshadow.dpdns.org
   udp: true
-- name: 🇽🇽未知-04
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 15a8fadd-3a43-422f-8e63-a87ea7c13221
-  network: ws
-  servername: blog.webex.com.cyylr.eu.cc
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /id-tksi
-    headers:
-      Host: blog.webex.com.cyylr.eu.cc
-  udp: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
-  - 🇫🇷法国-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇪🇸西班牙-01
   - 🇺🇸美国-01
   - 🇺🇸美国-02
-  - 🇹🇼台湾-01
-  - 🇭🇰香港-01
+  - 🇰🇷韩国-01
+  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-03
+  - 🇽🇽未知-01
+  - 🇳🇱荷兰-01
   - 🇺🇸美国-04
   - 🇺🇸美国-05
   - 🇺🇸美国-06
   - 🇺🇸美国-07
-  - 🇭🇰香港-02
-  - 🇭🇰香港-03
+  - 🇯🇵日本-01
   - 🇺🇸美国-08
-  - 🇭🇰香港-04
-  - 🇱🇻LV-01
-  - 🇫🇷法国-02
-  - 🇫🇷法国-03
+  - 🇨🇿捷克-01
+  - 🇸🇬新加坡-01
   - 🇺🇸美国-09
-  - 🇨🇭瑞士-01
-  - 🇹🇭泰国-01
+  - 🇫🇷法国-01
+  - 🇫🇷法国-02
+  - 🇹🇼台湾-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇮🇹意大利-01
+  - 🇸🇬新加坡-02
   - 🇺🇸美国-10
   - 🇺🇸美国-11
-  - 🇰🇷韩国-01
+  - 🇹🇭泰国-01
+  - 🇯🇵日本-02
+  - 🇱🇹LT-01
+  - 🇱🇹LT-02
+  - 🇱🇹LT-03
+  - 🇭🇰香港-04
+  - 🇰🇷韩国-04
+  - 🇹🇭泰国-02
+  - 🇹🇷土耳其-01
   - 🇭🇰香港-05
-  - 🇲🇾马来西亚-01
-  - 🇲🇾马来西亚-02
-  - 🇲🇾马来西亚-03
-  - 🇲🇾马来西亚-04
-  - 🇲🇾马来西亚-05
-  - 🇯🇵日本-01
-  - 🇲🇾马来西亚-06
-  - 🇵🇱波兰-01
-  - 🇳🇱荷兰-01
-  - 🇸🇪瑞典-01
-  - 🇭🇰香港-06
+  - 🇸🇬新加坡-03
+  - 🇱🇹LT-04
+  - 🇱🇹LT-05
+  - 🇱🇻LV-01
   - 🇺🇸美国-12
-  - 🇲🇾马来西亚-07
-  - 🇲🇾马来西亚-08
   - 🇺🇸美国-13
-  - 🇲🇾马来西亚-09
   - 🇺🇸美国-14
   - 🇺🇸美国-15
-  - 🇮🇩印尼-01
-  - 🇹🇼台湾-02
-  - 🇭🇰香港-07
-  - 🇹🇷土耳其-01
   - 🇺🇸美国-16
-  - 🇮🇩印尼-02
-  - 🇲🇾马来西亚-10
   - 🇺🇸美国-17
+  - 🇭🇰香港-06
+  - 🇭🇰香港-07
+  - 🇷🇴罗马尼亚-01
   - 🇺🇸美国-18
-  - 🇸🇬新加坡-01
-  - 🇹🇭泰国-02
-  - 🇹🇷土耳其-02
   - 🇺🇸美国-19
-  - 🇸🇬新加坡-02
-  - 🇹🇭泰国-03
-  - 🇨🇭瑞士-02
-  - 🇽🇽未知-01
-  - 🇳🇿新西兰-01
-  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-20
+  - 🇹🇼台湾-02
   - 🇺🇸美国-21
-  - 🇽🇽未知-02
-  - 🇩🇰丹麦-01
-  - 🇰🇷韩国-02
-  - 🇪🇸西班牙-01
   - 🇺🇸美国-22
   - 🇺🇸美国-23
-  - 🇯🇵日本-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇭🇰香港-08
   - 🇺🇸美国-24
   - 🇺🇸美国-25
+  - 🇭🇰香港-09
   - 🇺🇸美国-26
-  - 🇽🇽未知-03
   - 🇺🇸美国-27
+  - 🇲🇾马来西亚-01
+  - 🇮🇩印尼-01
+  - 🇲🇾马来西亚-02
   - 🇺🇸美国-28
-  - 🇯🇵日本-03
-  - 🇰🇷韩国-03
-  - 🇰🇷韩国-04
-  - 🇺🇸美国-29
-  - 🇺🇸美国-30
-  - 🇯🇵日本-04
-  - 🇸🇬新加坡-05
-  - 🇺🇸美国-31
-  - 🇸🇬新加坡-06
-  - 🇽🇽未知-04
-  - 🇸🇨SC-01
-  - 🇺🇸美国-32
-  - 🇺🇸美国-33
+  - 🇭🇰香港-10
+  - 🇭🇰香港-11
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇫🇷法国-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇪🇸西班牙-01
   - 🇺🇸美国-01
   - 🇺🇸美国-02
-  - 🇹🇼台湾-01
-  - 🇭🇰香港-01
+  - 🇰🇷韩国-01
+  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-03
+  - 🇽🇽未知-01
+  - 🇳🇱荷兰-01
   - 🇺🇸美国-04
   - 🇺🇸美国-05
   - 🇺🇸美国-06
   - 🇺🇸美国-07
-  - 🇭🇰香港-02
-  - 🇭🇰香港-03
+  - 🇯🇵日本-01
   - 🇺🇸美国-08
-  - 🇭🇰香港-04
-  - 🇱🇻LV-01
-  - 🇫🇷法国-02
-  - 🇫🇷法国-03
+  - 🇨🇿捷克-01
+  - 🇸🇬新加坡-01
   - 🇺🇸美国-09
-  - 🇨🇭瑞士-01
-  - 🇹🇭泰国-01
+  - 🇫🇷法国-01
+  - 🇫🇷法国-02
+  - 🇹🇼台湾-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇮🇹意大利-01
+  - 🇸🇬新加坡-02
   - 🇺🇸美国-10
   - 🇺🇸美国-11
-  - 🇰🇷韩国-01
+  - 🇹🇭泰国-01
+  - 🇯🇵日本-02
+  - 🇱🇹LT-01
+  - 🇱🇹LT-02
+  - 🇱🇹LT-03
+  - 🇭🇰香港-04
+  - 🇰🇷韩国-04
+  - 🇹🇭泰国-02
+  - 🇹🇷土耳其-01
   - 🇭🇰香港-05
-  - 🇲🇾马来西亚-01
-  - 🇲🇾马来西亚-02
-  - 🇲🇾马来西亚-03
-  - 🇲🇾马来西亚-04
-  - 🇲🇾马来西亚-05
-  - 🇯🇵日本-01
-  - 🇲🇾马来西亚-06
-  - 🇵🇱波兰-01
-  - 🇳🇱荷兰-01
-  - 🇸🇪瑞典-01
-  - 🇭🇰香港-06
+  - 🇸🇬新加坡-03
+  - 🇱🇹LT-04
+  - 🇱🇹LT-05
+  - 🇱🇻LV-01
   - 🇺🇸美国-12
-  - 🇲🇾马来西亚-07
-  - 🇲🇾马来西亚-08
   - 🇺🇸美国-13
-  - 🇲🇾马来西亚-09
   - 🇺🇸美国-14
   - 🇺🇸美国-15
-  - 🇮🇩印尼-01
-  - 🇹🇼台湾-02
-  - 🇭🇰香港-07
-  - 🇹🇷土耳其-01
   - 🇺🇸美国-16
-  - 🇮🇩印尼-02
-  - 🇲🇾马来西亚-10
   - 🇺🇸美国-17
+  - 🇭🇰香港-06
+  - 🇭🇰香港-07
+  - 🇷🇴罗马尼亚-01
   - 🇺🇸美国-18
-  - 🇸🇬新加坡-01
-  - 🇹🇭泰国-02
-  - 🇹🇷土耳其-02
   - 🇺🇸美国-19
-  - 🇸🇬新加坡-02
-  - 🇹🇭泰国-03
-  - 🇨🇭瑞士-02
-  - 🇽🇽未知-01
-  - 🇳🇿新西兰-01
-  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-20
+  - 🇹🇼台湾-02
   - 🇺🇸美国-21
-  - 🇽🇽未知-02
-  - 🇩🇰丹麦-01
-  - 🇰🇷韩国-02
-  - 🇪🇸西班牙-01
   - 🇺🇸美国-22
   - 🇺🇸美国-23
-  - 🇯🇵日本-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇭🇰香港-08
   - 🇺🇸美国-24
   - 🇺🇸美国-25
+  - 🇭🇰香港-09
   - 🇺🇸美国-26
-  - 🇽🇽未知-03
   - 🇺🇸美国-27
+  - 🇲🇾马来西亚-01
+  - 🇮🇩印尼-01
+  - 🇲🇾马来西亚-02
   - 🇺🇸美国-28
-  - 🇯🇵日本-03
-  - 🇰🇷韩国-03
-  - 🇰🇷韩国-04
-  - 🇺🇸美国-29
-  - 🇺🇸美国-30
-  - 🇯🇵日本-04
-  - 🇸🇬新加坡-05
-  - 🇺🇸美国-31
-  - 🇸🇬新加坡-06
-  - 🇽🇽未知-04
-  - 🇸🇨SC-01
-  - 🇺🇸美国-32
-  - 🇺🇸美国-33
+  - 🇭🇰香港-10
+  - 🇭🇰香港-11
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
 - name: 🌍 国外媒体
   type: select
   proxies:
-  - 🇫🇷法国-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇪🇸西班牙-01
   - 🇺🇸美国-01
   - 🇺🇸美国-02
-  - 🇹🇼台湾-01
-  - 🇭🇰香港-01
+  - 🇰🇷韩国-01
+  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-03
+  - 🇽🇽未知-01
+  - 🇳🇱荷兰-01
   - 🇺🇸美国-04
   - 🇺🇸美国-05
   - 🇺🇸美国-06
   - 🇺🇸美国-07
-  - 🇭🇰香港-02
-  - 🇭🇰香港-03
+  - 🇯🇵日本-01
   - 🇺🇸美国-08
-  - 🇭🇰香港-04
-  - 🇱🇻LV-01
-  - 🇫🇷法国-02
-  - 🇫🇷法国-03
+  - 🇨🇿捷克-01
+  - 🇸🇬新加坡-01
   - 🇺🇸美国-09
-  - 🇨🇭瑞士-01
-  - 🇹🇭泰国-01
+  - 🇫🇷法国-01
+  - 🇫🇷法国-02
+  - 🇹🇼台湾-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇮🇹意大利-01
+  - 🇸🇬新加坡-02
   - 🇺🇸美国-10
   - 🇺🇸美国-11
-  - 🇰🇷韩国-01
+  - 🇹🇭泰国-01
+  - 🇯🇵日本-02
+  - 🇱🇹LT-01
+  - 🇱🇹LT-02
+  - 🇱🇹LT-03
+  - 🇭🇰香港-04
+  - 🇰🇷韩国-04
+  - 🇹🇭泰国-02
+  - 🇹🇷土耳其-01
   - 🇭🇰香港-05
-  - 🇲🇾马来西亚-01
-  - 🇲🇾马来西亚-02
-  - 🇲🇾马来西亚-03
-  - 🇲🇾马来西亚-04
-  - 🇲🇾马来西亚-05
-  - 🇯🇵日本-01
-  - 🇲🇾马来西亚-06
-  - 🇵🇱波兰-01
-  - 🇳🇱荷兰-01
-  - 🇸🇪瑞典-01
-  - 🇭🇰香港-06
+  - 🇸🇬新加坡-03
+  - 🇱🇹LT-04
+  - 🇱🇹LT-05
+  - 🇱🇻LV-01
   - 🇺🇸美国-12
-  - 🇲🇾马来西亚-07
-  - 🇲🇾马来西亚-08
   - 🇺🇸美国-13
-  - 🇲🇾马来西亚-09
   - 🇺🇸美国-14
   - 🇺🇸美国-15
-  - 🇮🇩印尼-01
-  - 🇹🇼台湾-02
-  - 🇭🇰香港-07
-  - 🇹🇷土耳其-01
   - 🇺🇸美国-16
-  - 🇮🇩印尼-02
-  - 🇲🇾马来西亚-10
   - 🇺🇸美国-17
+  - 🇭🇰香港-06
+  - 🇭🇰香港-07
+  - 🇷🇴罗马尼亚-01
   - 🇺🇸美国-18
-  - 🇸🇬新加坡-01
-  - 🇹🇭泰国-02
-  - 🇹🇷土耳其-02
   - 🇺🇸美国-19
-  - 🇸🇬新加坡-02
-  - 🇹🇭泰国-03
-  - 🇨🇭瑞士-02
-  - 🇽🇽未知-01
-  - 🇳🇿新西兰-01
-  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-20
+  - 🇹🇼台湾-02
   - 🇺🇸美国-21
-  - 🇽🇽未知-02
-  - 🇩🇰丹麦-01
-  - 🇰🇷韩国-02
-  - 🇪🇸西班牙-01
   - 🇺🇸美国-22
   - 🇺🇸美国-23
-  - 🇯🇵日本-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇭🇰香港-08
   - 🇺🇸美国-24
   - 🇺🇸美国-25
+  - 🇭🇰香港-09
   - 🇺🇸美国-26
-  - 🇽🇽未知-03
   - 🇺🇸美国-27
+  - 🇲🇾马来西亚-01
+  - 🇮🇩印尼-01
+  - 🇲🇾马来西亚-02
   - 🇺🇸美国-28
-  - 🇯🇵日本-03
-  - 🇰🇷韩国-03
-  - 🇰🇷韩国-04
-  - 🇺🇸美国-29
-  - 🇺🇸美国-30
-  - 🇯🇵日本-04
-  - 🇸🇬新加坡-05
-  - 🇺🇸美国-31
-  - 🇸🇬新加坡-06
-  - 🇽🇽未知-04
-  - 🇸🇨SC-01
-  - 🇺🇸美国-32
-  - 🇺🇸美国-33
+  - 🇭🇰香港-10
+  - 🇭🇰香港-11
 - name: 📲 电报信息
   type: select
   proxies:
-  - 🇫🇷法国-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇪🇸西班牙-01
   - 🇺🇸美国-01
   - 🇺🇸美国-02
-  - 🇹🇼台湾-01
-  - 🇭🇰香港-01
+  - 🇰🇷韩国-01
+  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-03
+  - 🇽🇽未知-01
+  - 🇳🇱荷兰-01
   - 🇺🇸美国-04
   - 🇺🇸美国-05
   - 🇺🇸美国-06
   - 🇺🇸美国-07
-  - 🇭🇰香港-02
-  - 🇭🇰香港-03
+  - 🇯🇵日本-01
   - 🇺🇸美国-08
-  - 🇭🇰香港-04
-  - 🇱🇻LV-01
-  - 🇫🇷法国-02
-  - 🇫🇷法国-03
+  - 🇨🇿捷克-01
+  - 🇸🇬新加坡-01
   - 🇺🇸美国-09
-  - 🇨🇭瑞士-01
-  - 🇹🇭泰国-01
+  - 🇫🇷法国-01
+  - 🇫🇷法国-02
+  - 🇹🇼台湾-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇮🇹意大利-01
+  - 🇸🇬新加坡-02
   - 🇺🇸美国-10
   - 🇺🇸美国-11
-  - 🇰🇷韩国-01
+  - 🇹🇭泰国-01
+  - 🇯🇵日本-02
+  - 🇱🇹LT-01
+  - 🇱🇹LT-02
+  - 🇱🇹LT-03
+  - 🇭🇰香港-04
+  - 🇰🇷韩国-04
+  - 🇹🇭泰国-02
+  - 🇹🇷土耳其-01
   - 🇭🇰香港-05
-  - 🇲🇾马来西亚-01
-  - 🇲🇾马来西亚-02
-  - 🇲🇾马来西亚-03
-  - 🇲🇾马来西亚-04
-  - 🇲🇾马来西亚-05
-  - 🇯🇵日本-01
-  - 🇲🇾马来西亚-06
-  - 🇵🇱波兰-01
-  - 🇳🇱荷兰-01
-  - 🇸🇪瑞典-01
-  - 🇭🇰香港-06
+  - 🇸🇬新加坡-03
+  - 🇱🇹LT-04
+  - 🇱🇹LT-05
+  - 🇱🇻LV-01
   - 🇺🇸美国-12
-  - 🇲🇾马来西亚-07
-  - 🇲🇾马来西亚-08
   - 🇺🇸美国-13
-  - 🇲🇾马来西亚-09
   - 🇺🇸美国-14
   - 🇺🇸美国-15
-  - 🇮🇩印尼-01
-  - 🇹🇼台湾-02
-  - 🇭🇰香港-07
-  - 🇹🇷土耳其-01
   - 🇺🇸美国-16
-  - 🇮🇩印尼-02
-  - 🇲🇾马来西亚-10
   - 🇺🇸美国-17
+  - 🇭🇰香港-06
+  - 🇭🇰香港-07
+  - 🇷🇴罗马尼亚-01
   - 🇺🇸美国-18
-  - 🇸🇬新加坡-01
-  - 🇹🇭泰国-02
-  - 🇹🇷土耳其-02
   - 🇺🇸美国-19
-  - 🇸🇬新加坡-02
-  - 🇹🇭泰国-03
-  - 🇨🇭瑞士-02
-  - 🇽🇽未知-01
-  - 🇳🇿新西兰-01
-  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-20
+  - 🇹🇼台湾-02
   - 🇺🇸美国-21
-  - 🇽🇽未知-02
-  - 🇩🇰丹麦-01
-  - 🇰🇷韩国-02
-  - 🇪🇸西班牙-01
   - 🇺🇸美国-22
   - 🇺🇸美国-23
-  - 🇯🇵日本-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇭🇰香港-08
   - 🇺🇸美国-24
   - 🇺🇸美国-25
+  - 🇭🇰香港-09
   - 🇺🇸美国-26
-  - 🇽🇽未知-03
   - 🇺🇸美国-27
+  - 🇲🇾马来西亚-01
+  - 🇮🇩印尼-01
+  - 🇲🇾马来西亚-02
   - 🇺🇸美国-28
-  - 🇯🇵日本-03
-  - 🇰🇷韩国-03
-  - 🇰🇷韩国-04
-  - 🇺🇸美国-29
-  - 🇺🇸美国-30
-  - 🇯🇵日本-04
-  - 🇸🇬新加坡-05
-  - 🇺🇸美国-31
-  - 🇸🇬新加坡-06
-  - 🇽🇽未知-04
-  - 🇸🇨SC-01
-  - 🇺🇸美国-32
-  - 🇺🇸美国-33
+  - 🇭🇰香港-10
+  - 🇭🇰香港-11
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
-  - 🇫🇷法国-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇪🇸西班牙-01
   - 🇺🇸美国-01
   - 🇺🇸美国-02
-  - 🇹🇼台湾-01
-  - 🇭🇰香港-01
+  - 🇰🇷韩国-01
+  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-03
+  - 🇽🇽未知-01
+  - 🇳🇱荷兰-01
   - 🇺🇸美国-04
   - 🇺🇸美国-05
   - 🇺🇸美国-06
   - 🇺🇸美国-07
-  - 🇭🇰香港-02
-  - 🇭🇰香港-03
+  - 🇯🇵日本-01
   - 🇺🇸美国-08
-  - 🇭🇰香港-04
-  - 🇱🇻LV-01
-  - 🇫🇷法国-02
-  - 🇫🇷法国-03
+  - 🇨🇿捷克-01
+  - 🇸🇬新加坡-01
   - 🇺🇸美国-09
-  - 🇨🇭瑞士-01
-  - 🇹🇭泰国-01
+  - 🇫🇷法国-01
+  - 🇫🇷法国-02
+  - 🇹🇼台湾-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇮🇹意大利-01
+  - 🇸🇬新加坡-02
   - 🇺🇸美国-10
   - 🇺🇸美国-11
-  - 🇰🇷韩国-01
+  - 🇹🇭泰国-01
+  - 🇯🇵日本-02
+  - 🇱🇹LT-01
+  - 🇱🇹LT-02
+  - 🇱🇹LT-03
+  - 🇭🇰香港-04
+  - 🇰🇷韩国-04
+  - 🇹🇭泰国-02
+  - 🇹🇷土耳其-01
   - 🇭🇰香港-05
-  - 🇲🇾马来西亚-01
-  - 🇲🇾马来西亚-02
-  - 🇲🇾马来西亚-03
-  - 🇲🇾马来西亚-04
-  - 🇲🇾马来西亚-05
-  - 🇯🇵日本-01
-  - 🇲🇾马来西亚-06
-  - 🇵🇱波兰-01
-  - 🇳🇱荷兰-01
-  - 🇸🇪瑞典-01
-  - 🇭🇰香港-06
+  - 🇸🇬新加坡-03
+  - 🇱🇹LT-04
+  - 🇱🇹LT-05
+  - 🇱🇻LV-01
   - 🇺🇸美国-12
-  - 🇲🇾马来西亚-07
-  - 🇲🇾马来西亚-08
   - 🇺🇸美国-13
-  - 🇲🇾马来西亚-09
   - 🇺🇸美国-14
   - 🇺🇸美国-15
-  - 🇮🇩印尼-01
-  - 🇹🇼台湾-02
-  - 🇭🇰香港-07
-  - 🇹🇷土耳其-01
   - 🇺🇸美国-16
-  - 🇮🇩印尼-02
-  - 🇲🇾马来西亚-10
   - 🇺🇸美国-17
+  - 🇭🇰香港-06
+  - 🇭🇰香港-07
+  - 🇷🇴罗马尼亚-01
   - 🇺🇸美国-18
-  - 🇸🇬新加坡-01
-  - 🇹🇭泰国-02
-  - 🇹🇷土耳其-02
   - 🇺🇸美国-19
-  - 🇸🇬新加坡-02
-  - 🇹🇭泰国-03
-  - 🇨🇭瑞士-02
-  - 🇽🇽未知-01
-  - 🇳🇿新西兰-01
-  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-20
+  - 🇹🇼台湾-02
   - 🇺🇸美国-21
-  - 🇽🇽未知-02
-  - 🇩🇰丹麦-01
-  - 🇰🇷韩国-02
-  - 🇪🇸西班牙-01
   - 🇺🇸美国-22
   - 🇺🇸美国-23
-  - 🇯🇵日本-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇭🇰香港-08
   - 🇺🇸美国-24
   - 🇺🇸美国-25
+  - 🇭🇰香港-09
   - 🇺🇸美国-26
-  - 🇽🇽未知-03
   - 🇺🇸美国-27
+  - 🇲🇾马来西亚-01
+  - 🇮🇩印尼-01
+  - 🇲🇾马来西亚-02
   - 🇺🇸美国-28
-  - 🇯🇵日本-03
-  - 🇰🇷韩国-03
-  - 🇰🇷韩国-04
-  - 🇺🇸美国-29
-  - 🇺🇸美国-30
-  - 🇯🇵日本-04
-  - 🇸🇬新加坡-05
-  - 🇺🇸美国-31
-  - 🇸🇬新加坡-06
-  - 🇽🇽未知-04
-  - 🇸🇨SC-01
-  - 🇺🇸美国-32
-  - 🇺🇸美国-33
+  - 🇭🇰香港-10
+  - 🇭🇰香港-11
 - name: 🍎 苹果服务
   type: select
   proxies:
-  - 🇫🇷法国-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇪🇸西班牙-01
   - 🇺🇸美国-01
   - 🇺🇸美国-02
-  - 🇹🇼台湾-01
-  - 🇭🇰香港-01
+  - 🇰🇷韩国-01
+  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-03
+  - 🇽🇽未知-01
+  - 🇳🇱荷兰-01
   - 🇺🇸美国-04
   - 🇺🇸美国-05
   - 🇺🇸美国-06
   - 🇺🇸美国-07
-  - 🇭🇰香港-02
-  - 🇭🇰香港-03
+  - 🇯🇵日本-01
   - 🇺🇸美国-08
-  - 🇭🇰香港-04
-  - 🇱🇻LV-01
-  - 🇫🇷法国-02
-  - 🇫🇷法国-03
+  - 🇨🇿捷克-01
+  - 🇸🇬新加坡-01
   - 🇺🇸美国-09
-  - 🇨🇭瑞士-01
-  - 🇹🇭泰国-01
+  - 🇫🇷法国-01
+  - 🇫🇷法国-02
+  - 🇹🇼台湾-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇮🇹意大利-01
+  - 🇸🇬新加坡-02
   - 🇺🇸美国-10
   - 🇺🇸美国-11
-  - 🇰🇷韩国-01
+  - 🇹🇭泰国-01
+  - 🇯🇵日本-02
+  - 🇱🇹LT-01
+  - 🇱🇹LT-02
+  - 🇱🇹LT-03
+  - 🇭🇰香港-04
+  - 🇰🇷韩国-04
+  - 🇹🇭泰国-02
+  - 🇹🇷土耳其-01
   - 🇭🇰香港-05
-  - 🇲🇾马来西亚-01
-  - 🇲🇾马来西亚-02
-  - 🇲🇾马来西亚-03
-  - 🇲🇾马来西亚-04
-  - 🇲🇾马来西亚-05
-  - 🇯🇵日本-01
-  - 🇲🇾马来西亚-06
-  - 🇵🇱波兰-01
-  - 🇳🇱荷兰-01
-  - 🇸🇪瑞典-01
-  - 🇭🇰香港-06
+  - 🇸🇬新加坡-03
+  - 🇱🇹LT-04
+  - 🇱🇹LT-05
+  - 🇱🇻LV-01
   - 🇺🇸美国-12
-  - 🇲🇾马来西亚-07
-  - 🇲🇾马来西亚-08
   - 🇺🇸美国-13
-  - 🇲🇾马来西亚-09
   - 🇺🇸美国-14
   - 🇺🇸美国-15
-  - 🇮🇩印尼-01
-  - 🇹🇼台湾-02
-  - 🇭🇰香港-07
-  - 🇹🇷土耳其-01
   - 🇺🇸美国-16
-  - 🇮🇩印尼-02
-  - 🇲🇾马来西亚-10
   - 🇺🇸美国-17
+  - 🇭🇰香港-06
+  - 🇭🇰香港-07
+  - 🇷🇴罗马尼亚-01
   - 🇺🇸美国-18
-  - 🇸🇬新加坡-01
-  - 🇹🇭泰国-02
-  - 🇹🇷土耳其-02
   - 🇺🇸美国-19
-  - 🇸🇬新加坡-02
-  - 🇹🇭泰国-03
-  - 🇨🇭瑞士-02
-  - 🇽🇽未知-01
-  - 🇳🇿新西兰-01
-  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-20
+  - 🇹🇼台湾-02
   - 🇺🇸美国-21
-  - 🇽🇽未知-02
-  - 🇩🇰丹麦-01
-  - 🇰🇷韩国-02
-  - 🇪🇸西班牙-01
   - 🇺🇸美国-22
   - 🇺🇸美国-23
-  - 🇯🇵日本-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇭🇰香港-08
   - 🇺🇸美国-24
   - 🇺🇸美国-25
+  - 🇭🇰香港-09
   - 🇺🇸美国-26
-  - 🇽🇽未知-03
   - 🇺🇸美国-27
+  - 🇲🇾马来西亚-01
+  - 🇮🇩印尼-01
+  - 🇲🇾马来西亚-02
   - 🇺🇸美国-28
-  - 🇯🇵日本-03
-  - 🇰🇷韩国-03
-  - 🇰🇷韩国-04
-  - 🇺🇸美国-29
-  - 🇺🇸美国-30
-  - 🇯🇵日本-04
-  - 🇸🇬新加坡-05
-  - 🇺🇸美国-31
-  - 🇸🇬新加坡-06
-  - 🇽🇽未知-04
-  - 🇸🇨SC-01
-  - 🇺🇸美国-32
-  - 🇺🇸美国-33
+  - 🇭🇰香港-10
+  - 🇭🇰香港-11
 - name: 🎯 全球直连
   type: select
   proxies: []
@@ -1615,97 +1266,77 @@ proxy-groups:
 - name: 🐟 漏网之鱼
   type: select
   proxies:
-  - 🇫🇷法国-01
+  - 🇭🇰香港-01
+  - 🇭🇰香港-02
+  - 🇭🇰香港-03
+  - 🇪🇸西班牙-01
   - 🇺🇸美国-01
   - 🇺🇸美国-02
-  - 🇹🇼台湾-01
-  - 🇭🇰香港-01
+  - 🇰🇷韩国-01
+  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-03
+  - 🇽🇽未知-01
+  - 🇳🇱荷兰-01
   - 🇺🇸美国-04
   - 🇺🇸美国-05
   - 🇺🇸美国-06
   - 🇺🇸美国-07
-  - 🇭🇰香港-02
-  - 🇭🇰香港-03
+  - 🇯🇵日本-01
   - 🇺🇸美国-08
-  - 🇭🇰香港-04
-  - 🇱🇻LV-01
-  - 🇫🇷法国-02
-  - 🇫🇷法国-03
+  - 🇨🇿捷克-01
+  - 🇸🇬新加坡-01
   - 🇺🇸美国-09
-  - 🇨🇭瑞士-01
-  - 🇹🇭泰国-01
+  - 🇫🇷法国-01
+  - 🇫🇷法国-02
+  - 🇹🇼台湾-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇮🇹意大利-01
+  - 🇸🇬新加坡-02
   - 🇺🇸美国-10
   - 🇺🇸美国-11
-  - 🇰🇷韩国-01
+  - 🇹🇭泰国-01
+  - 🇯🇵日本-02
+  - 🇱🇹LT-01
+  - 🇱🇹LT-02
+  - 🇱🇹LT-03
+  - 🇭🇰香港-04
+  - 🇰🇷韩国-04
+  - 🇹🇭泰国-02
+  - 🇹🇷土耳其-01
   - 🇭🇰香港-05
-  - 🇲🇾马来西亚-01
-  - 🇲🇾马来西亚-02
-  - 🇲🇾马来西亚-03
-  - 🇲🇾马来西亚-04
-  - 🇲🇾马来西亚-05
-  - 🇯🇵日本-01
-  - 🇲🇾马来西亚-06
-  - 🇵🇱波兰-01
-  - 🇳🇱荷兰-01
-  - 🇸🇪瑞典-01
-  - 🇭🇰香港-06
+  - 🇸🇬新加坡-03
+  - 🇱🇹LT-04
+  - 🇱🇹LT-05
+  - 🇱🇻LV-01
   - 🇺🇸美国-12
-  - 🇲🇾马来西亚-07
-  - 🇲🇾马来西亚-08
   - 🇺🇸美国-13
-  - 🇲🇾马来西亚-09
   - 🇺🇸美国-14
   - 🇺🇸美国-15
-  - 🇮🇩印尼-01
-  - 🇹🇼台湾-02
-  - 🇭🇰香港-07
-  - 🇹🇷土耳其-01
   - 🇺🇸美国-16
-  - 🇮🇩印尼-02
-  - 🇲🇾马来西亚-10
   - 🇺🇸美国-17
+  - 🇭🇰香港-06
+  - 🇭🇰香港-07
+  - 🇷🇴罗马尼亚-01
   - 🇺🇸美国-18
-  - 🇸🇬新加坡-01
-  - 🇹🇭泰国-02
-  - 🇹🇷土耳其-02
   - 🇺🇸美国-19
-  - 🇸🇬新加坡-02
-  - 🇹🇭泰国-03
-  - 🇨🇭瑞士-02
-  - 🇽🇽未知-01
-  - 🇳🇿新西兰-01
-  - 🇦🇺澳大利亚-01
   - 🇺🇸美国-20
+  - 🇹🇼台湾-02
   - 🇺🇸美国-21
-  - 🇽🇽未知-02
-  - 🇩🇰丹麦-01
-  - 🇰🇷韩国-02
-  - 🇪🇸西班牙-01
   - 🇺🇸美国-22
   - 🇺🇸美国-23
-  - 🇯🇵日本-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇭🇰香港-08
   - 🇺🇸美国-24
   - 🇺🇸美国-25
+  - 🇭🇰香港-09
   - 🇺🇸美国-26
-  - 🇽🇽未知-03
   - 🇺🇸美国-27
+  - 🇲🇾马来西亚-01
+  - 🇮🇩印尼-01
+  - 🇲🇾马来西亚-02
   - 🇺🇸美国-28
-  - 🇯🇵日本-03
-  - 🇰🇷韩国-03
-  - 🇰🇷韩国-04
-  - 🇺🇸美国-29
-  - 🇺🇸美国-30
-  - 🇯🇵日本-04
-  - 🇸🇬新加坡-05
-  - 🇺🇸美国-31
-  - 🇸🇬新加坡-06
-  - 🇽🇽未知-04
-  - 🇸🇨SC-01
-  - 🇺🇸美国-32
-  - 🇺🇸美国-33
+  - 🇭🇰香港-10
+  - 🇭🇰香港-11
 rule-providers:
   LocalAreaNetwork:
     type: http

@@ -17,21 +17,30 @@ dns:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
 proxies:
+- name: 🇧🇷巴西-01
+  type: vless
+  server: 152.233.28.200
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  skip-cert-verify: true
+  udp: true
 - name: 🇨🇦加拿大-01
   type: trojan
   server: 103.177.136.42
-  port: 47909
+  port: 48697
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: is.01.naiun.bilibili.com
+  sni: gh.01.naiun.bilibili.com
   skip-cert-verify: true
   tls: true
   udp: true
 - name: 🇨🇦加拿大-02
   type: trojan
   server: 103.177.136.45
-  port: 48697
+  port: 47909
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: gh.01.naiun.bilibili.com
+  sni: is.01.naiun.bilibili.com
   skip-cert-verify: true
   tls: true
   udp: true
@@ -44,18 +53,40 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
-- name: 🇨🇭瑞士-01
+- name: 🇨🇿捷克-01
+  type: vless
+  server: 87.249.139.244
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇿捷克-02
+  type: vless
+  server: 95.173.199.88
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  skip-cert-verify: true
+  udp: true
+- name: 🇫🇷法国-01
   type: trojan
-  server: 103.177.136.45
-  port: 45553
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: ch.01.naiun.bilibili.com
+  server: 104.18.152.229
+  port: 443
+  password: humanity
+  sni: www.ignitelimit.com
   skip-cert-verify: true
   tls: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.ignitelimit.com
   udp: true
 - name: 🇯🇵日本-01
   type: trojan
-  server: 47.79.85.185
+  server: 124.156.208.160
   port: 443
   password: eeb6823c-b926-4ea2-866a-5542edd26e59
   sni: tjsp.hhxaf.cc.cd
@@ -67,99 +98,158 @@ proxies:
       Host: tjsp.hhxaf.cc.cd
   udp: true
 - name: 🇯🇵日本-02
-  type: vmess
-  server: cu1.ainivp.com
-  port: 33104
-  uuid: 9204afcd-026e-781f-1abc-c03efabe1344
-  alterId: 0
-  cipher: auto
-  tls: true
+  type: trojan
+  server: 207.65.189.9
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
   skip-cert-verify: true
-  servername: cu1.ainivp.com
-  network: ws
+  tls: true
   ws-opts:
-    path: /ray
+    path: /
     headers:
-      Host: cu1.ainivp.com
+      Host: hhcm.hhxaf.cc.cd
   udp: true
 - name: 🇯🇵日本-03
-  type: anytls
-  server: enwxapi.mao2uf1.com
-  port: 35720
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
+  type: trojan
+  server: 172.104.81.253
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
   skip-cert-verify: true
   tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: tjsp.hhxaf.cc.cd
   udp: true
 - name: 🇯🇵日本-04
-  type: anytls
-  server: enwxapi.mao2uf1.com
-  port: 35721
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
+  type: trojan
+  server: 172.104.120.92
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
   skip-cert-verify: true
   tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: hhcm.hhxaf.cc.cd
+  udp: true
+- name: 🇯🇵日本-05
+  type: trojan
+  server: 172.104.86.229
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: tjsp.hhxaf.cc.cd
+  udp: true
+- name: 🇯🇵日本-06
+  type: trojan
+  server: 172.104.80.248
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: hhcm.hhxaf.cc.cd
+  udp: true
+- name: 🇰🇷韩国-01
+  type: trojan
+  server: 211.49.57.179
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: tjsp.hhxaf.cc.cd
+  udp: true
+- name: 🇰🇷韩国-02
+  type: trojan
+  server: 123.111.169.70
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: tjsp.hhxaf.cc.cd
+  udp: true
+- name: 🇰🇷韩国-03
+  type: trojan
+  server: 144.24.94.127
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: tjsp.hhxaf.cc.cd
+  udp: true
+- name: 🇰🇷韩国-04
+  type: trojan
+  server: 211.49.57.175
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: hhcm.hhxaf.cc.cd
+  udp: true
+- name: 🇰🇷韩国-05
+  type: trojan
+  server: 211.49.57.178
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: hhcm.hhxaf.cc.cd
+  udp: true
+- name: 🇰🇷韩国-06
+  type: trojan
+  server: 211.49.57.161
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: hhcm.hhxaf.cc.cd
   udp: true
 - name: 🇳🇱荷兰-01
   type: vless
-  server: 185.229.191.67
+  server: 79.127.227.215
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
   tls: true
-  client-fingerprint: chrome
   skip-cert-verify: true
   udp: true
 - name: 🇳🇱荷兰-02
-  type: vless
-  server: 185.229.191.10
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇳🇱荷兰-03
-  type: vless
-  server: 185.229.191.13
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇳🇱荷兰-04
-  type: vless
-  server: 185.229.191.68
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇳🇱荷兰-05
-  type: vless
-  server: 79.127.227.57
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇳🇱荷兰-06
-  type: vless
-  server: 185.229.191.96
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇳🇱荷兰-07
   type: vless
   server: 185.229.191.185
   port: 8443
@@ -169,7 +259,82 @@ proxies:
   client-fingerprint: chrome
   skip-cert-verify: true
   udp: true
+- name: 🇳🇱荷兰-03
+  type: vless
+  server: 185.229.191.10
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  skip-cert-verify: true
+  udp: true
+- name: 🇳🇱荷兰-04
+  type: vless
+  server: 185.229.191.67
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  udp: true
+- name: 🇳🇱荷兰-05
+  type: vless
+  server: 185.229.191.68
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  udp: true
+- name: 🇳🇱荷兰-06
+  type: vless
+  server: 79.127.227.57
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  skip-cert-verify: true
+  udp: true
+- name: 🇳🇱荷兰-07
+  type: vless
+  server: 185.229.191.13
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  udp: true
 - name: 🇳🇱荷兰-08
+  type: vless
+  server: 185.229.191.109
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  skip-cert-verify: true
+  udp: true
+- name: 🇳🇱荷兰-09
+  type: vless
+  server: 185.229.191.107
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  skip-cert-verify: true
+  udp: true
+- name: 🇳🇱荷兰-10
+  type: vless
+  server: 185.229.191.46
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
+  skip-cert-verify: true
+  udp: true
+- name: 🇳🇱荷兰-11
   type: vless
   server: 185.229.191.14
   port: 8443
@@ -179,49 +344,22 @@ proxies:
   client-fingerprint: chrome
   skip-cert-verify: true
   udp: true
-- name: 🇳🇱荷兰-09
+- name: 🇵🇱波兰-01
   type: vless
-  server: 185.229.191.49
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
+  server: 83.168.71.216
+  port: 443
+  uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a
+  servername: ads.x5.ru
   tls: true
   client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇳🇱荷兰-10
-  type: vless
-  server: 185.229.191.42
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇳🇱荷兰-11
-  type: vless
-  server: 185.229.191.109
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇳🇱荷兰-12
-  type: vless
-  server: 185.229.191.180
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
+  reality-opts:
+    public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
+    short-id: 2f49bccf11150ef2
   skip-cert-verify: true
   udp: true
 - name: 🇷🇴罗马尼亚-01
   type: vless
-  server: 95.173.199.86
+  server: 95.173.199.117
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
@@ -239,15 +377,6 @@ proxies:
   udp: true
 - name: 🇷🇴罗马尼亚-03
   type: vless
-  server: 95.173.199.88
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇷🇴罗马尼亚-04
-  type: vless
   server: 95.173.199.84
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
@@ -256,14 +385,22 @@ proxies:
   client-fingerprint: chrome
   skip-cert-verify: true
   udp: true
-- name: 🇷🇴罗马尼亚-05
+- name: 🇷🇴罗马尼亚-04
   type: vless
-  server: 95.173.199.118
+  server: 95.173.199.86
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
   tls: true
-  client-fingerprint: chrome
+  skip-cert-verify: true
+  udp: true
+- name: 🇷🇴罗马尼亚-05
+  type: vless
+  server: 95.173.199.98
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
+  tls: true
   skip-cert-verify: true
   udp: true
 - name: 🇷🇴罗马尼亚-06
@@ -276,73 +413,7 @@ proxies:
   client-fingerprint: chrome
   skip-cert-verify: true
   udp: true
-- name: 🇷🇴罗马尼亚-07
-  type: vless
-  server: 95.173.199.78
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇷🇴罗马尼亚-08
-  type: vless
-  server: 95.173.199.117
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
 - name: 🇸🇪瑞典-01
-  type: vless
-  server: 45.159.12.191
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-02
-  type: vless
-  server: 45.159.12.121
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-03
-  type: vless
-  server: 45.159.12.11
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-04
-  type: vless
-  server: 45.159.12.16
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-05
-  type: vless
-  server: 45.159.12.13
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-06
   type: vless
   server: 45.159.12.196
   port: 8443
@@ -351,34 +422,7 @@ proxies:
   tls: true
   skip-cert-verify: true
   udp: true
-- name: 🇸🇪瑞典-07
-  type: vless
-  server: 45.159.12.2
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-08
-  type: vless
-  server: 45.159.12.195
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-09
-  type: vless
-  server: 45.159.12.31
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-10
+- name: 🇸🇪瑞典-02
   type: vless
   server: 45.159.12.20
   port: 8443
@@ -387,225 +431,7 @@ proxies:
   tls: true
   skip-cert-verify: true
   udp: true
-- name: 🇸🇪瑞典-11
-  type: vless
-  server: 45.159.12.32
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-12
-  type: vless
-  server: 45.159.12.193
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-13
-  type: vless
-  server: 45.159.12.8
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-14
-  type: vless
-  server: 45.159.12.164
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-15
-  type: vless
-  server: 45.159.12.119
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-16
-  type: vless
-  server: 45.159.12.161
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-17
-  type: vless
-  server: 45.159.12.4
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-18
-  type: vless
-  server: 45.159.12.18
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-19
-  type: vless
-  server: 45.159.12.23
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-20
-  type: vless
-  server: 45.159.12.118
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-21
-  type: vless
-  server: 45.159.12.26
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-22
-  type: vless
-  server: 45.159.12.25
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-23
-  type: vless
-  server: 45.159.12.163
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-24
-  type: vless
-  server: 45.159.12.190
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-25
-  type: vless
-  server: 45.159.12.24
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-26
-  type: vless
-  server: 45.159.12.19
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-27
-  type: vless
-  server: 45.159.12.14
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-28
-  type: vless
-  server: 45.159.12.10
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-29
-  type: vless
-  server: 45.159.12.194
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-30
-  type: vless
-  server: 45.159.12.21
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-31
-  type: vless
-  server: 45.159.12.9
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-32
-  type: vless
-  server: 45.159.12.33
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-33
-  type: vless
-  server: 45.159.12.192
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-34
-  type: vless
-  server: 45.159.12.134
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪瑞典-35
+- name: 🇸🇪瑞典-03
   type: vless
   server: 79.127.249.221
   port: 8443
@@ -615,9 +441,9 @@ proxies:
   client-fingerprint: chrome
   skip-cert-verify: true
   udp: true
-- name: 🇸🇪瑞典-36
+- name: 🇸🇪瑞典-04
   type: vless
-  server: 45.159.12.162
+  server: 45.159.12.8
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
@@ -625,40 +451,43 @@ proxies:
   skip-cert-verify: true
   udp: true
 - name: 🇸🇬新加坡-01
-  type: anytls
-  server: 185.151.146.26
-  port: 23169
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
+  type: trojan
+  server: 167.254.240.12
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
   skip-cert-verify: true
   tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: hhcm.hhxaf.cc.cd
   udp: true
 - name: 🇸🇬新加坡-02
-  type: anytls
-  server: 185.151.146.10
-  port: 23169
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
+  type: trojan
+  server: 8.219.134.138
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
   skip-cert-verify: true
   tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: hhcm.hhxaf.cc.cd
   udp: true
 - name: 🇸🇬新加坡-03
-  type: anytls
-  server: 185.151.146.61
-  port: 23167
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
+  type: trojan
+  server: 139.162.62.195
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
   skip-cert-verify: true
   tls: true
-  udp: true
-- name: 🇸🇬新加坡-04
-  type: anytls
-  server: enwxapi.mao2uf1.com
-  port: 35810
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
-  skip-cert-verify: true
-  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: tjsp.hhxaf.cc.cd
   udp: true
 - name: 🇹🇷土耳其-01
   type: vless
@@ -667,6 +496,7 @@ proxies:
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
   tls: true
+  client-fingerprint: chrome
   skip-cert-verify: true
   udp: true
 - name: 🇹🇷土耳其-02
@@ -680,7 +510,7 @@ proxies:
   udp: true
 - name: 🇹🇷土耳其-03
   type: vless
-  server: 87.249.139.235
+  server: 87.249.139.245
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
@@ -689,7 +519,7 @@ proxies:
   udp: true
 - name: 🇹🇷土耳其-04
   type: vless
-  server: 87.249.139.237
+  server: 87.249.139.235
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
@@ -698,7 +528,7 @@ proxies:
   udp: true
 - name: 🇹🇷土耳其-05
   type: vless
-  server: 169.150.215.80
+  server: 87.249.139.237
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
@@ -707,7 +537,7 @@ proxies:
   udp: true
 - name: 🇹🇷土耳其-06
   type: vless
-  server: 79.127.227.215
+  server: 169.150.215.77
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
@@ -716,34 +546,7 @@ proxies:
   udp: true
 - name: 🇹🇷土耳其-07
   type: vless
-  server: 169.150.215.77
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇹🇷土耳其-08
-  type: vless
-  server: 87.249.139.245
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇹🇷土耳其-09
-  type: vless
-  server: 87.249.139.244
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  servername: ams1.fromblancwithlove.com
-  tls: true
-  skip-cert-verify: true
-  udp: true
-- name: 🇹🇷土耳其-10
-  type: vless
-  server: 87.249.139.236
+  server: 169.150.215.80
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
@@ -751,97 +554,107 @@ proxies:
   client-fingerprint: chrome
   skip-cert-verify: true
   udp: true
-- name: 🇹🇼台湾-01
-  type: anytls
-  server: enwxapi.mao2uf1.com
-  port: 35910
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
-  skip-cert-verify: true
-  tls: true
-  udp: true
 - name: 🇺🇸美国-01
   type: trojan
-  server: 104.18.152.229
+  server: 38.207.171.30
   port: 443
-  password: humanity
-  sni: www.ignitelimit.com
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
   skip-cert-verify: true
   tls: true
   ws-opts:
-    path: /assignment
+    path: /
     headers:
-      Host: www.ignitelimit.com
+      Host: tjsp.hhxaf.cc.cd
   udp: true
 - name: 🇺🇸美国-02
-  type: anytls
-  server: huoshanapihongguo.mao26868.com
-  port: 36121
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
+  type: trojan
+  server: 154.64.235.153
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
   skip-cert-verify: true
   tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: tjsp.hhxaf.cc.cd
   udp: true
 - name: 🇺🇸美国-03
-  type: anytls
-  server: huoshanapihongguo.mao26868.com
-  port: 36123
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
+  type: trojan
+  server: 199.193.125.72
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
   skip-cert-verify: true
   tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: tjsp.hhxaf.cc.cd
   udp: true
 - name: 🇺🇸美国-04
-  type: anytls
-  server: huoshanapihongguo.mao26868.com
-  port: 36110
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
+  type: trojan
+  server: 23.106.152.36
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
   skip-cert-verify: true
   tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: tjsp.hhxaf.cc.cd
   udp: true
 - name: 🇺🇸美国-05
-  type: anytls
-  server: enwxapi.mao2uf1.com
-  port: 35712
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
-  skip-cert-verify: true
+  type: vless
+  server: 95.173.199.118
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  servername: ams1.fromblancwithlove.com
   tls: true
+  client-fingerprint: chrome
+  skip-cert-verify: true
   udp: true
 - name: 🇺🇸美国-06
-  type: anytls
-  server: enwxapi.mao2uf1.com
-  port: 35713
-  password: c144ee6e-6c4f-4df1-b539-9c8ee27762c7
-  sni: buylite.music.apple.com
-  skip-cert-verify: true
-  tls: true
-  udp: true
-- name: 🇺🇸美国-07
   type: vless
-  server: 1.sdwan.realm-sync.com
-  port: 60776
-  uuid: da4f61d1-8ca2-4bbf-a79a-1dfff04073e6
-  servername: swcdn.apple.com
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  reality-opts:
-    public-key: rPR7TUpmOpwShZeyLs2QFa46zzCBNkNdYkxe7-trUUc
-    short-id: 63290ae7179078
-  skip-cert-verify: true
-  udp: true
-- name: 🇽🇽未知-01
-  type: vless
-  server: 152.233.28.200
+  server: 45.159.12.25
   port: 8443
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   servername: ams1.fromblancwithlove.com
   tls: true
   skip-cert-verify: true
   udp: true
-- name: 🇽🇽未知-02
+- name: 🇺🇸美国-07
+  type: vless
+  server: 104.18.41.190
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  network: ws
+  servername: t1s1.rittbo.kdns.fr
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸美国-08
+  type: vless
+  server: 191.44.118.101
+  port: 443
+  uuid: deecd21a-a24f-444d-b92a-2c8e41a6b05b
+  servername: www.microsoft.com
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 69_I9Wm_vP5wQUbiQhdejWS9yLlNYLFjcnF59G-0GAU
+    short-id: 31e36d0ac3355472
+  skip-cert-verify: true
+  udp: true
+- name: 🇽🇽未知-01
   type: vless
   server: 152.233.28.201
   port: 8443
@@ -850,6 +663,32 @@ proxies:
   tls: true
   skip-cert-verify: true
   udp: true
+- name: 🇽🇽未知-02
+  type: trojan
+  server: 165.215.250.14
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  udp: true
+- name: 🇽🇽未知-03
+  type: trojan
+  server: 104.20.6.134
+  port: 443
+  password: humanity
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmloud.com
+  udp: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -857,53 +696,54 @@ proxy-groups:
   - 🇺🇸美国-01
   - 🇺🇸美国-02
   - 🇺🇸美国-03
-  - 🇯🇵日本-01
-  - 🇯🇵日本-02
-  - 🇯🇵日本-03
-  - 🇯🇵日本-04
-  - 🇳🇱荷兰-01
-  - 🇳🇱荷兰-02
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇷🇴罗马尼亚-01
-  - 🇸🇪瑞典-01
-  - 🇸🇪瑞典-02
-  - 🇸🇪瑞典-03
-  - 🇸🇪瑞典-04
-  - 🇸🇪瑞典-05
-  - 🇸🇪瑞典-06
-  - 🇸🇪瑞典-07
-  - 🇸🇪瑞典-08
-  - 🇸🇪瑞典-09
-  - 🇸🇪瑞典-10
-  - 🇸🇪瑞典-11
-  - 🇸🇪瑞典-12
-  - 🇸🇪瑞典-13
-  - 🇸🇪瑞典-14
-  - 🇸🇪瑞典-15
-  - 🇸🇪瑞典-16
-  - 🇸🇪瑞典-17
-  - 🇸🇪瑞典-18
-  - 🇸🇪瑞典-19
-  - 🇸🇪瑞典-20
-  - 🇸🇪瑞典-21
-  - 🇸🇪瑞典-22
-  - 🇸🇪瑞典-23
-  - 🇸🇪瑞典-24
-  - 🇸🇪瑞典-25
   - 🇹🇷土耳其-01
   - 🇹🇷土耳其-02
   - 🇹🇷土耳其-03
   - 🇹🇷土耳其-04
   - 🇹🇷土耳其-05
   - 🇹🇷土耳其-06
-  - 🇹🇷土耳其-07
-  - 🇹🇷土耳其-08
-  - 🇹🇷土耳其-09
-  - 🇺🇸美国-04
-  - 🇺🇸美国-05
-  - 🇺🇸美国-06
+  - 🇳🇱荷兰-01
+  - 🇸🇬新加坡-01
+  - 🇸🇬新加坡-02
+  - 🇸🇬新加坡-03
+  - 🇳🇱荷兰-02
+  - 🇳🇱荷兰-03
+  - 🇰🇷韩国-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇰🇷韩国-04
+  - 🇰🇷韩国-05
+  - 🇰🇷韩国-06
+  - 🇯🇵日本-01
+  - 🇯🇵日本-02
+  - 🇯🇵日本-03
+  - 🇯🇵日本-04
+  - 🇯🇵日本-05
+  - 🇯🇵日本-06
   - 🇽🇽未知-01
   - 🇽🇽未知-02
-  - 🇳🇱荷兰-03
+  - 🇽🇽未知-03
+  - 🇹🇷土耳其-07
+  - 🇸🇪瑞典-01
+  - 🇸🇪瑞典-02
+  - 🇸🇪瑞典-03
+  - 🇸🇪瑞典-04
+  - 🇺🇸美国-06
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇷🇴罗马尼亚-02
+  - 🇷🇴罗马尼亚-03
+  - 🇷🇴罗马尼亚-04
+  - 🇷🇴罗马尼亚-05
+  - 🇷🇴罗马尼亚-06
+  - 🇨🇿捷克-01
+  - 🇨🇿捷克-02
+  - 🇨🇦加拿大-01
+  - 🇨🇦加拿大-02
+  - 🇨🇦加拿大-03
   - 🇳🇱荷兰-04
   - 🇳🇱荷兰-05
   - 🇳🇱荷兰-06
@@ -912,89 +752,63 @@ proxy-groups:
   - 🇳🇱荷兰-09
   - 🇳🇱荷兰-10
   - 🇳🇱荷兰-11
-  - 🇳🇱荷兰-12
-  - 🇨🇦加拿大-01
-  - 🇨🇦加拿大-02
-  - 🇨🇦加拿大-03
-  - 🇷🇴罗马尼亚-02
-  - 🇷🇴罗马尼亚-03
-  - 🇷🇴罗马尼亚-04
-  - 🇷🇴罗马尼亚-05
-  - 🇷🇴罗马尼亚-06
-  - 🇷🇴罗马尼亚-07
-  - 🇷🇴罗马尼亚-08
-  - 🇺🇸美国-07
-  - 🇸🇪瑞典-26
-  - 🇸🇪瑞典-27
-  - 🇸🇪瑞典-28
-  - 🇸🇪瑞典-29
-  - 🇸🇪瑞典-30
-  - 🇸🇪瑞典-31
-  - 🇸🇪瑞典-32
-  - 🇸🇪瑞典-33
-  - 🇸🇪瑞典-34
-  - 🇸🇪瑞典-35
-  - 🇸🇪瑞典-36
-  - 🇨🇭瑞士-01
-  - 🇹🇼台湾-01
-  - 🇹🇷土耳其-10
-  - 🇸🇬新加坡-01
-  - 🇸🇬新加坡-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇫🇷法国-01
+  - 🇵🇱波兰-01
+  - 🇧🇷巴西-01
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇺🇸美国-01
   - 🇺🇸美国-02
   - 🇺🇸美国-03
-  - 🇯🇵日本-01
-  - 🇯🇵日本-02
-  - 🇯🇵日本-03
-  - 🇯🇵日本-04
-  - 🇳🇱荷兰-01
-  - 🇳🇱荷兰-02
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇷🇴罗马尼亚-01
-  - 🇸🇪瑞典-01
-  - 🇸🇪瑞典-02
-  - 🇸🇪瑞典-03
-  - 🇸🇪瑞典-04
-  - 🇸🇪瑞典-05
-  - 🇸🇪瑞典-06
-  - 🇸🇪瑞典-07
-  - 🇸🇪瑞典-08
-  - 🇸🇪瑞典-09
-  - 🇸🇪瑞典-10
-  - 🇸🇪瑞典-11
-  - 🇸🇪瑞典-12
-  - 🇸🇪瑞典-13
-  - 🇸🇪瑞典-14
-  - 🇸🇪瑞典-15
-  - 🇸🇪瑞典-16
-  - 🇸🇪瑞典-17
-  - 🇸🇪瑞典-18
-  - 🇸🇪瑞典-19
-  - 🇸🇪瑞典-20
-  - 🇸🇪瑞典-21
-  - 🇸🇪瑞典-22
-  - 🇸🇪瑞典-23
-  - 🇸🇪瑞典-24
-  - 🇸🇪瑞典-25
   - 🇹🇷土耳其-01
   - 🇹🇷土耳其-02
   - 🇹🇷土耳其-03
   - 🇹🇷土耳其-04
   - 🇹🇷土耳其-05
   - 🇹🇷土耳其-06
-  - 🇹🇷土耳其-07
-  - 🇹🇷土耳其-08
-  - 🇹🇷土耳其-09
-  - 🇺🇸美国-04
-  - 🇺🇸美国-05
-  - 🇺🇸美国-06
+  - 🇳🇱荷兰-01
+  - 🇸🇬新加坡-01
+  - 🇸🇬新加坡-02
+  - 🇸🇬新加坡-03
+  - 🇳🇱荷兰-02
+  - 🇳🇱荷兰-03
+  - 🇰🇷韩国-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇰🇷韩国-04
+  - 🇰🇷韩国-05
+  - 🇰🇷韩国-06
+  - 🇯🇵日本-01
+  - 🇯🇵日本-02
+  - 🇯🇵日本-03
+  - 🇯🇵日本-04
+  - 🇯🇵日本-05
+  - 🇯🇵日本-06
   - 🇽🇽未知-01
   - 🇽🇽未知-02
-  - 🇳🇱荷兰-03
+  - 🇽🇽未知-03
+  - 🇹🇷土耳其-07
+  - 🇸🇪瑞典-01
+  - 🇸🇪瑞典-02
+  - 🇸🇪瑞典-03
+  - 🇸🇪瑞典-04
+  - 🇺🇸美国-06
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇷🇴罗马尼亚-02
+  - 🇷🇴罗马尼亚-03
+  - 🇷🇴罗马尼亚-04
+  - 🇷🇴罗马尼亚-05
+  - 🇷🇴罗马尼亚-06
+  - 🇨🇿捷克-01
+  - 🇨🇿捷克-02
+  - 🇨🇦加拿大-01
+  - 🇨🇦加拿大-02
+  - 🇨🇦加拿大-03
   - 🇳🇱荷兰-04
   - 🇳🇱荷兰-05
   - 🇳🇱荷兰-06
@@ -1003,36 +817,9 @@ proxy-groups:
   - 🇳🇱荷兰-09
   - 🇳🇱荷兰-10
   - 🇳🇱荷兰-11
-  - 🇳🇱荷兰-12
-  - 🇨🇦加拿大-01
-  - 🇨🇦加拿大-02
-  - 🇨🇦加拿大-03
-  - 🇷🇴罗马尼亚-02
-  - 🇷🇴罗马尼亚-03
-  - 🇷🇴罗马尼亚-04
-  - 🇷🇴罗马尼亚-05
-  - 🇷🇴罗马尼亚-06
-  - 🇷🇴罗马尼亚-07
-  - 🇷🇴罗马尼亚-08
-  - 🇺🇸美国-07
-  - 🇸🇪瑞典-26
-  - 🇸🇪瑞典-27
-  - 🇸🇪瑞典-28
-  - 🇸🇪瑞典-29
-  - 🇸🇪瑞典-30
-  - 🇸🇪瑞典-31
-  - 🇸🇪瑞典-32
-  - 🇸🇪瑞典-33
-  - 🇸🇪瑞典-34
-  - 🇸🇪瑞典-35
-  - 🇸🇪瑞典-36
-  - 🇨🇭瑞士-01
-  - 🇹🇼台湾-01
-  - 🇹🇷土耳其-10
-  - 🇸🇬新加坡-01
-  - 🇸🇬新加坡-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇫🇷法国-01
+  - 🇵🇱波兰-01
+  - 🇧🇷巴西-01
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1042,53 +829,54 @@ proxy-groups:
   - 🇺🇸美国-01
   - 🇺🇸美国-02
   - 🇺🇸美国-03
-  - 🇯🇵日本-01
-  - 🇯🇵日本-02
-  - 🇯🇵日本-03
-  - 🇯🇵日本-04
-  - 🇳🇱荷兰-01
-  - 🇳🇱荷兰-02
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇷🇴罗马尼亚-01
-  - 🇸🇪瑞典-01
-  - 🇸🇪瑞典-02
-  - 🇸🇪瑞典-03
-  - 🇸🇪瑞典-04
-  - 🇸🇪瑞典-05
-  - 🇸🇪瑞典-06
-  - 🇸🇪瑞典-07
-  - 🇸🇪瑞典-08
-  - 🇸🇪瑞典-09
-  - 🇸🇪瑞典-10
-  - 🇸🇪瑞典-11
-  - 🇸🇪瑞典-12
-  - 🇸🇪瑞典-13
-  - 🇸🇪瑞典-14
-  - 🇸🇪瑞典-15
-  - 🇸🇪瑞典-16
-  - 🇸🇪瑞典-17
-  - 🇸🇪瑞典-18
-  - 🇸🇪瑞典-19
-  - 🇸🇪瑞典-20
-  - 🇸🇪瑞典-21
-  - 🇸🇪瑞典-22
-  - 🇸🇪瑞典-23
-  - 🇸🇪瑞典-24
-  - 🇸🇪瑞典-25
   - 🇹🇷土耳其-01
   - 🇹🇷土耳其-02
   - 🇹🇷土耳其-03
   - 🇹🇷土耳其-04
   - 🇹🇷土耳其-05
   - 🇹🇷土耳其-06
-  - 🇹🇷土耳其-07
-  - 🇹🇷土耳其-08
-  - 🇹🇷土耳其-09
-  - 🇺🇸美国-04
-  - 🇺🇸美国-05
-  - 🇺🇸美国-06
+  - 🇳🇱荷兰-01
+  - 🇸🇬新加坡-01
+  - 🇸🇬新加坡-02
+  - 🇸🇬新加坡-03
+  - 🇳🇱荷兰-02
+  - 🇳🇱荷兰-03
+  - 🇰🇷韩国-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇰🇷韩国-04
+  - 🇰🇷韩国-05
+  - 🇰🇷韩国-06
+  - 🇯🇵日本-01
+  - 🇯🇵日本-02
+  - 🇯🇵日本-03
+  - 🇯🇵日本-04
+  - 🇯🇵日本-05
+  - 🇯🇵日本-06
   - 🇽🇽未知-01
   - 🇽🇽未知-02
-  - 🇳🇱荷兰-03
+  - 🇽🇽未知-03
+  - 🇹🇷土耳其-07
+  - 🇸🇪瑞典-01
+  - 🇸🇪瑞典-02
+  - 🇸🇪瑞典-03
+  - 🇸🇪瑞典-04
+  - 🇺🇸美国-06
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇷🇴罗马尼亚-02
+  - 🇷🇴罗马尼亚-03
+  - 🇷🇴罗马尼亚-04
+  - 🇷🇴罗马尼亚-05
+  - 🇷🇴罗马尼亚-06
+  - 🇨🇿捷克-01
+  - 🇨🇿捷克-02
+  - 🇨🇦加拿大-01
+  - 🇨🇦加拿大-02
+  - 🇨🇦加拿大-03
   - 🇳🇱荷兰-04
   - 🇳🇱荷兰-05
   - 🇳🇱荷兰-06
@@ -1097,89 +885,63 @@ proxy-groups:
   - 🇳🇱荷兰-09
   - 🇳🇱荷兰-10
   - 🇳🇱荷兰-11
-  - 🇳🇱荷兰-12
-  - 🇨🇦加拿大-01
-  - 🇨🇦加拿大-02
-  - 🇨🇦加拿大-03
-  - 🇷🇴罗马尼亚-02
-  - 🇷🇴罗马尼亚-03
-  - 🇷🇴罗马尼亚-04
-  - 🇷🇴罗马尼亚-05
-  - 🇷🇴罗马尼亚-06
-  - 🇷🇴罗马尼亚-07
-  - 🇷🇴罗马尼亚-08
-  - 🇺🇸美国-07
-  - 🇸🇪瑞典-26
-  - 🇸🇪瑞典-27
-  - 🇸🇪瑞典-28
-  - 🇸🇪瑞典-29
-  - 🇸🇪瑞典-30
-  - 🇸🇪瑞典-31
-  - 🇸🇪瑞典-32
-  - 🇸🇪瑞典-33
-  - 🇸🇪瑞典-34
-  - 🇸🇪瑞典-35
-  - 🇸🇪瑞典-36
-  - 🇨🇭瑞士-01
-  - 🇹🇼台湾-01
-  - 🇹🇷土耳其-10
-  - 🇸🇬新加坡-01
-  - 🇸🇬新加坡-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇫🇷法国-01
+  - 🇵🇱波兰-01
+  - 🇧🇷巴西-01
 - name: 📲 电报信息
   type: select
   proxies:
   - 🇺🇸美国-01
   - 🇺🇸美国-02
   - 🇺🇸美国-03
-  - 🇯🇵日本-01
-  - 🇯🇵日本-02
-  - 🇯🇵日本-03
-  - 🇯🇵日本-04
-  - 🇳🇱荷兰-01
-  - 🇳🇱荷兰-02
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇷🇴罗马尼亚-01
-  - 🇸🇪瑞典-01
-  - 🇸🇪瑞典-02
-  - 🇸🇪瑞典-03
-  - 🇸🇪瑞典-04
-  - 🇸🇪瑞典-05
-  - 🇸🇪瑞典-06
-  - 🇸🇪瑞典-07
-  - 🇸🇪瑞典-08
-  - 🇸🇪瑞典-09
-  - 🇸🇪瑞典-10
-  - 🇸🇪瑞典-11
-  - 🇸🇪瑞典-12
-  - 🇸🇪瑞典-13
-  - 🇸🇪瑞典-14
-  - 🇸🇪瑞典-15
-  - 🇸🇪瑞典-16
-  - 🇸🇪瑞典-17
-  - 🇸🇪瑞典-18
-  - 🇸🇪瑞典-19
-  - 🇸🇪瑞典-20
-  - 🇸🇪瑞典-21
-  - 🇸🇪瑞典-22
-  - 🇸🇪瑞典-23
-  - 🇸🇪瑞典-24
-  - 🇸🇪瑞典-25
   - 🇹🇷土耳其-01
   - 🇹🇷土耳其-02
   - 🇹🇷土耳其-03
   - 🇹🇷土耳其-04
   - 🇹🇷土耳其-05
   - 🇹🇷土耳其-06
-  - 🇹🇷土耳其-07
-  - 🇹🇷土耳其-08
-  - 🇹🇷土耳其-09
-  - 🇺🇸美国-04
-  - 🇺🇸美国-05
-  - 🇺🇸美国-06
+  - 🇳🇱荷兰-01
+  - 🇸🇬新加坡-01
+  - 🇸🇬新加坡-02
+  - 🇸🇬新加坡-03
+  - 🇳🇱荷兰-02
+  - 🇳🇱荷兰-03
+  - 🇰🇷韩国-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇰🇷韩国-04
+  - 🇰🇷韩国-05
+  - 🇰🇷韩国-06
+  - 🇯🇵日本-01
+  - 🇯🇵日本-02
+  - 🇯🇵日本-03
+  - 🇯🇵日本-04
+  - 🇯🇵日本-05
+  - 🇯🇵日本-06
   - 🇽🇽未知-01
   - 🇽🇽未知-02
-  - 🇳🇱荷兰-03
+  - 🇽🇽未知-03
+  - 🇹🇷土耳其-07
+  - 🇸🇪瑞典-01
+  - 🇸🇪瑞典-02
+  - 🇸🇪瑞典-03
+  - 🇸🇪瑞典-04
+  - 🇺🇸美国-06
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇷🇴罗马尼亚-02
+  - 🇷🇴罗马尼亚-03
+  - 🇷🇴罗马尼亚-04
+  - 🇷🇴罗马尼亚-05
+  - 🇷🇴罗马尼亚-06
+  - 🇨🇿捷克-01
+  - 🇨🇿捷克-02
+  - 🇨🇦加拿大-01
+  - 🇨🇦加拿大-02
+  - 🇨🇦加拿大-03
   - 🇳🇱荷兰-04
   - 🇳🇱荷兰-05
   - 🇳🇱荷兰-06
@@ -1188,89 +950,63 @@ proxy-groups:
   - 🇳🇱荷兰-09
   - 🇳🇱荷兰-10
   - 🇳🇱荷兰-11
-  - 🇳🇱荷兰-12
-  - 🇨🇦加拿大-01
-  - 🇨🇦加拿大-02
-  - 🇨🇦加拿大-03
-  - 🇷🇴罗马尼亚-02
-  - 🇷🇴罗马尼亚-03
-  - 🇷🇴罗马尼亚-04
-  - 🇷🇴罗马尼亚-05
-  - 🇷🇴罗马尼亚-06
-  - 🇷🇴罗马尼亚-07
-  - 🇷🇴罗马尼亚-08
-  - 🇺🇸美国-07
-  - 🇸🇪瑞典-26
-  - 🇸🇪瑞典-27
-  - 🇸🇪瑞典-28
-  - 🇸🇪瑞典-29
-  - 🇸🇪瑞典-30
-  - 🇸🇪瑞典-31
-  - 🇸🇪瑞典-32
-  - 🇸🇪瑞典-33
-  - 🇸🇪瑞典-34
-  - 🇸🇪瑞典-35
-  - 🇸🇪瑞典-36
-  - 🇨🇭瑞士-01
-  - 🇹🇼台湾-01
-  - 🇹🇷土耳其-10
-  - 🇸🇬新加坡-01
-  - 🇸🇬新加坡-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇫🇷法国-01
+  - 🇵🇱波兰-01
+  - 🇧🇷巴西-01
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🇺🇸美国-01
   - 🇺🇸美国-02
   - 🇺🇸美国-03
-  - 🇯🇵日本-01
-  - 🇯🇵日本-02
-  - 🇯🇵日本-03
-  - 🇯🇵日本-04
-  - 🇳🇱荷兰-01
-  - 🇳🇱荷兰-02
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇷🇴罗马尼亚-01
-  - 🇸🇪瑞典-01
-  - 🇸🇪瑞典-02
-  - 🇸🇪瑞典-03
-  - 🇸🇪瑞典-04
-  - 🇸🇪瑞典-05
-  - 🇸🇪瑞典-06
-  - 🇸🇪瑞典-07
-  - 🇸🇪瑞典-08
-  - 🇸🇪瑞典-09
-  - 🇸🇪瑞典-10
-  - 🇸🇪瑞典-11
-  - 🇸🇪瑞典-12
-  - 🇸🇪瑞典-13
-  - 🇸🇪瑞典-14
-  - 🇸🇪瑞典-15
-  - 🇸🇪瑞典-16
-  - 🇸🇪瑞典-17
-  - 🇸🇪瑞典-18
-  - 🇸🇪瑞典-19
-  - 🇸🇪瑞典-20
-  - 🇸🇪瑞典-21
-  - 🇸🇪瑞典-22
-  - 🇸🇪瑞典-23
-  - 🇸🇪瑞典-24
-  - 🇸🇪瑞典-25
   - 🇹🇷土耳其-01
   - 🇹🇷土耳其-02
   - 🇹🇷土耳其-03
   - 🇹🇷土耳其-04
   - 🇹🇷土耳其-05
   - 🇹🇷土耳其-06
-  - 🇹🇷土耳其-07
-  - 🇹🇷土耳其-08
-  - 🇹🇷土耳其-09
-  - 🇺🇸美国-04
-  - 🇺🇸美国-05
-  - 🇺🇸美国-06
+  - 🇳🇱荷兰-01
+  - 🇸🇬新加坡-01
+  - 🇸🇬新加坡-02
+  - 🇸🇬新加坡-03
+  - 🇳🇱荷兰-02
+  - 🇳🇱荷兰-03
+  - 🇰🇷韩国-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇰🇷韩国-04
+  - 🇰🇷韩国-05
+  - 🇰🇷韩国-06
+  - 🇯🇵日本-01
+  - 🇯🇵日本-02
+  - 🇯🇵日本-03
+  - 🇯🇵日本-04
+  - 🇯🇵日本-05
+  - 🇯🇵日本-06
   - 🇽🇽未知-01
   - 🇽🇽未知-02
-  - 🇳🇱荷兰-03
+  - 🇽🇽未知-03
+  - 🇹🇷土耳其-07
+  - 🇸🇪瑞典-01
+  - 🇸🇪瑞典-02
+  - 🇸🇪瑞典-03
+  - 🇸🇪瑞典-04
+  - 🇺🇸美国-06
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇷🇴罗马尼亚-02
+  - 🇷🇴罗马尼亚-03
+  - 🇷🇴罗马尼亚-04
+  - 🇷🇴罗马尼亚-05
+  - 🇷🇴罗马尼亚-06
+  - 🇨🇿捷克-01
+  - 🇨🇿捷克-02
+  - 🇨🇦加拿大-01
+  - 🇨🇦加拿大-02
+  - 🇨🇦加拿大-03
   - 🇳🇱荷兰-04
   - 🇳🇱荷兰-05
   - 🇳🇱荷兰-06
@@ -1279,89 +1015,63 @@ proxy-groups:
   - 🇳🇱荷兰-09
   - 🇳🇱荷兰-10
   - 🇳🇱荷兰-11
-  - 🇳🇱荷兰-12
-  - 🇨🇦加拿大-01
-  - 🇨🇦加拿大-02
-  - 🇨🇦加拿大-03
-  - 🇷🇴罗马尼亚-02
-  - 🇷🇴罗马尼亚-03
-  - 🇷🇴罗马尼亚-04
-  - 🇷🇴罗马尼亚-05
-  - 🇷🇴罗马尼亚-06
-  - 🇷🇴罗马尼亚-07
-  - 🇷🇴罗马尼亚-08
-  - 🇺🇸美国-07
-  - 🇸🇪瑞典-26
-  - 🇸🇪瑞典-27
-  - 🇸🇪瑞典-28
-  - 🇸🇪瑞典-29
-  - 🇸🇪瑞典-30
-  - 🇸🇪瑞典-31
-  - 🇸🇪瑞典-32
-  - 🇸🇪瑞典-33
-  - 🇸🇪瑞典-34
-  - 🇸🇪瑞典-35
-  - 🇸🇪瑞典-36
-  - 🇨🇭瑞士-01
-  - 🇹🇼台湾-01
-  - 🇹🇷土耳其-10
-  - 🇸🇬新加坡-01
-  - 🇸🇬新加坡-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇫🇷法国-01
+  - 🇵🇱波兰-01
+  - 🇧🇷巴西-01
 - name: 🍎 苹果服务
   type: select
   proxies:
   - 🇺🇸美国-01
   - 🇺🇸美国-02
   - 🇺🇸美国-03
-  - 🇯🇵日本-01
-  - 🇯🇵日本-02
-  - 🇯🇵日本-03
-  - 🇯🇵日本-04
-  - 🇳🇱荷兰-01
-  - 🇳🇱荷兰-02
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇷🇴罗马尼亚-01
-  - 🇸🇪瑞典-01
-  - 🇸🇪瑞典-02
-  - 🇸🇪瑞典-03
-  - 🇸🇪瑞典-04
-  - 🇸🇪瑞典-05
-  - 🇸🇪瑞典-06
-  - 🇸🇪瑞典-07
-  - 🇸🇪瑞典-08
-  - 🇸🇪瑞典-09
-  - 🇸🇪瑞典-10
-  - 🇸🇪瑞典-11
-  - 🇸🇪瑞典-12
-  - 🇸🇪瑞典-13
-  - 🇸🇪瑞典-14
-  - 🇸🇪瑞典-15
-  - 🇸🇪瑞典-16
-  - 🇸🇪瑞典-17
-  - 🇸🇪瑞典-18
-  - 🇸🇪瑞典-19
-  - 🇸🇪瑞典-20
-  - 🇸🇪瑞典-21
-  - 🇸🇪瑞典-22
-  - 🇸🇪瑞典-23
-  - 🇸🇪瑞典-24
-  - 🇸🇪瑞典-25
   - 🇹🇷土耳其-01
   - 🇹🇷土耳其-02
   - 🇹🇷土耳其-03
   - 🇹🇷土耳其-04
   - 🇹🇷土耳其-05
   - 🇹🇷土耳其-06
-  - 🇹🇷土耳其-07
-  - 🇹🇷土耳其-08
-  - 🇹🇷土耳其-09
-  - 🇺🇸美国-04
-  - 🇺🇸美国-05
-  - 🇺🇸美国-06
+  - 🇳🇱荷兰-01
+  - 🇸🇬新加坡-01
+  - 🇸🇬新加坡-02
+  - 🇸🇬新加坡-03
+  - 🇳🇱荷兰-02
+  - 🇳🇱荷兰-03
+  - 🇰🇷韩国-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇰🇷韩国-04
+  - 🇰🇷韩国-05
+  - 🇰🇷韩国-06
+  - 🇯🇵日本-01
+  - 🇯🇵日本-02
+  - 🇯🇵日本-03
+  - 🇯🇵日本-04
+  - 🇯🇵日本-05
+  - 🇯🇵日本-06
   - 🇽🇽未知-01
   - 🇽🇽未知-02
-  - 🇳🇱荷兰-03
+  - 🇽🇽未知-03
+  - 🇹🇷土耳其-07
+  - 🇸🇪瑞典-01
+  - 🇸🇪瑞典-02
+  - 🇸🇪瑞典-03
+  - 🇸🇪瑞典-04
+  - 🇺🇸美国-06
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇷🇴罗马尼亚-02
+  - 🇷🇴罗马尼亚-03
+  - 🇷🇴罗马尼亚-04
+  - 🇷🇴罗马尼亚-05
+  - 🇷🇴罗马尼亚-06
+  - 🇨🇿捷克-01
+  - 🇨🇿捷克-02
+  - 🇨🇦加拿大-01
+  - 🇨🇦加拿大-02
+  - 🇨🇦加拿大-03
   - 🇳🇱荷兰-04
   - 🇳🇱荷兰-05
   - 🇳🇱荷兰-06
@@ -1370,36 +1080,9 @@ proxy-groups:
   - 🇳🇱荷兰-09
   - 🇳🇱荷兰-10
   - 🇳🇱荷兰-11
-  - 🇳🇱荷兰-12
-  - 🇨🇦加拿大-01
-  - 🇨🇦加拿大-02
-  - 🇨🇦加拿大-03
-  - 🇷🇴罗马尼亚-02
-  - 🇷🇴罗马尼亚-03
-  - 🇷🇴罗马尼亚-04
-  - 🇷🇴罗马尼亚-05
-  - 🇷🇴罗马尼亚-06
-  - 🇷🇴罗马尼亚-07
-  - 🇷🇴罗马尼亚-08
-  - 🇺🇸美国-07
-  - 🇸🇪瑞典-26
-  - 🇸🇪瑞典-27
-  - 🇸🇪瑞典-28
-  - 🇸🇪瑞典-29
-  - 🇸🇪瑞典-30
-  - 🇸🇪瑞典-31
-  - 🇸🇪瑞典-32
-  - 🇸🇪瑞典-33
-  - 🇸🇪瑞典-34
-  - 🇸🇪瑞典-35
-  - 🇸🇪瑞典-36
-  - 🇨🇭瑞士-01
-  - 🇹🇼台湾-01
-  - 🇹🇷土耳其-10
-  - 🇸🇬新加坡-01
-  - 🇸🇬新加坡-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇫🇷法国-01
+  - 🇵🇱波兰-01
+  - 🇧🇷巴西-01
 - name: 🎯 全球直连
   type: select
   proxies: []
@@ -1415,53 +1098,54 @@ proxy-groups:
   - 🇺🇸美国-01
   - 🇺🇸美国-02
   - 🇺🇸美国-03
-  - 🇯🇵日本-01
-  - 🇯🇵日本-02
-  - 🇯🇵日本-03
-  - 🇯🇵日本-04
-  - 🇳🇱荷兰-01
-  - 🇳🇱荷兰-02
+  - 🇺🇸美国-04
+  - 🇺🇸美国-05
   - 🇷🇴罗马尼亚-01
-  - 🇸🇪瑞典-01
-  - 🇸🇪瑞典-02
-  - 🇸🇪瑞典-03
-  - 🇸🇪瑞典-04
-  - 🇸🇪瑞典-05
-  - 🇸🇪瑞典-06
-  - 🇸🇪瑞典-07
-  - 🇸🇪瑞典-08
-  - 🇸🇪瑞典-09
-  - 🇸🇪瑞典-10
-  - 🇸🇪瑞典-11
-  - 🇸🇪瑞典-12
-  - 🇸🇪瑞典-13
-  - 🇸🇪瑞典-14
-  - 🇸🇪瑞典-15
-  - 🇸🇪瑞典-16
-  - 🇸🇪瑞典-17
-  - 🇸🇪瑞典-18
-  - 🇸🇪瑞典-19
-  - 🇸🇪瑞典-20
-  - 🇸🇪瑞典-21
-  - 🇸🇪瑞典-22
-  - 🇸🇪瑞典-23
-  - 🇸🇪瑞典-24
-  - 🇸🇪瑞典-25
   - 🇹🇷土耳其-01
   - 🇹🇷土耳其-02
   - 🇹🇷土耳其-03
   - 🇹🇷土耳其-04
   - 🇹🇷土耳其-05
   - 🇹🇷土耳其-06
-  - 🇹🇷土耳其-07
-  - 🇹🇷土耳其-08
-  - 🇹🇷土耳其-09
-  - 🇺🇸美国-04
-  - 🇺🇸美国-05
-  - 🇺🇸美国-06
+  - 🇳🇱荷兰-01
+  - 🇸🇬新加坡-01
+  - 🇸🇬新加坡-02
+  - 🇸🇬新加坡-03
+  - 🇳🇱荷兰-02
+  - 🇳🇱荷兰-03
+  - 🇰🇷韩国-01
+  - 🇰🇷韩国-02
+  - 🇰🇷韩国-03
+  - 🇰🇷韩国-04
+  - 🇰🇷韩国-05
+  - 🇰🇷韩国-06
+  - 🇯🇵日本-01
+  - 🇯🇵日本-02
+  - 🇯🇵日本-03
+  - 🇯🇵日本-04
+  - 🇯🇵日本-05
+  - 🇯🇵日本-06
   - 🇽🇽未知-01
   - 🇽🇽未知-02
-  - 🇳🇱荷兰-03
+  - 🇽🇽未知-03
+  - 🇹🇷土耳其-07
+  - 🇸🇪瑞典-01
+  - 🇸🇪瑞典-02
+  - 🇸🇪瑞典-03
+  - 🇸🇪瑞典-04
+  - 🇺🇸美国-06
+  - 🇺🇸美国-07
+  - 🇺🇸美国-08
+  - 🇷🇴罗马尼亚-02
+  - 🇷🇴罗马尼亚-03
+  - 🇷🇴罗马尼亚-04
+  - 🇷🇴罗马尼亚-05
+  - 🇷🇴罗马尼亚-06
+  - 🇨🇿捷克-01
+  - 🇨🇿捷克-02
+  - 🇨🇦加拿大-01
+  - 🇨🇦加拿大-02
+  - 🇨🇦加拿大-03
   - 🇳🇱荷兰-04
   - 🇳🇱荷兰-05
   - 🇳🇱荷兰-06
@@ -1470,36 +1154,9 @@ proxy-groups:
   - 🇳🇱荷兰-09
   - 🇳🇱荷兰-10
   - 🇳🇱荷兰-11
-  - 🇳🇱荷兰-12
-  - 🇨🇦加拿大-01
-  - 🇨🇦加拿大-02
-  - 🇨🇦加拿大-03
-  - 🇷🇴罗马尼亚-02
-  - 🇷🇴罗马尼亚-03
-  - 🇷🇴罗马尼亚-04
-  - 🇷🇴罗马尼亚-05
-  - 🇷🇴罗马尼亚-06
-  - 🇷🇴罗马尼亚-07
-  - 🇷🇴罗马尼亚-08
-  - 🇺🇸美国-07
-  - 🇸🇪瑞典-26
-  - 🇸🇪瑞典-27
-  - 🇸🇪瑞典-28
-  - 🇸🇪瑞典-29
-  - 🇸🇪瑞典-30
-  - 🇸🇪瑞典-31
-  - 🇸🇪瑞典-32
-  - 🇸🇪瑞典-33
-  - 🇸🇪瑞典-34
-  - 🇸🇪瑞典-35
-  - 🇸🇪瑞典-36
-  - 🇨🇭瑞士-01
-  - 🇹🇼台湾-01
-  - 🇹🇷土耳其-10
-  - 🇸🇬新加坡-01
-  - 🇸🇬新加坡-02
-  - 🇸🇬新加坡-03
-  - 🇸🇬新加坡-04
+  - 🇫🇷法国-01
+  - 🇵🇱波兰-01
+  - 🇧🇷巴西-01
 rule-providers:
   LocalAreaNetwork:
     type: http

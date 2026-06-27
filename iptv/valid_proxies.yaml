@@ -345,20 +345,6 @@ proxies:
     path: /
   skip-cert-verify: true
   udp: true
-- name: 🇮🇷IR-01
-  type: vless
-  server: sv2.azparadox.ir
-  port: 8880
-  uuid: d9307ab3-1ed0-4b6d-bfd0-e104c7ccc25a
-  network: ws
-  servername: azsv2.ir5ive.ir
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: azsv2.ir5ive.ir
-  skip-cert-verify: true
-  udp: true
 - name: 🇯🇵日本-01
   type: vless
   server: 43.163.225.68
@@ -1726,7 +1712,6 @@ proxy-groups:
   - 🇳🇱荷兰-01
   - 🇰🇷韩国-05
   - 🇽🇽未知-33
-  - 🇮🇷IR-01
   - 🇽🇽未知-34
   - 🇯🇵日本-02
   - 🇱🇹LT-01
@@ -1859,7 +1844,6 @@ proxy-groups:
   - 🇳🇱荷兰-01
   - 🇰🇷韩国-05
   - 🇽🇽未知-33
-  - 🇮🇷IR-01
   - 🇽🇽未知-34
   - 🇯🇵日本-02
   - 🇱🇹LT-01
@@ -1995,7 +1979,6 @@ proxy-groups:
   - 🇳🇱荷兰-01
   - 🇰🇷韩国-05
   - 🇽🇽未知-33
-  - 🇮🇷IR-01
   - 🇽🇽未知-34
   - 🇯🇵日本-02
   - 🇱🇹LT-01
@@ -2128,7 +2111,6 @@ proxy-groups:
   - 🇳🇱荷兰-01
   - 🇰🇷韩国-05
   - 🇽🇽未知-33
-  - 🇮🇷IR-01
   - 🇽🇽未知-34
   - 🇯🇵日本-02
   - 🇱🇹LT-01
@@ -2261,7 +2243,6 @@ proxy-groups:
   - 🇳🇱荷兰-01
   - 🇰🇷韩国-05
   - 🇽🇽未知-33
-  - 🇮🇷IR-01
   - 🇽🇽未知-34
   - 🇯🇵日本-02
   - 🇱🇹LT-01
@@ -2394,7 +2375,6 @@ proxy-groups:
   - 🇳🇱荷兰-01
   - 🇰🇷韩国-05
   - 🇽🇽未知-33
-  - 🇮🇷IR-01
   - 🇽🇽未知-34
   - 🇯🇵日本-02
   - 🇱🇹LT-01
@@ -2536,7 +2516,6 @@ proxy-groups:
   - 🇳🇱荷兰-01
   - 🇰🇷韩国-05
   - 🇽🇽未知-33
-  - 🇮🇷IR-01
   - 🇽🇽未知-34
   - 🇯🇵日本-02
   - 🇱🇹LT-01

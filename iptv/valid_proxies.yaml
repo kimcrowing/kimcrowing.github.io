@@ -195,9 +195,6 @@ proxies:
   tls: true
   flow: xtls-rprx-vision
   client-fingerprint: firefox
-  reality-opts:
-    public-key: vtbYKmQECfnd9IQN3SvhlCWlWHwEzHRA0rD_wT46TnA
-    short-id: cd8971da5a669139
   skip-cert-verify: true
   udp: true
 - name: 🇫🇮芬兰-02

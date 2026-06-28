@@ -72,11 +72,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300      
-  w:
-    type: http
-    url: https://kimcrowing.github.io/iptv/free.yaml
-    path: ./provider2.yaml
-    interval: 36000
 proxy-groups:
 - name: PROXY
   type: select
@@ -89,10 +84,6 @@ proxy-groups:
   type: select
   use:
    - ww
-- name: FREE
-  type: select
-  use:
-   - w
 - name: LOAD-BALANCE
   type: load-balance
   strategy: consistent-hashing

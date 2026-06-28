@@ -79,7 +79,6 @@ proxy-groups:
   - LOAD-BALANCE
   - URL-test
   - SELECT
-  - FREE
 - name: SELECT
   type: select
   use:
